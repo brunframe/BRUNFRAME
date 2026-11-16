@@ -1,0 +1,10 @@
+# Maquettes BRUNFRAME : fichiers statiques, aucun build.
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Referrer-Policy = "no-referrer"
