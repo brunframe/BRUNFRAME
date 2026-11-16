@@ -77,7 +77,7 @@ main{position:relative;padding:0 16px}
 .intro{padding:22px 0 30px}
 .kicker{color:var(--laiton);font-size:11px;letter-spacing:.05em}
 .accroche{margin:12px 0 10px;font:800 40px/.98 var(--display);font-stretch:80%;letter-spacing:-.01em;text-wrap:balance}
-.accroche em{font-style:normal;color:var(--laiton-clair)}
+.accroche em{display:block;font-style:normal;color:var(--laiton-clair)}
 .intro .sous{color:var(--doux);max-width:34ch;text-wrap:pretty}
 .note-avis{margin-top:14px;color:var(--doux);font-size:11px}
 .note-avis b{color:var(--creme);font-weight:700}
@@ -311,12 +311,11 @@ dialog .cta{margin-top:12px;min-height:54px}
   <main>
     <section class="intro" aria-labelledby="t-intro">
       <p class="mono kicker">Restaurant libanais · Krutenau · depuis 2010</p>
-      <h2 class="accroche" id="t-intro">Commandez avant. <em>Passez prendre à l’heure.</em></h2>
+      <h2 class="accroche" id="t-intro">Commandez à l’avance. <em>Passez prendre à l’heure.</em></h2>
       <p class="sous">Composez votre commande ici, choisissez l’heure de retrait&nbsp;: nous la préparons au 22 rue de la Krutenau.</p>
       <a class="cta" id="cta-haut" href="#commande">Composer ma commande
         <svg class="fleche" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
       </a>
-      <p class="mono note-avis"><b>4,3/5</b> sur Sluurpy · <b>1&#8239;197</b> recommandations</p>
     </section>
 
     <section class="bloc plats" id="plats" aria-labelledby="t-plats">
@@ -388,12 +387,6 @@ dialog .cta{margin-top:12px;min-height:54px}
       <p class="repere mono">Notre histoire</p>
       <h2 id="t-histoire">Une cuisine libanaise, depuis <span class="annee">2010</span></h2>
       <p class="chapo">Le Tarbouche a été fondé en 2010 par des passionnés de cuisine libanaise. La salle a depuis été rénovée, puis a rouvert.</p>
-      <h3 class="h3">Plus de 1&#8239;000 avis en ligne</h3>
-      <div class="chiffres">
-        <div><strong>4,3/5</strong><span class="mono"><em>Sluurpy</em><br>1&#8239;197 recomm.</span></div>
-        <div><strong>7,3</strong><span class="mono"><em>Restoranking</em><br>1&#8239;089 avis</span></div>
-        <div><strong>4,0</strong><span class="mono"><em>Spinach</em><br>1&#8239;311 évaluations</span></div>
-      </div>
     </section>
 
     <section class="bloc" id="trouver" aria-labelledby="t-trouver">
@@ -429,7 +422,7 @@ dialog .cta{margin-top:12px;min-height:54px}
 
   <footer>
     <div class="frange" aria-hidden="true"></div>
-    <p>Notes et horaires&nbsp;: Sluurpy, Restoranking, Spinach. Spécialités&nbsp;: avis Wanderlog et Sluurpy. Histoire&nbsp;: Mapstr.</p>
+    <p>Horaires&nbsp;: Sluurpy, Restoranking, Spinach. Spécialités&nbsp;: avis Wanderlog et Sluurpy. Histoire&nbsp;: Mapstr.</p>
     <p>Page de démonstration non officielle : aucune commande n’est transmise.</p>
     <p class="signe">Maquette préparée par BRUNFRAME</p>
   </footer>
