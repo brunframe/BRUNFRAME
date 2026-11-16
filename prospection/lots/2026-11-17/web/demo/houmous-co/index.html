@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Houmous &amp; Co — restaurant et traiteur libanais à Strasbourg</title>
+<meta name="description" content="Maquette : la cuisine libanaise de Houmous &amp; Co, 11 rue de la Division-Leclerc à Strasbourg. Spécialités, horaires et commande pour les fêtes.">
+<meta name="theme-color" content="#4f1220">
+<style>
+@font-face{font-family:"Fraunces";src:url("fonts/fraunces-latin-500-normal.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("fonts/fraunces-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Manrope";src:url("fonts/manrope-latin-500-normal.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+:root{
+  --sumac-950:#22060c;--sumac-900:#330b14;--sumac-800:#4a111e;--sumac-700:#681a2a;--sumac-600:#862637;--sumac-500:#a33648;
+  --tahini-50:#fbf6ec;--tahini-100:#f3ead7;--tahini-200:#e8dabd;--tahini-300:#d6c29b;--tahini-700:#68522f;
+  --huile-300:#efd27c;--huile-400:#ddb650;--huile-500:#c49a33;--huile-800:#5c4410;
+  --olive-950:#11160d;--olive-900:#192113;--olive-800:#222d1a;--olive-700:#2f3d24;--olive-300:#bccb95;
+  --encre:#2a1110;
+  --serif:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --marge:20px;--max:1180px;--focus:var(--huile-300);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .85 0 0 0 .9 -.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;font-synthesis:none}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--sumac-900);color:var(--tahini-100);font:500 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--huile-400);color:var(--sumac-950)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;text-wrap:balance}
+em{font-style:italic}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.enveloppe{max-width:var(--max);margin:0 auto;padding:0 var(--marge)}
+.label{display:flex;align-items:center;gap:10px;margin:0 0 14px;font:500 12px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.label svg{width:18px;height:18px;flex:none}
+.ico{width:1em;height:1em;flex:none}
+
+/* ---------- Héros : la spirale du houmous ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:max(740px,100svh);
+  padding:0 var(--marge) 30px;color:var(--tahini-100);
+  background:radial-gradient(70% 40% at 60% 214px,#8c2a3b 0%,#6e1c2c 42%,transparent 78%),
+             linear-gradient(180deg,#5c1624 0%,#4a111e 50%,#330b14 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--grain);opacity:.16;mix-blend-mode:soft-light;pointer-events:none}
+.hero-visuel{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  -webkit-mask:linear-gradient(180deg,#000 0,#000 47%,transparent 70%);mask:linear-gradient(180deg,#000 0,#000 47%,transparent 70%)}
+.spirale-cadre{--d:620px;position:absolute;width:var(--d);height:var(--d);left:calc(60% - var(--d)/2);top:calc(214px - var(--d)/2)}
+.spirale-tour{width:100%;height:100%;transform:rotate(var(--tour,0deg))}
+.spirale{display:block;width:100%;height:100%;overflow:visible}
+.spirale-texte{fill:url(#fondu)}
+.spirale-texte .f{font:italic 400 15.5px var(--serif);letter-spacing:.01em}
+.spirale-texte .m{font:500 9.6px var(--sans);letter-spacing:.24em;text-transform:uppercase}
+.spirale-texte .d{fill:url(#fondu-or);font:500 15px var(--serif)}
+.sillon-or{fill:none;stroke:url(#fondu-or);stroke-width:.9;opacity:.55}
+.flaque{position:absolute;left:50%;top:50%;width:calc(var(--d)*130/620);height:calc(var(--d)*130/620);transform:translate(-50%,-50%);overflow:visible;filter:drop-shadow(0 10px 18px #1a0308aa)}
+.hero-haut{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:calc(14px + env(safe-area-inset-top))}
+.pastille{display:inline-flex;align-items:center;gap:8px;padding:7px 13px 7px 11px;border-radius:99px;
+  background:#22060cb8;border:1px solid #f3ead766;color:var(--tahini-50);font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pastille i{width:7px;height:7px;border-radius:50%;background:var(--huile-400);box-shadow:0 0 0 3px #ddb65033}
+.lieu{padding:7px 12px;border-radius:99px;background:#22060c8c;font:500 11.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--tahini-100);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.hero-texte{margin-top:auto;position:relative}
+.surtitre{margin:0 0 14px;color:var(--huile-300);font:500 12.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+h1{font-size:clamp(4.2rem,19.4vw,10.5rem);line-height:.84;letter-spacing:-.035em;color:var(--tahini-50);margin:0 0 22px;text-shadow:0 2px 28px #3a0c16}
+h1 .l1,h1 .l2{display:block}
+h1 .l2{padding-left:.95em}
+h1 em{font-weight:400;color:var(--huile-400);letter-spacing:0;margin-right:.12em}
+.chapo{margin:0 0 24px;max-width:31ch;font-size:17px;line-height:1.5;color:#f3ead7e8}
+.chapo strong{font-weight:500;color:var(--huile-300)}
+.cta{position:relative;display:inline-flex;align-items:center;gap:16px;min-height:58px;padding:7px 7px 7px 24px;border:0;border-radius:99px;
+  background:var(--huile-400);color:var(--sumac-950);font:500 17px/1.2 var(--sans);letter-spacing:.01em;text-decoration:none;cursor:pointer;
+  box-shadow:0 14px 30px -14px #0d0104,inset 0 1px 0 #fff3c466;transition:background-color .2s,transform .2s}
+.cta:hover{background:var(--huile-300)}
+.cta:active{transform:translateY(1px)}
+.cta-rond{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sumac-800);color:var(--huile-300);flex:none}
+.cta-rond svg{width:24px;height:24px;transition:transform .6s cubic-bezier(.3,.7,.2,1)}
+.cta:hover .cta-rond svg,.cta:focus-visible .cta-rond svg{transform:rotate(200deg)}
+.hero-meta{list-style:none;margin:22px 0 0;padding:16px 0 0;border-top:1px solid #f3ead72e;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:#f3ead7d9}
+.hero-meta li{display:flex;align-items:center;gap:8px}
+.hero-meta .ico{color:var(--huile-400);width:16px;height:16px}
+
+/* ---------- Bandeau des fêtes ---------- */
+.fetes{position:relative;overflow:hidden;background:var(--huile-400);color:var(--sumac-950);padding:46px 0 50px}
+.fetes::before{content:"";position:absolute;inset:0;background:var(--grain);opacity:.22;mix-blend-mode:multiply;pointer-events:none}
+.fetes .enveloppe{position:relative}
+.fetes .label{color:var(--sumac-800)}
+.fetes h2{font-size:clamp(2.2rem,9.4vw,4.4rem);line-height:.98;letter-spacing:-.02em;color:var(--sumac-900);margin-bottom:18px}
+.fetes h2 em{font-weight:400;color:var(--sumac-700)}
+.fetes p{margin:0;max-width:40ch;font-size:17px;line-height:1.55;color:#33060e}
+.fetes .points{list-style:none;padding:18px 0 0;margin:22px 0 0;border-top:1.5px solid #33060e33;display:flex;flex-wrap:wrap;gap:8px 12px;font:500 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sumac-800)}
+.fetes .points li{display:inline-flex;align-items:center;gap:12px}
+.fetes .points li+li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--sumac-700)}
+.fetes-spirale{position:absolute;right:-230px;top:-250px;width:520px;height:520px;overflow:visible;fill:none;stroke:var(--sumac-700);stroke-width:2.6;opacity:.2;pointer-events:none}
+
+/* ---------- La carte : surface de houmous ---------- */
+.carte{position:relative;overflow:hidden;background:var(--tahini-100);color:var(--encre);padding:64px 0 60px;--focus:var(--sumac-600)}
+.relief{position:absolute;width:1150px;height:1150px;right:-640px;top:-330px;pointer-events:none;overflow:visible}
+.relief .creux{fill:none;stroke:#e6d8b9;stroke-width:8;stroke-linecap:round}
+.relief .lumiere{fill:none;stroke:#fffbf2;stroke-width:1.8;stroke-linecap:round;opacity:.85}
+.carte .enveloppe{position:relative}
+.carte .label{color:var(--sumac-700)}
+.carte h2{font-size:clamp(1.9rem,7.4vw,3.2rem);line-height:1.06;letter-spacing:-.015em;color:var(--sumac-800);max-width:17ch;margin-bottom:40px}
+.carte h2 em{font-weight:400;color:var(--sumac-600)}
+.vedettes{margin:0 0 34px}
+.mention{display:inline-flex;align-items:center;gap:8px;margin:0 0 6px;padding:6px 12px 6px 10px;border-radius:99px;background:var(--sumac-700);color:var(--tahini-50);font-size:13px;line-height:1.2}
+.mention svg{width:14px;height:14px;color:var(--huile-300)}
+.plats-vedettes{list-style:none;margin:0;padding:0;font-family:var(--serif);font-size:clamp(4rem,19vw,8.6rem);line-height:.92;letter-spacing:-.035em;color:var(--sumac-700)}
+.plats-vedettes li{display:block}
+.plats-vedettes .et{display:inline-block;font-style:italic;font-weight:400;color:#9c7420;font-size:.62em;margin:0 .1em 0 .05em;vertical-align:.12em}
+.classiques{border-top:1.5px solid #68522f40;padding-top:18px;margin-bottom:34px}
+.sous-titre{margin:0 0 10px;font:500 12px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--tahini-700)}
+.liste-mezze{list-style:none;margin:0;padding:0;display:grid;gap:2px;font:italic 400 clamp(2rem,8.6vw,3.3rem)/1.18 var(--serif);color:var(--sumac-800)}
+.liste-mezze li{display:inline-flex;align-items:center;gap:14px}
+.liste-mezze li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--huile-500);flex:none}
+.engagements{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.engagements li{display:flex;align-items:baseline;gap:12px;font-size:16px;line-height:1.4;color:var(--encre)}
+.engagements svg{width:17px;height:17px;flex:none;color:var(--huile-500);align-self:center}
+.a-fournir{margin:28px 0 0;font-size:13.5px;color:var(--tahini-700)}
+
+/* ---------- Commande : le bon ---------- */
+.commande{position:relative;background:var(--olive-800);color:var(--tahini-100);padding:64px 0 72px;overflow:hidden}
+.commande::before{content:"";position:absolute;inset:0;background:var(--grain);opacity:.12;mix-blend-mode:soft-light;pointer-events:none}
+.commande .enveloppe{position:relative}
+.commande-spirale{display:none;position:absolute;left:-330px;bottom:-420px;width:980px;height:980px;overflow:visible;fill:none;stroke:var(--huile-400);stroke-width:1.4;opacity:.16;pointer-events:none}
+.commande .label{color:var(--olive-300)}
+.commande h2{font-size:clamp(2.1rem,8.8vw,3.6rem);line-height:1.02;letter-spacing:-.02em;color:var(--tahini-50);margin-bottom:24px;max-width:14ch}
+.commande h2 em{font-weight:400;color:var(--huile-400)}
+.etapes{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:14px;counter-reset:e}
+.etapes li{display:grid;grid-template-columns:34px 1fr;gap:6px;align-items:baseline;font-size:16px;line-height:1.45;color:#f3ead7e0;counter-increment:e}
+.etapes li::before{content:counter(e);font:italic 400 28px/1 var(--serif);color:var(--huile-400)}
+.etapes strong{font-weight:500;color:var(--tahini-50)}
+.appel-alt{margin:0 0 30px;font-size:15px;color:#f3ead7c7}
+.appel-alt a{color:var(--tahini-50);text-underline-offset:3px}
+.bon-ombre{filter:drop-shadow(0 26px 34px #0a0e06aa)}
+.bon{--focus:var(--sumac-600);position:relative;background:var(--tahini-50);color:var(--encre);border-radius:0 0 22px 22px;padding:30px 18px 24px;
+  -webkit-mask:radial-gradient(circle at 9px 0,transparent 5.5px,#000 6px) 0 0/18px 100% repeat-x;mask:radial-gradient(circle at 9px 0,transparent 5.5px,#000 6px) 0 0/18px 100% repeat-x}
+.bon-tete{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-bottom:14px;margin-bottom:20px;border-bottom:1.5px dashed #68522f59}
+.bon-tete span{font:500 11.5px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--tahini-700)}
+.bon-tete b{font:italic 400 20px/1 var(--serif);color:var(--sumac-700)}
+.champs{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.champ>label,.champ>.lbl{display:block;padding:0;margin:0 0 8px;font:500 15px/1.3 var(--sans);color:var(--encre)}
+.facultatif{font-size:13px;color:var(--tahini-700);margin-left:6px}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.puce{display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:8px 15px 8px 12px;border-radius:99px;border:1.5px solid #681a2a59;background:#fff;
+  color:var(--sumac-800);font:500 15px/1.1 var(--sans);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.puce svg{width:16px;height:16px;color:var(--huile-500);transition:transform .45s cubic-bezier(.3,.7,.2,1)}
+.puce:hover{border-color:var(--sumac-600)}
+.puce[aria-pressed="true"]{background:var(--sumac-700);border-color:var(--sumac-700);color:var(--tahini-50)}
+.puce[aria-pressed="true"] svg{color:var(--huile-300);transform:rotate(180deg)}
+.aide{margin:0 0 8px;font-size:13.5px;line-height:1.4;color:var(--tahini-700)}
+input,textarea{width:100%;min-width:0;font:500 16px/1.4 var(--sans);color:var(--encre);background:#fff;border:1.5px solid #c9b48c;border-radius:12px;padding:12px 14px;
+  transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+input[type=date],input[type=time]{min-height:50px}
+textarea{min-height:120px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--sumac-600);box-shadow:0 0 0 3px #86263733}
+input:focus-visible,textarea:focus-visible{outline:none}
+[aria-invalid="true"]{border-color:#a12b3d;background:#fff6f6}
+.duo{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:12px}
+.erreur{margin:6px 0 0;font-size:13.5px;line-height:1.35;color:#9b1f33}
+.erreur::before{content:"• "}
+.envoyer{width:100%;justify-content:space-between;margin-top:6px;background:var(--sumac-700);color:var(--tahini-50);box-shadow:0 12px 24px -14px #33060e}
+.envoyer:hover{background:var(--sumac-600)}
+.envoyer .cta-rond{background:#25d366;color:#fff}
+.envoyer .cta-rond svg{width:22px;height:22px}
+.envoyer:hover .cta-rond svg{transform:none}
+.demo-note{margin:12px 0 0;text-align:center;font-size:13px;color:var(--tahini-700)}
+
+/* ---------- Infos ---------- */
+.infos{position:relative;background:var(--sumac-900);color:var(--tahini-100);padding:64px 0 56px;overflow:hidden}
+.infos::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.14;mix-blend-mode:soft-light;pointer-events:none}
+.infos .enveloppe{position:relative;z-index:1}
+.infos .label{color:var(--huile-300)}
+.infos h2{font-size:clamp(2.1rem,8.8vw,3.6rem);line-height:1.02;letter-spacing:-.02em;color:var(--tahini-50);margin-bottom:34px}
+.infos h2 em{font-weight:400;color:var(--huile-400)}
+.infos-grille{display:grid;gap:40px}
+.infos h3{display:flex;align-items:center;gap:12px;font-size:24px;color:var(--tahini-50);margin-bottom:14px}
+.tag{font:500 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:6px 9px;border-radius:99px;border:1px solid var(--huile-400);color:var(--huile-300)}
+.horaires{width:100%;border-collapse:collapse;font-size:16px}
+.horaires th,.horaires td{padding:10px 0;border-bottom:1px solid #f3ead724;text-align:left;font-weight:500}
+.horaires td{text-align:right;color:#f3ead7d6;font-variant-numeric:tabular-nums}
+.horaires tr.aujourdhui th,.horaires tr.aujourdhui td{color:var(--huile-300)}
+.auj{display:inline-block;margin-left:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:3px 7px;border-radius:99px;background:var(--huile-400);color:var(--sumac-950);vertical-align:2px}
+.note-h{margin:14px 0 0;font-size:14px;line-height:1.5;color:#f3ead7b8}
+address{font:500 26px/1.25 var(--serif);font-style:normal;color:var(--tahini-50);margin:0 0 8px}
+.quartier{margin:0 0 22px;color:#f3ead7c7;font-size:15px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn2{display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:10px 14px;border-radius:99px;border:1.5px solid #f3ead780;
+  color:var(--tahini-50);font:500 15.5px/1.2 var(--sans);text-decoration:none;transition:background-color .2s,border-color .2s}
+.btn2:hover{background:#f3ead714;border-color:var(--tahini-50)}
+.btn2 .ico{color:var(--huile-300);width:18px;height:18px}
+.services{margin:26px 0 0;padding-top:18px;border-top:1px solid #f3ead724;font-size:15px;line-height:1.55;color:#f3ead7d0}
+
+/* ---------- Pied ---------- */
+.pied{background:var(--sumac-950);color:#f3ead7b8;padding:44px 0 120px;font-size:14px;line-height:1.55}
+.pied-nom{margin:0 0 6px;font:500 30px/1 var(--serif);color:var(--tahini-50);letter-spacing:-.01em}
+.pied-nom em{font-weight:400;color:var(--huile-400)}
+.pied p{margin:0 0 8px}
+.pied .sources{font-size:13px;color:#f3ead799;max-width:60ch}
+.pied .avert{margin-top:22px;padding-top:18px;border-top:1px solid #f3ead724;color:var(--tahini-100)}
+.pied .credit{color:#f3ead7a6}
+
+/* ---------- Barre flottante ---------- */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:center;padding:0 16px calc(14px + env(safe-area-inset-bottom));pointer-events:none;
+  transition:transform .35s cubic-bezier(.3,.7,.2,1),opacity .25s,visibility .35s}
+.barre .cta{pointer-events:auto;box-shadow:0 18px 40px -12px #0d0104,0 0 0 1px #5c441033}
+.barre.cachee{transform:translateY(130%);opacity:0;visibility:hidden}
+
+/* ---------- Aperçu WhatsApp ---------- */
+dialog{border:0;padding:0;margin:auto;width:min(94vw,430px);max-height:94vh;max-height:94dvh;overflow:auto;border-radius:26px;background:var(--sumac-950);color:var(--tahini-100);
+  box-shadow:0 40px 80px -20px #000}
+dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.ap{padding:20px 16px 18px}
+.ap-haut{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;padding:0 4px}
+.ap-haut .label{margin:0 0 6px;color:var(--huile-300)}
+.ap-haut h2{font-size:24px;line-height:1.1;color:var(--tahini-50)}
+.fermer-x{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid #f3ead74d;background:none;color:var(--tahini-50);cursor:pointer}
+.fermer-x svg{width:18px;height:18px}
+.telephone{border-radius:22px;overflow:hidden;background:#efeae2;border:6px solid #0e0306;box-shadow:inset 0 0 0 1px #0000000d}
+.tel-barre{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#f7f5f1;border-bottom:1px solid #00000014;color:#111b21}
+.tel-barre .ret{width:18px;height:18px;color:#54656f}
+.avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#dfe5e7;color:#3b4a54;font:500 14px/1 var(--sans);flex:none}
+.tel-id{min-width:0}
+.tel-id b{display:block;font:500 15.5px/1.2 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tel-id small{display:block;font-size:12.5px;color:#54656f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tel-fil{padding:14px 12px 18px;min-height:260px;
+  background:#efeae2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23d9d0c2' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M16 16m0-2a2 2 0 1 1-2 2 4 4 0 0 1 4-4 6 6 0 0 1 6 6 8 8 0 0 1-8 8'/%3E%3Cpath d='M48 46m0-1.5a1.5 1.5 0 1 1-1.5 1.5 3 3 0 0 1 3-3 4.5 4.5 0 0 1 4.5 4.5 6 6 0 0 1-6 6'/%3E%3Ccircle cx='46' cy='14' r='1.4'/%3E%3Ccircle cx='14' cy='48' r='1.1'/%3E%3C/g%3E%3C/svg%3E")}
+.jour-chip{display:table;margin:0 auto 12px;padding:5px 10px;border-radius:8px;background:#fffffff0;color:#54656f;font-size:12px;box-shadow:0 1px 1px #0000000f}
+.bulle{position:relative;max-width:88%;padding:8px 10px 20px 11px;border-radius:0 10px 10px 10px;background:#fff;color:#111b21;box-shadow:0 1px 1px #00000021;
+  font:500 14.5px/1.42 var(--sans);white-space:pre-wrap;overflow-wrap:anywhere}
+.bulle::before{content:"";position:absolute;left:-8px;top:0;border:8px solid transparent;border-top-color:#fff;border-right-color:#fff;border-width:0 8px 10px 0}
+.bulle .h{position:absolute;right:9px;bottom:5px;font-size:11px;color:#667781}
+.ap-note{margin:14px 4px 14px;padding:12px 14px;border-radius:14px;background:#f3ead712;border:1px solid #f3ead72e;font-size:14px;line-height:1.5;color:#f3ead7e0}
+.ap-note strong{font-weight:500;color:var(--huile-300)}
+.ap .cta{width:100%;justify-content:center;padding:7px 24px}
+
+/* ---------- Apparitions (seulement si le mouvement est permis) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .anim .apparait{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .anim .apparait.vu{opacity:1;transform:none}
+  .anim .spirale{animation:tourne 240s linear infinite,eclot 1.6s cubic-bezier(.2,.7,.2,1) both}
+  .anim .flaque{animation:flaque 1.2s .15s cubic-bezier(.2,.8,.2,1.2) both}
+  dialog[open]{animation:monte .38s cubic-bezier(.2,.8,.2,1)}
+  @keyframes tourne{to{rotate:360deg}}
+  @keyframes eclot{from{opacity:0;scale:.9}to{opacity:1;scale:1}}
+  @keyframes flaque{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+  @keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ---------- Grand écran ---------- */
+@media (min-width:700px){
+  :root{--marge:40px}
+  .duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (min-width:980px){
+  :root{--marge:56px}
+  .hero{min-height:max(700px,100vh);padding-bottom:44px;
+    background:radial-gradient(46% 64% at 76% 50%,#8c2a3b 0%,#6e1c2c 40%,transparent 76%),linear-gradient(180deg,#5c1624 0%,#4a111e 55%,#330b14 100%)}
+  .hero-visuel{-webkit-mask:linear-gradient(90deg,transparent 38%,#000 62%);mask:linear-gradient(90deg,transparent 38%,#000 62%)}
+  .spirale-cadre{--d:1040px;left:calc(76% - var(--d)/2);top:calc(50% - var(--d)/2)}
+  .hero-haut{max-width:var(--max);width:100%;margin:0 auto;padding-top:26px}
+  .hero-texte{max-width:var(--max);width:100%;margin:auto;padding:40px 0 0}
+  .hero-texte>*{max-width:600px}
+  h1{font-size:clamp(6.4rem,9.8vw,9.4rem);margin-bottom:26px}
+  .chapo{font-size:19px;max-width:34ch}
+  .hero-meta{max-width:560px}
+  .fetes{padding:64px 0}
+  .fetes .enveloppe{display:grid;grid-template-columns:1.2fr 1fr;gap:20px 64px;align-items:end}
+  .fetes .label{grid-column:1/-1;margin:0}
+  .fetes h2{margin:0}
+  .fetes .points{grid-column:2}
+  .fetes-spirale{right:-220px;top:-380px;width:820px;height:820px}
+  .carte{padding:100px 0 96px}
+  .relief{width:1500px;height:1500px;right:-620px;top:-420px}
+  .carte h2{margin-bottom:56px}
+  .carte-grille{display:grid;grid-template-columns:1.35fr 1fr;gap:0 64px;align-items:end}
+  .classiques{margin-bottom:28px}
+  .commande{padding:100px 0 110px}
+  .commande .enveloppe{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:start}
+  .commande-intro{position:sticky;top:48px}
+  .commande-spirale{display:block}
+  .bon{padding:36px 32px 30px}
+  .infos{padding:96px 0 84px}
+  .infos-grille{grid-template-columns:1fr 1fr;gap:80px}
+  .pied{padding:56px 0 110px}
+  .pied .enveloppe{display:grid;grid-template-columns:1fr 1.3fr;gap:12px 64px}
+  .pied .avert{grid-column:1/-1}
+  .pied .credit{grid-column:1/-1}
+  .barre{justify-content:flex-end;padding-right:32px}
+}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="mini" viewBox="-12 -12 24 24"><path d="M0 -1.2C0.21 -1.29 0.46 -1.32 0.72 -1.26C0.98 -1.21 1.25 -1.08 1.47 -0.87C1.7 -0.66 1.88 -0.37 1.97 -0.03C2.06 0.3 2.06 0.69 1.95 1.07C1.84 1.44 1.62 1.81 1.3 2.11C0.98 2.41 0.56 2.63 0.09 2.73C-0.38 2.83 -0.89 2.81 -1.39 2.65C-1.89 2.48 -2.36 2.17 -2.73 1.75C-3.11 1.32 -3.38 0.78 -3.5 0.18C-3.61 -0.42 -3.57 -1.07 -3.35 -1.69C-3.14 -2.31 -2.75 -2.89 -2.22 -3.34C-1.69 -3.8 -1.02 -4.12 -0.29 -4.26C0.44 -4.39 1.23 -4.33 1.97 -4.07C2.71 -3.81 3.4 -3.34 3.94 -2.71C4.47 -2.08 4.86 -1.29 5.01 -0.43C5.17 0.43 5.11 1.35 4.8 2.22C4.49 3.08 3.95 3.89 3.22 4.51C2.49 5.14 1.58 5.58 0.59 5.77C-0.4 5.96 -1.46 5.88 -2.45 5.54C-3.44 5.19 -4.36 4.58 -5.07 3.75C-5.79 2.93 -6.3 1.89 -6.52 0.78C-6.74 -0.34 -6.67 -1.53 -6.29 -2.65C-5.91 -3.77 -5.22 -4.81 -4.3 -5.62C-3.39 -6.43 -2.24 -7.01 -0.99 -7.27C0.25 -7.52 1.58 -7.45 2.83 -7.04C4.08 -6.63 5.24 -5.88 6.14 -4.88C7.05 -3.87 7.71 -2.6 8.01 -1.23C8.3 0.14 8.24 1.61 7.8 2.98C7.37 4.36 6.56 5.64 5.47 6.65C4.37 7.66 2.99 8.4 1.5 8.74C0 9.08 -1.6 9.03 -3.11 8.57C-4.62 8.12 -6.03 7.25 -7.14 6.07C-8.26 4.9 -9.07 3.41 -9.47 1.79C-9.86 0.17 -9.83 -1.57 -9.35 -3.21C-8.88 -4.86 -7.96 -6.39 -6.7 -7.61C-5.44 -8.84 -3.85 -9.74 -2.1 -10.18C-0.36 -10.63 1.52 -10.62 3.29 -10.13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.5 4.2-2 1.4a11 11 0 0 0 6.2 6.2l1.4-2 4.2 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><path d="M12 2.8 21.2 12 12 21.2 2.8 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13.5V11h5.2M12.4 8.8l2.2 2.2-2.2 2.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-etoile" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8Z" fill="currentColor"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-retour" viewBox="0 0 24 24"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <path id="p-sillon" d="M0 -80.5C14 -81.2 28.3 -78.2 41.1 -71.6C53.9 -65.1 65.1 -55 73.1 -42.7C81.1 -30.4 85.9 -15.7 86.7 -0.7C87.5 14.4 84.3 29.8 77.3 43.6C70.4 57.4 59.6 69.4 46.4 78.1C33.2 86.8 17.6 92 1.4 92.9C-14.7 93.9 -31.3 90.5 -46 83.1C-60.8 75.7 -73.8 64.3 -83.1 50.3C-92.4 36.2 -98 19.5 -99.1 2.3C-100.2 -14.9 -96.7 -32.6 -88.9 -48.4C-81.1 -64.1 -69.1 -78 -54.1 -88C-39.2 -98 -21.5 -104.1 -3.2 -105.3C15 -106.6 33.8 -103 50.6 -94.8C67.4 -86.6 82.2 -73.9 92.8 -58.1C103.5 -42.4 110.1 -23.6 111.5 -4.3C112.9 15.1 109.2 35 100.7 52.8C92.1 70.6 78.8 86.3 62.2 97.6C45.6 109 25.8 116.1 5.4 117.7C-15 119.3 -36 115.5 -54.8 106.6C-73.7 97.7 -90.3 83.7 -102.4 66.3C-114.5 48.9 -122 28.1 -123.9 6.6C-125.7 -14.8 -121.8 -37 -112.6 -56.8C-103.3 -76.7 -88.7 -94.2 -70.5 -107.1C-52.3 -119.9 -30.5 -127.9 -8 -130C14.6 -132.1 37.8 -128.2 58.7 -118.6C79.6 -109 98.1 -93.8 111.7 -74.8C125.2 -55.8 133.8 -33 136.2 -9.4C138.5 14.2 134.5 38.6 124.6 60.5C114.7 82.5 98.9 101.9 79.1 116.2C59.3 130.6 35.6 139.7 10.9 142.3C-13.7 144.9 -39.2 140.9 -62.2 130.7C-85.2 120.5 -105.7 104.1 -120.7 83.6C-135.8 63 -145.5 38.3 -148.4 12.5C-151.3 -13.2 -147.3 -39.8 -136.8 -63.9C-126.3 -87.9 -109.4 -109.3 -88.1 -125.2C-66.7 -141.1 -41 -151.3 -14.2 -154.5C12.5 -157.6 40.3 -153.7 65.4 -143C90.5 -132.2 112.9 -114.7 129.6 -92.6C146.2 -70.5 157.1 -43.9 160.6 -16C164 11.8 160.1 40.7 149.1 66.9C138.1 93 120.1 116.4 97.3 133.9C74.4 151.3 46.8 162.8 17.9 166.6C-10.9 170.4 -41 166.5 -68.2 155.3C-95.5 144.1 -119.9 125.6 -138.1 102C-156.4 78.4 -168.5 49.8 -172.6 19.9C-176.8 -10 -173 -41.1 -161.6 -69.5C-150.1 -97.8 -131.1 -123.2 -106.8 -142.3C-82.5 -161.4 -53 -174.2 -22 -178.7C8.9 -183.2 41.2 -179.5 70.6 -167.8C100.1 -156.2 126.5 -136.7 146.5 -111.6C166.4 -86.6 179.8 -56.2 184.7 -24.2C189.5 7.8 185.9 41.2 174.1 71.7C162.3 102.2 142.3 129.7 116.6 150.5C90.8 171.3 59.5 185.3 26.5 190.6C-6.6 195.9 -41.1 192.4 -72.7 180.4C-104.3 168.4 -132.9 148 -154.5 121.6C-176.2 95.2 -190.9 62.9 -196.6 28.8C-202.3 -5.2 -198.9 -40.9 -186.8 -73.6C-174.6 -106.3 -153.7 -135.9 -126.6 -158.4C-99.5 -181 -66.3 -196.4 -31.3 -202.5C3.8 -208.6 40.6 -205.4 74.4 -193.1C108.2 -180.8 138.9 -159.5 162.3 -131.8C185.7 -104 201.8 -69.9 208.4 -33.8C214.9 2.3 211.9 40.2 199.5 75.1C187.1 110 165.4 141.7 137 166.1C108.6 190.4 73.6 207.2 36.5 214.2C-0.6 221.3 -39.7 218.4 -75.7 205.9C-111.7 193.4 -144.6 171.3 -169.8 142.2C-195 113.2 -212.6 77.3 -220.1 39.2C-227.6 1.1 -224.9 -39.2 -212.3 -76.3C-199.7 -113.4 -177.2 -147.3 -147.5 -173.4C-117.9 -199.6 -81.1 -217.9 -42 -225.9C-2.9 -233.9 38.5 -231.5 76.7 -218.8C114.9 -206.1 149.9 -183.2 177 -152.9C204.1 -122.6 223.2 -85 231.7 -44.9C240.2 -4.8 238 37.7 225.3 77C212.5 116.4 189.3 152.5 158.4 180.5C127.5 208.5 89 228.4 47.9 237.4C6.8 246.4 -36.8 244.5 -77.3 231.7C-117.7 219 -154.9 195.4 -183.9 163.9C-212.9 132.4 -233.6 93.1 -243.1 51C-252.7 8.9 -251 -35.8 -238.2 -77.4C-225.5 -119 -201.5 -157.3 -169.5 -187.3C-137.4 -217.2 -97.3 -238.7 -54.2 -248.8C-11.1 -258.9 34.7 -257.5 77.5 -244.8C120.2 -232 159.6 -207.7 190.5 -175.1C221.5 -142.5 243.8 -101.5 254.5 -57.5C265.1 -13.4 264.1 33.6 251.3 77.4C238.5 121.3 214 161.8 180.8 193.7C147.6 225.7 105.9 248.8 60.9 260.1C15.8 271.3 -32.3 270.6 -77.3 257.8C-122.2 245.1 -164 220.3 -196.9 186.6C-229.8 152.9 -253.8 110.3 -265.6 64.3C-277.5 18.3 -277.1 -30.9 -264.4 -77C-251.7 -123.1 -226.6 -166 -192.4 -199.9C-158.2 -233.8 -114.8 -258.7 -67.9 -271.2C-20.9 -283.6 29.4 -283.6 76.7 -271C123.9 -258.3 167.9 -233 202.9 -198.3C237.8 -163.5 263.6 -119.4 276.7 -71.5C289.7 -23.6 290.1 27.9 277.5 76.3C264.9 124.7 239.4 169.8 204.2 205.8C168.9 241.7 124 268.4 75.2 282.1C26.4 295.8 -26.2 296.6 -75.7 284.1C-125.3 271.6 -171.6 245.9 -208.6 210.2C-245.6 174.4 -273.1 128.8 -287.5 79C-301.9 29.3 -303.1 -24.5 -290.7 -75.1C-278.3 -125.8 -252.4 -173.3 -216.2 -211.3C-180 -249.3 -133.6 -277.8 -82.9 -292.9C-32.2 -308 22.6 -309.6 74.4 -297.3C126.2 -285.1 174.9 -259 214 -222.3C253 -185.7 282.5 -138.5 298.2 -86.9C314 -35.3 316 20.6 303.9 73.6C291.8 126.5 265.6 176.4 228.5 216.5C191.4 256.7 143.5 287 91 303.5C38.4 320 -18.6 322.5 -72.7 310.5C-126.8 298.6 -177.8 272.2 -219 234.7C-260.2 197.1 -291.6 148.5 -308.7 95.1C-325.9 41.7 -328.9 -16.4 -317.1 -71.7C-305.4 -126.9 -278.9 -179.1 -240.9 -221.4C-203 -263.7 -153.7 -296 -99.4 -313.9C-45 -331.8 14.2 -335.3 70.5 -323.8C126.9 -312.2 180.3 -285.6 223.7 -247.2C267.1 -208.9 300.4 -158.9 319.1 -103.7"/>
+  </defs>
+</svg>
+
+<header class="hero" id="haut">
+  <div class="hero-visuel" aria-hidden="true">
+    <div class="spirale-cadre">
+      <div class="spirale-tour">
+        <svg class="spirale" viewBox="-310 -310 620 620" focusable="false">
+          <defs>
+            <radialGradient id="fondu" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="320">
+              <stop offset=".2" stop-color="#fbf1dc"/>
+              <stop offset=".46" stop-color="#f6e6c8" stop-opacity=".78"/>
+              <stop offset=".82" stop-color="#f3e2c2" stop-opacity=".2"/>
+              <stop offset="1" stop-color="#f3e2c2" stop-opacity=".08"/>
+            </radialGradient>
+            <radialGradient id="fondu-or" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="320">
+              <stop offset=".2" stop-color="#efd27c"/>
+              <stop offset="1" stop-color="#ddb650" stop-opacity=".25"/>
+            </radialGradient>
+            <path id="p-texte" d="M0 -64C11.1 -64.7 22.6 -62.4 32.8 -57.3C43.1 -52.2 52.2 -44.3 58.8 -34.5C65.4 -24.6 69.4 -12.9 70.2 -0.7C71 11.5 68.6 24 63.1 35.3C57.5 46.6 48.9 56.6 38.2 63.8C27.5 71 14.7 75.5 1.5 76.4C-11.7 77.4 -25.4 74.8 -37.7 68.9C-50 62.9 -60.8 53.6 -68.7 42.1C-76.6 30.5 -81.5 16.7 -82.6 2.4C-83.7 -11.9 -81 -26.6 -74.7 -39.9C-68.4 -53.2 -58.5 -65 -46.1 -73.5C-33.7 -82.1 -18.9 -87.5 -3.5 -88.8C11.9 -90.1 27.8 -87.3 42.1 -80.6C56.4 -73.9 69 -63.3 78.3 -50.1C87.6 -36.9 93.4 -21.1 94.9 -4.7C96.4 11.8 93.6 28.8 86.5 44.1C79.5 59.4 68.3 73 54.3 83C40.3 93 23.5 99.4 6 101.1C-11.5 102.8 -29.7 99.9 -46 92.5C-62.4 85.2 -76.9 73.4 -87.6 58.6C-98.4 43.7 -105.3 25.9 -107.2 7.4C-109.2 -11.2 -106.2 -30.4 -98.6 -47.8C-90.9 -65.2 -78.5 -80.7 -62.9 -92.2C-47.3 -103.7 -28.5 -111.1 -8.9 -113.3C10.7 -115.6 31 -112.6 49.5 -104.6C67.9 -96.7 84.4 -83.7 96.7 -67.4C108.9 -51 116.9 -31.2 119.4 -10.6C122 10.1 119 31.6 110.8 51.1C102.5 70.6 89 88 71.9 101.1C54.8 114.1 34.1 122.7 12.4 125.5C-9.3 128.3 -32 125.4 -52.5 116.9C-73.1 108.4 -91.5 94.4 -105.4 76.6C-119.2 58.7 -128.4 37 -131.5 14.3C-134.7 -8.5 -131.8 -32.2 -123.1 -53.9C-114.4 -75.5 -99.9 -95 -81.3 -109.6C-62.7 -124.3 -40.1 -134.1 -16.3 -137.6C7.5 -141.1 32.4 -138.3 55.1 -129.4C77.8 -120.4 98.3 -105.4 113.8 -86.1C129.2 -66.8 139.7 -43.2 143.6 -18.4C147.4 6.4 144.7 32.4 135.6 56.2C126.5 80 111 101.5 91 117.8C71 134.2 46.5 145.3 20.7 149.5C-5.2 153.8 -32.3 151.2 -57.2 141.9C-82 132.7 -104.6 116.7 -121.8 96C-139 75.3 -150.8 49.9 -155.5 23.1C-160.1 -3.8 -157.7 -32.1 -148.3 -58C-138.9 -84 -122.5 -107.6 -101.1 -125.7C-79.7 -143.8 -53.4 -156.2 -25.6 -161.4C2.3 -166.5 31.7 -164.2 58.8 -154.6C85.9 -145.1 110.5 -128.3 129.5 -106.3C148.5 -84.2 161.7 -57.1 167.2 -28.2C172.8 0.7 170.7 31.2 161 59.4C151.4 87.6 134.2 113.3 111.5 133.2C88.9 153.1 60.8 167 30.9 173.1C1 179.1 -30.6 177.2 -59.9 167.5C-89.2 157.7 -116 140.1 -136.8 116.9C-157.6 93.6 -172.3 64.6 -178.9 33.8C-185.4 2.9 -183.7 -29.9 -173.9 -60.3C-164.1 -90.7 -146.2 -118.6 -122.3 -140.4C-98.4 -162.1 -68.6 -177.6 -36.7 -184.6C-4.8 -191.6 29.1 -190.2 60.6 -180.4C92.1 -170.5 121.1 -152.3 143.8 -127.8C166.5 -103.3 182.7 -72.7 190.3 -39.8C197.9 -6.9 196.8 28.1 186.9 60.7C177 93.3 158.4 123.5 133.4 147.1C108.3 170.8 76.8 187.8 43 196C9.2 204.1 -27 203.3 -60.7 193.4C-94.5 183.5 -125.8 164.6 -150.4 139C-175 113.4 -192.9 81.1 -201.6 46.3C-210.3 11.5 -209.8 -25.8 -199.9 -60.6C-190.1 -95.5 -170.9 -127.9 -144.7 -153.5C-118.6 -179.1 -85.5 -197.9 -49.7 -207.2C-14 -216.5 24.4 -216.3 60.4 -206.5C96.4 -196.7 130 -177.2 156.6 -150.5C183.2 -123.9 202.8 -90 212.7 -53.3C222.6 -16.6 222.8 22.9 213 60.1C203.3 97.2 183.6 131.9 156.4 159.5C129.2 187.1 94.6 207.6 56.9 218.2C19.3 228.7 -21.3 229.3 -59.6 219.6C-97.9 209.9 -133.7 190 -162.4 162.4C-191 134.7 -212.4 99.3 -223.6 60.7C-234.8 22.1 -235.8 -19.6 -226.2 -59C-216.6 -98.4 -196.5 -135.4 -168.4 -165.1C-140.2 -194.8 -104.1 -217.1 -64.6 -229C-25.1 -240.8 17.8 -242.2 58.3 -232.8C98.9 -223.3 137 -203.1 167.8 -174.5C198.5 -145.9 221.7 -109 234.3 -68.6C246.8 -28.1 248.7 15.8 239.4 57.5C230.1 99.2 209.7 138.5 180.6 170.3C151.6 202.1 114 226.3 72.7 239.5C31.3 252.8 -13.7 255.1 -56.5 246C-99.3 236.9 -139.9 216.3 -172.7 186.9C-205.6 157.4 -230.8 119.1 -244.7 76.9C-258.7 34.6 -261.5 -11.5 -252.6 -55.4C-243.7 -99.4 -223 -141.1 -193.2 -175.1C-163.3 -209 -124.3 -235.2 -81.2 -249.9C-38.1 -264.6 9.1 -267.9 54.2 -259.2C99.3 -250.5 142.2 -229.7 177.3 -199.5C212.3 -169.3 239.5 -129.6 255 -85.6C270.5 -41.6 274.3 6.6 265.8 52.9C257.3 99.1 236.5 143.2 205.9 179.4C175.3 215.6 135 243.7 90.2 260C45.3 276.3 -4 280.7 -51.4 272.4C-98.8 264.2 -144.1 243.3 -181.4 212.4C-218.7 181.5 -247.8 140.5 -264.9 94.8C-282 49.1 -287 -1.3 -279 -49.8C-271.1 -98.3 -250.2 -144.9 -218.9 -183.3C-187.7 -221.7 -146.1 -251.9 -99.5 -269.8C-53 -287.7 -1.5 -293.3 48.1 -285.6C97.8 -278 145.5 -257.1 185.1 -225.5C224.6 -193.9 255.9 -151.8 274.6 -104.4C293.4 -57 299.6 -4.5 292.2 46.3C284.9 97.1 264 146 232.2 186.7C200.3 227.4 157.6 259.8 109.3 279.4C61.1 299 7.6 305.8 -44.3 298.8C-96.3 291.8 -146.4 271 -188.3 238.9C-230.2 206.7 -263.6 163.4 -284.1 114.4C-304.5 65.4 -312 10.8 -305.4 -42.2C-298.7 -95.3 -278 -146.7 -245.6 -189.7C-213.2 -232.8 -169.4 -267.3 -119.6 -288.7C-69.8 -310 -14.2 -318.2 40 -311.9C94.2 -305.7 146.9 -285 191.1 -252.4C235.3 -219.8 270.9 -175.4 293.2 -124.8C315.5 -74.2 324.3 -17.6 318.5 37.7C312.6 93 292.1 146.9 259.3 192.3C226.5 237.7 181.5 274.4 130.2 297.6C78.8 320.8 21.2 330.5 -35.2 325C-91.7 319.6 -146.8 299.1 -193.4 266.2"/>
+          </defs>
+          <use href="#p-sillon" class="sillon-or"/>
+          <text class="spirale-texte"><textPath href="#p-texte"><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan><tspan class="f">Houmous</tspan><tspan class="d"> · </tspan><tspan class="f">Falafels</tspan><tspan class="d"> · </tspan><tspan class="f">Taboulé</tspan><tspan class="d"> · </tspan><tspan class="f">Baba ganoush</tspan><tspan class="d"> · </tspan><tspan class="f">Moussaka</tspan><tspan class="d"> · </tspan><tspan class="m">CUISINE DE LA CHEFFE TANIA</tspan><tspan class="d"> · </tspan><tspan class="f">fait maison</tspan><tspan class="d"> · </tspan><tspan class="m">HALAL</tspan><tspan class="d"> · </tspan><tspan class="f">plats végétariens &amp; végans</tspan><tspan class="d"> · </tspan><tspan class="m">11 RUE DE LA DIVISION-LECLERC</tspan><tspan class="d"> · </tspan></textPath></text>
+        </svg>
+      </div>
+      <svg class="flaque" viewBox="-65 -65 130 130" focusable="false">
+        <defs>
+          <radialGradient id="huile" cx=".42" cy=".38" r=".66">
+            <stop offset="0" stop-color="#f8e39a"/>
+            <stop offset=".42" stop-color="#e3bd55"/>
+            <stop offset=".82" stop-color="#b98d29"/>
+            <stop offset="1" stop-color="#8a6419"/>
+          </radialGradient>
+        </defs>
+        <circle r="52" fill="url(#huile)"/>
+        <circle r="50.5" fill="none" stroke="#5c3a08" stroke-opacity=".35" stroke-width="3"/>
+        <ellipse cx="-16" cy="-22" rx="17" ry="7.5" transform="rotate(-32 -16 -22)" fill="#fffbe8" opacity=".38"/>
+        <g fill="#6e1426">
+          <circle cx="14" cy="-8" r="2.4"/><circle cx="20" cy="2" r="1.6"/><circle cx="6" cy="10" r="2"/><circle cx="-10" cy="16" r="1.5"/>
+          <circle cx="24" cy="-16" r="1.3"/><circle cx="-2" cy="-4" r="1.2"/><circle cx="-22" cy="4" r="1.8"/><circle cx="10" cy="24" r="1.3"/>
+          <circle cx="30" cy="12" r="1.1"/><circle cx="-6" cy="30" r="1.1"/>
+        </g>
+        <g fill="#556f2b">
+          <rect x="18" y="12" width="5" height="2.2" rx="1.1" transform="rotate(30 20 13)"/>
+          <rect x="-16" y="-4" width="4.4" height="2" rx="1" transform="rotate(-40 -14 -3)"/>
+          <rect x="2" y="-20" width="4" height="2" rx="1" transform="rotate(70 4 -19)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-haut">
+    <span class="pastille"><i aria-hidden="true"></i>Maquette</span>
+    <span class="lieu">Grande Île · Strasbourg</span>
+  </div>
+
+  <div class="hero-texte">
+    <h1><span class="l1">Houmous</span> <span class="l2"><em>&amp;</em>Co</span></h1>
+    <p class="surtitre">Restaurant &amp; traiteur libanais</p>
+    <p class="chapo">Pour les fêtes, les mezze de la cheffe Tania sur votre table : <strong>faits maison, halal</strong>, à emporter ou en service traiteur.</p>
+    <a class="cta" href="#commande" id="cta-haut"><span>Commander pour les fêtes</span><span class="cta-rond" aria-hidden="true"><svg><use href="#mini"/></svg></span></a>
+    <ul class="hero-meta">
+      <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>11 rue de la Division-Leclerc</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-etoile"/></svg>4,7/5 · 2&nbsp;259 notes sur Rankeat</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="fetes" aria-labelledby="t-fetes">
+    <svg class="fetes-spirale" viewBox="-310 -310 620 620" aria-hidden="true" focusable="false"><use href="#p-sillon"/></svg>
+    <div class="enveloppe">
+      <p class="label apparait"><svg aria-hidden="true"><use href="#mini"/></svg>Fêtes de fin d'année</p>
+      <h2 id="t-fetes" class="apparait">Une grande tablée&nbsp;? <em>Les mezze s'en chargent.</em></h2>
+      <div class="apparait">
+        <p>Repas de famille, réception, buffet entre collègues&nbsp;: composez votre commande, choisissez le jour du retrait. Pour les groupes, nous proposons aussi un service traiteur.</p>
+        <ul class="points">
+          <li>Repas de groupe</li><li>Réceptions</li><li>Buffet</li><li>À emporter</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="carte" id="carte" aria-labelledby="t-carte">
+    <svg class="relief" viewBox="-310 -310 620 620" aria-hidden="true" focusable="false">
+      <use href="#p-sillon" class="creux"/>
+      <use href="#p-sillon" class="lumiere" transform="translate(1.6 2.2)"/>
+    </svg>
+    <div class="enveloppe">
+      <p class="label apparait"><svg aria-hidden="true"><use href="#mini"/></svg>En cuisine</p>
+      <h2 id="t-carte" class="apparait">Les recettes traditionnelles de la cheffe Tania, <em>faites maison.</em></h2>
+      <div class="carte-grille">
+        <div class="vedettes apparait">
+          <p class="mention"><svg aria-hidden="true"><use href="#i-etoile"/></svg>Les plus cités dans les avis</p>
+          <ul class="plats-vedettes">
+            <li>Houmous</li>
+            <li><span class="et" aria-hidden="true">&amp;</span>Falafels</li>
+          </ul>
+        </div>
+        <div class="apparait">
+          <div class="classiques">
+            <p class="sous-titre">Les mezze classiques</p>
+            <ul class="liste-mezze"><li>Taboulé</li><li>Baba ganoush</li><li>Moussaka</li></ul>
+          </div>
+          <ul class="engagements">
+            <li><svg aria-hidden="true"><use href="#mini"/></svg>Cuisine halal</li>
+            <li><svg aria-hidden="true"><use href="#mini"/></svg>Nombreux plats végétariens et végans</li>
+            <li><svg aria-hidden="true"><use href="#mini"/></svg>Sur place, à emporter et service traiteur</li>
+          </ul>
+        </div>
+      </div>
+      <p class="a-fournir">Carte complète et tarifs&nbsp;: [à fournir].</p>
+    </div>
+  </section>
+
+  <section class="commande" id="commande" aria-labelledby="t-commande">
+    <svg class="commande-spirale" viewBox="-310 -310 620 620" aria-hidden="true" focusable="false"><use href="#p-sillon"/></svg>
+    <div class="enveloppe">
+      <div class="commande-intro">
+        <p class="label apparait"><svg aria-hidden="true"><use href="#mini"/></svg>Commande à emporter</p>
+        <h2 id="t-commande" class="apparait">Composez, <em>nous préparons.</em></h2>
+        <ol class="etapes apparait">
+          <li><span><strong>Choisissez vos plats</strong> et précisez les quantités.</span></li>
+          <li><span><strong>Indiquez le jour et l'heure</strong> où vous passez la chercher.</span></li>
+          <li><span><strong>Envoyez sur WhatsApp</strong>&nbsp;: nous vous confirmons la commande.</span></li>
+        </ol>
+        <p class="appel-alt apparait">Vous préférez en parler&nbsp;? Appelez-nous au <a href="tel:+33390418311">03&nbsp;90&nbsp;41&nbsp;83&nbsp;11</a>.</p>
+      </div>
+
+      <div class="bon-ombre apparait">
+        <form class="bon" id="form" novalidate>
+          <div class="bon-tete"><span>Bon de commande</span><b>Houmous &amp; Co</b></div>
+          <div class="champs">
+            <fieldset class="champ">
+              <legend>Vos plats</legend>
+              <div class="puces" id="puces">
+                <button type="button" class="puce" data-plat="Houmous" aria-pressed="false"><svg aria-hidden="true"><use href="#mini"/></svg>Houmous</button>
+                <button type="button" class="puce" data-plat="Falafels" aria-pressed="false"><svg aria-hidden="true"><use href="#mini"/></svg>Falafels</button>
+                <button type="button" class="puce" data-plat="Taboulé" aria-pressed="false"><svg aria-hidden="true"><use href="#mini"/></svg>Taboulé</button>
+                <button type="button" class="puce" data-plat="Baba ganoush" aria-pressed="false"><svg aria-hidden="true"><use href="#mini"/></svg>Baba ganoush</button>
+                <button type="button" class="puce" data-plat="Moussaka" aria-pressed="false"><svg aria-hidden="true"><use href="#mini"/></svg>Moussaka</button>
+              </div>
+              <p class="aide" id="aide-commande">Touchez un plat pour l'ajouter, puis indiquez les quantités. Vous pouvez aussi tout écrire vous-même.</p>
+              <label for="commande-txt">Votre commande</label>
+              <textarea id="commande-txt" name="commande" aria-describedby="aide-commande e-commande" placeholder="Ex.&nbsp;: houmous pour 10 personnes, 30 falafels…"></textarea>
+              <p class="erreur" id="e-commande" hidden></p>
+            </fieldset>
+
+            <div class="champ">
+              <label for="personnes">Nombre de personnes <span class="facultatif">facultatif</span></label>
+              <input id="personnes" name="personnes" type="number" min="1" max="500" inputmode="numeric" style="max-width:160px">
+            </div>
+
+            <div class="duo">
+              <div class="champ">
+                <label for="date">Jour du retrait</label>
+                <input id="date" name="date" type="date" aria-describedby="e-date">
+                <p class="erreur" id="e-date" hidden></p>
+              </div>
+              <div class="champ">
+                <label for="heure">Vers quelle heure</label>
+                <input id="heure" name="heure" type="time" value="12:00" step="900" aria-describedby="e-heure">
+                <p class="erreur" id="e-heure" hidden></p>
+              </div>
+            </div>
+
+            <div class="champ">
+              <label for="nom">Votre nom</label>
+              <input id="nom" name="nom" autocomplete="name" aria-describedby="e-nom">
+              <p class="erreur" id="e-nom" hidden></p>
+            </div>
+            <div class="champ">
+              <label for="tel">Votre téléphone</label>
+              <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="e-tel">
+              <p class="erreur" id="e-tel" hidden></p>
+            </div>
+
+            <button class="cta envoyer" type="submit"><span>Commander sur WhatsApp</span><span class="cta-rond" aria-hidden="true"><svg><use href="#i-wa"/></svg></span></button>
+          </div>
+          <p class="demo-note">Démonstration&nbsp;: rien n'est envoyé.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="infos" id="infos" aria-labelledby="t-infos">
+    <div class="enveloppe">
+      <p class="label apparait"><svg aria-hidden="true"><use href="#mini"/></svg>Infos pratiques</p>
+      <h2 id="t-infos" class="apparait">En plein centre, <em>sur la Grande Île.</em></h2>
+      <div class="infos-grille">
+        <div class="apparait">
+          <h3>Horaires <span class="tag">à confirmer</span></h3>
+          <table class="horaires">
+            <tbody>
+              <tr data-jour="0"><th scope="row">Lundi</th><td>11h30 – 21h30</td></tr>
+              <tr data-jour="1"><th scope="row">Mardi</th><td>11h30 – 21h30</td></tr>
+              <tr data-jour="2"><th scope="row">Mercredi</th><td>11h30 – 21h30</td></tr>
+              <tr data-jour="3"><th scope="row">Jeudi</th><td>11h30 – 21h30</td></tr>
+              <tr data-jour="4"><th scope="row">Vendredi</th><td>11h30 – 22h00</td></tr>
+              <tr data-jour="5"><th scope="row">Samedi</th><td>11h30 – 22h00</td></tr>
+              <tr data-jour="6"><th scope="row">Dimanche</th><td>Fermé</td></tr>
+            </tbody>
+          </table>
+          <p class="note-h">Horaires relevés sur des annuaires en ligne, qui ne concordent pas tous pour le vendredi et le samedi.</p>
+        </div>
+        <div class="apparait">
+          <h3>Adresse</h3>
+          <address>11 rue de la Division-Leclerc<br>67000 Strasbourg</address>
+          <p class="quartier">Centre-ville, Grande Île</p>
+          <div class="actions">
+            <a class="btn2" href="tel:+33390418311"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+            <a class="btn2" href="https://www.google.com/maps/search/?api=1&amp;query=11%20rue%20de%20la%20Division-Leclerc%2C%2067000%20Strasbourg" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+          </div>
+          <p class="services">Sur place, à emporter, et service traiteur pour vos repas de groupe et vos réceptions. Téléphone&nbsp;: 03&nbsp;90&nbsp;41&nbsp;83&nbsp;11.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="enveloppe">
+    <div>
+      <p class="pied-nom">Houmous <em>&amp;</em> Co</p>
+      <p>Restaurant et traiteur libanais<br>11 rue de la Division-Leclerc, 67000 Strasbourg</p>
+    </div>
+    <p class="sources">Note de 4,7/5 sur 2&nbsp;259 notes&nbsp;: Rankeat, classement mis à jour en juillet 2026. Spécialités et horaires relevés sur des annuaires publics (Rankeat, HappyCow, Wanderlog, Spinach).</p>
+    <p class="avert">Page de démonstration non officielle&nbsp;: aucune commande n'est transmise.</p>
+    <p class="credit">Maquette préparée par BRUNFRAME</p>
+  </div>
+</footer>
+
+<div class="barre cachee" id="barre">
+  <a class="cta" href="#commande" tabindex="-1"><span>Commander pour les fêtes</span><span class="cta-rond" aria-hidden="true"><svg><use href="#mini"/></svg></span></a>
+</div>
+
+<dialog id="apercu" aria-labelledby="ap-titre" aria-describedby="ap-note">
+  <div class="ap">
+    <div class="ap-haut">
+      <div>
+        <p class="label">Aperçu</p>
+        <h2 id="ap-titre">Ce que Houmous&nbsp;&amp;&nbsp;Co reçoit</h2>
+      </div>
+      <button class="fermer-x" type="button" data-fermer aria-label="Fermer l'aperçu"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="telephone" role="group" aria-label="Conversation WhatsApp simulée">
+      <div class="tel-barre">
+        <svg class="ret" aria-hidden="true"><use href="#i-retour"/></svg>
+        <span class="avatar" id="ap-initiales" aria-hidden="true">?</span>
+        <div class="tel-id"><b id="ap-nom">Client</b><small id="ap-tel"></small></div>
+      </div>
+      <div class="tel-fil">
+        <span class="jour-chip">Aujourd'hui</span>
+        <div class="bulle"><span id="ap-message"></span><span class="h" id="ap-heure"></span></div>
+      </div>
+    </div>
+    <p class="ap-note" id="ap-note"><strong>Démonstration&nbsp;: rien n'est envoyé.</strong> Une fois le site en service, ce message arriverait sur le WhatsApp du restaurant (numéro&nbsp;[à&nbsp;fournir]).</p>
+    <button class="cta" type="button" data-fermer>Modifier ma commande</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var racine = document.documentElement;
+  var mouvement = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: no-preference)").matches);
+  var io = "IntersectionObserver" in window;
+  if (mouvement && io) racine.classList.add("anim");
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function paris() {
+    var d = new Date();
+    try { return new Date(d.toLocaleString("en-US", { timeZone: "Europe/Paris" })); } catch (e) { return d; }
+  }
+  var maintenant = paris();
+  var jourIdx = (maintenant.getDay() + 6) % 7;
+
+  /* Ligne du jour dans les horaires */
+  var ligne = document.querySelector('.horaires tr[data-jour="' + jourIdx + '"]');
+  if (ligne) {
+    ligne.classList.add("aujourdhui");
+    var badge = document.createElement("span");
+    badge.className = "auj"; badge.textContent = "aujourd'hui";
+    ligne.querySelector("th").appendChild(badge);
+  }
+
+  /* Apparitions + spirale qui tourne avec le défilement */
+  if (racine.classList.contains("anim")) {
+    var obs = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("vu"); obs.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -6% 0px" });
+    Array.prototype.forEach.call(document.querySelectorAll(".apparait"), function (el) { obs.observe(el); });
+    var tour = document.querySelector(".spirale-tour"), enAttente = false;
+    window.addEventListener("scroll", function () {
+      if (enAttente || !tour) return;
+      enAttente = true;
+      requestAnimationFrame(function () { enAttente = false; tour.style.setProperty("--tour", (window.scrollY * 0.09).toFixed(1) + "deg"); });
+    }, { passive: true });
+  }
+
+  /* Barre flottante : cachée quand le bouton du haut ou le formulaire est visible */
+  var barre = document.getElementById("barre"), lienBarre = barre.querySelector("a");
+  var surveilles = [document.getElementById("cta-haut"), document.getElementById("commande")];
+  function montrerBarre(oui) {
+    barre.classList.toggle("cachee", !oui);
+    lienBarre.tabIndex = oui ? 0 : -1;
+    if (oui) barre.removeAttribute("aria-hidden"); else barre.setAttribute("aria-hidden", "true");
+  }
+  if (io) {
+    var visibles = [];
+    var obsBarre = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) {
+        var i = visibles.indexOf(en.target);
+        if (en.isIntersecting && i < 0) visibles.push(en.target);
+        if (!en.isIntersecting && i > -1) visibles.splice(i, 1);
+      });
+      montrerBarre(visibles.length === 0);
+    });
+    surveilles.forEach(function (el) { if (el) obsBarre.observe(el); });
+  } else { montrerBarre(false); }
+
+  /* Puces des spécialités <-> texte libre */
+  var form = document.getElementById("form");
+  var zone = form.elements.commande;
+  var puces = Array.prototype.slice.call(document.querySelectorAll(".puce"));
+  function lignes() { return zone.value.split("\n"); }
+  function cle(t) { return t.trim().toLowerCase(); }
+  function contient(plat) { var p = cle(plat); return lignes().some(function (l) { return cle(l).indexOf(p) === 0; }); }
+  function synchro() { puces.forEach(function (b) { b.setAttribute("aria-pressed", contient(b.getAttribute("data-plat")) ? "true" : "false"); }); }
+  puces.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var plat = b.getAttribute("data-plat");
+      if (contient(plat)) {
+        zone.value = lignes().filter(function (l) { return cle(l).indexOf(cle(plat)) !== 0; }).join("\n").replace(/^\n+|\n+$/g, "");
+      } else {
+        var base = zone.value.replace(/\s+$/, "");
+        zone.value = (base ? base + "\n" : "") + plat + " : ";
+      }
+      synchro();
+      effacer("commande");
+    });
+  });
+  zone.addEventListener("input", synchro);
+
+  /* Date minimale = aujourd'hui (heure de Paris) */
+  var aujourdhui = maintenant.getFullYear() + "-" + pad(maintenant.getMonth() + 1) + "-" + pad(maintenant.getDate());
+  form.elements.date.min = aujourdhui;
+
+  /* Validation lisible */
+  function champ(nom) { return form.elements[nom]; }
+  function erreur(nom, texte) {
+    var el = document.getElementById("e-" + nom);
+    el.textContent = texte; el.hidden = false;
+    champ(nom).setAttribute("aria-invalid", "true");
+  }
+  function effacer(nom) {
+    var el = document.getElementById("e-" + nom);
+    if (el) { el.hidden = true; el.textContent = ""; }
+    if (champ(nom)) champ(nom).removeAttribute("aria-invalid");
+  }
+  ["commande", "date", "heure", "nom", "tel"].forEach(function (n) {
+    champ(n).addEventListener("input", function () { effacer(n); });
+    champ(n).addEventListener("change", function () { effacer(n); });
+  });
+  function minutes(h) { var p = (h || "").split(":"); return p.length === 2 ? (+p[0]) * 60 + (+p[1]) : NaN; }
+
+  function valider() {
+    var premiers = [];
+    ["commande", "date", "heure", "nom", "tel"].forEach(effacer);
+    var cmd = zone.value.replace(/\s+$/, "");
+    if (!cmd.trim()) { erreur("commande", "Indiquez ce que vous souhaitez commander."); premiers.push("commande"); }
+    var d = champ("date").value;
+    if (!d) { erreur("date", "Choisissez le jour du retrait."); premiers.push("date"); }
+    else if (d < aujourdhui) { erreur("date", "Choisissez une date à partir d'aujourd'hui."); premiers.push("date"); }
+    else if (new Date(d + "T12:00:00").getDay() === 0) { erreur("date", "Nous sommes fermés le dimanche : choisissez un autre jour."); premiers.push("date"); }
+    var m = minutes(champ("heure").value);
+    if (champ("heure").value && (isNaN(m) || m < 690 || m > 1320)) { erreur("heure", "Retrait entre 11h30 et 21h30 (22h00 le vendredi et le samedi)."); premiers.push("heure"); }
+    if (!champ("nom").value.trim()) { erreur("nom", "Indiquez votre nom."); premiers.push("nom"); }
+    var chiffres = champ("tel").value.replace(/\D/g, "");
+    if (chiffres.length < 10) { erreur("tel", "Indiquez un numéro de téléphone complet."); premiers.push("tel"); }
+    if (premiers.length) { champ(premiers[0]).focus(); return false; }
+    return true;
+  }
+
+  /* Aperçu WhatsApp (aucun envoi : le numéro vérifié est un fixe) */
+  var dlg = document.getElementById("apercu");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!valider()) return;
+    var date = new Date(champ("date").value + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+    var heure = champ("heure").value ? champ("heure").value.replace(":", "h") : "";
+    var pers = parseInt(form.elements.personnes.value, 10);
+    var nom = champ("nom").value.trim(), tel = champ("tel").value.trim();
+    var msg = ["Bonjour Houmous & Co,", "je souhaite passer une commande à emporter.", "",
+      "Retrait : " + date + (heure ? " vers " + heure : "")];
+    if (pers > 0) msg.push("Pour " + pers + " personne" + (pers > 1 ? "s" : ""));
+    msg.push("", zone.value.trim(), "", "Nom : " + nom, "Tél : " + tel);
+    document.getElementById("ap-message").textContent = msg.join("\n");
+    document.getElementById("ap-nom").textContent = nom;
+    document.getElementById("ap-tel").textContent = tel;
+    document.getElementById("ap-initiales").textContent = nom.split(/\s+/).map(function (p) { return p.charAt(0); }).join("").slice(0, 2).toUpperCase() || "?";
+    var h = paris();
+    document.getElementById("ap-heure").textContent = pad(h.getHours()) + ":" + pad(h.getMinutes());
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+  });
+  function fermer() { if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
+  Array.prototype.forEach.call(dlg.querySelectorAll("[data-fermer]"), function (b) { b.addEventListener("click", fermer); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) fermer(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Chocolat Noisette — chocolatier, Faubourg-de-Pierre, Strasbourg</title>
+<meta name="description" content="Maquette pour Chocolat Noisette, chocolaterie familiale du 18, rue du Faubourg-de-Pierre à Strasbourg : commandes de fêtes et retrait en boutique.">
+<meta name="theme-color" content="#1b110c">
+<style>
+@font-face{font-family:"Libre Caslon Text";src:url(fonts/libre-caslon-text-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Caslon Text";src:url(fonts/libre-caslon-text-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Work Sans";src:url(fonts/work-sans-latin-500-normal.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
+:root{
+  color-scheme:dark;
+  --papier:#1b110c;--papier-2:#24170f;--creux:#120a07;
+  --encre:#f2e7d5;--encre-2:#d6c6ae;--encre-3:#ad9a80;
+  --noisette:#c99555;--noisette-2:#e3b97f;--noisette-3:#8c5a2c;
+  --vermillon:#ff8a66;
+  --trait:rgba(242,231,213,.18);--trait-2:rgba(242,231,213,.4);
+  --caslon:"Libre Caslon Text","Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --work:"Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --dorure:linear-gradient(100deg,#f7dcaa 0%,#c99555 22%,#7f5028 40%,#d9a86a 52%,#f5d5a0 60%,#b07a40 76%,#e9c18a 100%);
+  --filet:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6' preserveAspectRatio='none'%3E%3Cpath d='M0 3C40 2.9 70 1.3 100 .9V5.1C70 4.7 40 3.1 0 3Z' fill='%23c99555'/%3E%3C/svg%3E");
+  --filet-d:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6' preserveAspectRatio='none'%3E%3Cpath d='M100 3C60 2.9 30 1.3 0 .9V5.1C30 4.7 60 3.1 100 3Z' fill='%23c99555'/%3E%3C/svg%3E");
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .96 0 0 0 0 .86 0 0 0 0 .72 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--papier)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--papier) var(--grain);color:var(--encre);font:400 17px/1.6 var(--caslon);padding-bottom:88px;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-kerning:normal}
+a{color:inherit}
+p{margin:0}
+:focus-visible{outline:2px solid var(--noisette-2);outline-offset:3px}
+.nw{white-space:nowrap}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Ornements ---------- */
+.noix{width:19px;height:19px;flex:none;color:var(--noisette);--cap:#efdcbc}
+.filet{display:flex;align-items:center;justify-content:center;gap:10px;width:100%}
+.filet i{display:block;height:5px;flex:1;max-width:120px;background:var(--filet) center/100% 100% no-repeat;transform-origin:right center}
+.filet i:last-child{background-image:var(--filet-d);transform-origin:left center}
+.cadre-double{position:relative;border:1px solid var(--trait-2)}
+.cadre-double::before{content:"";position:absolute;inset:4px;border:1px solid var(--trait);pointer-events:none}
+.coin{position:absolute;width:9px;height:9px;background:var(--papier);border:1px solid var(--noisette);transform:rotate(45deg)}
+.coin:nth-of-type(1){top:-5px;left:-5px}.coin:nth-of-type(2){top:-5px;right:-5px}
+.coin:nth-of-type(3){bottom:-5px;left:-5px}.coin:nth-of-type(4){bottom:-5px;right:-5px}
+.petites-cap{font:500 11.5px/1.3 var(--work);letter-spacing:.2em;text-transform:uppercase}
+.epreuve{display:inline-flex;align-items:baseline;gap:7px;font:italic 400 15px/1.4 var(--caslon);color:var(--vermillon)}
+.epreuve::before{content:"";flex:none;width:12px;height:9px;transform:translateY(-1px);
+  background:linear-gradient(currentColor,currentColor) 0 100%/100% 1.5px no-repeat,
+    linear-gradient(currentColor,currentColor) 0 0/1.5px 100% no-repeat}
+
+/* ---------- La une (premier écran) ---------- */
+.une{position:relative;padding:10px;background:
+  radial-gradient(90% 55% at 50% 58%,rgba(201,149,85,.13),transparent 70%),
+  radial-gradient(140% 90% at 50% 0%,transparent 55%,rgba(0,0,0,.35) 100%)}
+.une>.cadre-double{min-height:calc(100svh - 20px);padding:16px 18px 26px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.tampon{align-self:flex-end;margin:2px 2px 6px 0;padding:6px 9px 6px 11px;color:var(--vermillon);border:1.5px solid currentColor;
+  box-shadow:0 0 0 2px var(--papier),0 0 0 3px rgba(255,138,102,.5);transform:rotate(-4deg);background:rgba(255,138,102,.06)}
+.surtitre{color:var(--encre-2);margin-top:6px}
+.une .filet{margin:14px 0 12px}
+.nom{margin:0;font-weight:400;color:var(--encre)}
+.nom-1{display:block;font:italic 400 31px/1.05 var(--caslon);color:var(--noisette-2)}
+.nom-2{display:block;font:400 clamp(60px,20.5vw,86px)/.98 var(--caslon);letter-spacing:-.018em;
+  text-shadow:0 1px 0 rgba(0,0,0,.7),0 -1px 0 rgba(255,236,210,.06)}
+.h-bas{display:flex;flex-direction:column;align-items:center;width:100%;flex:1;justify-content:space-between;gap:22px;margin-top:12px}
+.lieu{font:italic 400 17px/1.4 var(--caslon);color:var(--encre-2)}
+.lieu-2{display:none}
+.q{display:grid;justify-items:center;margin:0}
+.q-noir{font:italic 400 19px/1 var(--caslon);color:var(--encre)}
+.q-ligne{display:flex;align-items:flex-start;justify-content:center;margin:12px 0 2px}
+.q-chiffre,.q-pct{background:var(--dorure);background-size:220% 100%;background-position:0 0;-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.55))}
+.q-chiffre{font:400 clamp(170px,55vw,226px)/.8 var(--caslon);letter-spacing:-.04em;padding:0 .02em}
+.q-pct{font:400 clamp(54px,17vw,70px)/1 var(--caslon);margin:6px 0 0 6px}
+.q-cite{display:flex;align-items:center;gap:10px;color:var(--noisette-2);margin-top:8px}
+.q-cite::before,.q-cite::after{content:"";width:22px;height:1px;background:currentColor;opacity:.7}
+.h-acc{display:grid;justify-items:center;gap:20px}
+.accroche{font:400 20px/1.38 var(--caslon);max-width:21em;text-wrap:balance}
+.accroche em{color:var(--noisette-2)}
+.bord{display:none}
+.sommaire{display:none}
+
+/* ---------- Banderole (appel à l'action) ---------- */
+.banderole{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;
+  width:min(100%,330px);padding:0 38px;color:var(--papier);text-decoration:none;font:500 13.5px/1.2 var(--work);letter-spacing:.16em;
+  text-transform:uppercase;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.banderole::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--noisette-2),var(--noisette) 55%,#b98448);
+  clip-path:polygon(0 0,100% 0,calc(100% - 16px) 50%,100% 100%,0 100%,16px 50%);transition:filter .2s,transform .12s}
+.banderole::after{content:"";position:absolute;z-index:-1;left:24px;right:24px;top:6px;bottom:6px;
+  border-top:1px dashed rgba(27,17,12,.45);border-bottom:1px dashed rgba(27,17,12,.45)}
+.banderole:hover::before{filter:brightness(1.07)}
+.banderole:active{transform:translateY(1px)}
+.banderole:active::before{filter:brightness(.9)}
+.banderole svg{width:20px;height:20px;flex:none}
+
+/* ---------- Sections ---------- */
+.section{max-width:1120px;margin:0 auto;padding:72px 20px 8px;scroll-margin-top:12px}
+.rubrique{text-align:center;margin:0 0 34px;font-weight:400}
+.rubrique .num{display:flex;align-items:center;justify-content:center;gap:14px;font:italic 400 19px/1 var(--caslon);color:var(--noisette)}
+.rubrique .num::before,.rubrique .num::after{content:"";width:58px;height:5px;background:var(--filet) center/100% 100% no-repeat;transform-origin:right center}
+.rubrique .num::after{background-image:var(--filet-d);transform-origin:left center}
+.rubrique .titre{display:block;margin-top:14px;font:400 clamp(31px,8.4vw,48px)/1.08 var(--caslon);color:var(--encre);text-wrap:balance;letter-spacing:-.01em}
+.rubrique .titre em{color:var(--noisette-2)}
+.chapeau{max-width:34em;margin:-14px auto 34px;text-align:center;color:var(--encre-2);text-wrap:balance}
+
+/* I — étapes */
+.etapes{list-style:none;margin:0 auto;padding:0;max-width:980px;counter-reset:e}
+.etapes li{display:grid;grid-template-columns:132px 1fr;gap:4px 14px;align-items:baseline;padding:18px 0;border-top:1px solid var(--trait)}
+.etapes li:last-child{border-bottom:1px solid var(--trait)}
+.e-verbe{font:italic 400 23px/1.1 var(--caslon);color:var(--noisette-2)}
+.e-verbe::before{counter-increment:e;content:counter(e) ".";display:block;font:500 11px/1 var(--work);letter-spacing:.2em;color:var(--encre-3);margin-bottom:6px}
+.e-texte{color:var(--encre-2)}
+
+/* II — la carte */
+.carte-grille{display:grid;gap:44px}
+.carte{padding:30px 20px 26px}
+.carte-entete{text-align:center;color:var(--encre-3);margin-bottom:18px}
+.ligne{display:flex;align-items:baseline;gap:0}
+.l-nom{font:400 27px/1.15 var(--caslon)}
+.l-points{flex:1;min-width:20px;height:4px;margin:0 10px;align-self:baseline;
+  background:radial-gradient(circle,var(--encre-3) 1.15px,transparent 1.6px) 0 0/9px 4px repeat-x}
+.l-val{font:400 27px/1.15 var(--caslon);color:var(--noisette-2);white-space:nowrap}
+.l-cite{margin-top:10px;color:var(--noisette)}
+.l-desc{margin-top:10px;color:var(--encre-2);max-width:30em;text-wrap:pretty}
+.reglette{position:relative;margin:30px 4px 6px;padding-top:24px}
+.r-piste{position:relative;height:8px;border:1px solid var(--trait-2);background:var(--creux)}
+.r-plein{position:absolute;left:0;top:0;bottom:0;width:87%;background:var(--dorure);background-size:220% 100%}
+.r-grad{height:9px;margin-top:3px;background:repeating-linear-gradient(90deg,var(--encre-3) 0 1px,transparent 1px 10%);
+  border-right:1px solid var(--encre-3)}
+.r-repere{position:absolute;top:0;left:87%;transform:translateX(-50%);font:500 12px/1 var(--work);letter-spacing:.06em;color:var(--noisette-2)}
+.r-repere::after{content:"";position:absolute;left:50%;top:15px;margin-left:-4px;border:4px solid transparent;border-top-color:var(--noisette-2);border-bottom:0}
+.r-bornes{display:flex;justify-content:space-between;margin-top:6px;font:500 11px/1 var(--work);letter-spacing:.08em;color:var(--encre-3)}
+.carte .epreuve{margin-top:24px}
+.maison h3{display:flex;align-items:center;gap:10px;margin:0 0 16px;color:var(--encre-3);font-weight:500}
+.maison p{text-wrap:pretty}
+.maison p+p{margin-top:14px}
+.maison .grand{font:400 23px/1.4 var(--caslon);color:var(--encre)}
+.maison .petit{color:var(--encre-2);font-size:16px}
+
+/* III — bon de commande */
+.bon{position:relative;max-width:780px;margin:0 auto;padding:44px 20px 30px;background:var(--papier-2) var(--grain);border:1px solid var(--trait)}
+.bon::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:9px;
+  background:radial-gradient(circle at 7px 0,var(--papier) 4.5px,transparent 5px) 0 0/14px 9px repeat-x}
+.bon::after{content:"";position:absolute;left:14px;right:14px;top:18px;border-top:1px dashed var(--trait-2)}
+.bon .rubrique{margin-bottom:26px}
+.bon .chapeau{margin:-10px auto 30px}
+form{display:grid;gap:24px}
+.champ{display:grid;gap:8px;min-width:0}
+.champ>label,.groupe-titre{font:500 12px/1.2 var(--work);letter-spacing:.16em;text-transform:uppercase;color:var(--encre-2)}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 6px}
+.puce{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:8px 14px 8px 12px;font:500 14.5px/1.2 var(--work);color:var(--encre);
+  background:transparent;border:1px solid var(--trait-2);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .15s}
+.puce::before{content:"";width:11px;height:11px;flex:none;
+  background:linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat,linear-gradient(currentColor,currentColor) center/1.5px 100% no-repeat}
+.puce[aria-pressed="true"]{background:var(--noisette);border-color:var(--noisette);color:var(--papier)}
+.puce[aria-pressed="true"]::before{width:6px;height:11px;background:none;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-2px)}
+.puce.specialite{border-color:var(--noisette);color:var(--noisette-2)}
+.puce.specialite[aria-pressed="true"]{color:var(--papier)}
+.puce .noix{width:15px;height:15px;color:currentColor;--cap:currentColor}
+.puce:active{transform:scale(.97)}
+textarea,input{width:100%;font:500 16px/1.4 var(--work);color:var(--encre);background-color:rgba(242,231,213,.045);border:0;border-radius:0;
+  border-bottom:1px solid var(--encre-3);padding:12px 10px;-webkit-appearance:none;appearance:none}
+textarea{min-height:132px;resize:vertical;line-height:32px;padding:0 10px;border-bottom:0;
+  background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(242,231,213,.42) 31px 32px);background-attachment:local}
+input{min-height:50px}
+input::-webkit-date-and-time-value{text-align:left}
+::placeholder{color:#9d8b74;opacity:1}
+textarea:focus-visible,input:focus-visible{outline:2px solid var(--noisette-2);outline-offset:2px}
+[aria-invalid="true"]{border-bottom-color:var(--vermillon);box-shadow:inset 0 -1px 0 var(--vermillon)}
+.erreur{font:italic 400 15px/1.35 var(--caslon);color:var(--vermillon);min-height:0}
+.erreur:empty{display:none}
+.duo{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.aide{color:var(--encre-3);font-size:15px;font-style:italic;margin-top:-12px}
+.envoi{display:grid;justify-items:center;gap:14px;margin-top:8px}
+.envoi .banderole{width:min(100%,360px);padding:0 26px;letter-spacing:.1em;font-size:13px}
+.demo{color:var(--encre-3);font:italic 400 15px/1.4 var(--caslon);text-align:center}
+.envoi .epreuve{margin-top:-8px;font-size:14px}
+
+/* IV — nous trouver */
+.trouver{display:grid;gap:40px;max-width:980px;margin:0 auto}
+.adresse{text-align:center}
+.adresse .rue{font:400 27px/1.25 var(--caslon)}
+.adresse .ville{color:var(--encre-2);margin-top:4px}
+.adresse .quartier{color:var(--encre-3);margin-top:14px}
+.adresse .epreuve{margin-top:14px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.bouton2{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:60px;padding:8px 10px;text-decoration:none;
+  border:1px solid var(--trait-2);box-shadow:inset 0 0 0 3px var(--papier),inset 0 0 0 4px var(--trait);font:500 12.5px/1.2 var(--work);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--encre);transition:border-color .2s,color .2s}
+.bouton2 small{font:italic 400 14px/1.2 var(--caslon);letter-spacing:0;text-transform:none;color:var(--encre-2)}
+.bouton2:hover{border-color:var(--noisette);color:var(--noisette-2)}
+.bouton2:active{transform:translateY(1px)}
+.horaires{padding:26px 18px 24px;text-align:center}
+.horaires h3{margin:0 0 18px;color:var(--encre-3);font-weight:500}
+.jours{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:0 0 20px;padding:0;list-style:none}
+.jours li{display:grid;gap:10px;justify-items:center;font:500 11px/1 var(--work);letter-spacing:.1em;text-transform:uppercase;color:var(--encre-2)}
+.jours li::after{content:"";width:100%;height:22px;border-bottom:1px dotted var(--encre-3)}
+.horaires .statut{font:italic 400 21px/1.3 var(--caslon);color:var(--vermillon)}
+.horaires .tel{margin-top:10px;color:var(--encre-2);font-size:16px;font-style:italic}
+
+/* ---------- Pied ---------- */
+footer{max-width:1120px;margin:0 auto;padding:72px 20px 34px;text-align:center;color:var(--encre-3);font-size:15px}
+footer .filet{margin-bottom:24px}
+footer p+p{margin-top:8px}
+footer .signature{font:500 11px/1.3 var(--work);letter-spacing:.2em;text-transform:uppercase;color:var(--encre-3)}
+
+/* ---------- Barre fixe ---------- */
+.barre{position:fixed;z-index:20;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(27,17,12,.93);border-top:1px solid var(--trait-2);box-shadow:0 -12px 30px -18px #000;transition:transform .32s cubic-bezier(.2,.7,.2,1),visibility .32s}
+@supports (backdrop-filter:blur(8px)){.barre{background:rgba(27,17,12,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}}
+.js .barre.cachee{transform:translateY(115%);visibility:hidden}
+
+/* ---------- Aperçu WhatsApp ---------- */
+dialog{width:min(94vw,410px);max-height:92vh;padding:18px 16px 14px;border:1px solid var(--trait-2);background:var(--papier-2);color:var(--encre);overflow:auto}
+dialog::backdrop{background:rgba(9,5,3,.8)}
+.dlg-sur{text-align:center;color:var(--encre-2);margin:2px 0 14px}
+.telephone{border-radius:22px;overflow:hidden;background:#efeae2;box-shadow:0 0 0 6px #0c0806,0 18px 40px -16px #000;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wa-tete{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#008069;color:#fff}
+.wa-tete svg{width:18px;height:18px;flex:none;opacity:.9}
+.avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#dfe5e7;color:#54656f;font:600 16px/1 system-ui,sans-serif;flex:none}
+.wa-id{display:grid;min-width:0;line-height:1.25}
+.wa-id b{font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wa-id small{font-size:13px;opacity:.9}
+.wa-fil{padding:14px 12px 18px;min-height:220px;display:grid;align-content:start;gap:10px;
+  background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1.5px);background-size:14px 14px}
+.wa-jour{justify-self:center;font-size:12px;color:#54656f;background:#fff;padding:5px 10px;border-radius:8px;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.wa-bulle{position:relative;justify-self:start;max-width:88%;background:#fff;color:#111b21;padding:8px 10px 6px 10px;border-radius:0 9px 9px 9px;
+  font-size:15px;line-height:1.4;box-shadow:0 1px .5px rgba(11,20,26,.13);white-space:pre-wrap;overflow-wrap:anywhere}
+.wa-bulle::before{content:"";position:absolute;left:-8px;top:0;border:8px solid transparent;border-top-color:#fff;border-right-color:#fff;border-width:0 8px 10px 0}
+.wa-bulle time{display:block;text-align:right;font-size:11.5px;color:#667781;margin-top:2px}
+.wa-saisie{justify-self:start;display:none;gap:5px;background:#fff;padding:12px 14px;border-radius:0 9px 9px 9px}
+.wa-saisie i{width:7px;height:7px;border-radius:50%;background:#8696a0;animation:point 1s infinite}
+.wa-saisie i:nth-child(2){animation-delay:.15s}.wa-saisie i:nth-child(3){animation-delay:.3s}
+@keyframes point{50%{transform:translateY(-3px);opacity:.5}}
+.en-saisie .wa-saisie{display:flex}
+.en-saisie .wa-bulle{display:none}
+.dlg-note{margin:16px 0 0;text-align:center;font:italic 400 17px/1.4 var(--caslon);color:var(--vermillon)}
+.dlg-note2{margin:6px auto 0;text-align:center;color:var(--encre-2);font-size:15px;max-width:26em}
+.fermer{display:block;margin:14px auto 0;min-height:44px;padding:8px 18px;background:none;border:1px solid var(--trait-2);color:var(--encre);
+  font:500 12px/1 var(--work);letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.fermer:hover{border-color:var(--noisette)}
+
+/* ---------- Mouvement (jamais sous prefers-reduced-motion) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .une .filet i{animation:tire 1s .2s both cubic-bezier(.2,.7,.2,1)}
+  .une .filet .noix{animation:pose .6s .1s both ease-out}
+  .nom{animation:encre .9s both ease-out}
+  .q-chiffre,.q-pct{animation:dorure 2.4s .35s both cubic-bezier(.3,.6,.2,1)}
+  .q:hover .q-chiffre,.q:hover .q-pct{animation:dorure 1.6s both cubic-bezier(.3,.6,.2,1)}
+  .anime .revele{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .anime .revele.vu{opacity:1;transform:none}
+  .anime .revele .rubrique .num::before,.anime .revele .rubrique .num::after{transform:scaleX(0);transition:transform 1s .2s cubic-bezier(.2,.7,.2,1)}
+  .anime .revele.vu .rubrique .num::before,.anime .revele.vu .rubrique .num::after{transform:none}
+  .anime .reglette .r-plein{width:0;transition:width 1.6s .3s cubic-bezier(.2,.7,.2,1)}
+  .anime .reglette .r-repere{left:0;opacity:0;transition:left 1.6s .3s cubic-bezier(.2,.7,.2,1),opacity .4s .3s}
+  .anime .vu .reglette .r-plein{width:87%}
+  .anime .vu .reglette .r-repere{left:87%;opacity:1}
+  .puce[aria-pressed="true"]{animation:tamponne .35s ease-out}
+}
+@keyframes tire{from{transform:scaleX(0)}}
+@keyframes pose{from{opacity:0;transform:scale(.4) rotate(-30deg)}}
+@keyframes encre{from{opacity:0;filter:blur(4px)}}
+@keyframes dorure{from{background-position:100% 0}to{background-position:0 0}}
+@keyframes tamponne{0%{transform:scale(1.08)}60%{transform:scale(.96)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media (forced-colors:active){
+  .q-chiffre,.q-pct{color:CanvasText;background:none}
+  .banderole{border:2px solid ButtonText}
+}
+
+/* ---------- Bureau ---------- */
+@media (min-width:900px){
+  body{font-size:18px;padding-bottom:0}
+  .une{padding:16px}
+  .une>.cadre-double{min-height:calc(100vh - 32px);padding:22px 64px 40px}
+  .tampon{position:absolute;top:26px;right:30px;margin:0}
+  .surtitre{margin-top:26px}
+  .une .filet{margin:18px 0 14px}
+  .une .filet i{max-width:220px}
+  .nom{display:flex;align-items:baseline;justify-content:center;gap:.3em;flex-wrap:wrap}
+  .nom-1{display:inline;font-size:clamp(60px,6.2vw,92px);line-height:1}
+  .nom-2{display:inline;font-size:clamp(88px,9.6vw,140px);line-height:1}
+  .h-bas{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:0;margin-top:34px;flex:1;max-width:1080px}
+  .h-lieu{padding-right:44px;text-align:right;align-self:center}
+  .lieu{font-size:20px;color:var(--encre)}
+  .lieu-2{display:block;margin-top:10px;color:var(--encre-3)}
+  .q{padding:4px 54px 10px;border-left:1px solid var(--trait);border-right:1px solid var(--trait)}
+  .q-chiffre{font-size:200px}
+  .h-acc{padding-left:44px;justify-items:start;text-align:left}
+  .accroche{font-size:21px;max-width:15em}
+  .une>.cadre-double{justify-content:flex-start}
+  .surtitre{margin-top:auto!important}
+  .h-bas{flex:none}
+  .sommaire{display:flex;justify-content:center;gap:34px;margin-top:auto;padding-top:34px}
+  .sommaire a{color:var(--encre-3);text-decoration:none;padding:6px 2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+  .sommaire a:hover{color:var(--noisette-2);border-bottom-color:currentColor}
+  .sommaire span{font:italic 400 15px/1 var(--caslon);letter-spacing:0;text-transform:none;color:var(--noisette);margin-right:8px}
+  .bord{display:block;position:absolute;top:50%;writing-mode:vertical-rl;color:var(--encre-3);white-space:nowrap}
+  .bord-g{left:17px;transform:translateY(-50%) rotate(180deg)}
+  .bord-d{right:17px;transform:translateY(-50%)}
+  .section{padding:110px 40px 10px}
+  .etapes{display:grid;grid-template-columns:repeat(3,1fr)}
+  .etapes li{display:block;padding:6px 34px 8px;border:0;border-left:1px solid var(--trait);text-align:center}
+  .etapes li:first-child{border-left:0}
+  .etapes li:last-child{border-bottom:0}
+  .e-verbe{display:block;font-size:34px;margin-bottom:12px}
+  .e-verbe::before{margin-bottom:12px}
+  .carte-grille{grid-template-columns:7fr 5fr;gap:0;align-items:center}
+  .carte{padding:44px 44px 36px}
+  .l-nom,.l-val{font-size:34px}
+  .maison{padding-left:56px}
+  .bon{padding:64px 64px 44px}
+  .duo{gap:22px}
+  .trouver{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .adresse .rue{font-size:32px}
+  .barre{left:auto;right:24px;bottom:24px;padding:0;background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .barre .banderole{filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}
+  .js .barre.cachee{transform:translateY(160%)}
+}
+@media (min-width:900px) and (max-height:760px){
+  .q-chiffre{font-size:170px}
+  .surtitre{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="noix" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2.6c.9 1.6 2.6 2.5 4.3 3.6 2.3 1.5 3.7 3.9 3.7 6.9 0 4.4-3.6 7.9-8 7.9s-8-3.5-8-7.9c0-3 1.4-5.4 3.7-6.9 1.7-1.1 3.4-2 4.3-3.6Z"/>
+    <path fill="var(--cap,#f2e7d5)" d="M4.3 15.4c1 3.3 4 5.6 7.7 5.6s6.7-2.3 7.7-5.6c-2.4 1-5 1.5-7.7 1.5s-5.3-.5-7.7-1.5Z"/>
+    <path fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1.1" stroke-linecap="round" d="M8.6 8.2c-1.3 1.1-2 2.6-2.2 4.2"/>
+  </symbol>
+</svg>
+
+<header class="une" id="haut">
+  <div class="cadre-double">
+    <span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span>
+    <span class="bord bord-g petites-cap" aria-hidden="true">Faubourg-de-Pierre · Strasbourg</span>
+    <span class="bord bord-d petites-cap" aria-hidden="true">Chocolaterie familiale</span>
+    <span class="tampon petites-cap">Maquette</span>
+    <p class="surtitre petites-cap">Chocolatier · Strasbourg</p>
+    <div class="filet" aria-hidden="true"><i></i><svg class="noix"><use href="#noix"/></svg><i></i></div>
+    <h1 class="nom"><span class="nom-1">Chocolat</span> <span class="nom-2">Noisette</span></h1>
+    <div class="h-bas">
+      <div class="h-lieu">
+        <p class="lieu">18, rue du Faubourg-de-Pierre</p>
+        <p class="lieu-2 petites-cap">Chocolaterie familiale<br>centre nord de Strasbourg</p>
+      </div>
+      <p class="q">
+        <span class="q-noir">Chocolat noir</span>
+        <span class="q-ligne"><span class="q-chiffre">87</span><span class="q-pct"><span class="vh">&nbsp;</span>%</span></span>
+        <span class="q-cite petites-cap">cité par nos clients</span>
+      </p>
+      <div class="h-acc">
+        <p class="accroche"><em>Pour les fêtes,</em> commandez vos chocolats à l’avance et <span class="nw">retirez-les</span> en boutique, au jour choisi.</p>
+        <a class="banderole" id="cta-haut" href="#commander">Composer ma commande</a>
+      </div>
+    </div>
+    <nav class="sommaire petites-cap" aria-label="Sommaire">
+      <a href="#fetes"><span>i</span>Les fêtes</a><a href="#carte"><span>ii</span>La carte</a><a href="#commander"><span>iii</span>Bon de commande</a><a href="#trouver"><span>iv</span>Nous trouver</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section revele" id="fetes" aria-labelledby="t-fetes">
+    <h2 class="rubrique" id="t-fetes"><span class="num">i</span><span class="titre">Les fêtes, <em>commandées d’avance</em></span></h2>
+    <ol class="etapes">
+      <li><span class="e-verbe">Composez</span><span class="e-texte">Écrivez votre commande, ou touchez une spécialité pour l’ajouter.</span></li>
+      <li><span class="e-verbe">Choisissez</span><span class="e-texte">Le jour et l’heure de votre retrait, rue du <span class="nw">Faubourg-de-Pierre</span>.</span></li>
+      <li><span class="e-verbe">Retirez</span><span class="e-texte">Nous vous confirmons la commande par message, puis vous passez la chercher.</span></li>
+    </ol>
+  </section>
+
+  <section class="section revele" id="carte" aria-labelledby="t-carte">
+    <h2 class="rubrique" id="t-carte"><span class="num">ii</span><span class="titre">La carte</span></h2>
+    <div class="carte-grille">
+      <div class="carte cadre-double">
+        <span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span>
+        <p class="carte-entete petites-cap">Spécialité de la maison</p>
+        <p class="ligne"><span class="l-nom">Chocolat noir</span><span class="l-points" aria-hidden="true"></span><span class="l-val">87&nbsp;%</span></p>
+        <p class="l-cite petites-cap">Cité par nos clients</p>
+        <p class="l-desc">Le chocolat noir que nos clients mettent en avant dans leurs avis.</p>
+        <div class="reglette" aria-hidden="true">
+          <span class="r-repere">87</span>
+          <div class="r-piste"><span class="r-plein"></span></div>
+          <div class="r-grad"></div>
+          <div class="r-bornes"><span>0</span><span>50</span><span>100&nbsp;%</span></div>
+        </div>
+        <p class="epreuve"><span class="vh">Note de maquette :</span>Vos autres créations : à compléter ensemble.</p>
+      </div>
+      <div class="maison">
+        <h3 class="petites-cap"><svg class="noix" aria-hidden="true"><use href="#noix"/></svg>La maison</h3>
+        <p class="grand">Une chocolaterie familiale, au <span class="nw">Faubourg-de-Pierre</span>, dans le centre nord de Strasbourg.</p>
+        <p>Dans leurs avis, nos clients saluent l’accueil et l’expertise de la maison.</p>
+        <p class="petit">Citée par le site Culture Trip parmi les adresses chocolat de Strasbourg.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section revele" id="commander" aria-labelledby="t-bon">
+    <div class="bon">
+      <h2 class="rubrique" id="t-bon"><span class="num">iii</span><span class="titre">Bon de commande <em>des fêtes</em></span></h2>
+      <p class="chapeau">Votre commande arrive sur notre WhatsApp. Nous vous répondons pour la confirmer.</p>
+      <form id="form" novalidate>
+        <div class="champ">
+          <label for="commande">Votre commande</label>
+          <div class="puces" role="group" aria-label="Ajouter à votre commande">
+            <button type="button" class="puce specialite" aria-pressed="false" data-ligne="Chocolat noir 87 %"><svg class="noix" aria-hidden="true"><use href="#noix"/></svg>Chocolat noir 87&nbsp;%</button>
+            <button type="button" class="puce" aria-pressed="false" data-ligne="Selon vos conseils">Selon vos conseils</button>
+            <button type="button" class="puce" aria-pressed="false" data-ligne="C’est pour offrir">Pour offrir</button>
+          </div>
+          <textarea id="commande" name="commande" rows="4" placeholder="Écrivez ici ce que vous souhaitez, avec les quantités." aria-describedby="err-commande"></textarea>
+          <p class="erreur" id="err-commande" aria-live="polite"></p>
+        </div>
+        <div class="duo">
+          <div class="champ">
+            <label for="date">Retrait le</label>
+            <input id="date" name="date" type="date" aria-describedby="err-date">
+            <p class="erreur" id="err-date" aria-live="polite"></p>
+          </div>
+          <div class="champ">
+            <label for="heure">Vers</label>
+            <input id="heure" name="heure" type="time" step="900" aria-describedby="err-heure">
+            <p class="erreur" id="err-heure" aria-live="polite"></p>
+          </div>
+        </div>
+        <p class="aide">Horaires d’ouverture à confirmer : nous validons le créneau avec vous.</p>
+        <div class="duo">
+          <div class="champ">
+            <label for="nom">Votre nom</label>
+            <input id="nom" name="nom" autocomplete="name" aria-describedby="err-nom">
+            <p class="erreur" id="err-nom" aria-live="polite"></p>
+          </div>
+          <div class="champ">
+            <label for="tel">Téléphone</label>
+            <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="err-tel">
+            <p class="erreur" id="err-tel" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="envoi">
+          <button class="banderole" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Commander sur WhatsApp
+          </button>
+          <p class="demo">Démonstration : rien n’est envoyé.</p>
+          <p class="epreuve"><span class="vh">Note de maquette :</span>Numéro WhatsApp de la boutique : à fournir.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section revele" id="trouver" aria-labelledby="t-trouver">
+    <h2 class="rubrique" id="t-trouver"><span class="num">iv</span><span class="titre">Nous trouver</span></h2>
+    <div class="trouver">
+      <div class="adresse">
+        <p class="rue">18, rue du <span class="nw">Faubourg-de-Pierre</span></p>
+        <p class="ville">67000 Strasbourg</p>
+        <p class="quartier petites-cap">Faubourg-de-Pierre · centre nord</p>
+        <p class="epreuve"><span class="vh">Note de maquette :</span>Numéro de rue et téléphone à confirmer.</p>
+        <div class="actions">
+          <a class="bouton2" href="tel:+33388226238">Appeler<small>03 88 22 62 38</small></a>
+          <a class="bouton2" href="https://www.google.com/maps/search/?api=1&amp;query=18%20rue%20du%20Faubourg-de-Pierre%2C%2067000%20Strasbourg" target="_blank" rel="noopener">Itinéraire<small>Google Maps</small></a>
+        </div>
+      </div>
+      <div class="horaires cadre-double">
+        <span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span><span class="coin" aria-hidden="true"></span>
+        <h3 class="petites-cap">Horaires</h3>
+        <ul class="jours" aria-hidden="true"><li>lun</li><li>mar</li><li>mer</li><li>jeu</li><li>ven</li><li>sam</li><li>dim</li></ul>
+        <p class="statut">Horaires à confirmer</p>
+        <p class="tel">Jours et heures d’ouverture : à compléter ensemble.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="filet" aria-hidden="true"><i></i><svg class="noix"><use href="#noix"/></svg><i></i></div>
+  <p>Page de démonstration non officielle : aucune commande n’est transmise.</p>
+  <p class="signature">Maquette préparée par BRUNFRAME</p>
+</footer>
+
+<div class="barre cachee" id="barre"><a class="banderole" href="#commander">Composer ma commande</a></div>
+
+<dialog id="apercu" aria-labelledby="dlg-titre">
+  <p class="dlg-sur petites-cap" id="dlg-titre">Le message reçu par la boutique</p>
+  <div class="telephone">
+    <div class="wa-tete">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.4 4.6 14 3.2 5.2 12l8.8 8.8 1.4-1.4L8 12z"/></svg>
+      <span class="avatar" id="wa-initiale" aria-hidden="true">?</span>
+      <span class="wa-id"><b id="wa-nom">Client</b><small id="wa-num"></small></span>
+    </div>
+    <div class="wa-fil" id="wa-fil">
+      <span class="wa-jour">Aujourd’hui</span>
+      <div class="wa-saisie" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="wa-bulle"><span id="wa-texte"></span><time id="wa-heure"></time></div>
+    </div>
+  </div>
+  <p class="dlg-note">Démonstration : rien n’est envoyé.</p>
+  <p class="dlg-note2">Une fois la page en ligne, chaque commande arrive ainsi sur le WhatsApp de la boutique.</p>
+  <button class="fermer" type="button" id="dlg-fermer">Fermer l’aperçu</button>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var racine = document.documentElement;
+  racine.classList.add("js");
+  var mouvement = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: no-preference)").matches);
+  if (mouvement) racine.classList.add("anime");
+  var NOM = "Chocolat Noisette";
+  /* Le numéro vérifié commence par 03 : pas de lien wa.me. */
+
+  /* Apparitions au défilement */
+  var aReveler = [].slice.call(document.querySelectorAll(".revele"));
+  if (mouvement && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("vu"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -12% 0px" });
+    aReveler.forEach(function (el) { io.observe(el); });
+  } else {
+    aReveler.forEach(function (el) { el.classList.add("vu"); });
+  }
+
+  /* Date minimale : demain, heure de Paris */
+  function deux(n) { return (n < 10 ? "0" : "") + n; }
+  var paris = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+  var demain = new Date(paris.getFullYear(), paris.getMonth(), paris.getDate() + 1);
+  var form = document.getElementById("form");
+  form.date.min = demain.getFullYear() + "-" + deux(demain.getMonth() + 1) + "-" + deux(demain.getDate());
+
+  /* Puces : ajoutent ou retirent une ligne de la commande */
+  var zone = form.commande;
+  var puces = [].slice.call(document.querySelectorAll(".puce"));
+  function lignes() { return zone.value.split("\n"); }
+  function trouve(l, texte) {
+    for (var i = 0; i < l.length; i++) { if (l[i].replace(/^[-•*]\s*/, "").trim().indexOf(texte) === 0) return i; }
+    return -1;
+  }
+  function synchro() {
+    var l = lignes();
+    puces.forEach(function (p) { p.setAttribute("aria-pressed", trouve(l, p.dataset.ligne) > -1 ? "true" : "false"); });
+  }
+  puces.forEach(function (p) {
+    p.addEventListener("click", function () {
+      var texte = p.dataset.ligne, l = lignes();
+      var i = trouve(l, texte);
+      if (i > -1) { l.splice(i, 1); zone.value = l.join("\n").replace(/^\n+|\n+$/g, ""); }
+      else { zone.value = (zone.value.trim() ? zone.value.replace(/\s+$/, "") + "\n" : "") + texte; }
+      synchro();
+      if (zone.value.trim()) erreur("commande", "");
+    });
+  });
+  zone.addEventListener("input", synchro);
+
+  /* Validation douce */
+  function erreur(nom, msg) {
+    var champ = form[nom], zoneErr = document.getElementById("err-" + nom);
+    zoneErr.textContent = msg;
+    if (msg) champ.setAttribute("aria-invalid", "true"); else champ.removeAttribute("aria-invalid");
+    return !msg;
+  }
+  ["commande", "date", "heure", "nom", "tel"].forEach(function (n) {
+    form[n].addEventListener("input", function () { if (form[n].getAttribute("aria-invalid")) erreur(n, ""); });
+  });
+  function heureFr(v) { var p = v.split(":"); return parseInt(p[0], 10) + " h" + (p[1] && p[1] !== "00" ? " " + p[1] : ""); }
+
+  /* Aperçu WhatsApp */
+  var dlg = document.getElementById("apercu"), fil = document.getElementById("wa-fil");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var ok = [
+      erreur("commande", zone.value.trim() ? "" : "Écrivez votre commande ou touchez une spécialité."),
+      erreur("date", !form.date.value ? "Choisissez le jour du retrait." : (form.date.value < form.date.min ? "Choisissez un jour à partir de demain." : "")),
+      erreur("heure", form.heure.value ? "" : "Choisissez une heure."),
+      erreur("nom", form.nom.value.trim() ? "" : "Indiquez votre nom."),
+      erreur("tel", form.tel.value.replace(/\D/g, "").length >= 10 ? "" : "Indiquez un numéro pour vous joindre.")
+    ];
+    var premier = ["commande", "date", "heure", "nom", "tel"][ok.indexOf(false)];
+    if (premier) { form[premier].focus(); return; }
+
+    var jour = new Date(form.date.value + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+    var articles = zone.value.split("\n").map(function (s) { return s.replace(/^[-•*]\s*/, "").trim(); })
+      .filter(Boolean).map(function (s) { return "• " + s; });
+    var client = form.nom.value.trim(), tel = form.tel.value.trim();
+    var msg = "Bonjour " + NOM + ",\nvoici ma commande pour les fêtes :\n\n" + articles.join("\n") +
+      "\n\nRetrait : " + jour + ", vers " + heureFr(form.heure.value) +
+      "\nNom : " + client + "\nTél. : " + tel;
+
+    document.getElementById("wa-texte").textContent = msg;
+    document.getElementById("wa-nom").textContent = client;
+    document.getElementById("wa-num").textContent = tel;
+    document.getElementById("wa-initiale").textContent = client.charAt(0).toUpperCase();
+    var t = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+    document.getElementById("wa-heure").textContent = deux(t.getHours()) + ":" + deux(t.getMinutes());
+
+    if (mouvement) { fil.classList.add("en-saisie"); setTimeout(function () { fil.classList.remove("en-saisie"); }, 750); }
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+  });
+  function fermer() { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); }
+  document.getElementById("dlg-fermer").addEventListener("click", fermer);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) fermer(); });
+
+  /* Barre fixe : masquée quand l'appel du haut ou le bon de commande est visible */
+  var barre = document.getElementById("barre");
+  if ("IntersectionObserver" in window) {
+    var visibles = new Set();
+    var io2 = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) visibles.add(en.target); else visibles.delete(en.target); });
+      barre.classList.toggle("cachee", visibles.size > 0);
+    });
+    io2.observe(document.getElementById("cta-haut"));
+    io2.observe(document.getElementById("form"));
+  } else {
+    barre.classList.remove("cachee");
+  }
+})();
+</script>
+</body>
+</html>

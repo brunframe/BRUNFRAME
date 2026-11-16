@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Pâtisserie Kubler — pâtisserie, chocolaterie, glacerie · avenue des Vosges, Strasbourg</title>
+<meta name="description" content="Maquette : commandes de fêtes, créations maison, horaires et accès de la Pâtisserie Confiserie Kubler, 29 avenue des Vosges à Strasbourg.">
+<meta name="theme-color" content="#f3e7df">
+<style>
+@font-face{font-family:"Playfair";src:url(fonts/playfair-display-latin-wght-normal.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Playfair";src:url(fonts/playfair-display-latin-wght-italic.woff2) format("woff2");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Franklin";src:url(fonts/libre-franklin-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+
+:root{
+  --papier:#f3e7df;--papier-clair:#f9f1ec;--table:#e2cfc4;
+  --encre:#2a1913;--encre-2:#5c4339;--rouge:#a3182a;--rouge-fonce:#86121f;
+  --filet:#2a1913;--filet-fin:rgba(42,25,19,.26);--wa:#0f7a43;
+  --serif:"Playfair","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Franklin","Helvetica Neue",Arial,system-ui,sans-serif;
+  --g:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--papier)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--papier);color:var(--encre);font:16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.55;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .16 0 0 0 0 .1 0 0 0 0 .07 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:3px solid var(--rouge);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.evitement{position:absolute;left:12px;top:-60px;z-index:50;background:var(--encre);color:var(--papier);padding:10px 14px;font-weight:700;text-decoration:none}
+.evitement:focus{top:12px}
+
+.journal{position:relative;max-width:1200px;margin:0 auto;padding:0 var(--g) 120px}
+
+/* ---------- Bandeau, tampon « Maquette » ---------- */
+.bandeau{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0 12px;border-bottom:1px solid var(--filet-fin);
+  font:600 11px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--encre-2)}
+.tampon{display:inline-flex;align-items:center;gap:7px;padding:5px 10px 4px;color:var(--rouge);font:800 11.5px/1 var(--sans);letter-spacing:.2em;
+  border:2px solid var(--rouge);box-shadow:inset 0 0 0 2px var(--papier),inset 0 0 0 3px var(--rouge);transform:rotate(-3deg);transform-origin:left center}
+.tampon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rouge)}
+
+/* ---------- Titre du journal ---------- */
+.titre{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"nom nom" "og od";row-gap:10px;padding-top:20px}
+.nom{grid-area:nom;text-align:center;font-weight:400}
+.sur-nom{display:block;font:700 11px/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.kubler{display:block;font:900 min(29vw,190px)/.86 var(--serif);letter-spacing:-.045em;margin:.06em 0 .02em;padding-right:.04em}
+.sous-nom{display:block;font:italic 400 16px/1.2 var(--serif);color:var(--encre-2)}
+.oreille{display:grid;align-content:center;gap:3px;padding:16px 0 14px}
+.oreille.g{grid-area:og;padding-right:14px;border-right:1px solid var(--filet-fin)}
+.oreille.d{grid-area:od;padding-left:14px;text-align:right}
+.o-k{font:700 10px/1.1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--rouge)}
+.o-v{font:800 25px/1 var(--serif);letter-spacing:-.01em}
+.o-s{font:italic 400 14px/1.25 var(--serif);color:var(--encre-2)}
+.o-s.ouvert::before{content:"";display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:var(--wa);vertical-align:1px}
+.date-ligne{display:flex;justify-content:space-between;gap:10px;padding:13px 0 8px;border-bottom:1px solid var(--filet);
+  background:linear-gradient(var(--filet),var(--filet)) top/100% 3px no-repeat,linear-gradient(var(--filet),var(--filet)) 0 5px/100% 1px no-repeat;
+  font:600 10.5px/1.2 var(--sans);letter-spacing:.13em;text-transform:uppercase}
+.date-ligne .loin{display:none}
+
+/* ---------- Rubriques communes ---------- */
+.rubrique{display:flex;align-items:center;gap:9px;font:700 11.5px/1.2 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--rouge)}
+.rubrique::before{content:"";flex:none;width:9px;height:9px;background:var(--rouge)}
+.sec{padding:30px 0 34px;border-top:1px solid var(--filet);position:relative}
+.sec::before{content:"";position:absolute;left:0;right:0;top:3px;height:1px;background:var(--filet)}
+.sec-titre{font:800 clamp(32px,9vw,64px)/1.02 var(--serif);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.sec-titre em{color:var(--rouge)}
+.sec-intro{font:italic 400 18px/1.5 var(--serif);color:var(--encre-2);max-width:40ch}
+.a-fournir{font:italic 400 15px/1.4 var(--serif);color:var(--encre-2)}
+
+/* ---------- La une ---------- */
+.une-grille{display:block}
+.une{position:relative;padding:24px var(--g) 30px 0;margin-right:calc(-1 * var(--g));isolation:isolate;overflow:clip}
+.trame-une{position:absolute;z-index:-1;right:-44px;bottom:calc(.46em - 66px);width:166px;height:166px;opacity:.62;mix-blend-mode:multiply;pointer-events:none}
+.gros-titre{position:relative;font:900 clamp(54px,15vw,112px)/.93 var(--serif);letter-spacing:-.03em;margin:14px 0 22px;text-wrap:balance}
+.gros-titre em{position:relative;font-style:italic;color:var(--rouge);white-space:nowrap}
+.gros-titre em .souligne{position:absolute;left:-4%;bottom:-.12em;width:112%;height:.32em;overflow:visible}
+.gros-titre em path{fill:none;stroke:var(--rouge);stroke-width:5;stroke-linecap:round}
+.br-b{display:none}
+.chapo{font:italic 400 20px/1.45 var(--serif);max-width:31ch;margin-bottom:24px;text-wrap:pretty}
+.cta{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:60px;padding:16px 18px 16px 20px;
+  background:var(--rouge);color:#fff;text-decoration:none;border:0;border-radius:0;cursor:pointer;
+  font:700 16.5px/1.2 var(--sans);letter-spacing:.01em;box-shadow:5px 5px 0 var(--encre);transition:transform .15s ease,box-shadow .15s ease}
+.cta::after{content:"";position:absolute;inset:5px;border:1px dashed rgba(255,255,255,.55);pointer-events:none}
+.cta svg{flex:none}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--encre)}
+.cta:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--encre)}
+.cta:focus-visible{outline:3px solid var(--encre);outline-offset:4px}
+.cta-note{margin-top:14px;font:600 12px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--encre-2)}
+
+.cote{border-top:1px solid var(--filet);padding:18px 0 4px}
+.sommaire-t{font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px}
+.sommaire{list-style:none;margin:0;padding:0;counter-reset:s}
+.sommaire li{counter-increment:s;border-bottom:1px solid var(--filet-fin)}
+.sommaire a{display:grid;grid-template-columns:34px 1fr auto;align-items:baseline;gap:4px;padding:11px 0;text-decoration:none}
+.sommaire a::before{content:counter(s);font:900 24px/1 var(--serif);color:var(--rouge)}
+.sommaire b{font:700 17px/1.2 var(--serif)}
+.sommaire small{display:block;font:400 13.5px/1.3 var(--sans);color:var(--encre-2);margin-top:2px}
+.sommaire .fl{font:400 18px/1 var(--sans);transition:transform .2s ease}
+.sommaire a:hover .fl{transform:translateX(4px)}
+.sommaire a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* ---------- Article « la maison » ---------- */
+.article-grille{display:block}
+.colonnes{font-size:16.5px;line-height:1.6;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
+.colonnes p+p{margin-top:.7em;text-indent:1.2em}
+.lettrine::first-letter{float:left;font:900 82px/.74 var(--serif);color:var(--rouge);padding:8px 10px 0 0}
+.lu{align-self:start;margin-top:28px;border:1px solid var(--filet);padding:16px 16px 6px;background:var(--papier-clair)}
+.lu-t{font:800 22px/1.1 var(--serif);font-style:italic;margin:2px 0 8px}
+.lu ul{list-style:none;margin:0;padding:0}
+.lu li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-top:1px solid var(--filet-fin);font-size:14.5px}
+.lu li b{font:700 15px/1.2 var(--serif)}
+.lu li span{text-align:right;color:var(--encre-2)}
+.lu .src{font-size:12.5px;color:var(--encre-2);padding:8px 0 10px;border-top:1px solid var(--filet-fin)}
+
+/* ---------- Créations ---------- */
+.crea-liste{list-style:none;margin:22px 0 0;padding:0}
+.crea{position:relative;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:end;padding:22px 0 20px;border-top:1px solid var(--filet);isolation:isolate;overflow:hidden}
+.crea-trame{position:absolute;z-index:-1;right:0;top:10px;width:132px;height:154px;overflow:visible}
+.crea-trame .decal{transition:transform .5s ease}
+.crea:hover .crea-trame .decal{transform:translate(6px,5px)}
+.crea-num{grid-column:1/-1;font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--rouge)}
+.crea-nom{grid-column:1/-1;font:italic 800 clamp(42px,12vw,64px)/1 var(--serif);letter-spacing:-.02em;margin:6px 0 2px}
+.crea-desc{grid-column:1/-1;margin-bottom:12px;max-width:62%}
+.ajout{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:8px 14px 8px 10px;
+  background:var(--papier-clair);border:1.5px solid var(--encre);color:var(--encre);font:700 14px/1 var(--sans);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.ajout:hover{background:#fff}
+.ajout[aria-pressed="true"]{border-color:var(--rouge);color:var(--rouge)}
+.crea-note{margin-top:4px;padding-top:14px;border-top:1px solid var(--filet);font:italic 400 16px/1.45 var(--serif);color:var(--encre-2)}
+
+/* Case cochée à la main (puces, boutons) */
+.case{position:relative;flex:none;width:22px;height:22px;border:1.5px solid currentColor;background:var(--papier-clair)}
+.case svg{position:absolute;inset:-5px;width:32px;height:32px;overflow:visible}
+.case path{fill:none;stroke:var(--rouge);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:30;stroke-dashoffset:30;transition:stroke-dashoffset .28s ease}
+.case path+path{transition-delay:.14s}
+.ajout[aria-pressed="true"] .case path,.puce input:checked+.case path{stroke-dashoffset:0}
+
+/* ---------- Bulletin de commande ---------- */
+.etapes{list-style:none;margin:22px 0 26px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet-fin);border-bottom:1px solid var(--filet-fin)}
+.etapes li{padding:12px 10px 12px 0;font:600 13px/1.3 var(--sans)}
+.etapes li+li{padding-left:10px;border-left:1px solid var(--filet-fin)}
+.etapes b{display:block;font:900 26px/1 var(--serif);color:var(--rouge);margin-bottom:4px}
+.coupon{position:relative;border:2px dashed var(--encre);background:var(--papier-clair);padding:30px 16px 24px}
+.ciseaux{position:absolute;top:-15px;left:12px;width:30px;height:30px;padding:2px;background:var(--papier);color:var(--encre)}
+.coupon-t{font:800 26px/1.1 var(--serif);margin-bottom:4px}
+.coupon-s{font:italic 400 16px/1.4 var(--serif);color:var(--encre-2);margin-bottom:20px}
+form{display:grid;gap:24px}
+fieldset{margin:0;padding:0;border:0;min-width:0}
+.etiq,legend{display:flex;align-items:baseline;gap:9px;padding:0;margin-bottom:10px;font:700 12.5px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--encre)}
+.etiq .n,legend .n{font:900 20px/1 var(--serif);letter-spacing:0;color:var(--rouge)}
+.aide{display:block;margin:-4px 0 10px;font:400 14px/1.4 var(--sans);color:var(--encre-2)}
+.puces{display:grid;gap:8px}
+.puce{position:relative;display:flex;align-items:center;gap:11px;min-height:50px;padding:8px 16px 8px 12px;border:1.5px solid var(--encre);background:var(--papier);
+  font:italic 700 18px/1 var(--serif);cursor:pointer;transition:border-color .2s,background .2s}
+.puce input{position:absolute;inset:0;margin:0;opacity:0;cursor:pointer}
+.puce:has(input:checked){border-color:var(--rouge);background:#fff}
+.puce:has(input:focus-visible){outline:3px solid var(--rouge);outline-offset:3px}
+textarea,input[type=text],input[type=tel],select{width:100%;font:400 17px/1.4 var(--sans);color:var(--encre);background:transparent;border:0;border-bottom:1.5px solid var(--encre);border-radius:0;padding:10px 2px;min-height:48px}
+textarea{min-height:128px;resize:vertical;line-height:32px;padding:0 2px;border:0;border-bottom:1.5px solid var(--encre);
+  background:repeating-linear-gradient(to bottom,transparent 0 31px,var(--filet-fin) 31px 32px);background-attachment:local}
+select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:30px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%232a1913' stroke-width='2'/%3E%3C/svg%3E") right 6px center/14px 9px no-repeat}
+textarea:focus,input:focus,select:focus{border-bottom-color:var(--rouge)}
+::placeholder{color:#715549;opacity:1}
+[aria-invalid="true"]{border-bottom-color:var(--rouge)!important;background-color:rgba(163,24,42,.05)}
+.duo{display:grid;gap:24px}
+
+.alm{border:1.5px solid var(--encre);background:var(--papier)}
+.alm-tete{display:grid;grid-template-columns:48px 1fr 48px;align-items:center;border-bottom:1.5px solid var(--encre)}
+.alm-mois{text-align:center;font:italic 800 21px/1 var(--serif);text-transform:capitalize}
+.alm-nav{height:48px;border:0;background:none;color:var(--encre);font:400 26px/1 var(--serif);cursor:pointer}
+.alm-nav:disabled{color:rgba(42,25,19,.25);cursor:default}
+.alm-grille{display:grid;grid-template-columns:repeat(7,1fr);padding:6px}
+.alm-e{padding:6px 0 8px;text-align:center;font:700 11px/1 var(--sans);letter-spacing:.12em;color:var(--encre-2)}
+.alm-c{position:relative;display:grid;place-items:center;height:44px;cursor:pointer;font:600 16px/1 var(--sans)}
+.alm-c input{position:absolute;inset:2px;margin:0;opacity:0;cursor:pointer}
+.alm-c span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;transition:background .15s,color .15s}
+.alm-c:hover span{background:rgba(163,24,42,.1)}
+.alm-c input:checked+span{background:var(--rouge);color:#fff}
+.alm-c input:focus-visible+span{outline:3px solid var(--rouge);outline-offset:2px}
+.alm-c.auj span{box-shadow:inset 0 0 0 1.5px var(--encre)}
+.alm-c.passe,.alm-c.ferme,.alm-c.inconnu{cursor:default}
+.alm-c.passe span{color:rgba(42,25,19,.3)}
+.alm-c.ferme span{color:rgba(42,25,19,.38);text-decoration:line-through;text-decoration-thickness:1.5px}
+.alm-c.inconnu span{color:rgba(42,25,19,.4);font-style:italic}
+.alm-c.passe input,.alm-c.ferme input,.alm-c.inconnu input{cursor:default}
+.alm-c.passe:hover span,.alm-c.ferme:hover span,.alm-c.inconnu:hover span{background:none}
+.alm-pied{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding:10px 12px;border-top:1px solid var(--filet-fin);font:400 13px/1.35 var(--sans);color:var(--encre-2)}
+.alm-choix{font-weight:700;color:var(--rouge)}
+
+.erreurs:empty{display:none}
+.erreurs{border-left:4px solid var(--rouge);background:rgba(163,24,42,.07);padding:12px 14px;font:600 14.5px/1.45 var(--sans);color:var(--rouge-fonce)}
+.erreurs ul{margin:6px 0 0;padding-left:18px;font-weight:400}
+.envoi{display:grid;gap:12px}
+.cta-wa{background:var(--wa);justify-content:center;gap:12px}
+.cta-wa::after{border-color:rgba(255,255,255,.45)}
+.demo{font:600 13px/1.4 var(--sans);color:var(--encre-2);text-align:center}
+
+/* ---------- Pratique ---------- */
+.prat-grille{display:grid;gap:30px;margin-top:20px}
+.prat-t{font:800 22px/1.1 var(--serif);font-style:italic;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--filet)}
+.horaires{list-style:none;margin:0;padding:0}
+.horaires li{display:flex;align-items:baseline;padding:8px 0;font-size:16px}
+.horaires .j{font:600 16px/1.2 var(--sans)}
+.horaires .pts{flex:1;margin:0 8px;border-bottom:2px dotted var(--filet-fin);transform:translateY(-4px)}
+.horaires .h{font-variant-numeric:tabular-nums}
+.horaires .inc{font-style:italic;font-family:var(--serif);color:var(--encre-2)}
+.horaires li.auj .j,.horaires li.auj .h{font-weight:800;color:var(--rouge)}
+.horaires li.auj .j::after{content:" · aujourd'hui";font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.prat-note{margin-top:10px;font:400 13.5px/1.45 var(--sans);color:var(--encre-2)}
+address{font:400 21px/1.35 var(--serif);font-style:normal}
+address span{display:block;font:italic 400 16px/1.4 var(--serif);color:var(--encre-2);margin-top:4px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 14px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:10px 12px;border:1.5px solid var(--encre);background:var(--papier-clair);
+  color:var(--encre);text-decoration:none;font:700 15px/1.2 var(--sans);text-align:center;cursor:pointer;transition:background .2s,transform .15s}
+.btn:hover{background:#fff;transform:translateY(-1px)}
+.mail{font-size:15px;color:var(--encre-2)}
+.mail a{color:var(--encre);text-underline-offset:3px;word-break:break-all}
+
+/* ---------- Pied ---------- */
+.pied{margin-top:10px;padding:16px 0 0;border-top:1px solid var(--filet);text-align:center;position:relative;font:400 13.5px/1.5 var(--sans);color:var(--encre-2)}
+.pied::before{content:"";position:absolute;left:0;right:0;top:3px;height:3px;background:var(--filet)}
+.pied p{margin:8px 0}
+.pied .fin{font:900 22px/1 var(--serif);color:var(--encre);margin:16px 0 10px}
+.pied .credit{font:600 11px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+
+/* ---------- Barre fixe ---------- */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px var(--g) calc(12px + env(safe-area-inset-bottom));
+  background:rgba(243,231,223,.94);border-top:1px solid var(--filet);transition:transform .3s ease,opacity .3s ease}
+.barre .cta{max-width:560px;margin:0 auto;min-height:54px;box-shadow:4px 4px 0 var(--encre)}
+.barre.cachee{transform:translateY(115%);opacity:0;pointer-events:none}
+
+/* ---------- Aperçu WhatsApp ---------- */
+dialog{border:0;padding:0;background:transparent;width:min(94vw,410px);max-width:none;max-height:none;overflow:visible;color:var(--encre)}
+dialog::backdrop{background:rgba(42,25,19,.66)}
+.dlg{background:var(--papier);border:1.5px solid var(--encre);box-shadow:7px 7px 0 var(--encre);padding:14px 14px 14px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:auto;outline:0}
+.dlg-t{font:800 20px/1.15 var(--serif);margin:6px 0 10px;text-wrap:balance}
+.wa{border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.12);box-shadow:0 10px 30px -18px rgba(0,0,0,.5);font-family:system-ui,-apple-system,"Segoe UI",Roboto,var(--sans)}
+.wa-tete{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#008069;color:#fff}
+.wa-ret{font:400 24px/1 system-ui;opacity:.9;margin-right:-2px}
+.wa-av{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#dfe5e7;color:#54656f;font:700 14px/1 var(--sans)}
+.wa-id b{display:block;font-size:16px;font-weight:600;line-height:1.2}
+.wa-id small{display:block;font-size:12.5px;opacity:.85}
+.wa-fil{padding:10px 10px 12px;background-color:#efeae2;
+  background-image:radial-gradient(rgba(84,101,111,.09) 1.2px,transparent 1.6px),radial-gradient(rgba(84,101,111,.06) 1px,transparent 1.4px);
+  background-size:22px 22px,22px 22px;background-position:0 0,11px 11px}
+.wa-jour{display:table;margin:0 auto 10px;padding:5px 12px;border-radius:8px;background:#fff;color:#54656f;font-size:12.5px;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.wa-bulle{position:relative;max-width:90%;margin-left:8px;padding:7px 10px 8px;background:#fff;border-radius:0 9px 9px 9px;color:#111b21;font-size:14px;line-height:1.4;
+  white-space:pre-wrap;word-wrap:break-word;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.wa-bulle::before{content:"";position:absolute;left:-8px;top:0;border-style:solid;border-width:0 9px 10px 0;border-color:transparent #fff transparent transparent}
+.wa-bulle b{font-weight:700}
+.wa-heure{float:right;margin:4px 0 -4px 12px;font-size:11.5px;color:#667781}
+.wa-saisie{display:flex;align-items:center;gap:8px;padding:6px 8px;background:#f0f2f5}
+.wa-saisie span{flex:1;padding:8px 14px;border-radius:20px;background:#fff;color:#8696a0;font-size:14px}
+.wa-saisie i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#00a884;flex:none}
+.dlg-demo{margin:12px 0 0;padding:10px 12px;border-left:4px solid var(--rouge);background:var(--papier-clair);font:400 13.5px/1.4 var(--sans)}
+.dlg-demo strong{display:block;color:var(--rouge-fonce);font-size:15px;margin-bottom:2px}
+.dlg-act{display:grid;margin-top:10px}
+
+/* ---------- Animations (coupées si mouvement réduit) ---------- */
+.anime .tampon{animation:tampon .5s cubic-bezier(.2,1.4,.4,1) .7s both}
+@keyframes tampon{from{opacity:0;transform:rotate(-12deg) scale(1.6)}to{opacity:1;transform:rotate(-3deg) scale(1)}}
+.anime .kubler{animation:encre 1s ease both}
+@keyframes encre{from{opacity:0;filter:blur(6px);letter-spacing:.02em}to{opacity:1;filter:blur(0);letter-spacing:-.045em}}
+.anime .date-ligne{animation:filet .8s ease .2s both}
+@keyframes filet{from{background-size:0 3px,0 1px}to{background-size:100% 3px,100% 1px}}
+.anime .gros-titre em path{stroke-dasharray:420;stroke-dashoffset:420;animation:trait .8s ease 1s forwards}
+@keyframes trait{to{stroke-dashoffset:0}}
+.anime .revele{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.anime .revele.vu{opacity:1;transform:none}
+.anime .coupon.vu .ciseaux{animation:decoupe 2.2s cubic-bezier(.5,0,.3,1) .3s both}
+@keyframes decoupe{from{left:12px}to{left:calc(100% - 46px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ---------- Tablette et bureau ---------- */
+@media (min-width:640px){
+  :root{--g:32px}
+  .duo{grid-template-columns:1fr 1fr}
+  .puces{grid-template-columns:repeat(3,1fr)}
+  .colonnes{columns:2;column-gap:30px;column-rule:1px solid var(--filet-fin);text-align:justify}
+  .colonnes p+p{margin-top:0}
+  .date-ligne .loin{display:inline}
+  .crea-liste{display:grid;grid-template-columns:repeat(3,1fr)}
+  .crea{border-top:0;padding:8px 22px 20px;border-left:1px solid var(--filet-fin);min-height:350px;align-content:end}
+  .crea:first-child{border-left:0;padding-left:0}
+  .crea-trame{width:144px;height:168px;right:14px;top:0}
+  .crea-liste{border-top:1px solid var(--filet);padding-top:18px}
+  .crea-nom{font-size:clamp(40px,5vw,60px)}
+  .prat-grille{grid-template-columns:repeat(2,1fr);gap:34px}
+}
+@media (min-width:1000px){
+  :root{--g:52px}
+  body{background:var(--table)}
+  html{background:var(--table)}
+  .journal{margin:24px auto 0;background:var(--papier);box-shadow:0 1px 0 rgba(42,25,19,.12),0 40px 90px -50px rgba(42,25,19,.55);padding-bottom:40px}
+  .titre{grid-template-columns:210px 1fr 210px;grid-template-areas:"og nom od";align-items:center;padding-top:22px}
+  .oreille{border:1px solid var(--filet)!important;padding:14px 16px!important;text-align:center!important;align-self:center}
+  .o-v{font-size:30px}
+  .sur-nom{font-size:12px}
+  .kubler{font-size:156px}
+  .sous-nom{font-size:19px}
+  .date-ligne{font-size:11.5px;margin-top:10px}
+  .une{padding:26px 0 24px;margin-right:0;overflow:visible}
+  .gros-titre{font-size:88px;margin:14px 0 18px;text-wrap:wrap}
+  .br-b{display:inline}
+  .trame-une{right:10px;bottom:calc(.46em - 130px);width:260px;height:260px;opacity:.7}
+  .une-suite{margin-top:-94px;padding-left:290px;max-width:850px;position:relative}
+  .chapo{font-size:22px;max-width:30ch;margin-bottom:20px}
+  .une .cta{width:auto;display:inline-flex;min-width:400px}
+  .cote{display:grid;grid-template-columns:180px 1fr;align-items:start;padding:16px 0 4px}
+  .sommaire-t{padding-top:6px}
+  .sommaire{display:grid;grid-template-columns:repeat(3,1fr)}
+  .sommaire li{border-bottom:0;border-left:1px solid var(--filet-fin);padding:0 22px}
+  .sommaire a{padding:0 0 4px}
+  .article-grille{display:grid;grid-template-columns:minmax(0,7.2fr) minmax(0,3.8fr)}
+  .article-grille>div:first-child{padding-right:46px;border-right:1px solid var(--filet-fin)}
+  .lu{margin:6px 0 0 36px}
+  .colonnes{columns:2;font-size:16.5px;column-gap:34px}
+  .bul-grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
+  .bul-grille .etapes{grid-template-columns:1fr;border-bottom:0}
+  .bul-grille .etapes li{padding:16px 0;border-left:0;border-bottom:1px solid var(--filet-fin);font-size:15px}
+  .bul-grille .etapes li+li{padding-left:0}
+  .bul-intro{position:sticky;top:30px}
+  .coupon{padding:36px 34px 30px}
+  .prat-grille{grid-template-columns:1.1fr 1fr;gap:56px}
+  .barre{left:auto;right:28px;bottom:24px;padding:0;background:none;border:0}
+  .barre .cta{width:auto;min-width:360px}
+}
+</style>
+</head>
+<body>
+<a class="evitement" href="#bulletin">Aller au bulletin de commande</a>
+
+<!-- Motif de trame réutilisé (points d'imprimerie) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="points" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <circle cx="3.5" cy="3.5" r="2.25" fill="#a3182a"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="journal">
+  <header>
+    <div class="bandeau">
+      <span class="tampon">Maquette</span>
+      <span>Strasbourg · Neustadt</span>
+    </div>
+
+    <div class="titre">
+      <h1 class="nom"><span class="sur-nom">Pâtisserie · Confiserie</span> <span class="kubler">Kubler</span> <span class="sous-nom">pâtisserie, chocolaterie, glacerie</span></h1>
+      <div class="oreille g">
+        <span class="o-k">Depuis</span>
+        <span class="o-v">1950</span>
+        <span class="o-s">dans la Neustadt</span>
+      </div>
+      <div class="oreille d" aria-live="polite">
+        <span class="o-k">Mardi → samedi</span>
+        <span class="o-v">7h30–19h</span>
+        <span class="o-s" id="etat-s">lundi fermé</span>
+      </div>
+    </div>
+
+    <p class="date-ligne">
+      <span id="date-jour">Strasbourg</span>
+      <span>Édition des fêtes</span>
+      <span class="loin">29, avenue des Vosges</span>
+    </p>
+  </header>
+
+  <main id="contenu">
+    <div class="une-grille">
+      <article class="une" aria-labelledby="t-une">
+        <p class="rubrique">À la une · Commandes de fêtes</p>
+        <h2 class="gros-titre" id="t-une">Les fêtes se commandent<br class="br-b"> <em>ici.<svg class="souligne" viewBox="0 0 120 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 13 C 30 6, 70 4, 117 9"/></svg></em><svg class="trame-une" id="trame-une" viewBox="0 0 250 250" aria-hidden="true" focusable="false"></svg></h2>
+        <div class="une-suite">
+        <p class="chapo">Composez votre commande, choisissez le jour et l’heure du retrait : nous la préparons pour vous.</p>
+        <a class="cta" id="cta-une" href="#bulletin">
+          <span>Remplir le bulletin de commande</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+        </a>
+        <p class="cta-note">Retrait en boutique · du mardi au samedi</p>
+        </div>
+      </article>
+
+      <aside class="cote" aria-label="Dans cette édition">
+        <p class="sommaire-t">Dans cette édition</p>
+        <ol class="sommaire">
+          <li><a href="#creations"><span><b>Nos créations maison</b><small>Le Kileï, le Bahia, Enora</small></span><span class="fl" aria-hidden="true">→</span></a></li>
+          <li><a href="#bulletin"><span><b>Bulletin de commande</b><small>Composez, choisissez le retrait</small></span><span class="fl" aria-hidden="true">→</span></a></li>
+          <li><a href="#pratique"><span><b>Horaires et accès</b><small>29, avenue des Vosges</small></span><span class="fl" aria-hidden="true">→</span></a></li>
+        </ol>
+      </aside>
+    </div>
+
+    <section class="sec revele" aria-labelledby="t-maison">
+      <div class="article-grille">
+        <div>
+          <p class="rubrique">La maison</p>
+          <h2 class="sec-titre" id="t-maison">Une maison de la Neustadt, <em>depuis 1950</em></h2>
+          <div class="colonnes">
+            <p class="lettrine">Pâtisserie, chocolaterie, glacerie : nous travaillons dans le quartier de la Neustadt depuis 1950. En vitrine, les classiques du répertoire français côtoient nos créations maison, le Kileï, le Bahia et Enora.</p>
+            <p>Le guide des artisans Gault&amp;Millau référence notre maison comme pâtissier, avec le chocolat pour seconde activité. Pour les fêtes, vous composez votre commande ici et vous la retirez en boutique.</p>
+          </div>
+        </div>
+        <aside class="lu" aria-labelledby="t-lu">
+          <p class="rubrique">Revue de presse</p>
+          <h3 class="lu-t" id="t-lu">Lu ailleurs</h3>
+          <ul>
+            <li><b>Gault&amp;Millau</b><span>Guide des artisans</span></li>
+            <li><b>PagesJaunes</b><span>5,0/5 · 7 avis</span></li>
+            <li><b>MyBoulange</b><span>4,3/5 · environ 300 notes</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sec revele" id="creations" aria-labelledby="t-creations">
+      <p class="rubrique">Créations maison</p>
+      <h2 class="sec-titre" id="t-creations">Le Kileï, le Bahia, <em>Enora</em></h2>
+      <p class="sec-intro">Trois créations de la maison, citées par le guide Gault&amp;Millau. Ajoutez-les à votre bulletin d’un geste.</p>
+      <ol class="crea-liste">
+        <li class="crea">
+          <svg class="crea-trame" viewBox="0 0 180 210" aria-hidden="true" focusable="false"><text x="82" y="178" text-anchor="middle" font-family="Playfair, Georgia, serif" font-style="italic" font-weight="900" font-size="200" fill="url(#points)">K</text><text class="decal" x="77" y="174" text-anchor="middle" font-family="Playfair, Georgia, serif" font-style="italic" font-weight="900" font-size="200" fill="none" stroke="#2a1913" stroke-width="1.1" opacity=".55">K</text></svg>
+          <span class="crea-num">N° 1</span>
+          <h3 class="crea-nom">Le Kileï</h3>
+          <p class="crea-desc a-fournir">[Description à fournir]</p>
+          <button type="button" class="ajout" data-crea="Le Kileï" aria-pressed="false"><span class="case"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 9 C 13 14, 19 20, 25 24"/><path d="M24 8 C 19 13, 13 19, 8 25"/></svg></span><span class="txt">Ajouter au bulletin</span></button>
+        </li>
+        <li class="crea">
+          <svg class="crea-trame" viewBox="0 0 180 210" aria-hidden="true" focusable="false"><text x="82" y="178" text-anchor="middle" font-family="Playfair, Georgia, serif" font-style="italic" font-weight="900" font-size="200" fill="url(#points)">B</text><text class="decal" x="77" y="174" text-anchor="middle" font-family="Playfair, Georgia, serif" font-style="italic" font-weight="900" font-size="200" fill="none" stroke="#2a1913" stroke-width="1.1" opacity=".55">B</text></svg>
+          <span class="crea-num">N° 2</span>
+          <h3 class="crea-nom">Le Bahia</h3>
+          <p class="crea-desc a-fournir">[Description à fournir]</p>
+          <button type="button" class="ajout" data-crea="Le Bahia" aria-pressed="false"><span class="case"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 9 C 13 14, 19 20, 25 24"/><path d="M24 8 C 19 13, 13 19, 8 25"/></svg></span><span class="txt">Ajouter au bulletin</span></button>
+        </li>
+        <li class="crea">
+          <svg class="crea-trame" viewBox="0 0 180 210" aria-hidden="true" focusable="false"><text x="82" y="178" text-anchor="middle" font-family="Playfair, Georgia, serif" font-style="italic" font-weight="900" font-size="200" fill="url(#points)">E</text><text class="decal" x="77" y="174" text-anchor="middle" font-family="Playfair, Georgia, serif" font-style="italic" font-weight="900" font-size="200" fill="none" stroke="#2a1913" stroke-width="1.1" opacity=".55">E</text></svg>
+          <span class="crea-num">N° 3</span>
+          <h3 class="crea-nom">Enora</h3>
+          <p class="crea-desc a-fournir">[Description à fournir]</p>
+          <button type="button" class="ajout" data-crea="Enora" aria-pressed="false"><span class="case"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 9 C 13 14, 19 20, 25 24"/><path d="M24 8 C 19 13, 13 19, 8 25"/></svg></span><span class="txt">Ajouter au bulletin</span></button>
+        </li>
+      </ol>
+      <p class="crea-note">Et toujours, en vitrine, les classiques du répertoire français.</p>
+    </section>
+
+    <section class="sec" id="bulletin" aria-labelledby="t-bulletin">
+      <div class="bul-grille">
+        <div class="bul-intro">
+          <p class="rubrique">Bulletin de commande</p>
+          <h2 class="sec-titre" id="t-bulletin">Votre commande <em>de fêtes</em></h2>
+          <p class="sec-intro">Remplissez le bulletin : votre message nous arrive sur WhatsApp, prêt à préparer.</p>
+          <ol class="etapes">
+            <li><b>1</b>Vous composez votre commande</li>
+            <li><b>2</b>Nous la recevons sur WhatsApp</li>
+            <li><b>3</b>Vous la retirez en boutique</li>
+          </ol>
+        </div>
+
+        <div class="coupon" id="coupon">
+          <svg class="ciseaux" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="9" r="4.2"/><circle cx="7" cy="23" r="4.2"/><path d="M10.5 11.2 29 23.5M10.5 20.8 29 8.5"/></g></svg>
+          <p class="coupon-t">Bulletin à remplir</p>
+          <p class="coupon-s">Pas besoin de ciseaux. Tous les champs servent à préparer votre commande.</p>
+          <form id="form" novalidate>
+            <fieldset>
+              <legend><span class="n">1</span> Nos créations maison</legend>
+              <span class="aide">Facultatif : touchez pour ajouter.</span>
+              <div class="puces">
+                <label class="puce"><input type="checkbox" name="crea" value="Le Kileï"><span class="case"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 9 C 13 14, 19 20, 25 24"/><path d="M24 8 C 19 13, 13 19, 8 25"/></svg></span>Le Kileï</label>
+                <label class="puce"><input type="checkbox" name="crea" value="Le Bahia"><span class="case"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 9 C 13 14, 19 20, 25 24"/><path d="M24 8 C 19 13, 13 19, 8 25"/></svg></span>Le Bahia</label>
+                <label class="puce"><input type="checkbox" name="crea" value="Enora"><span class="case"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M8 9 C 13 14, 19 20, 25 24"/><path d="M24 8 C 19 13, 13 19, 8 25"/></svg></span>Enora</label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label class="etiq" for="f-commande"><span class="n">2</span> Votre commande</label>
+              <span class="aide" id="a-commande">Quantités, nombre de personnes, autres pâtisseries de la vitrine…</span>
+              <textarea id="f-commande" name="commande" aria-describedby="a-commande" placeholder="Écrivez ici, ligne par ligne."></textarea>
+            </div>
+
+            <fieldset>
+              <legend><span class="n">3</span> Jour du retrait</legend>
+              <div class="alm">
+                <div class="alm-tete">
+                  <button type="button" class="alm-nav" id="alm-prec" aria-label="Mois précédent">‹</button>
+                  <p class="alm-mois" id="alm-mois" aria-live="polite">Calendrier</p>
+                  <button type="button" class="alm-nav" id="alm-suiv" aria-label="Mois suivant">›</button>
+                </div>
+                <div class="alm-grille" id="alm-grille"></div>
+                <div class="alm-pied"><span>Lundi : fermé · dimanche, jours fériés : à confirmer</span><span class="alm-choix" id="alm-choix" aria-live="polite"></span></div>
+              </div>
+            </fieldset>
+
+            <div>
+              <label class="etiq" for="f-heure"><span class="n">4</span> Heure du retrait</label>
+              <select id="f-heure" name="heure">
+                <option value="">Choisir une heure</option>
+                <option>7h30</option><option>8h00</option><option>8h30</option><option>9h00</option><option>9h30</option><option>10h00</option>
+                <option>10h30</option><option>11h00</option><option>11h30</option><option>12h00</option><option>12h30</option><option>13h00</option>
+                <option>13h30</option><option>14h00</option><option>14h30</option><option>15h00</option><option>15h30</option><option>16h00</option>
+                <option>16h30</option><option>17h00</option><option>17h30</option><option>18h00</option><option>18h30</option>
+              </select>
+            </div>
+
+            <div class="duo">
+              <div>
+                <label class="etiq" for="f-nom"><span class="n">5</span> Votre nom</label>
+                <input type="text" id="f-nom" name="nom" autocomplete="name" placeholder="Prénom et nom">
+              </div>
+              <div>
+                <label class="etiq" for="f-tel"><span class="n">6</span> Votre téléphone</label>
+                <input type="tel" id="f-tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="06 00 00 00 00">
+              </div>
+            </div>
+
+            <div class="erreurs" id="erreurs" role="alert"></div>
+
+            <div class="envoi">
+              <button class="cta cta-wa" type="submit" id="envoyer">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+                <span>Commander sur WhatsApp</span>
+              </button>
+              <p class="demo">Démonstration : rien n’est envoyé.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec revele" id="pratique" aria-labelledby="t-pratique">
+      <p class="rubrique">Pratique</p>
+      <h2 class="sec-titre" id="t-pratique">Horaires <em>et accès</em></h2>
+      <div class="prat-grille">
+        <div>
+          <h3 class="prat-t">Horaires</h3>
+          <ul class="horaires" id="horaires">
+            <li data-j="0"><span class="j">Lundi</span><span class="pts"></span><span class="h">Fermé</span></li>
+            <li data-j="1"><span class="j">Mardi</span><span class="pts"></span><span class="h">7h30 – 19h00</span></li>
+            <li data-j="2"><span class="j">Mercredi</span><span class="pts"></span><span class="h">7h30 – 19h00</span></li>
+            <li data-j="3"><span class="j">Jeudi</span><span class="pts"></span><span class="h">7h30 – 19h00</span></li>
+            <li data-j="4"><span class="j">Vendredi</span><span class="pts"></span><span class="h">7h30 – 19h00</span></li>
+            <li data-j="5"><span class="j">Samedi</span><span class="pts"></span><span class="h">7h30 – 19h00</span></li>
+            <li data-j="6"><span class="j">Dimanche</span><span class="pts"></span><span class="h inc">À confirmer</span></li>
+          </ul>
+          <p class="prat-note">Horaires relevés sur PagesJaunes et le 118712. Un autre annuaire indique une fermeture à 18h en semaine : à confirmer avec la maison.</p>
+        </div>
+        <div>
+          <h3 class="prat-t">Adresse</h3>
+          <address>29, avenue des Vosges<br>67000 Strasbourg<span>Quartier de la Neustadt</span></address>
+          <div class="actions">
+            <a class="btn" href="tel:+33388352227">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1Z"/></svg>
+              Appeler
+            </a>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=29%20avenue%20des%20Vosges%2C%2067000%20Strasbourg" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
+              Itinéraire
+            </a>
+          </div>
+          <p class="mail">Téléphone : <a href="tel:+33388352227">03 88 35 22 27</a><br>Courriel : <a href="mailto:patisserie.kubler@gmail.com">patisserie.kubler@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <p class="fin" aria-hidden="true">Kubler</p>
+    <p>Pâtisserie Confiserie Kubler · 29, avenue des Vosges, 67000 Strasbourg</p>
+    <p>Page de démonstration non officielle : aucune commande n’est transmise.</p>
+    <p class="credit">Maquette préparée par BRUNFRAME</p>
+  </footer>
+</div>
+
+<div class="barre cachee" id="barre">
+  <a class="cta" href="#bulletin"><span>Remplir le bulletin de commande</span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a>
+</div>
+
+<p class="sr" id="annonce" aria-live="polite"></p>
+
+<dialog id="apercu" aria-labelledby="dlg-t" aria-describedby="dlg-desc">
+  <div class="dlg" tabindex="-1">
+    <p class="rubrique">Aperçu</p>
+    <h2 class="dlg-t" id="dlg-t">Le message tel que la pâtisserie le reçoit</h2>
+    <div class="wa">
+      <div class="wa-tete" aria-hidden="true">
+        <span class="wa-ret">‹</span>
+        <span class="wa-av" id="wa-av">?</span>
+        <span class="wa-id"><b id="wa-nom">Client</b><small id="wa-num"></small></span>
+      </div>
+      <div class="wa-fil">
+        <span class="wa-jour">Aujourd’hui</span>
+        <div class="wa-bulle" id="wa-bulle"></div>
+      </div>
+      <div class="wa-saisie" aria-hidden="true"><span>Répondre…</span><i><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#fff" d="M3 20.5 21 12 3 3.5l.01 6.6L15 12 3.01 13.9Z"/></svg></i></div>
+    </div>
+    <p class="dlg-demo" id="dlg-desc"><strong>Démonstration : rien n’est envoyé.</strong>Le 03 88 35 22 27 est une ligne fixe : l’envoi réel passera par un numéro mobile WhatsApp de la maison.</p>
+    <div class="dlg-act"><button type="button" class="btn" id="dlg-fermer">Modifier ma commande</button></div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var doc = document, root = doc.documentElement;
+  function $(id) { return doc.getElementById(id); }
+  var mouvement = !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  if (mouvement && "IntersectionObserver" in window) root.classList.add("anime");
+
+  var JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+  var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+  /* Horaires vérifiés : mardi-samedi 7h30-19h, lundi fermé, dimanche inconnu (null). Index 0 = lundi. */
+  var H = [[], [[450, 1140]], [[450, 1140]], [[450, 1140]], [[450, 1140]], [[450, 1140]], null];
+
+  function paris() {
+    var d = new Date(), o = {};
+    try {
+      new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+        .formatToParts(d).forEach(function (p) { o[p.type] = p.value; });
+      return { y: +o.year, m: +o.month, d: +o.day, h: (+o.hour) % 24, mi: +o.minute };
+    } catch (e) { return { y: d.getFullYear(), m: d.getMonth() + 1, d: d.getDate(), h: d.getHours(), mi: d.getMinutes() }; }
+  }
+  function hm(m) { var h = Math.floor(m / 60), r = m % 60; return h + "h" + (r < 10 ? "0" : "") + r; }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function jourFr(dt) { var n = dt.getDate(); return JOURS[(dt.getDay() + 6) % 7] + " " + (n === 1 ? "1er" : n) + " " + MOIS[dt.getMonth()]; }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(dt) { return dt.getFullYear() + "-" + pad(dt.getMonth() + 1) + "-" + pad(dt.getDate()); }
+
+  var P = paris();
+  var auj = new Date(P.y, P.m - 1, P.d);
+  var jour = (auj.getDay() + 6) % 7, min = P.h * 60 + P.mi;
+
+  /* Ligne de date, comme un quotidien */
+  $("date-jour").textContent = cap(jourFr(auj)) + " " + P.y;
+
+  /* Oreille droite : état d'ouverture en direct */
+  var etat = "", ouvert = false;
+  if (H[jour] === null) etat = "dimanche : à confirmer";
+  else if (!H[jour].length) etat = "fermé le lundi";
+  else {
+    var p = H[jour][0];
+    if (min < p[0]) etat = "ouverture à " + hm(p[0]);
+    else if (min < p[1]) { etat = "ouvert en ce moment"; ouvert = true; }
+    else etat = jour === 5 ? "fermé ce soir" : "fermé ce soir, à demain";
+  }
+  var es = $("etat-s"); es.textContent = etat; if (ouvert) es.classList.add("ouvert");
+  var ligne = doc.querySelector('#horaires li[data-j="' + jour + '"]');
+  if (ligne) ligne.classList.add("auj");
+
+  /* Trame d'imprimerie (points de taille variable) */
+  (function () {
+    var svg = $("trame-une"); if (!svg) return;
+    var ns = "http://www.w3.org/2000/svg", pas = 9, cx = 125, cy = 125, R = 124, frag = doc.createDocumentFragment();
+    for (var y = pas / 2, l = 0; y < 250; y += pas * 0.87, l++) {
+      for (var x = (l % 2 ? pas : pas / 2); x < 250; x += pas) {
+        var d = Math.sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy)) / R;
+        var r = Math.pow(Math.max(0, 1 - d), 0.8) * pas * 0.47;
+        if (r < 0.45) continue;
+        var c = doc.createElementNS(ns, "circle");
+        c.setAttribute("cx", x.toFixed(1)); c.setAttribute("cy", y.toFixed(1)); c.setAttribute("r", r.toFixed(2));
+        frag.appendChild(c);
+      }
+    }
+    svg.setAttribute("fill", "#a3182a");
+    svg.appendChild(frag);
+  })();
+
+  /* Créations : boutons « Ajouter au bulletin » liés aux cases du formulaire */
+  var form = $("form");
+  var cases = [].slice.call(form.querySelectorAll('input[name="crea"]'));
+  var boutons = [].slice.call(doc.querySelectorAll(".ajout"));
+  function caseDe(nom) { for (var i = 0; i < cases.length; i++) if (cases[i].value === nom) return cases[i]; return null; }
+  function synchro() {
+    boutons.forEach(function (b) {
+      var c = caseDe(b.getAttribute("data-crea")), on = !!(c && c.checked);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.querySelector(".txt").textContent = on ? "Ajouté au bulletin" : "Ajouter au bulletin";
+    });
+  }
+  boutons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var nom = b.getAttribute("data-crea"), c = caseDe(nom);
+      if (!c) return;
+      c.checked = !c.checked; synchro();
+      $("annonce").textContent = nom + (c.checked ? " ajouté au bulletin de commande." : " retiré du bulletin de commande.");
+    });
+  });
+  cases.forEach(function (c) { c.addEventListener("change", synchro); });
+
+  /* Almanach des retraits */
+  var grille = $("alm-grille"), moisEl = $("alm-mois"), prec = $("alm-prec"), suiv = $("alm-suiv"), choixEl = $("alm-choix");
+  var debut = new Date(P.y, P.m - 1, P.d + 1);
+  var premierMois = new Date(debut.getFullYear(), debut.getMonth(), 1);
+  var vue = new Date(premierMois), choisi = "";
+  var MAX_MOIS = 3;
+  function ecartMois(a, b) { return (b.getFullYear() - a.getFullYear()) * 12 + b.getMonth() - a.getMonth(); }
+  function rendu() {
+    grille.textContent = "";
+    ["L", "M", "M", "J", "V", "S", "D"].forEach(function (x) {
+      var e = doc.createElement("span"); e.className = "alm-e"; e.setAttribute("aria-hidden", "true"); e.textContent = x; grille.appendChild(e);
+    });
+    var y = vue.getFullYear(), m = vue.getMonth(), n = new Date(y, m + 1, 0).getDate(), dec = (new Date(y, m, 1).getDay() + 6) % 7;
+    for (var i = 0; i < dec; i++) { var vide = doc.createElement("span"); vide.setAttribute("aria-hidden", "true"); grille.appendChild(vide); }
+    for (var d = 1; d <= n; d++) {
+      var dt = new Date(y, m, d), js = (dt.getDay() + 6) % 7, val = iso(dt), raison = "";
+      if (dt < debut) raison = "passe";
+      else if (H[js] === null) raison = "dimanche : à confirmer";
+      else if (!H[js].length) raison = "fermé";
+      var lab = doc.createElement("label"); lab.className = "alm-c";
+      var inp = doc.createElement("input"); inp.type = "radio"; inp.name = "jour"; inp.value = val;
+      inp.setAttribute("aria-label", jourFr(dt) + (raison && raison !== "passe" ? " (" + raison + ")" : ""));
+      if (raison) { inp.disabled = true; lab.classList.add(raison === "passe" ? "passe" : raison === "fermé" ? "ferme" : "inconnu"); }
+      if (val === choisi) inp.checked = true;
+      if (dt.getTime() === auj.getTime()) lab.classList.add("auj");
+      var sp = doc.createElement("span"); sp.textContent = d; sp.setAttribute("aria-hidden", "true");
+      lab.appendChild(inp); lab.appendChild(sp); grille.appendChild(lab);
+    }
+    moisEl.textContent = MOIS[m] + " " + y;
+    prec.disabled = ecartMois(premierMois, vue) <= 0;
+    suiv.disabled = ecartMois(premierMois, vue) >= MAX_MOIS - 1;
+  }
+  prec.addEventListener("click", function () { vue = new Date(vue.getFullYear(), vue.getMonth() - 1, 1); rendu(); });
+  suiv.addEventListener("click", function () { vue = new Date(vue.getFullYear(), vue.getMonth() + 1, 1); rendu(); });
+  grille.addEventListener("change", function (e) {
+    if (e.target && e.target.name === "jour") {
+      choisi = e.target.value;
+      var p2 = choisi.split("-");
+      choixEl.textContent = "Retrait : " + jourFr(new Date(+p2[0], +p2[1] - 1, +p2[2]));
+      grille.removeAttribute("aria-invalid");
+    }
+  });
+  rendu();
+
+  /* Envoi : vérification puis aperçu du message */
+  var dlg = $("apercu"), erreurs = $("erreurs"), envoyer = $("envoyer");
+  function ligneWa(bulle, label, texte) {
+    if (label) { var b = doc.createElement("b"); b.textContent = label; bulle.appendChild(b); }
+    if (texte) bulle.appendChild(doc.createTextNode(texte));
+  }
+  var valeurs = {};
+  function verifier() {
+    [form.commande, form.heure, form.nom, form.tel, grille].forEach(function (el) { el.removeAttribute("aria-invalid"); });
+    var v = valeurs = {
+      crea: cases.filter(function (c) { return c.checked; }).map(function (c) { return c.value; }),
+      texte: form.commande.value.trim(), heure: form.heure.value, nom: form.nom.value.trim(), tel: form.tel.value.trim()
+    };
+    var manques = [], premier = null;
+    function manque(msg, el) { manques.push(msg); el.setAttribute("aria-invalid", "true"); if (!premier) premier = el; }
+    if (!v.crea.length && !v.texte) manque("ajoutez une création maison ou décrivez votre commande", form.commande);
+    if (!choisi) manque("choisissez le jour du retrait", grille);
+    if (!v.heure) manque("choisissez l’heure du retrait", form.heure);
+    if (!v.nom) manque("indiquez votre nom", form.nom);
+    if (v.tel.replace(/\D/g, "").length < 10) manque("indiquez un numéro de téléphone complet", form.tel);
+    erreurs.textContent = "";
+    if (manques.length) {
+      erreurs.appendChild(doc.createTextNode("Il manque encore quelques informations :"));
+      var ul = doc.createElement("ul");
+      manques.forEach(function (m) { var li = doc.createElement("li"); li.textContent = cap(m) + "."; ul.appendChild(li); });
+      erreurs.appendChild(ul);
+    }
+    return premier;
+  }
+  function suivi() { if (erreurs.textContent) verifier(); }
+  form.addEventListener("input", suivi);
+  form.addEventListener("change", suivi);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var premier = verifier();
+    if (premier) {
+      if (premier === grille) { var r = grille.querySelector("input:not(:disabled)"); if (r) r.focus(); else suiv.focus(); }
+      else premier.focus();
+      return;
+    }
+    var crea = valeurs.crea, texte = valeurs.texte, heure = valeurs.heure, nom = valeurs.nom, tel = valeurs.tel;
+    var p3 = choisi.split("-"), dateTxt = jourFr(new Date(+p3[0], +p3[1] - 1, +p3[2]));
+    var bulle = $("wa-bulle"); bulle.textContent = "";
+    var L = [["", "Bonjour, je souhaite passer une commande pour les fêtes."], ["", ""]];
+    if (crea.length) { L.push(["Créations maison :", ""]); crea.forEach(function (c) { L.push(["", "• " + c]); }); }
+    if (texte) { if (crea.length) L.push(["", ""]); L.push([crea.length ? "Précisions :" : "Ma commande :", ""]); L.push(["", texte]); }
+    L.push(["", ""], ["Retrait : ", dateTxt + ", vers " + heure], ["Nom : ", nom], ["Tél : ", tel]);
+    L.forEach(function (x, i) { ligneWa(bulle, x[0], x[1] + (i < L.length - 1 ? "\n" : "")); });
+    var h = doc.createElement("span"); h.className = "wa-heure"; var P2 = paris(); h.textContent = pad(P2.h) + ":" + pad(P2.mi);
+    bulle.appendChild(h);
+    $("wa-nom").textContent = nom; $("wa-num").textContent = tel;
+    $("wa-av").textContent = nom.split(/\s+/).map(function (x) { return x.charAt(0); }).join("").slice(0, 2).toUpperCase() || "?";
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    var cadre = dlg.querySelector(".dlg"); cadre.scrollTop = 0;
+    try { cadre.focus({ preventScroll: true }); } catch (err) { cadre.focus(); }
+  });
+  function fermer() { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); envoyer.focus(); }
+  $("dlg-fermer").addEventListener("click", fermer);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) fermer(); });
+
+  /* Barre fixe : masquée quand l'appel du haut ou le bulletin est visible */
+  var barre = $("barre");
+  if ("IntersectionObserver" in window) {
+    var visibles = [];
+    var io = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) {
+        var i = visibles.indexOf(en.target);
+        if (en.isIntersecting && i < 0) visibles.push(en.target);
+        if (!en.isIntersecting && i > -1) visibles.splice(i, 1);
+      });
+      barre.classList.toggle("cachee", visibles.length > 0);
+    });
+    io.observe($("cta-une")); io.observe($("bulletin"));
+
+    if (root.classList.contains("anime")) {
+      var io2 = new IntersectionObserver(function (entrees) {
+        entrees.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("vu"); io2.unobserve(en.target); } });
+      }, { rootMargin: "0px 0px -12% 0px" });
+      [].slice.call(doc.querySelectorAll(".revele, .coupon")).forEach(function (el) { io2.observe(el); });
+    }
+  } else {
+    barre.classList.remove("cachee");
+  }
+})();
+</script>
+</body>
+</html>

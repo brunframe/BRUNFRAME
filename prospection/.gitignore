@@ -9,3 +9,4 @@ sorties/
 personnalisation/*
 !personnalisation/README.md
 lots/*/liste_noire_gmail.json
+lots/*/captures/

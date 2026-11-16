@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Chez Rita — Restaurant libanais, rue des Tonneliers à Strasbourg</title>
+<meta name="description" content="Chez Rita, restaurant libanais au 7 rue des Tonneliers, Grande Île de Strasbourg : les classiques de la carte et une proposition de commande de fêtes à l’avance (maquette).">
+<meta name="theme-color" content="#7f4134">
+<style>
+@font-face{font-family:"DM Serif Display";font-style:normal;font-weight:400;font-display:swap;
+  src:url(fonts/dm-serif-display-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Serif Display";font-style:italic;font-weight:400;font-display:swap;
+  src:url(fonts/dm-serif-display-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:100 1000;font-display:swap;
+  src:url(fonts/dm-sans-latin-wght-normal.woff2) format("woff2-variations"),url(fonts/dm-sans-latin-wght-normal.woff2) format("woff2")}
+
+:root{
+  /* Émail */
+  --email:#1b3e7e;--email-clair:#2b58a8;--email-fonce:#0f2858;--nuit:#0b1d40;
+  --blanc:#f6f8fc;--blanc-2:#e6ebf3;
+  /* Grès rose des façades de la Grande Île */
+  --gres:#87463a;--gres-clair:#a45a49;--gres-fonce:#5f2d24;
+  --sur-mur:#fff6f1;--sur-mur-doux:#f6dcd2;
+  --encre:#0f2858;--encre-douce:#46557a;
+  --lanterne:#ffcf8a;--focus:#ffd27a;
+  --serif:"DM Serif Display","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --gouttiere:16px;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .07 0 0 0 0 .05 0 0 0 .9 -.38'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)'/%3E%3C/svg%3E");
+  --appareil:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='264' viewBox='0 0 560 264'%3E%3Crect x='0' y='0' width='230' height='88' fill='%23fff' fill-opacity='.035'/%3E%3Crect x='230' y='0' width='170' height='88' fill='%23000' fill-opacity='.04'/%3E%3Crect x='400' y='0' width='160' height='88' fill='%23fff' fill-opacity='.015'/%3E%3Crect x='120' y='88' width='210' height='88' fill='%23000' fill-opacity='.03'/%3E%3Crect x='330' y='88' width='140' height='88' fill='%23000' fill-opacity='.05'/%3E%3Crect x='470' y='88' width='90' height='88' fill='%23fff' fill-opacity='.02'/%3E%3Crect x='0' y='88' width='120' height='88' fill='%23fff' fill-opacity='.02'/%3E%3Crect x='60' y='176' width='220' height='88' fill='%23fff' fill-opacity='.04'/%3E%3Crect x='280' y='176' width='140' height='88' fill='%23000' fill-opacity='.025'/%3E%3Crect x='420' y='176' width='140' height='88' fill='%23000' fill-opacity='.035'/%3E%3Crect x='0' y='176' width='60' height='88' fill='%23000' fill-opacity='.035'/%3E%3Cg fill='none' stroke='%23300f09' stroke-opacity='.24' stroke-width='1.6'%3E%3Cpath d='M0 0.8H560 M0 88.8H560 M0 176.8H560 M230 0v88 M400 0v88 M120 88v88 M330 88v88 M470 88v88 M60 176v88 M280 176v88 M420 176v88'/%3E%3C/g%3E%3Cg fill='none' stroke='%23ffe2d4' stroke-opacity='.08'%3E%3Cpath d='M0 2.6H560 M0 90.6H560 M0 178.6H560 M231.8 2v86 M401.8 2v86 M121.8 90v86 M331.8 90v86 M471.8 90v86 M61.8 178v86 M281.8 178v86 M421.8 178v86'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;background:var(--gres-fonce)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;color:var(--sur-mur);font:16px/1.55 var(--sans);font-optical-sizing:auto;
+  background-color:var(--gres);
+  background-image:var(--grain),var(--appareil),
+    linear-gradient(180deg,#0000 0,#0000 70%,#2a0f0a33 100%);
+  background-size:180px 180px,560px 264px,100% 100%;
+  overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.cadre{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--gouttiere)}
+
+/* ---------- La plaque émaillée : composant de base ---------- */
+.plaque{
+  --m:9px;--r:16px;--t:2.5px;--rv:18px;--filet:var(--blanc);
+  position:relative;isolation:isolate;color:#fff;border-radius:12px;
+  background:
+    linear-gradient(118deg,#ffffff2e 0%,#ffffff00 26%,#ffffff00 60%,#ffffff12 67%,#ffffff00 74%),
+    radial-gradient(150% 120% at 18% 0%,var(--email-clair) 0%,var(--email) 48%,var(--email-fonce) 120%);
+  box-shadow:
+    inset 0 0 0 1px #ffffff1c,inset 0 2px 1px #ffffff40,inset 0 -3px 5px #00000059,
+    0 1px 0 #00000040,0 3px 4px -1px #2a0c0659,0 22px 30px -18px #2a0c06cc;
+}
+.plaque::before{
+  --a:calc(var(--r) + var(--t) + 1px);
+  content:"";position:absolute;inset:var(--m);pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(circle at 0 0,#0000 var(--r),var(--filet) calc(var(--r) + .5px),var(--filet) calc(var(--r) + var(--t)),#0000 calc(var(--r) + var(--t) + .6px)) 0 0/var(--a) var(--a) no-repeat,
+    radial-gradient(circle at 100% 0,#0000 var(--r),var(--filet) calc(var(--r) + .5px),var(--filet) calc(var(--r) + var(--t)),#0000 calc(var(--r) + var(--t) + .6px)) 100% 0/var(--a) var(--a) no-repeat,
+    radial-gradient(circle at 0 100%,#0000 var(--r),var(--filet) calc(var(--r) + .5px),var(--filet) calc(var(--r) + var(--t)),#0000 calc(var(--r) + var(--t) + .6px)) 0 100%/var(--a) var(--a) no-repeat,
+    radial-gradient(circle at 100% 100%,#0000 var(--r),var(--filet) calc(var(--r) + .5px),var(--filet) calc(var(--r) + var(--t)),#0000 calc(var(--r) + var(--t) + .6px)) 100% 100%/var(--a) var(--a) no-repeat,
+    linear-gradient(var(--filet),var(--filet)) 50% 0/calc(100% - 2 * var(--r)) var(--t) no-repeat,
+    linear-gradient(var(--filet),var(--filet)) 50% 100%/calc(100% - 2 * var(--r)) var(--t) no-repeat,
+    linear-gradient(var(--filet),var(--filet)) 0 50%/var(--t) calc(100% - 2 * var(--r)) no-repeat,
+    linear-gradient(var(--filet),var(--filet)) 100% 50%/var(--t) calc(100% - 2 * var(--r)) no-repeat;
+}
+.plaque::after{
+  --vis:radial-gradient(circle at 42% 38%,#fff 0 .8px,#dfe3ea 1.5px,#97a0ae 3px,#454c58 4.3px,#0000008c 5px,#0000 5.7px);
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
+  background:
+    var(--vis) left calc(var(--rv) - 6px) top calc(var(--rv) - 6px)/12px 12px no-repeat,
+    var(--vis) right calc(var(--rv) - 6px) top calc(var(--rv) - 6px)/12px 12px no-repeat,
+    var(--vis) left calc(var(--rv) - 6px) bottom calc(var(--rv) - 6px)/12px 12px no-repeat,
+    var(--vis) right calc(var(--rv) - 6px) bottom calc(var(--rv) - 6px)/12px 12px no-repeat;
+}
+.plaque.blanche{
+  --filet:var(--email);color:var(--encre);
+  background:
+    linear-gradient(118deg,#ffffffd9 0%,#ffffff00 30%,#ffffff00 62%,#ffffff80 68%,#ffffff00 75%),
+    linear-gradient(180deg,#fdfeff 0%,var(--blanc) 45%,var(--blanc-2) 100%);
+  box-shadow:inset 0 0 0 1px #0f285814,inset 0 -3px 5px #0f285824,0 1px 0 #00000033,0 3px 4px -1px #2a0c0659,0 22px 30px -18px #2a0c06cc;
+}
+/* petites plaques : deux vis latérales */
+.plaque.mini{--m:4px;--r:7px;--t:1.6px;border-radius:7px}
+.plaque.mini::after{display:none}
+
+/* éclat d'émail */
+.eclat{position:absolute;width:13px;height:9px;background:radial-gradient(circle at 45% 50%,#1d1f25 0 38%,#3b3f49 55%,#ffffff55 70%,#0000 74%);
+  clip-path:polygon(8% 30%,40% 0,78% 12%,100% 52%,72% 100%,26% 88%,0 66%);opacity:.9}
+
+/* ---------- Bandeau du haut ---------- */
+.haut{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:calc(14px + env(safe-area-inset-top));padding-bottom:4px}
+.lieu{margin:0;font-size:12px;font-weight:650;letter-spacing:.2em;text-transform:uppercase;color:var(--sur-mur-doux)}
+.pastille{display:inline-flex;align-items:center;gap:7px;padding:6px 11px 6px 9px;border-radius:999px;
+  background:var(--blanc);color:var(--encre);font-size:11.5px;font-weight:750;letter-spacing:.16em;text-transform:uppercase;
+  box-shadow:0 1px 0 #0003,0 6px 12px -6px #2a0c06aa}
+.pastille::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--email);box-shadow:0 0 0 2px #1b3e7e33}
+
+/* ---------- Héros : le mur et la plaque ---------- */
+.heros{position:relative;padding-bottom:40px;
+  background:
+    radial-gradient(90% 55% at 60% 26%,#ffcf8a2e 0%,#ffcf8a00 62%),
+    radial-gradient(120% 70% at 50% 110%,#2a0c0666 0%,#2a0c0600 60%)}
+.heros-grille{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;padding-top:22px}
+.enseigne{--m:10px;--r:18px;--t:2.5px;--rv:19px;padding:26px 28px 27px;border-radius:14px}
+.enseigne .metier{margin:0;font-size:12.5px;font-weight:650;letter-spacing:.24em;text-transform:uppercase;color:#dde6f7}
+h1{margin:12px 0 0;font-weight:400;line-height:1}
+h1 .chez{display:block;font:italic 400 48px/.9 var(--serif);color:#e8eefb;margin-left:2px}
+h1 .rita{display:block;font:400 clamp(118px,41vw,164px)/.8 var(--serif);letter-spacing:-.025em;margin:4px 0 0 -6px;text-shadow:0 2px 0 #0b1d4066}
+.enseigne .barre-filet{height:2.5px;background:var(--filet);margin:18px calc(-28px + 10px) 14px}
+.enseigne .rue{margin:0;font:600 17px/1.3 var(--sans);letter-spacing:.01em}
+.enseigne .rue small{display:block;font-size:13.5px;font-weight:500;color:#cfdaf1;letter-spacing:.06em;margin-top:2px}
+.enseigne .eclat{left:38%;bottom:-2px}
+.sous-plaque{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-top:14px}
+.distinction{margin:6px 0 0;max-width:22ch;font-size:14px;line-height:1.35;color:var(--sur-mur-doux)}
+.distinction b{display:block;color:var(--sur-mur);font-weight:700;letter-spacing:.02em}
+.numero{--m:5px;--r:8px;--t:2px;--rv:0px;flex:none;display:grid;place-items:center;width:66px;height:58px;
+  font:400 44px/1 var(--serif);padding-top:4px}
+.numero::after{display:none}
+.accroche h2{margin:0;font:400 clamp(32px,8.6vw,40px)/1.04 var(--serif);letter-spacing:-.005em;text-wrap:balance}
+.accroche h2 em{font-style:italic;color:var(--lanterne)}
+.accroche p{margin:12px 0 22px;font-size:17px;line-height:1.5;color:var(--sur-mur-doux);max-width:36ch}
+.cta{--m:5px;--r:9px;--t:2px;--rv:0px;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  min-height:62px;padding:14px 20px 14px 22px;text-decoration:none;font:750 17px/1.2 var(--sans);letter-spacing:.005em;cursor:pointer;border:0;width:100%}
+.cta::after{display:none}
+.cta .fleche{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--email);color:#fff}
+.cta:hover{filter:brightness(1.03)}
+.cta:active{transform:translateY(1px)}
+
+/* ---------- Corniche : sépare les sections comme un bandeau de grès ---------- */
+.corniche{height:20px;margin:0;border:0;
+  background:linear-gradient(180deg,#c47563 0,#b0624f 18%,#954d3e 55%,#6c3329 100%);
+  box-shadow:0 1px 0 #ffd9c733 inset,0 10px 14px -6px #2a0c0699}
+
+/* ---------- Sections ---------- */
+section{position:relative}
+.bloc{padding:52px 0 60px}
+.cartouche{--m:5px;--r:8px;--t:2px;--rv:0px;display:inline-block;margin:0 0 18px;padding:11px 22px 12px;
+  font:400 26px/1.1 var(--serif);letter-spacing:.005em}
+.cartouche::after{display:none}
+.intro{margin:0 0 24px;font-size:17px;max-width:38ch;color:var(--sur-mur-doux)}
+.intro strong{color:var(--sur-mur);font-weight:650}
+
+/* Les classiques : un mur de plaques */
+.mur-plaques{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 10px}
+.mur-plaques li{flex:1 1 auto;display:flex}
+.mur-plaques .spec{flex:1;justify-content:space-between}
+.spec{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:10px 24px 11px 24px;border:0;cursor:pointer;
+  font:400 23px/1.1 var(--serif);text-align:left}
+.spec .signe{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1.6px solid currentColor;
+  font:700 14px/1 var(--sans);opacity:.85}
+.spec .signe::before{content:"+"}
+.spec[aria-pressed="true"]{--filet:var(--email);color:var(--encre);
+  background:linear-gradient(118deg,#ffffffd9 0%,#ffffff00 30%),linear-gradient(180deg,#fdfeff,var(--blanc) 45%,var(--blanc-2));}
+.spec[aria-pressed="true"] .signe{background:var(--email);border-color:var(--email);color:#fff;opacity:1}
+.spec[aria-pressed="true"] .signe::before{content:"✓"}
+.aide-mur{margin:18px 0 0;font-size:14.5px;color:var(--sur-mur-doux)}
+.sources-note{margin:28px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--sur-mur-doux)}
+.sources-note span{display:inline-flex;gap:8px;align-items:baseline}
+.sources-note span::before{content:"";width:6px;height:6px;transform:rotate(45deg) translateY(-2px);background:var(--lanterne);flex:none}
+
+/* ---------- Bon de commande : grande plaque blanche ---------- */
+.commande-grille{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:start}
+.bon{--m:10px;--r:18px;--t:2px;--rv:19px;--focus:var(--email);padding:34px 22px 30px}
+.bon h2{margin:0;font:400 31px/1.08 var(--serif);color:var(--encre)}
+.bon .chapeau{margin:8px 0 22px;color:var(--encre-douce);font-size:15.5px}
+fieldset{margin:0 0 24px;padding:0;border:0;min-width:0}
+legend{display:flex;align-items:center;gap:10px;padding:0;margin:0 0 12px;font:700 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--encre)}
+legend .n{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--email);color:#fff;font:400 15px/1 var(--serif);letter-spacing:0}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.puces .spec{min-height:42px;padding:7px 12px 8px 15px;font-size:18px;gap:8px}
+.puces .spec .signe{width:18px;height:18px;font-size:12px}
+label.champ{display:grid;gap:6px;font-weight:650;font-size:15px;color:var(--encre)}
+.champ .aide,.aide-bloc{font-weight:450;font-size:13.5px;line-height:1.4;color:var(--encre-douce)}
+input,textarea,select{width:100%;font:16px/1.4 var(--sans);color:var(--encre);background:#fff;
+  border:1.5px solid #0f28583d;border-radius:10px;padding:12px 13px;appearance:none;-webkit-appearance:none}
+textarea{min-height:92px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#5c6884}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--email);outline-offset:1px;border-color:var(--email)}
+select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231b3e7e' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+[aria-invalid="true"]{border-color:#b3261e!important}
+.erreur{margin:6px 0 0;font-size:14px;font-weight:600;color:#a3221b}
+.erreur:empty{display:none}
+.duo{display:grid;gap:14px}
+
+/* jours : petites plaques de numéro */
+.jours-defile{position:relative;margin:0 -22px 14px;padding:4px 22px 12px;overflow-x:auto;scroll-padding-inline:22px;scroll-snap-type:x proximity;scrollbar-width:thin;
+  -webkit-mask:linear-gradient(90deg,#0000 0,#000 18px,#000 calc(100% - 26px),#0000 100%);mask:linear-gradient(90deg,#0000 0,#000 18px,#000 calc(100% - 26px),#0000 100%)}
+.jours{display:flex;gap:8px;width:max-content}
+.jour{position:relative;scroll-snap-align:start}
+.jour input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.jour span{--m:3px;--r:6px;--t:1.5px;--rv:0px;display:grid;justify-items:center;width:58px;padding:8px 0 9px;border-radius:7px;
+  font-size:11.5px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.jour span::after{display:none}
+.jour b{font:400 26px/1 var(--serif);letter-spacing:0;margin:3px 0 2px;text-transform:none}
+.jour input:checked + span{--filet:var(--email);color:var(--encre);background:linear-gradient(180deg,#fff,var(--blanc-2));
+  box-shadow:0 0 0 2.5px var(--email),0 8px 14px -8px #0f2858aa;transform:translateY(-2px)}
+.jour input:focus-visible + span{outline:3px solid var(--lanterne);outline-offset:2px}
+.jour .ferme{opacity:.5}
+
+.envoyer{--m:6px;--r:10px;--t:2px;--rv:0px;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;
+  min-height:62px;margin-top:6px;border:0;cursor:pointer;font:750 17.5px/1.2 var(--sans);color:#fff;padding:14px 20px}
+.envoyer::after{display:none}
+.envoyer svg{width:24px;height:24px;color:#7ff0a6}
+.rassure{margin:12px 0 0;text-align:center;font-size:13.5px;color:var(--encre-douce)}
+
+/* aperçu téléphone (direct sur grand écran, et dans la fenêtre) */
+.ecran{background:#0b141a;border-radius:26px;padding:10px;box-shadow:0 30px 50px -24px #1a0603cc,0 0 0 1px #ffffff14}
+.ecran-int{border-radius:18px;overflow:hidden;background:#efeae2}
+.tete-wa{display:flex;align-items:center;gap:11px;padding:12px 14px;background:#f0f2f5;color:#111b21;border-bottom:1px solid #0000000f}
+.tete-wa .retour{width:18px;height:18px;color:#54656f}
+.avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#dfe5e7;color:#54656f;font:700 16px/1 var(--sans);flex:none}
+.tete-wa strong{display:block;font:650 15.5px/1.2 var(--sans)}
+.tete-wa small{display:block;font-size:12.5px;color:#54656f}
+.fil{padding:14px 12px 18px;min-height:220px;
+  background-color:#efeae2;
+  background-image:radial-gradient(circle at 10px 10px,#d9d1c566 1.2px,#0000 1.6px),radial-gradient(circle at 30px 28px,#d9d1c566 1.2px,#0000 1.6px);
+  background-size:40px 40px}
+.date-wa{display:table;margin:0 auto 12px;padding:4px 10px;border-radius:7px;background:#fff;color:#54656f;font-size:12px;font-weight:600;box-shadow:0 1px 1px #0000001a}
+.bulle{position:relative;max-width:92%;padding:8px 10px 20px 11px;background:#fff;color:#111b21;border-radius:0 9px 9px 9px;
+  font:14.5px/1.42 var(--sans);white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:0 1px 1px #0000001f;min-width:120px}
+.bulle::before{content:"";position:absolute;left:-7px;top:0;border:0 solid #0000;border-width:0 8px 9px 0;border-right-color:#fff}
+.bulle .h{position:absolute;right:9px;bottom:4px;font-size:11px;color:#667781}
+.bulle.vide{color:#667781;font-style:italic}
+.pied-wa{display:flex;gap:8px;align-items:center;padding:8px 10px;background:#f0f2f5}
+.pied-wa span{flex:1;padding:9px 14px;border-radius:20px;background:#fff;color:#667781;font-size:14px}
+.pied-wa i{width:38px;height:38px;border-radius:50%;background:#00a884;flex:none}
+.direct{display:none}
+.direct .titre-direct{margin:0 0 14px;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sur-mur-doux)}
+
+dialog{border:0;padding:0;background:transparent;width:min(94vw,410px);max-height:94vh;color:var(--sur-mur);overflow:visible}
+dialog::backdrop{background:#1a0805cc;backdrop-filter:blur(3px)}
+.fenetre{display:grid;gap:12px;max-height:94vh;overflow:auto;padding:4px}
+.fenetre .surtitre{margin:0;text-align:center;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#f6dcd2}
+.fenetre .fil{max-height:max(240px,calc(92vh - 352px));min-height:0;overflow:auto;padding:10px 12px 12px}
+.fenetre .date-wa{margin-bottom:8px}
+.fenetre .bulle{max-width:96%;font-size:14px;line-height:1.38}
+.fenetre .tete-wa{padding:10px 14px}
+.fenetre .pied-wa{padding:6px 10px}
+.fenetre .pied-wa i{width:34px;height:34px}
+.note-demo{--m:5px;--r:8px;--t:1.6px;--rv:0px;margin:0;padding:13px 18px;font-size:14px;line-height:1.42}
+.note-demo::after{display:none}
+.note-demo strong{display:block;font-size:15.5px}
+.fermer{--m:4px;--r:7px;--t:1.6px;--rv:0px;min-height:52px;border:0;cursor:pointer;font:750 16px/1 var(--sans);width:100%}
+.fermer::after{display:none}
+.ou-appeler{margin:2px 0 6px;text-align:center;font-size:14.5px;color:#f6dcd2}
+.ou-appeler a{color:#fff;font-weight:700;text-underline-offset:3px}
+
+/* ---------- Infos pratiques ---------- */
+.infos-grille{display:grid;grid-template-columns:minmax(0,1fr);gap:30px}
+.horaires{--m:9px;--r:16px;--rv:18px;padding:30px 28px 26px}
+.horaires h2,.adresse h2{margin:0 0 16px;font:700 12.5px/1.2 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#dde6f7}
+.service{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1.5px solid #f6f8fc40}
+.service:last-of-type{border-bottom:0}
+.service dt{font:italic 400 24px/1 var(--serif);color:#e8eefb}
+.service dd{margin:0;font:400 30px/1 var(--serif);letter-spacing:.01em}
+.horaires dl{margin:0}
+.horaires .avertir{margin:14px 0 0;padding-top:14px;border-top:2.5px solid var(--filet);margin-left:-19px;margin-right:-19px;padding-left:19px;padding-right:19px;font-size:14.5px;color:#dbe4f6}
+.adresse{padding:4px 0 0}
+.adresse h2{color:var(--sur-mur-doux)}
+.rue-plaque{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.plaque-rue{--m:7px;--r:11px;--t:2px;--rv:0px;padding:12px 24px 14px;font:400 27px/1.05 var(--serif)}
+.plaque-rue::after{display:none}
+.plaque-rue small{display:block;font:650 10.5px/1.2 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#cfdaf1;margin-bottom:4px}
+.adresse address{font-style:normal;margin:16px 0 18px;font-size:17px;line-height:1.45}
+.adresse address span{color:var(--sur-mur-doux);font-size:15px}
+.liens{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lien2{display:flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:10px 12px;border-radius:10px;
+  border:1.5px solid #fff6f1a6;color:var(--sur-mur);text-decoration:none;font-weight:700;font-size:15.5px;background:#2a0c061f}
+.lien2:hover{background:#2a0c0640}
+.lien2 svg{width:18px;height:18px}
+
+/* ---------- Pied ---------- */
+footer{background:var(--nuit);color:#d7e0f2;padding:34px 0 104px;font-size:14px;
+  background-image:linear-gradient(180deg,#00000033,#0000 30%)}
+footer p{margin:0 0 8px;max-width:62ch}
+footer .demo{color:#fff;font-weight:650}
+footer .signature{margin-top:16px;color:#aebbd6;font-size:13px;letter-spacing:.04em}
+footer a{color:#fff}
+
+/* ---------- Barre fixe ---------- */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px var(--gouttiere) calc(10px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,#5f2d2400,#4a2019e6 30%,#3a1712f2);
+  transition:transform .3s ease,visibility 0s linear 0s}
+.barre .cta{max-width:520px;margin:0 auto;min-height:56px}
+.barre.cachee{transform:translateY(115%);visibility:hidden;transition:transform .3s ease,visibility 0s linear .3s}
+.compte{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 7px;margin-left:8px;border-radius:12px;background:var(--email);color:#fff;font-size:13px;font-weight:750}
+.cta .libelle{display:flex;align-items:center}
+
+/* ---------- Animations (seulement si le mouvement est accepté) ---------- */
+.reflet{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
+.reflet::before{content:"";position:absolute;top:-20%;bottom:-20%;width:38%;left:-60%;
+  background:linear-gradient(100deg,#fff0 0%,#ffffff2e 50%,#fff0 100%);transform:skewX(-14deg)}
+@media (prefers-reduced-motion:no-preference){
+  .heros .enseigne{animation:poser .9s cubic-bezier(.2,.8,.2,1) both}
+  .heros .numero{animation:poser .9s .18s cubic-bezier(.2,.8,.2,1) both}
+  .reflet::before{animation:reflet 1.6s .9s ease-in-out both}
+  .heros .cta .fleche{animation:pointer 1.4s 1.4s ease-in-out 2}
+  .spec.tinte{animation:tinte .42s ease-out}
+  .compte.saute{animation:saute .35s ease-out}
+  .js-anim .revele{opacity:0;transform:translateY(22px)}
+  .js-anim .revele.vu{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+  .jour span{transition:transform .18s ease}
+}
+@keyframes poser{from{opacity:.001;transform:translateY(-14px) rotate(-1.4deg)}to{opacity:1;transform:none}}
+@keyframes reflet{from{left:-60%}to{left:130%}}
+@keyframes pointer{0%,100%{transform:none}50%{transform:translateY(4px)}}
+@keyframes tinte{0%{transform:rotate(0)}30%{transform:rotate(-2.4deg)}60%{transform:rotate(1.6deg)}100%{transform:rotate(0)}}
+@keyframes saute{0%{transform:scale(1)}40%{transform:scale(1.3)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.reflet{display:none}.barre,.barre.cachee{transition:none}}
+
+/* ---------- Grand écran ---------- */
+@media (min-width:900px){
+  :root{--gouttiere:40px}
+  .haut{padding-top:22px}
+  .heros{padding-bottom:84px}
+  .heros-grille{grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:72px;align-items:center;padding-top:44px}
+  .enseigne{--m:12px;--r:22px;--t:3px;--rv:23px;padding:38px 44px 30px}
+  .enseigne .metier{font-size:14px}
+  h1 .chez{font-size:66px}
+  h1 .rita{font-size:236px;margin-left:-10px}
+  .enseigne .barre-filet{height:3px;margin:24px calc(-44px + 12px) 18px}
+  .enseigne .rue{font-size:20px}
+  .enseigne .rue small{font-size:15px}
+  .sous-plaque{margin-top:18px}
+  .distinction{font-size:15px;max-width:30ch}
+  .numero{width:82px;height:72px;font-size:54px}
+  .accroche h2{font-size:56px;line-height:1.02}
+  .accroche p{font-size:19px;margin:18px 0 30px}
+  .accroche .cta{max-width:420px}
+  .bloc{padding:84px 0 96px}
+  .classiques-grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:start}
+  .classiques-grille>.revele:nth-child(2){grid-column:2;grid-row:1/span 2}
+  .classiques-grille>.sources-note{grid-column:1;grid-row:2;margin:0;flex-direction:column;gap:10px}
+  .mur-plaques{gap:16px 14px}
+  .spec{font-size:28px;min-height:62px;padding:12px 30px 13px 30px}
+  .commande-grille{grid-template-columns:minmax(0,7fr) minmax(0,4.4fr);gap:56px}
+  .bon{padding:48px 48px 42px}
+  .bon h2{font-size:40px}
+  .jours-defile{margin:0 -48px 14px;padding:4px 48px 12px}
+  .duo{grid-template-columns:1fr 1fr}
+  .jours-defile{overflow:visible;-webkit-mask:none;mask:none}
+  .jours{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));width:auto}
+  .jour span{width:100%}
+  .direct{display:block;position:sticky;top:28px}
+  .infos-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+  .horaires{padding:40px 44px 34px}
+  .horaires .avertir{margin-left:-35px;margin-right:-35px;padding-left:35px;padding-right:35px}
+  .service dd{font-size:38px}
+  .plaque-rue{font-size:36px;padding:16px 32px 18px}
+  .barre{padding-left:0;padding-right:0;background:none;left:auto;right:28px;bottom:24px}
+  .barre .cta{width:auto;min-width:340px}
+}
+</style>
+</head>
+<body>
+
+<header class="heros" id="haut">
+  <div class="cadre haut">
+    <p class="lieu">Strasbourg · Grande Île</p>
+    <span class="pastille">Maquette</span>
+  </div>
+
+  <div class="cadre heros-grille">
+    <div>
+      <div class="plaque enseigne">
+        <span class="reflet" aria-hidden="true"></span>
+        <p class="metier">Restaurant libanais</p>
+        <h1><span class="chez">Chez</span><span class="rita">Rita</span></h1>
+        <div class="barre-filet" aria-hidden="true"></div>
+        <p class="rue"><span class="sr">7 </span>Rue des Tonneliers<small>Grande Île · Strasbourg</small></p>
+      </div>
+      <div class="sous-plaque">
+        <p class="distinction"><b>Sélection Gault&amp;Millau 2025</b>Cuisine libanaise</p>
+        <div class="plaque numero" aria-hidden="true">7</div>
+      </div>
+    </div>
+
+    <div class="accroche">
+      <h2>Pour les fêtes, commandez vos mezze <em>à l’avance.</em></h2>
+      <p>Composez votre commande, choisissez le jour et l’heure de retrait. Nous vous confirmons par message.</p>
+      <a class="plaque blanche cta" id="cta-haut" href="#commander">
+        <span class="libelle">Commander pour les fêtes</span>
+        <span class="fleche" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<hr class="corniche">
+
+<main>
+  <section class="bloc" aria-labelledby="t-classiques">
+    <div class="cadre classiques-grille">
+      <div class="revele">
+        <h2 class="plaque cartouche" id="t-classiques">Les classiques</h2>
+        <p class="intro">Notre carte reprend <strong>les classiques du répertoire libanais</strong>, ceux que cite le guide Gault&amp;Millau.</p>
+      </div>
+      <div class="revele">
+        <ul class="mur-plaques" id="mur">
+          <li><button type="button" class="plaque mini spec" data-spec="Taboulé" aria-pressed="false">Taboulé<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Houmous" aria-pressed="false">Houmous<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Feuilles de vigne" aria-pressed="false">Feuilles de vigne<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Falafels" aria-pressed="false">Falafels<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Kefta" aria-pressed="false">Kefta<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Méchoui" aria-pressed="false">Méchoui<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Mezze" aria-pressed="false">Mezze<span class="signe" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="plaque mini spec" data-spec="Baklava" aria-pressed="false">Baklava<span class="signe" aria-hidden="true"></span></button></li>
+        </ul>
+        <p class="aide-mur">Touchez une plaque pour l’ajouter à votre commande.</p>
+      </div>
+      <p class="sources-note revele"><span>Gault&amp;Millau 2025 : sélectionné</span><span>Sluurpy : 4,5/5, environ 2 658 recommandations</span></p>
+    </div>
+  </section>
+
+  <hr class="corniche">
+
+  <section class="bloc" id="commander" aria-labelledby="t-commande">
+    <div class="cadre commande-grille">
+      <form class="plaque blanche bon revele" id="form" novalidate>
+        <h2 id="t-commande">Votre commande de fêtes</h2>
+        <p class="chapeau">Vous relisez le message avant tout envoi.</p>
+
+        <fieldset aria-describedby="err-commande">
+          <legend><span class="n" aria-hidden="true">1</span>Ce que vous souhaitez</legend>
+          <ul class="puces" aria-label="Nos classiques">
+            <li><button type="button" class="plaque mini spec" data-spec="Taboulé" aria-pressed="false">Taboulé<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Houmous" aria-pressed="false">Houmous<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Feuilles de vigne" aria-pressed="false">Feuilles de vigne<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Falafels" aria-pressed="false">Falafels<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Kefta" aria-pressed="false">Kefta<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Méchoui" aria-pressed="false">Méchoui<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Mezze" aria-pressed="false">Mezze<span class="signe" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="plaque mini spec" data-spec="Baklava" aria-pressed="false">Baklava<span class="signe" aria-hidden="true"></span></button></li>
+          </ul>
+          <label class="champ" for="precisions">Quantités et précisions
+            <span class="aide" id="aide-precisions">Nombre de personnes, quantités, ce que vous voulez nous dire.</span>
+          </label>
+          <textarea id="precisions" name="precisions" aria-describedby="aide-precisions err-commande" placeholder="Ex. : mezze pour 8 personnes, deux houmous"></textarea>
+          <p class="erreur" id="err-commande" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset aria-describedby="aide-retrait err-jour">
+          <legend><span class="n" aria-hidden="true">2</span>Jour et heure de retrait</legend>
+          <div class="jours-defile" id="jours-defile">
+            <div class="jours" id="jours" role="radiogroup" aria-label="Jour de retrait"></div>
+          </div>
+          <p class="erreur" id="err-jour" aria-live="polite"></p>
+          <label class="champ" for="heure">Heure de retrait</label>
+          <select id="heure" name="heure" aria-describedby="aide-retrait err-heure" style="margin-top:6px">
+            <option value="">Choisir une heure</option>
+            <optgroup label="Midi">
+              <option>12h00</option><option>12h30</option><option>13h00</option><option>13h30</option>
+            </optgroup>
+            <optgroup label="Soir">
+              <option>19h00</option><option>19h30</option><option>20h00</option><option>20h30</option><option>21h00</option><option>21h30</option><option>22h00</option><option>22h30</option><option>23h00</option>
+            </optgroup>
+          </select>
+          <p class="aide-bloc" id="aide-retrait" style="margin:8px 0 0">Créneaux d’après nos horaires indiqués, jours d’ouverture à confirmer.</p>
+          <p class="erreur" id="err-heure" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n" aria-hidden="true">3</span>Vos coordonnées</legend>
+          <div class="duo">
+            <div>
+              <label class="champ" for="nom">Votre nom</label>
+              <input id="nom" name="nom" autocomplete="name" aria-describedby="err-nom" style="margin-top:6px">
+              <p class="erreur" id="err-nom" aria-live="polite"></p>
+            </div>
+            <div>
+              <label class="champ" for="tel">Votre téléphone</label>
+              <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" aria-describedby="aide-tel err-tel" style="margin-top:6px">
+              <p class="aide-bloc" id="aide-tel" style="margin:6px 0 0">Pour vous confirmer la commande.</p>
+              <p class="erreur" id="err-tel" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <button class="plaque envoyer" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Commander sur WhatsApp
+        </button>
+        <p class="rassure">Rien ne part sans votre accord : vous voyez d’abord le message.</p>
+      </form>
+
+      <aside class="direct" aria-label="Aperçu du message">
+        <p class="titre-direct">Ce que nous recevons</p>
+        <div class="ecran">
+          <div class="ecran-int">
+            <div class="tete-wa">
+              <svg class="retour" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="avatar" data-avatar aria-hidden="true">?</span>
+              <div><strong data-client>Votre nom</strong><small data-num>via la page Chez Rita</small></div>
+            </div>
+            <div class="fil">
+              <span class="date-wa">Aujourd’hui</span>
+              <div class="bulle vide" data-bulle><span data-msg>Votre message s’écrit ici, au fil de votre saisie.</span><span class="h" data-heure></span></div>
+            </div>
+            <div class="pied-wa" aria-hidden="true"><span>Répondre</span><i></i></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <hr class="corniche">
+
+  <section class="bloc" aria-label="Infos pratiques">
+    <div class="cadre infos-grille">
+      <div class="plaque horaires revele">
+        <h2>Horaires</h2>
+        <dl>
+          <div class="service"><dt>Midi</dt><dd>12h00 – 14h00</dd></div>
+          <div class="service"><dt>Soir</dt><dd>19h00 – 23h30</dd></div>
+        </dl>
+        <p class="avertir">Jours d’ouverture à confirmer.</p>
+      </div>
+
+      <div class="adresse revele">
+        <h2>Nous trouver</h2>
+        <div class="rue-plaque" aria-hidden="true">
+          <div class="plaque numero">7</div>
+          <div class="plaque plaque-rue"><small>Grande Île</small>Rue des Tonneliers</div>
+        </div>
+        <address>7 rue des Tonneliers, 67000 Strasbourg<br><span>Grande Île, centre de Strasbourg</span></address>
+        <div class="liens">
+          <a class="lien2" href="tel:+33390400812"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg>Appeler<span class="sr"> le 03 90 40 08 12</span></a>
+          <a class="lien2" href="https://www.google.com/maps/search/?api=1&amp;query=7%20rue%20des%20Tonneliers%2C%2067000%20Strasbourg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Itinéraire</a>
+        </div>
+        <p style="margin:14px 0 0;font-size:15px;color:var(--sur-mur-doux)">Téléphone : <a href="tel:+33390400812" style="color:var(--sur-mur);font-weight:650">03 90 40 08 12</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cadre">
+    <p>Sources publiques : Gault&amp;Millau (sélection 2025), PagesJaunes (horaires, à confirmer), Sluurpy (note).</p>
+    <p class="demo">Page de démonstration non officielle : aucune commande n'est transmise.</p>
+    <p class="signature">Maquette préparée par BRUNFRAME</p>
+  </div>
+</footer>
+
+<div class="barre cachee" id="barre">
+  <a class="plaque blanche cta" href="#commander">
+    <span class="libelle">Commander pour les fêtes<span class="compte" id="compte" hidden>0</span></span>
+    <span class="fleche" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+</div>
+
+<dialog id="apercu" aria-labelledby="ap-titre" aria-describedby="ap-note">
+  <div class="fenetre">
+    <p class="surtitre" id="ap-titre">Le message que recevrait Chez Rita</p>
+    <div class="ecran">
+      <div class="ecran-int">
+        <div class="tete-wa">
+          <svg class="retour" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="avatar" data-avatar aria-hidden="true">?</span>
+          <div><strong data-client></strong><small data-num></small></div>
+        </div>
+        <div class="fil">
+          <span class="date-wa">Aujourd’hui</span>
+          <div class="bulle" data-bulle><span data-msg></span><span class="h" data-heure></span></div>
+        </div>
+        <div class="pied-wa" aria-hidden="true"><span>Répondre</span><i></i></div>
+      </div>
+    </div>
+    <p class="plaque note-demo" id="ap-note"><strong>Démonstration : rien n'est envoyé.</strong>Une fois la page en ligne, ce message arriverait sur le WhatsApp du restaurant (numéro mobile [à fournir]), qui vous répondrait pour confirmer.</p>
+    <a class="plaque envoyer" id="ap-wa" href="#" target="_blank" rel="noopener" hidden>Ouvrir dans WhatsApp</a>
+    <button class="plaque blanche fermer" type="button" id="ap-fermer">Modifier ma commande</button>
+    <p class="ou-appeler">Une question ? <a href="tel:+33390400812">Appelez le 03 90 40 08 12</a></p>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var NOM = "Chez Rita";
+  var TEL_VERIFIE = "+33390400812";
+  // Lien wa.me uniquement pour un mobile (06/07) vérifié ; ici un fixe, donc pas de lien.
+  var WA = /^\+33[67]\d{8}$/.test(TEL_VERIFIE) ? TEL_VERIFIE.slice(1) : "";
+  var ORDRE = ["Taboulé", "Houmous", "Feuilles de vigne", "Falafels", "Kefta", "Méchoui", "Mezze", "Baklava"];
+  var choix = new Set();
+  var mouvement = window.matchMedia && window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+
+  var form = document.getElementById("form");
+  var champ = { precisions: form.precisions, heure: form.heure, nom: form.nom, tel: form.tel };
+
+  // Date du jour à Strasbourg
+  function jourParis(decalage) {
+    var iso = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    var d = new Date(iso + "T12:00:00");
+    d.setDate(d.getDate() + decalage);
+    return d;
+  }
+  function isoDe(d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+  function heureParis() {
+    return new Intl.DateTimeFormat("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" }).format(new Date());
+  }
+
+  // Jours de retrait : petites plaques de numéro
+  var conteneur = document.getElementById("jours");
+  for (var i = 1; i <= 21; i++) {
+    var d = jourParis(i);
+    var lab = document.createElement("label");
+    lab.className = "jour";
+    var inp = document.createElement("input");
+    inp.type = "radio"; inp.name = "jour"; inp.value = isoDe(d);
+    inp.setAttribute("aria-label", d.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }));
+    inp.setAttribute("aria-describedby", "err-jour");
+    var s = document.createElement("span");
+    s.className = "plaque mini";
+    s.setAttribute("aria-hidden", "true");
+    s.innerHTML = "";
+    s.appendChild(document.createTextNode(d.toLocaleDateString("fr-FR", { weekday: "short" }).replace(".", "")));
+    var b = document.createElement("b"); b.textContent = d.getDate(); s.appendChild(b);
+    s.appendChild(document.createTextNode(d.toLocaleDateString("fr-FR", { month: "short" }).replace(".", "")));
+    lab.appendChild(inp); lab.appendChild(s);
+    conteneur.appendChild(lab);
+  }
+
+  // Spécialités : les plaques du mur et les puces du formulaire partagent le même choix
+  var boutons = document.querySelectorAll(".spec");
+  var compte = document.getElementById("compte");
+  function rafraichirPuces() {
+    boutons.forEach(function (bt) { bt.setAttribute("aria-pressed", choix.has(bt.dataset.spec) ? "true" : "false"); });
+    compte.textContent = choix.size;
+    compte.hidden = choix.size === 0;
+  }
+  boutons.forEach(function (bt) {
+    bt.addEventListener("click", function () {
+      var nom = bt.dataset.spec;
+      if (choix.has(nom)) choix.delete(nom); else choix.add(nom);
+      rafraichirPuces();
+      if (mouvement) {
+        bt.classList.remove("tinte"); void bt.offsetWidth; bt.classList.add("tinte");
+        compte.classList.remove("saute"); void compte.offsetWidth; compte.classList.add("saute");
+      }
+      effacer("commande");
+      majDirect();
+    });
+  });
+
+  // Le message, tel que le restaurant le reçoit
+  function telLisible(v) {
+    var c = v.replace(/[^\d+]/g, "");
+    if (/^0\d{9}$/.test(c)) return c.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+    return v.trim();
+  }
+  function message() {
+    var jour = form.querySelector('input[name="jour"]:checked');
+    var lignes = ["Bonjour " + NOM + ",", "je souhaite passer une commande pour les fêtes.", ""];
+    if (jour || champ.heure.value) {
+      var quand = jour ? new Date(jour.value + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "jour à préciser";
+      lignes.push("Retrait : " + quand + (champ.heure.value ? ", vers " + champ.heure.value : ""), "");
+    }
+    var liste = ORDRE.filter(function (n) { return choix.has(n); });
+    if (liste.length) { lignes.push("Ma commande :"); liste.forEach(function (n) { lignes.push("• " + n); }); }
+    var p = champ.precisions.value.trim();
+    if (p) lignes.push((liste.length ? "Précisions : " : "Ma commande : ") + p);
+    if (liste.length || p) lignes.push("");
+    if (champ.nom.value.trim()) lignes.push("Nom : " + champ.nom.value.trim());
+    if (champ.tel.value.trim()) lignes.push("Téléphone : " + telLisible(champ.tel.value));
+    lignes.push("", "Merci de me confirmer la commande.");
+    return lignes.join("\n").replace(/\n{3,}/g, "\n\n");
+  }
+  function remplir(racine, vide) {
+    var nom = champ.nom.value.trim();
+    racine.querySelectorAll("[data-client]").forEach(function (el) { el.textContent = nom || "Votre nom"; });
+    racine.querySelectorAll("[data-num]").forEach(function (el) { el.textContent = champ.tel.value.trim() ? telLisible(champ.tel.value) : "via la page Chez Rita"; });
+    racine.querySelectorAll("[data-avatar]").forEach(function (el) { el.textContent = nom ? nom.charAt(0).toUpperCase() : "?"; });
+    racine.querySelectorAll("[data-heure]").forEach(function (el) { el.textContent = heureParis(); });
+    racine.querySelectorAll("[data-bulle]").forEach(function (el) {
+      el.classList.toggle("vide", !!vide);
+      el.querySelector("[data-msg]").textContent = vide ? "Votre message s’écrit ici, au fil de votre saisie." : message();
+    });
+  }
+  var direct = document.querySelector(".direct");
+  function majDirect() {
+    var rempli = choix.size || champ.precisions.value.trim() || champ.nom.value.trim() || form.querySelector('input[name="jour"]:checked') || champ.heure.value;
+    remplir(direct, !rempli);
+  }
+  form.addEventListener("input", majDirect);
+  form.addEventListener("change", function (e) { if (e.target.name === "jour") effacer("jour"); majDirect(); });
+  majDirect();
+
+  // Validation douce, messages en français
+  var erreurs = { commande: null, jour: null, heure: champ.heure, nom: champ.nom, tel: champ.tel };
+  function effacer(cle) {
+    var p = document.getElementById("err-" + cle);
+    if (p) p.textContent = "";
+    if (erreurs[cle]) erreurs[cle].removeAttribute("aria-invalid");
+    if (cle === "commande") champ.precisions.removeAttribute("aria-invalid");
+  }
+  ["heure", "nom", "tel"].forEach(function (k) { champ[k].addEventListener("input", function () { effacer(k); }); champ[k].addEventListener("change", function () { effacer(k); }); });
+  champ.precisions.addEventListener("input", function () { effacer("commande"); });
+  function signaler(cle, texte) {
+    document.getElementById("err-" + cle).textContent = texte;
+    if (erreurs[cle]) erreurs[cle].setAttribute("aria-invalid", "true");
+    if (cle === "commande") champ.precisions.setAttribute("aria-invalid", "true");
+  }
+  function telValide(v) {
+    var c = v.replace(/[\s.\-()]/g, "");
+    return /^(?:0[1-9]\d{8}|\+33[1-9]\d{8}|0033[1-9]\d{8}|\+\d{8,15})$/.test(c);
+  }
+
+  var dlg = document.getElementById("apercu");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var premier = null;
+    if (!choix.size && !champ.precisions.value.trim()) { signaler("commande", "Choisissez au moins une spécialité ou décrivez votre commande."); premier = premier || champ.precisions; }
+    if (!form.querySelector('input[name="jour"]:checked')) { signaler("jour", "Choisissez un jour de retrait."); premier = premier || form.querySelector('input[name="jour"]'); }
+    if (!champ.heure.value) { signaler("heure", "Choisissez une heure de retrait."); premier = premier || champ.heure; }
+    if (!champ.nom.value.trim()) { signaler("nom", "Indiquez votre nom."); premier = premier || champ.nom; }
+    if (!telValide(champ.tel.value)) { signaler("tel", "Indiquez un numéro valide, par exemple 06 12 34 56 78."); premier = premier || champ.tel; }
+    if (premier) { premier.focus(); return; }
+    remplir(dlg, false);
+    var lien = document.getElementById("ap-wa");
+    if (WA) { lien.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(message()); lien.hidden = false; }
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+    document.getElementById("ap-fermer").focus();
+  });
+  document.getElementById("ap-fermer").addEventListener("click", function () {
+    if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open");
+  });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg && typeof dlg.close === "function") dlg.close(); });
+
+  // Barre fixe : masquée quand l'appel du haut ou le formulaire est à l'écran
+  var barre = document.getElementById("barre");
+  if ("IntersectionObserver" in window) {
+    var visibles = new Set();
+    var suivre = function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) visibles.add(en.target); else visibles.delete(en.target); });
+      barre.classList.toggle("cachee", visibles.size > 0);
+    };
+    // l'appel du haut : dès qu'il est à l'écran ; le formulaire : dès qu'il occupe le haut de l'écran
+    new IntersectionObserver(suivre).observe(document.getElementById("cta-haut"));
+    new IntersectionObserver(suivre, { rootMargin: "0px 0px -40% 0px" }).observe(form);
+  } else {
+    barre.classList.remove("cachee");
+  }
+
+  // Apparition douce des blocs, seulement si le mouvement est accepté
+  if (mouvement && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js-anim");
+    var rv = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("vu"); rv.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".revele").forEach(function (el) { rv.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

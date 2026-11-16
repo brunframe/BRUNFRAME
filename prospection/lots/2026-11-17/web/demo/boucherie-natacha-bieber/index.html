@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Boucherie Natacha Bieber — boucherie-charcuterie, 17 rue de la Croix, Strasbourg</title>
+<meta name="description" content="Maquette : commandes de fêtes, spécialités, horaires et adresse de la Boucherie Natacha Bieber, 17 rue de la Croix à Strasbourg.">
+<meta name="theme-color" content="#F2EDE6">
+<style>
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/bodoni-moda-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/bodoni-moda-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Karla";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/karla-latin-400-normal.woff2) format("woff2")}
+
+:root{
+  --papier:#F2EDE6;--papier-clair:#FBF8F3;--encre:#22140F;--encre-douce:#54443E;
+  --sang:#7A1C24;--sang-vif:#94252F;--acier:#56636A;
+  --filet:rgba(34,20,15,.16);--filet-fort:rgba(34,20,15,.5);
+  --titre:"Bodoni Moda","Bodoni 72",Didot,"Didot LT STD","Times New Roman",serif;
+  --texte:"Karla",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --gout:20px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;background:var(--papier)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;overflow-x:hidden;color:var(--encre);font:400 16px/1.55 var(--texte);font-synthesis:none;-webkit-font-smoothing:antialiased;
+  background-color:var(--papier);
+  /* papier vergé : lignes de vergeure serrées + fils de chaînette espacés */
+  background-image:repeating-linear-gradient(0deg,rgba(34,20,15,.026) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(90deg,rgba(34,20,15,.035) 0 1px,transparent 1px 96px)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sang);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.page{max-width:1200px;margin:0 auto;padding:0 var(--gout)}
+.capitale{font-size:11px;line-height:1.4;letter-spacing:.18em;text-transform:uppercase}
+
+/* ——— Réglet (portionner : mesurer) ——— */
+.regle{height:11px;border-bottom:1px solid var(--encre);background:
+  repeating-linear-gradient(90deg,var(--encre) 0 1px,transparent 1px 10px) left bottom/100% 4px no-repeat,
+  repeating-linear-gradient(90deg,var(--encre) 0 1px,transparent 1px 50px) left bottom/100% 10px no-repeat}
+
+/* ——— En-tête ——— */
+.tete{position:relative;padding-bottom:28px}
+.haut{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0 10px}
+.haut p{margin:0;color:var(--encre-douce)}
+.pastille{display:inline-flex;align-items:center;gap:7px;color:var(--sang);border:1px solid currentColor;padding:4px 9px 4px 8px;white-space:nowrap}
+.pastille::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.metier{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:18px 0 8px}
+.metier span:last-child{color:var(--acier)}
+
+/* Le nom, tranché net */
+.nom{margin:0;font:500 clamp(70px,24vw,176px)/.86 var(--titre);letter-spacing:-.035em}
+.tranche{position:relative;display:block;--y1:88%;--y2:72%}
+.part{display:block}
+.dessus{clip-path:polygon(0 0,100% 0,100% var(--y2),0 var(--y1))}
+.dessous{position:absolute;inset:0;color:var(--sang);clip-path:polygon(0 var(--y1),100% var(--y2),100% 100%,0 100%);transform:translate(.06em,.055em)}
+.lame{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.lame line{stroke:var(--acier);stroke-width:1.25;vector-effect:non-scaling-stroke}
+
+/* Les gestes, en cascade */
+.gestes{margin:22px 0 0;font:italic 400 clamp(27px,7.6vw,40px)/1.08 var(--titre);color:var(--sang)}
+.gestes span{display:flex;align-items:center;gap:12px;padding-left:calc(var(--i,0) * 1.05em)}
+.gestes span::after{content:"";flex:1;height:1px;background:var(--filet);margin-top:.18em}
+.gestes .fin{font-style:normal;font-weight:500;color:var(--encre);letter-spacing:-.02em}
+.gestes .fin::after{display:none}
+.selon{margin:8px 0 0;color:var(--acier)}
+
+/* Accroche des fêtes */
+.fetes{margin-top:22px}
+.cartouche{display:flex;align-items:center;gap:10px;margin:0 0 12px}
+.cartouche::before,.cartouche::after{content:"";flex:1;border-top:1px dashed var(--filet-fort)}
+.cartouche span{border:1px solid var(--encre);padding:5px 10px 4px;background:var(--papier-clair)}
+.fetes-texte{margin:0 0 16px;font-size:16.5px;line-height:1.5;color:var(--encre-douce)}
+.fetes-texte strong{font-weight:400;color:var(--encre)}
+.alt{margin:12px 0 0;font-size:14px;color:var(--encre-douce);text-align:center}
+.alt a{color:var(--encre);text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* Bouton principal : rectangle aux coins tranchés */
+.cta{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;
+  min-height:58px;padding:0 20px 0 22px;border:0;background:none;color:var(--papier-clair);cursor:pointer;text-decoration:none;
+  font:400 14px/1.2 var(--texte);letter-spacing:.16em;text-transform:uppercase;text-align:left}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sang);
+  clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px));transition:background-color .2s}
+.cta:hover::before{background:var(--sang-vif)}
+.cta .fleche{flex:none;transition:transform .25s ease}
+.cta:hover .fleche{transform:translateX(4px)}
+.cta:active{transform:translateY(1px)}
+.cta .wa-ico{flex:none;margin-right:-4px}
+.cta .libelle{flex:1}
+.cta-wa{letter-spacing:.12em}
+@media (max-width:420px){.cta-wa .fleche{display:none}}
+
+/* ——— Volets ——— */
+.volet{padding:64px 0 0}
+.rail{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--acier)}
+.rail .num{font:500 17px/1 var(--titre);letter-spacing:.02em;color:var(--sang)}
+.rail::after{content:"";flex:1;height:1px;background:var(--encre);transform-origin:left center;transition:transform .9s cubic-bezier(.6,0,.2,1)}
+h2{margin:0 0 16px;font:500 clamp(34px,9.4vw,58px)/1.02 var(--titre);letter-spacing:-.025em;text-wrap:balance}
+h2 em{font-style:italic;font-weight:400;color:var(--sang)}
+.chapo{margin:0 0 14px;font-size:17px;line-height:1.55;max-width:34em}
+.texte{margin:0 0 14px;color:var(--encre-douce);max-width:36em}
+.source{margin:18px 0 0;color:var(--acier)}
+
+/* 01 — Le billot : filiation des enseignes */
+.filiation{list-style:none;margin:28px 0 0;padding:0 0 0 22px;position:relative}
+.filiation::before{content:"";position:absolute;left:4px;top:14px;bottom:30px;border-left:1px dashed var(--filet-fort)}
+.filiation li{position:relative;margin-bottom:22px}
+.filiation li::before{content:"";position:absolute;left:-22px;top:15px;width:9px;height:9px;border:1px solid var(--encre);background:var(--papier);transform:rotate(45deg)}
+.filiation li:last-child::before{background:var(--sang);border-color:var(--sang)}
+.enseigne{display:inline-block;padding:7px 14px 6px;border:1px solid currentColor;outline:1px solid currentColor;outline-offset:3px;
+  font:500 22px/1.15 var(--titre);letter-spacing:0}
+.filiation li:first-child .enseigne{color:var(--encre-douce)}
+.filiation li:last-child .enseigne{color:var(--sang)}
+.etape{display:block;margin-top:10px;color:var(--acier)}
+.guides{margin:30px 0 0;padding:14px 0 0;border-top:1px solid var(--filet);display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--encre-douce)}
+
+/* 02 — L'étal : étiquettes pique-prix */
+.etiquettes{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.etiquettes li{display:flex;justify-content:center;padding-bottom:36px}
+.etiquettes li:nth-child(even){padding-top:22px;padding-bottom:14px}
+.etiquettes li.large{grid-column:1/-1}
+.etiquette{position:relative;width:100%;background:var(--papier-clair);border:1px solid var(--encre);padding:11px 12px 13px;
+  transform:rotate(var(--r,0deg));transition:transform .35s cubic-bezier(.2,.7,.2,1);
+  box-shadow:0 1px 0 rgba(34,20,15,.06),0 14px 18px -16px rgba(34,20,15,.55)}
+.etiquettes li.large .etiquette{width:72%}
+.etiquette::after{content:"";position:absolute;left:50%;top:100%;width:3px;height:30px;margin-left:-1.5px;
+  background:linear-gradient(90deg,#3B4448,#B8C1C5 45%,#56636A);clip-path:polygon(0 0,100% 0,100% 78%,50% 100%,0 78%)}
+.etiquette:hover{transform:rotate(0deg) translateY(-3px)}
+.etiquette .cat{display:block;padding-bottom:7px;margin-bottom:6px;border-bottom:1px solid var(--filet);color:var(--acier);font-size:10.5px}
+.etiquette .plat{display:block;font:italic 400 24px/1.08 var(--titre);color:var(--sang)}
+
+/* 03 — Le carnet : bon de commande */
+.bon{position:relative;margin:30px 0 0;background:var(--papier-clair);border:1px solid var(--encre);
+  box-shadow:0 1px 0 rgba(34,20,15,.05),0 24px 40px -30px rgba(34,20,15,.55)}
+.reperes{position:absolute;inset:-14px;pointer-events:none;--c:var(--encre);background:
+  linear-gradient(var(--c),var(--c)) 0 14px/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) 14px 0/1px 9px no-repeat,
+  linear-gradient(var(--c),var(--c)) 100% 14px/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) calc(100% - 13px) 0/1px 9px no-repeat,
+  linear-gradient(var(--c),var(--c)) 0 calc(100% - 14px)/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) 14px 100%/1px 9px no-repeat,
+  linear-gradient(var(--c),var(--c)) 100% calc(100% - 14px)/9px 1px no-repeat,linear-gradient(var(--c),var(--c)) calc(100% - 13px) 100%/1px 9px no-repeat}
+.souche{position:relative;padding:18px 18px 20px}
+.souche::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;
+  background:radial-gradient(circle,var(--filet-fort) 1px,transparent 1.6px) 0 50%/8px 2px repeat-x}
+.poincon{position:absolute;bottom:-9px;width:18px;height:18px;border-radius:50%;background:var(--papier);border:1px solid var(--encre)}
+.poincon.g{left:-9px;clip-path:inset(0 0 0 50%)}
+.poincon.d{right:-9px;clip-path:inset(0 50% 0 0)}
+.souche-titre{margin:0;font:500 28px/1 var(--titre);letter-spacing:-.02em}
+.souche-sous{margin:6px 0 0;color:var(--sang)}
+.etapes{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 16px;color:var(--encre-douce);font-size:13px;counter-reset:e}
+.etapes li{counter-increment:e}
+.etapes li::before{content:counter(e) "\2002";font:italic 400 16px/1 var(--titre);color:var(--sang)}
+.souche-pied{display:none;margin:auto 0 0;padding-top:16px;border-top:1px solid var(--filet);color:var(--acier);font-size:10.5px;line-height:1.7}
+.corps{padding:22px 16px 20px;display:grid;gap:20px}
+fieldset{margin:0;padding:0;border:0;min-width:0}
+legend,.champ label{display:block;padding:0;margin:0 0 8px;color:var(--encre-douce)}
+.puces-liste{display:flex;flex-wrap:wrap;gap:7px}
+.puce{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 11px 8px 10px;border:1px solid var(--encre);background:transparent;
+  color:var(--encre);font:400 14px/1.2 var(--texte);cursor:pointer;border-radius:0;transition:background-color .2s,color .2s}
+.puce::before{content:"";flex:none;width:11px;height:11px;transition:transform .25s ease;
+  background:linear-gradient(currentColor,currentColor) center/11px 1.4px no-repeat,linear-gradient(currentColor,currentColor) center/1.4px 11px no-repeat}
+.puce:hover{background:rgba(122,28,36,.07)}
+.puce[aria-pressed="true"]{background:var(--encre);color:var(--papier-clair)}
+.puce[aria-pressed="true"]::before{transform:rotate(45deg)}
+.champ{min-width:0}
+input,textarea{display:block;width:100%;margin:0;border:0;border-radius:0;background:transparent;color:var(--encre);font:400 16px/1.4 var(--texte);
+  -webkit-appearance:none;appearance:none}
+input{border-bottom:1px solid var(--encre);padding:9px 2px 8px;min-height:44px}
+input[type="date"],input[type="time"]{padding-right:0}
+textarea{min-height:140px;resize:vertical;padding:2px 2px 0;line-height:28px;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre);
+  background:repeating-linear-gradient(to bottom,transparent 0 27px,var(--filet) 27px 28px) local;background-position:0 2px}
+::placeholder{color:#76665F;opacity:1}
+input:focus,textarea:focus{border-color:var(--sang)}
+[aria-invalid="true"]{border-bottom:2px solid var(--sang)}
+.aide{margin:6px 0 0;font-size:13px;line-height:1.45;color:var(--encre-douce)}
+.aide.alerte{color:var(--sang)}
+.erreur{margin:6px 0 0;font-size:13px;color:var(--sang)}
+.erreur::before{content:"— "}
+.duo{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.mention{margin:-6px 0 0;text-align:center;font-size:13px;color:var(--encre-douce)}
+
+/* 04 — Les heures */
+.heures{margin:24px 0 0;padding:0}
+.heures div{display:flex;align-items:baseline;gap:10px;padding:9px 0;font-size:16px}
+.heures dt{min-width:0}
+.heures div::after{content:"";order:2;flex:1;border-bottom:1px dotted var(--filet-fort);transform:translateY(-4px)}
+.heures dd{order:3;margin:0;color:var(--encre-douce)}
+.heures .ferme dd{color:var(--encre)}
+.heures .auj dt{font:italic 400 19px/1 var(--titre);color:var(--sang)}
+.heures .auj dt::after{content:"aujourd’hui";margin-left:8px;font:400 10px/1 var(--texte);letter-spacing:.16em;text-transform:uppercase;color:var(--sang);vertical-align:3px}
+
+/* 05 — La rue */
+.adresse{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:end;gap:0 16px;margin:6px 0 26px}
+.dixsept{font:500 clamp(118px,33vw,240px)/.8 var(--titre);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px var(--sang);margin-left:-.04em}
+.adresse h2{margin:0 0 8px;font-size:clamp(31px,8.6vw,58px)}
+.adresse p{margin:0;color:var(--encre-douce);font-size:15px;line-height:1.45}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:8px 12px;border:1px solid var(--encre);
+  color:var(--encre);text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center;transition:background-color .2s}
+.btn:hover{background:rgba(122,28,36,.07)}
+.btn small{display:block;font-size:14px;letter-spacing:.02em;text-transform:none;color:var(--encre-douce)}
+
+/* Pied de page */
+.pied{margin-top:72px;padding:0 0 112px}
+.pied p{margin:14px 0 0;font-size:13px;color:var(--encre-douce);max-width:46em}
+.pied .signature{margin-top:6px;color:var(--encre)}
+
+/* Barre fixe : un seul appel à l'action */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px var(--gout) calc(10px + env(safe-area-inset-bottom));
+  background:rgba(242,237,230,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--encre);
+  transition:transform .3s ease,visibility 0s}
+.barre .cta{max-width:520px;margin:0 auto;min-height:52px}
+.barre.cachee{transform:translateY(115%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
+
+/* ——— Aperçu WhatsApp ——— */
+dialog{padding:0;border:0;background:transparent;width:min(392px,calc(100vw - 20px));max-width:none;max-height:calc(100dvh - 20px);overflow:auto;color:var(--encre)}
+dialog::backdrop{background:rgba(34,20,15,.74)}
+.ap{background:var(--papier);border:1px solid var(--encre);padding:14px 14px 10px}
+.ap-sur{margin:0 0 10px;display:flex;justify-content:space-between;gap:10px;color:var(--encre-douce)}
+.ap-sur b{font-weight:400;color:var(--sang)}
+.ecran{border:7px solid #1A1412;border-radius:26px;overflow:hidden;background:#EFEAE2;font-family:-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wa-tete{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#008069;color:#fff}
+.wa-avatar{flex:none;width:36px;height:36px;border-radius:50%;background:#DFE5E7;display:grid;place-items:center;overflow:hidden}
+.wa-nom{margin:0;font-size:16px;font-weight:600;line-height:1.2}
+.wa-statut{margin:1px 0 0;font-size:12.5px}
+.wa-fil{padding:12px 10px 14px;min-height:250px;background-color:#EFEAE2;
+  background-image:radial-gradient(rgba(84,101,111,.09) 1px,transparent 1.6px),radial-gradient(rgba(84,101,111,.06) 1px,transparent 1.6px);
+  background-size:18px 18px,18px 18px;background-position:0 0,9px 9px}
+.wa-jour{margin:0 auto 12px;width:max-content;padding:4px 10px;border-radius:8px;background:#fff;color:#54656F;font-size:12.5px;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.wa-bulle{position:relative;max-width:90%;padding:6px 9px 8px;border-radius:0 8px 8px 8px;background:#fff;color:#111B21;
+  font-size:14.5px;line-height:1.42;box-shadow:0 1px .5px rgba(11,20,26,.13);overflow-wrap:anywhere}
+.wa-bulle::before{content:"";position:absolute;left:-8px;top:0;border-top:0 solid transparent;border-right:8px solid #fff;border-bottom:10px solid transparent}
+.wa-bulle p{margin:0;white-space:pre-wrap}
+.wa-bulle strong{font-weight:600}
+.wa-heure{display:block;text-align:right;margin:2px -2px -4px 0;font-size:11px;color:#667781}
+.wa-avis{margin:14px auto 0;max-width:92%;padding:6px 10px;border-radius:8px;background:#FFF3C2;color:#54656F;font-size:12.5px;line-height:1.4;text-align:center;box-shadow:0 1px .5px rgba(11,20,26,.1)}
+.wa-saisie{display:flex;align-items:center;gap:8px;padding:8px;background:#EFEAE2}
+.wa-saisie span{flex:1;padding:9px 14px;border-radius:21px;background:#fff;color:#667781;font-size:15px}
+.wa-saisie i{flex:none;width:40px;height:40px;border-radius:50%;background:#00A884;display:grid;place-items:center}
+.ap-note{margin:10px 2px 4px;font-size:13px;line-height:1.45;color:var(--encre-douce)}
+.ap-note strong{font-weight:400;color:var(--encre)}
+.ap .cta{margin-top:6px}
+.ap-retour{display:block;width:100%;min-height:46px;margin:4px 0 0;border:0;background:none;color:var(--encre);font:400 13px/1 var(--texte);
+  letter-spacing:.16em;text-transform:uppercase;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* ——— Mouvement (désactivé si l'utilisateur le demande) ——— */
+@media (prefers-reduced-motion:no-preference){
+  .anim .lame{animation:trace .9s cubic-bezier(.6,0,.2,1) .2s both}
+  .anim .dessous{animation:glisse .7s cubic-bezier(.2,.7,.2,1) .95s both}
+  .anim .gestes span{animation:entree .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.35s + var(--i,0) * .09s)}
+  .anim .gestes .fin{animation-delay:.8s}
+  .anim .volet .rail::after{transform:scaleX(0)}
+  .anim .volet.vu .rail::after{transform:none}
+  .anim .revele{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .anim .revele.vu{opacity:1;transform:none}
+  .anim dialog[open] .ap{animation:monte .35s cubic-bezier(.2,.7,.2,1)}
+  .anim dialog[open]::backdrop{animation:fondu .3s ease}
+  .anim .wa-bulle{animation:bulle .45s cubic-bezier(.2,.8,.2,1.1) .15s both}
+  @keyframes trace{from{clip-path:inset(-40% 110% -40% -10%)}to{clip-path:inset(-40% -10% -40% -10%)}}
+  @keyframes glisse{from{transform:none;color:var(--encre)}}
+  @keyframes entree{from{opacity:0;transform:translateX(-10px)}}
+  @keyframes monte{from{opacity:0;transform:translateY(18px)}}
+  @keyframes fondu{from{opacity:0}}
+  @keyframes bulle{from{opacity:0;transform:translateY(8px) scale(.97)}}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:0s!important;animation:none!important}
+}
+
+/* ——— Grand écran ——— */
+@media (min-width:900px){
+  :root{--gout:48px}
+  .haut{padding:20px 0 14px}
+  .tete{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:56px;padding-bottom:40px}
+  .haut,.tete>.regle,.metier{grid-column:1/-1}
+  .identite,.droite{display:contents}
+  .metier{margin-top:36px;margin-bottom:16px}
+  .nom{grid-column:1;grid-row:4;font-size:min(13.2vw,170px)}
+  .geste-bloc{grid-column:2;grid-row:4;align-self:end;padding-bottom:4px}
+  .gestes{margin-top:0;font-size:38px}
+  .fetes{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:56px;align-items:center;margin-top:52px}
+  .cartouche{grid-column:1/-1;margin-bottom:22px}
+  .fetes-texte{margin:0;font-size:20px;max-width:30em}
+  .alt{grid-column:2;text-align:left;margin-top:10px}
+  .volet{display:grid;grid-template-columns:200px minmax(0,1fr);column-gap:64px;padding-top:96px}
+  .rail{flex-direction:column;align-items:flex-start;gap:10px;position:sticky;top:28px;align-self:start;margin:10px 0 0}
+  .rail .num{font-size:44px}
+  .rail::after{width:100%;flex:none}
+  .billot-grille{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:start}
+  .filiation{margin-top:8px}
+  .etiquettes{grid-template-columns:repeat(5,minmax(0,1fr));gap:0 18px}
+  .etiquettes li,.etiquettes li:nth-child(even){padding:0 0 40px}
+  .etiquettes li:nth-child(even){padding-top:30px;padding-bottom:10px}
+  .etiquettes li.large{grid-column:auto}
+  .etiquettes li.large .etiquette{width:100%}
+  .bon{display:grid;grid-template-columns:260px minmax(0,1fr);margin:34px 0 0}
+  .souche{padding:28px 26px;display:flex;flex-direction:column}
+  .souche-pied{display:block}
+  .souche::after{left:auto;right:-1px;top:14px;bottom:14px;width:2px;height:auto;
+    background:radial-gradient(circle,var(--filet-fort) 1px,transparent 1.6px) 50% 0/2px 8px repeat-y}
+  .poincon{bottom:auto;right:-9px;left:auto}
+  .poincon.g{top:-9px;clip-path:inset(50% 0 0 0)}
+  .poincon.d{bottom:-9px;top:auto;clip-path:inset(0 0 50% 0)}
+  .souche-titre{font-size:36px}
+  .etapes{flex-direction:column;gap:10px;margin-top:26px;font-size:14px}
+  .corps{padding:28px 30px 26px;grid-template-columns:1fr 1fr;column-gap:28px}
+  .corps>.plein{grid-column:1/-1}
+  .heures-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+  .heures{margin-top:0}
+  .actions{max-width:560px}
+  .barre .cta{max-width:420px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="tete">
+    <div class="haut">
+      <p class="capitale">17 rue de la Croix · Strasbourg</p>
+      <span class="pastille capitale">Maquette</span>
+    </div>
+    <div class="regle" aria-hidden="true"></div>
+
+    <div class="identite">
+      <p class="metier capitale"><span>Boucherie · Charcuterie</span><span>Centre-ville</span></p>
+      <h1 class="nom">
+        <span class="sr">Boucherie Natacha Bieber</span>
+        <span class="tranche" aria-hidden="true">
+          <span class="part dessus">Natacha <br>Bieber</span>
+          <span class="part dessous">Natacha <br>Bieber</span>
+          <svg class="lame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false">
+            <line x1="-8" y1="91" x2="108" y2="72.45"/>
+          </svg>
+        </span>
+      </h1>
+    </div>
+
+    <div class="droite">
+      <div class="geste-bloc">
+      <p class="gestes">
+        <span style="--i:0">désosse,</span>
+        <span style="--i:1">tranche,</span>
+        <span style="--i:2">portionne,</span>
+        <span style="--i:3">hache —</span>
+        <span class="fin" style="--i:0">tout, elle-même.</span>
+      </p>
+      <p class="selon capitale">D’après Le Fooding</p>
+      </div>
+
+      <div class="fetes">
+        <p class="cartouche capitale"><span>Commandes de fêtes</span></p>
+        <p class="fetes-texte">Dites-nous ce qu’il vous faut et quand vous passez. <strong>Nous préparons, vous retirez au comptoir.</strong></p>
+        <a class="cta" id="cta-haut" href="#carnet"><span class="libelle">Composer ma commande</span>
+          <svg class="fleche" width="30" height="12" viewBox="0 0 30 12" aria-hidden="true"><path d="M0 6h28M23 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <p class="alt">ou par téléphone&nbsp;: <a href="tel:+33390238738">03 90 23 87 38</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 01 — Le billot -->
+    <section class="volet" id="billot" aria-labelledby="t-billot">
+      <p class="rail capitale"><span class="num">01</span><span>Le billot</span></p>
+      <div class="billot-grille">
+        <div class="revele">
+          <h2 id="t-billot">Apprentie ici, <em>patronne ici.</em></h2>
+          <p class="chapo">Natacha Bieber a appris le métier à la boucherie Kirn, rue de la Croix. Puis elle l’a reprise.</p>
+          <p class="texte">Selon Le Fooding, elle désosse, tranche, coupe en dés, portionne et hache tout elle-même. Gault&amp;Millau la compte parmi les boucheries les plus en vue du centre.</p>
+        </div>
+        <div class="revele">
+          <ol class="filiation">
+            <li><span class="enseigne">Boucherie Kirn</span><span class="etape capitale">L’apprentissage</span></li>
+            <li><span class="enseigne">Boucherie Natacha Bieber</span><span class="etape capitale">La reprise</span></li>
+          </ol>
+          <p class="guides capitale"><span>Guide Gault&amp;Millau</span><span>Guide Le Fooding</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 — L'étal -->
+    <section class="volet" id="etal" aria-labelledby="t-etal">
+      <p class="rail capitale"><span class="num">02</span><span>L’étal</span></p>
+      <div>
+        <div class="revele">
+          <h2 id="t-etal">Sur l’étal, <em>découpé ici.</em></h2>
+          <p class="texte">Viande de boucherie et charcuterie maison. Prix et disponibilités&nbsp;: au comptoir ou au téléphone.</p>
+        </div>
+        <ul class="etiquettes revele">
+          <li><span class="etiquette" style="--r:-2.2deg"><span class="cat capitale">Bœuf</span><span class="plat">maturé</span></span></li>
+          <li><span class="etiquette" style="--r:1.6deg"><span class="cat capitale">Porc du Cantal</span><span class="plat">travers</span></span></li>
+          <li><span class="etiquette" style="--r:1.2deg"><span class="cat capitale">Agneau</span><span class="plat">côtelettes</span></span></li>
+          <li><span class="etiquette" style="--r:-1.8deg"><span class="cat capitale">Charcuterie maison</span><span class="plat">boudin brioché</span></span></li>
+          <li class="large"><span class="etiquette" style="--r:-.8deg"><span class="cat capitale">Charcuterie maison</span><span class="plat">jambon en croûte</span></span></li>
+        </ul>
+        <p class="source capitale">Spécialités citées par le guide Gault&amp;Millau</p>
+      </div>
+    </section>
+
+    <!-- 03 — Le carnet -->
+    <section class="volet" id="carnet" aria-labelledby="t-carnet">
+      <p class="rail capitale"><span class="num">03</span><span>Le carnet</span></p>
+      <div>
+        <h2 id="t-carnet">Vos fêtes, <em>au carnet.</em></h2>
+        <p class="texte">Écrivez votre commande et choisissez le jour du retrait. Elle nous arrive sur WhatsApp, prête à préparer.</p>
+
+        <form class="bon" id="bon" novalidate>
+          <i class="reperes" aria-hidden="true"></i>
+          <div class="souche">
+            <p class="souche-titre">Bon de commande</p>
+            <p class="souche-sous capitale">Fêtes · retrait en boutique</p>
+            <ol class="etapes">
+              <li>Composez</li>
+              <li>Le jour</li>
+              <li>Envoyez</li>
+            </ol>
+            <p class="souche-pied capitale">Boucherie Natacha Bieber<br>17 rue de la Croix<br>67000 Strasbourg</p>
+            <i class="poincon g" aria-hidden="true"></i><i class="poincon d" aria-hidden="true"></i>
+          </div>
+
+          <div class="corps">
+            <fieldset class="plein">
+              <legend class="capitale">Ajouter une spécialité</legend>
+              <div class="puces-liste">
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Bœuf maturé">Bœuf maturé</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Côtelettes d’agneau">Côtelettes d’agneau</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Travers de porc du Cantal">Travers de porc du Cantal</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Boudin brioché">Boudin brioché</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Jambon en croûte">Jambon en croûte</button>
+              </div>
+            </fieldset>
+
+            <div class="champ plein">
+              <label for="commande" class="capitale">Votre commande</label>
+              <textarea id="commande" name="commande" rows="5" aria-describedby="aide-commande" placeholder="Par exemple&nbsp;: jambon en croûte pour huit, quatre côtelettes d’agneau…"></textarea>
+              <p class="aide" id="aide-commande">Indiquez les quantités ou le nombre de personnes.</p>
+              <p class="erreur" id="err-commande" hidden>Écrivez au moins un produit.</p>
+            </div>
+
+            <div class="plein">
+              <div class="duo">
+                <div class="champ">
+                  <label for="jour" class="capitale">Jour du retrait</label>
+                  <input type="date" id="jour" name="jour" aria-describedby="aide-jour">
+                </div>
+                <div class="champ">
+                  <label for="heure" class="capitale">Vers</label>
+                  <input type="time" id="heure" name="heure" step="900" aria-describedby="aide-jour">
+                </div>
+              </div>
+              <p class="aide" id="aide-jour">Fermé le lundi, en général le dimanche. Horaires à confirmer.</p>
+              <p class="erreur" id="err-jour" hidden>Choisissez un jour de retrait.</p>
+            </div>
+
+            <div class="champ">
+              <label for="nom" class="capitale">Votre nom</label>
+              <input id="nom" name="nom" autocomplete="name">
+              <p class="erreur" id="err-nom" hidden>Indiquez votre nom.</p>
+            </div>
+            <div class="champ">
+              <label for="tel" class="capitale">Votre téléphone</label>
+              <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel">
+              <p class="erreur" id="err-tel" hidden>Indiquez un numéro pour vous joindre.</p>
+            </div>
+
+            <button type="submit" class="cta cta-wa plein" id="envoyer">
+              <svg class="wa-ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+              <span class="libelle">Commander sur WhatsApp</span>
+              <svg class="fleche" width="30" height="12" viewBox="0 0 30 12" aria-hidden="true"><path d="M0 6h28M23 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+            </button>
+            <p class="mention plein">Démonstration&nbsp;: rien n’est envoyé.</p>
+            <p class="sr" id="annonce" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 04 — Les heures -->
+    <section class="volet" id="heures" aria-labelledby="t-heures">
+      <p class="rail capitale"><span class="num">04</span><span>Les heures</span></p>
+      <div class="heures-grille revele">
+        <div>
+          <h2 id="t-heures">Nos heures, <em>à confirmer.</em></h2>
+          <p class="texte">Horaires indicatifs. Appelez-nous avant de passer, surtout pendant les fêtes&nbsp;: les horaires de fin d’année sont à confirmer.</p>
+        </div>
+        <div>
+        <dl class="heures">
+          <div class="ferme" data-j="1"><dt>Lundi</dt><dd>Fermé</dd></div>
+          <div data-j="2"><dt>Mardi</dt><dd>À confirmer</dd></div>
+          <div data-j="3"><dt>Mercredi</dt><dd>À confirmer</dd></div>
+          <div data-j="4"><dt>Jeudi</dt><dd>À confirmer</dd></div>
+          <div data-j="5"><dt>Vendredi</dt><dd>À confirmer</dd></div>
+          <div data-j="6"><dt>Samedi</dt><dd>À confirmer</dd></div>
+          <div class="ferme" data-j="0"><dt>Dimanche</dt><dd>En général fermé</dd></div>
+        </dl>
+        <p class="source capitale">Lundi et dimanche&nbsp;: horaires saisis par des internautes, à vérifier</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — La rue -->
+    <section class="volet" id="rue" aria-labelledby="t-rue">
+      <p class="rail capitale"><span class="num">05</span><span>La rue</span></p>
+      <div class="revele">
+        <div class="adresse">
+          <span class="dixsept" aria-hidden="true">17</span>
+          <div>
+            <h2 id="t-rue"><span class="sr">17 </span>rue de la Croix</h2>
+            <p>67000 Strasbourg<br>Centre-ville</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="tel:+33390238738"><span>Appeler<small>03 90 23 87 38</small></span></a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=17%20rue%20de%20la%20Croix%2C%2067000%20Strasbourg" target="_blank" rel="noopener"><span>Itinéraire<small>Google Maps</small></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="regle" aria-hidden="true"></div>
+    <p>Sources publiques&nbsp;: acceslibre (adresse, téléphone), guides Gault&amp;Millau et Le Fooding (histoire, spécialités), au-magasin.fr (jours de fermeture saisis par des internautes, à vérifier).</p>
+    <p>Page de démonstration non officielle&nbsp;: aucune commande n’est transmise.</p>
+    <p class="signature">Maquette préparée par BRUNFRAME</p>
+  </footer>
+</div>
+
+<div class="barre cachee" id="barre">
+  <a class="cta" href="#carnet"><span class="libelle">Composer ma commande</span>
+    <svg class="fleche" width="30" height="12" viewBox="0 0 30 12" aria-hidden="true"><path d="M0 6h28M23 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+</div>
+
+<dialog id="apercu" aria-labelledby="ap-titre" aria-describedby="ap-note">
+  <div class="ap">
+    <p class="ap-sur capitale" id="ap-titre"><span>Aperçu du message</span><b>Côté boutique</b></p>
+    <div class="ecran">
+      <div class="wa-tete">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="#fff" stroke-width="2"/></svg>
+        <span class="wa-avatar" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="14" r="6.5" fill="#fff"/><path d="M5 34c1.5-7 6.6-10.5 13-10.5S29.5 27 31 34Z" fill="#fff"/></svg></span>
+        <div><p class="wa-nom" id="wa-nom">Client</p><p class="wa-statut" id="wa-statut">Nouveau client</p></div>
+      </div>
+      <div class="wa-fil">
+        <p class="wa-jour">Aujourd’hui</p>
+        <div class="wa-bulle"><div id="wa-texte"></div><span class="wa-heure" id="wa-heure"></span></div>
+        <p class="wa-avis">Démonstration&nbsp;: rien n’est envoyé.</p>
+      </div>
+      <div class="wa-saisie" aria-hidden="true"><span>Répondre…</span><i><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-2.1A7 7 0 0 0 19 12Z" fill="#fff"/></svg></i></div>
+    </div>
+    <p class="ap-note" id="ap-note"><strong>Démonstration&nbsp;: rien n’est envoyé.</strong> Le message arriverait ainsi sur le téléphone de la boutique. Numéro WhatsApp&nbsp;: à fournir.</p>
+    <a class="cta" id="ap-wa" href="#" target="_blank" rel="noopener" hidden><span class="libelle">Ouvrir dans WhatsApp</span></a>
+    <button type="button" class="ap-retour" id="ap-fermer">Revenir au bon</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var TEL = "03 90 23 87 38";
+  var chiffres = TEL.replace(/\D/g, "");
+  // Lien wa.me seulement pour un mobile (06 / 07) : ici un fixe, donc aucun lien.
+  var WA = /^0[67]\d{8}$/.test(chiffres) ? "33" + chiffres.slice(1) : null;
+  var doc = document.documentElement;
+  var mouvement = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: no-preference)").matches);
+  if (mouvement) doc.classList.add("anim");
+
+  /* Jour courant (heure de Paris) */
+  var TZ = "Europe/Paris";
+  var isoAuj;
+  try { isoAuj = new Date().toLocaleDateString("en-CA", { timeZone: TZ }); } catch (e) { isoAuj = new Date().toISOString().slice(0, 10); }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(isoAuj)) isoAuj = new Date().toISOString().slice(0, 10);
+  var base = new Date(isoAuj + "T12:00:00Z");
+  var ligne = document.querySelector('.heures [data-j="' + base.getUTCDay() + '"]');
+  if (ligne) ligne.classList.add("auj");
+
+  /* Bon de commande */
+  var form = document.getElementById("bon");
+  var ta = document.getElementById("commande");
+  var jour = document.getElementById("jour");
+  var heure = document.getElementById("heure");
+  var nom = document.getElementById("nom");
+  var tel = document.getElementById("tel");
+  var aideJour = document.getElementById("aide-jour");
+  var annonce = document.getElementById("annonce");
+  var demain = new Date(base.getTime() + 864e5);
+  jour.min = demain.toISOString().slice(0, 10);
+
+  var puces = Array.prototype.slice.call(document.querySelectorAll(".puce"));
+  function aLaLigne(nomProduit) {
+    var n = nomProduit.toLowerCase();
+    return ta.value.split("\n").some(function (l) { return l.trim().toLowerCase().indexOf(n) === 0; });
+  }
+  function synchroniser() {
+    puces.forEach(function (b) { b.setAttribute("aria-pressed", aLaLigne(b.getAttribute("data-ligne")) ? "true" : "false"); });
+  }
+  puces.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var produit = b.getAttribute("data-ligne");
+      if (b.getAttribute("aria-pressed") !== "true") {
+        var v = ta.value.replace(/\s+$/, "");
+        ta.value = (v ? v + "\n" : "") + produit + "\u00a0: ";
+        annonce.textContent = produit + " ajouté au bon. Précisez la quantité.";
+      } else {
+        var n = produit.toLowerCase();
+        ta.value = ta.value.split("\n").filter(function (l) { return l.trim().toLowerCase().indexOf(n) !== 0; }).join("\n");
+        annonce.textContent = produit + " retiré du bon.";
+      }
+      synchroniser();
+      effacer(ta);
+    });
+  });
+  ta.addEventListener("input", function () { synchroniser(); effacer(ta); });
+
+  var AIDE_JOUR = aideJour.textContent;
+  jour.addEventListener("change", function () {
+    effacer(jour);
+    if (!jour.value) { aideJour.textContent = AIDE_JOUR; aideJour.classList.remove("alerte"); return; }
+    var j = new Date(jour.value + "T12:00:00Z").getUTCDay();
+    if (j === 1) { aideJour.textContent = "Le lundi, la boutique est fermée (à confirmer). Un autre jour\u00a0?"; aideJour.classList.add("alerte"); }
+    else if (j === 0) { aideJour.textContent = "Le dimanche, la boutique est en général fermée (à confirmer). Un autre jour\u00a0?"; aideJour.classList.add("alerte"); }
+    else { aideJour.textContent = AIDE_JOUR; aideJour.classList.remove("alerte"); }
+  });
+  [nom, tel].forEach(function (c) { c.addEventListener("input", function () { effacer(c); }); });
+
+  function erreurDe(c) { return document.getElementById("err-" + c.id); }
+  function marquer(c) {
+    c.setAttribute("aria-invalid", "true");
+    var e = erreurDe(c); e.hidden = false;
+    var d = (c.getAttribute("aria-describedby") || "").split(" ").filter(Boolean);
+    if (d.indexOf(e.id) < 0) { d.push(e.id); c.setAttribute("aria-describedby", d.join(" ")); }
+  }
+  function effacer(c) {
+    if (c.getAttribute("aria-invalid") !== "true") return;
+    c.removeAttribute("aria-invalid"); erreurDe(c).hidden = true;
+  }
+  function verifier() {
+    var premiers = [];
+    if (!ta.value.replace(/[\s:]/g, "")) { marquer(ta); premiers.push(ta); }
+    if (!jour.value || jour.value < jour.min) { marquer(jour); premiers.push(jour); }
+    if (!nom.value.trim()) { marquer(nom); premiers.push(nom); }
+    if (tel.value.replace(/\D/g, "").length < 6) { marquer(tel); premiers.push(tel); }
+    return premiers[0] || null;
+  }
+
+  var dlg = document.getElementById("apercu");
+  var texte = document.getElementById("wa-texte");
+  function para(contenu) { var p = document.createElement("p"); contenu.forEach(function (x) { p.appendChild(x); }); return p; }
+  function gras(t) { var s = document.createElement("strong"); s.textContent = t; return s; }
+  function brut(t) { return document.createTextNode(t); }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var mauvais = verifier();
+    if (mauvais) { mauvais.focus(); annonce.textContent = "Le bon n’est pas complet."; return; }
+    var date = new Date(jour.value + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+    var quand = date + (heure.value ? ", vers\u00a0" + heure.value.replace(":", "\u00a0h\u00a0") : "");
+    var lignes = ta.value.split("\n").map(function (l) { return l.trim(); }).filter(function (l) { return l && l !== ":"; });
+    var client = nom.value.trim(), num = tel.value.trim();
+
+    texte.textContent = "";
+    texte.appendChild(para([brut("Bonjour, voici ma commande pour les fêtes\u00a0:")]));
+    texte.appendChild(para([brut("\n" + lignes.map(function (l) { return "• " + l.replace(/\s*:\s*$/, "").replace(/ :/g, "\u00a0:"); }).join("\n"))]));
+    texte.appendChild(para([brut("\n"), gras("Retrait\u00a0: "), brut(quand)]));
+    texte.appendChild(para([gras("Nom\u00a0: "), brut(client)]));
+    texte.appendChild(para([gras("Tél.\u00a0: "), brut(num)]));
+    texte.appendChild(para([brut("\nMerci\u00a0!")]));
+    document.getElementById("wa-nom").textContent = client;
+    document.getElementById("wa-statut").textContent = num;
+    var h = new Date().toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: TZ });
+    document.getElementById("wa-heure").textContent = h;
+
+    var lien = document.getElementById("ap-wa");
+    if (WA) {
+      var msg = "Bonjour, voici ma commande pour les fêtes\u00a0:\n" + lignes.map(function (l) { return "• " + l.replace(/\s*:\s*$/, "").replace(/ :/g, "\u00a0:"); }).join("\n") +
+        "\n\nRetrait\u00a0: " + quand + "\nNom\u00a0: " + client + "\nTél.\u00a0: " + num;
+      lien.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); lien.hidden = false;
+    } else { lien.hidden = true; lien.removeAttribute("href"); }
+
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+    document.getElementById("ap-fermer").focus();
+  });
+
+  function fermer() { if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
+  document.getElementById("ap-fermer").addEventListener("click", fermer);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) fermer(); });
+  dlg.addEventListener("close", function () { document.getElementById("envoyer").focus(); });
+
+  /* Barre fixe : masquée quand le bouton du haut ou le bon est à l'écran */
+  var barre = document.getElementById("barre");
+  var revele = Array.prototype.slice.call(document.querySelectorAll(".revele, .volet"));
+  if ("IntersectionObserver" in window) {
+    var visibles = new Set();
+    var io = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) visibles.add(en.target); else visibles.delete(en.target); });
+      barre.classList.toggle("cachee", visibles.size > 0);
+    });
+    io.observe(document.getElementById("cta-haut"));
+    io.observe(form);
+    if (mouvement) {
+      var io2 = new IntersectionObserver(function (entrees) {
+        entrees.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("vu"); io2.unobserve(en.target); } });
+      }, { rootMargin: "0px 0px -12% 0px" });
+      revele.forEach(function (el) { io2.observe(el); });
+    }
+  } else {
+    barre.classList.remove("cachee");
+    revele.forEach(function (el) { el.classList.add("vu"); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Le Tarbouche — restaurant libanais, Krutenau, Strasbourg</title>
+<meta name="description" content="Maquette pour Le Tarbouche, restaurant libanais au 22 rue de la Krutenau à Strasbourg : spécialités, horaires, commande à emporter sur WhatsApp.">
+<meta name="theme-color" content="#140a0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 5h14l5 23H4z' fill='%239b1c27'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Bricolage";src:url("fonts/bricolage-grotesque-latin-standard-normal.woff2") format("woff2-variations"),url("fonts/bricolage-grotesque-latin-standard-normal.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  --nuit:#140a0b;--nuit2:#1d0f12;--nuit3:#2a161a;
+  --feutre:#9b1c27;--feutre-sombre:#5c0d15;--feutre-clair:#b8323a;
+  --laiton:#e2b264;--laiton-clair:#f3d293;--laiton-sombre:#9c6f2f;
+  --creme:#f5e9dd;--doux:#c2afa5;--trait:rgba(245,233,221,.16);
+  --ins:13%;
+  --display:"Bricolage","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --texte:"Bricolage",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"Space Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23f)'/%3E%3C/svg%3E");
+  --trapeze:polygon(var(--ins) 0,calc(100% - var(--ins)) 0,100% 100%,0 100%);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--nuit)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--nuit);color:var(--creme);font:400 17px/1.55 var(--texte);font-optical-sizing:auto;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.05;pointer-events:none;z-index:0}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:800}
+:focus-visible{outline:3px solid var(--laiton-clair);outline-offset:3px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mono{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.08em;text-transform:uppercase}
+.page{position:relative;z-index:1}
+
+/* ——— En-tête : le tarbouche ——— */
+.tete{position:relative;padding:0 16px;overflow:hidden}
+.tete::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(70% 42% at 50% 46%,rgba(184,50,58,.30),transparent 72%),
+             radial-gradient(40% 20% at 50% 96%,rgba(0,0,0,.55),transparent 80%)}
+.bandeau{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0 0}
+.pastille{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:9px;padding:6px 18px 5px 19px;
+  font:700 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--nuit)}
+.pastille::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--laiton);clip-path:polygon(9% 0,91% 0,100% 100%,0 100%)}
+.pastille i{width:6px;height:6px;border-radius:50%;background:var(--feutre)}
+.bandeau .adr{color:var(--doux);font-size:11px;text-align:right}
+
+.chapeau{position:relative;width:100%;max-width:440px;margin:34px auto 0;aspect-ratio:358/396;container-type:size}
+.feutre{position:absolute;inset:0;clip-path:var(--trapeze);
+  background:var(--grain),
+    radial-gradient(90% 55% at 36% 0%,rgba(255,150,130,.20),transparent 62%),
+    linear-gradient(90deg,#4a0a11 0%,#761520 11%,#9f222c 31%,#b02b34 45%,#9c212b 62%,#6f1320 86%,#41080e 100%);
+  background-size:180px 180px,100% 100%,100% 100%;background-blend-mode:overlay,normal,normal}
+.feutre::before{content:"";position:absolute;left:var(--ins);right:var(--ins);top:0;height:7%;
+  background:radial-gradient(60% 100% at 50% 0,rgba(0,0,0,.34),transparent 75%)}
+.feutre::after{content:"";position:absolute;left:2.5%;right:2.5%;bottom:5.5%;border-top:1.5px dashed rgba(243,210,147,.55)}
+.tige{position:absolute;left:calc(50% - 6px);top:-8px;width:12px;height:9px;border-radius:4px 4px 1px 1px;
+  background:linear-gradient(90deg,var(--laiton-sombre),var(--laiton-clair) 45%,var(--laiton-sombre))}
+.cordon{position:absolute;left:0;top:-16px;width:100%;height:20px;overflow:visible}
+.gland{position:absolute;top:-2px;left:calc(100% - var(--ins) - 17px);width:34px;height:170px;transform-origin:17px 0;
+  filter:drop-shadow(3px 7px 6px rgba(0,0,0,.45));cursor:grab;will-change:transform}
+.gland svg{display:block;width:100%;height:100%}
+.nom{position:absolute;inset:5.5% 0 11% 0;display:flex;flex-direction:column;justify-content:space-between;
+  color:var(--creme);text-transform:uppercase;pointer-events:none}
+.nom .le{display:block;width:max-content;margin-left:22%;font:700 6.2cqh/1 var(--display);font-stretch:85%;letter-spacing:.32em;color:var(--laiton-clair)}
+.nom .ligne{display:block;width:max-content;margin-left:9%;font:800 29.5cqh/.74 var(--display);font-stretch:90%;
+  text-shadow:0 2px 0 rgba(60,4,10,.45)}
+
+/* ——— Contenu ——— */
+main{position:relative;padding:0 16px}
+.intro{padding:22px 0 30px}
+.kicker{color:var(--laiton);font-size:11px;letter-spacing:.05em}
+.accroche{margin:12px 0 10px;font:800 40px/.98 var(--display);font-stretch:80%;letter-spacing:-.01em;text-wrap:balance}
+.accroche em{font-style:normal;color:var(--laiton-clair)}
+.intro .sous{color:var(--doux);max-width:34ch;text-wrap:pretty}
+.note-avis{margin-top:14px;color:var(--doux);font-size:11px}
+.note-avis b{color:var(--creme);font-weight:700}
+
+/* Bouton tarbouche (forme en pseudo-élément pour ne pas couper le focus) */
+.cta{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  min-height:58px;margin-top:20px;padding:14px 28px;border:0;background:none;color:var(--nuit);cursor:pointer;
+  font:800 19px/1.1 var(--texte);font-stretch:88%;text-decoration:none;letter-spacing:.005em}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;clip-path:polygon(4.5% 0,95.5% 0,100% 100%,0 100%);
+  background:linear-gradient(180deg,var(--laiton-clair),var(--laiton) 55%,#c99545);transition:filter .2s}
+.cta:hover::before{filter:brightness(1.08)}
+.cta svg{flex:none}
+.cta .fleche{transition:transform .25s}
+.cta:hover .fleche{transform:translateY(3px)}
+
+.bloc{padding:44px 0 46px;border-top:1px solid var(--trait)}
+.repere{display:flex;align-items:center;gap:10px;color:var(--laiton);margin-bottom:14px}
+.repere::before{content:"";width:16px;height:12px;flex:none;background:var(--feutre-clair);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+h2{font:800 34px/1 var(--display);font-stretch:80%;letter-spacing:-.005em;text-wrap:balance}
+.chapo{margin-top:12px;color:var(--doux);max-width:38ch}
+
+/* Frange : séparateur en passementerie */
+.frange{height:16px;margin:0 0 0;background:repeating-linear-gradient(90deg,var(--laiton) 0 1px,transparent 1px 4px);
+  -webkit-mask:radial-gradient(9px 16px at 50% 0,#000 97%,transparent 100%) 0 0/18px 16px repeat-x;
+          mask:radial-gradient(9px 16px at 50% 0,#000 97%,transparent 100%) 0 0/18px 16px repeat-x;opacity:.7}
+
+/* Spécialités : la pile qui s'élargit */
+.pile{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:8px;justify-items:center}
+.plat{position:relative;isolation:isolate;width:100%;padding:22px 13% 22px;text-align:center}
+.plat::before{content:"";position:absolute;inset:0;z-index:-1;clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);
+  background:var(--grain),linear-gradient(90deg,#5a0d15,#9b1f2a 30%,#a8262f 50%,#8a1a25 75%,#540c14);
+  background-size:180px 180px,100% 100%;background-blend-mode:overlay,normal}
+.plat-1{width:82%}
+.plat-src{display:block;color:var(--laiton-clair);font-size:11px}
+.plat-nom{display:block;margin:8px 0 12px;font:800 46px/.9 var(--display);font-stretch:78%;text-transform:uppercase;letter-spacing:.005em}
+.plat-2 .plat-nom{font-size:38px}
+.ajout{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 22px;border:0;background:none;
+  color:var(--creme);font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.ajout::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M8 1H92L99.2 99H.8Z' fill='%23140a0b' fill-opacity='.4' stroke='%23f5e9dd' stroke-opacity='.7' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;transition:background-color .2s}
+.ajout:hover::before{filter:brightness(1.4)}
+.ajout b{color:var(--laiton-clair);font-size:16px;line-height:1}
+.ajout .compte{color:var(--laiton-clair)}
+.manque{margin-top:22px;text-align:center;color:var(--doux);font-size:11px}
+
+/* Commande : la section a la silhouette du tarbouche */
+.commande{position:relative;isolation:isolate;margin:0 -16px;padding:74px 22px 40px;border:0}
+.commande::before{content:"";position:absolute;inset:0;z-index:-1;
+  clip-path:polygon(9% 0,91% 0,100% 72px,100% 100%,0 100%,0 72px);
+  background:var(--grain),radial-gradient(80% 30% at 40% 0,rgba(255,150,130,.16),transparent 70%),
+    linear-gradient(90deg,#5c0d15,#8e1a25 22%,#a3232d 50%,#8a1a25 78%,#560c14);
+  background-size:180px 180px,100% 100%,100% 100%;background-blend-mode:overlay,normal,normal}
+.commande .repere{color:var(--laiton-clair)}
+.commande .repere::before{background:var(--laiton-clair)}
+.commande .chapo{color:#f0ddd2}
+form{display:grid;gap:22px;margin-top:26px}
+.champ{display:grid;gap:8px}
+.lbl{font:700 11px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#f8e6d9}
+.lbl small{display:block;margin-top:3px;font-weight:400;letter-spacing:.04em;text-transform:none;font-size:12px;color:#f0d9cb}
+input,textarea,select{width:100%;font:500 18px/1.35 var(--texte);color:var(--creme);background:transparent;border:0;
+  border-bottom:1.5px solid rgba(245,233,221,.55);border-radius:0;padding:8px 2px 9px;color-scheme:dark}
+select{-webkit-appearance:none;appearance:none;padding-right:28px;cursor:pointer;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 10'%3E%3Cpath d='M1 1h12L9 9H5z' fill='%23f3d293'/%3E%3C/svg%3E") no-repeat right 4px center/13px 9px}
+select option{background:#2a161a;color:#f5e9dd}
+input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--laiton-clair);box-shadow:0 1.5px 0 var(--laiton-clair)}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--laiton-clair);outline-offset:3px}
+textarea{min-height:128px;resize:vertical;padding:12px 14px;background:rgba(20,10,11,.32);border:1.5px solid rgba(245,233,221,.45);line-height:1.5}
+::placeholder{color:#e2c3b6;opacity:1}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.puce{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 20px;border:0;background:none;
+  color:var(--nuit);font:700 15px/1.1 var(--texte);cursor:pointer}
+.puce::before{content:"";position:absolute;inset:0;z-index:-1;clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);background:var(--creme)}
+.puce .n{display:none;min-width:22px;padding:3px 5px;background:var(--feutre);color:var(--creme);font:700 11px/1 var(--mono);text-align:center}
+.puce.a .n{display:inline-block}
+.puce.a::before{background:var(--laiton-clair)}
+.duo{display:grid;grid-template-columns:1fr;gap:22px}
+@media (min-width:600px){.duo{grid-template-columns:1.5fr 1fr;gap:18px}}
+.info-jour{min-height:1.5em;font-size:14px;color:#f8e6d9}
+.info-jour b{color:var(--laiton-clair)}
+.err{display:none;font-size:14px;font-weight:600;color:#ffe0a8}
+.err.v{display:block}
+.err::before{content:"— "}
+[aria-invalid="true"]{border-bottom-color:#ffd58c!important}
+.envoi{margin-top:4px}
+.envoi .cta{margin-top:0}
+.rassure{margin-top:12px;text-align:center;color:#f0d9cb;font-size:11px}
+
+/* Histoire */
+.annee{display:block;margin:10px 0 6px;font:800 128px/.8 var(--display);font-stretch:75%;letter-spacing:-.01em;color:transparent;
+  -webkit-text-stroke:1.5px var(--laiton)}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:28px;border-top:1px solid var(--trait)}
+.chiffres div{padding:16px 10px 4px 0}
+.chiffres div+div{padding-left:12px;border-left:1px solid var(--trait)}
+.chiffres strong{display:block;font:800 40px/1 var(--display);font-stretch:78%}
+.chiffres span{display:block;margin-top:6px;color:var(--doux);font-size:10.5px;letter-spacing:.06em}
+.chiffres em{font-style:normal;color:var(--laiton)}
+.h3{margin-top:30px;font:800 22px/1.1 var(--display);font-stretch:85%}
+
+/* Nous trouver */
+.adresse{margin-top:6px;font:800 52px/.9 var(--display);font-stretch:76%;text-transform:uppercase;letter-spacing:.005em}
+.adresse span{color:var(--laiton-clair)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.b2{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:10px 14px;
+  color:var(--creme);text-decoration:none;font:700 16px/1.1 var(--texte)}
+.b2::before{content:"";position:absolute;inset:0;z-index:-1;clip-path:polygon(6% 0,94% 0,100% 100%,0 100%);
+  background:var(--nuit3);box-shadow:inset 0 0 0 1px var(--trait)}
+.b2:hover::before{background:#3a1e23}
+.horaires{width:100%;margin-top:14px;border-collapse:collapse;font:400 13px/1.4 var(--mono)}
+.horaires th,.horaires td{padding:11px 0;border-bottom:1px solid var(--trait);text-align:left;vertical-align:top;font-weight:400}
+.horaires th{width:34%;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--doux)}
+.horaires td{text-align:right}
+.horaires .ac{color:var(--doux);font-style:italic}
+.horaires tr.auj th,.horaires tr.auj td{color:var(--laiton-clair);font-weight:700}
+.horaires tr.auj th::before{content:"";display:inline-block;width:10px;height:8px;margin-right:7px;background:var(--laiton-clair);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.source{margin-top:12px;color:var(--doux);font-size:13px}
+
+footer{position:relative;padding:28px 16px 120px;color:var(--doux);font-size:13px}
+footer p{margin:6px 0}
+footer .frange{margin-bottom:20px}
+footer .signe{color:var(--creme)}
+
+/* Barre fixe : un seul appel à l'action */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:center;padding:0 12px;pointer-events:none;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.barre.cachee{transform:translateY(130%);visibility:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility 0s .35s}
+.barre .cta{pointer-events:auto;max-width:430px;margin:0;min-height:62px;padding:12px 30px calc(12px + env(safe-area-inset-bottom));
+  filter:drop-shadow(0 -8px 18px rgba(0,0,0,.45))}
+.barre .cta::before{clip-path:polygon(5% 0,95% 0,100% 100%,0 100%)}
+.mini{transform-origin:7px 1px}
+.mini.balance{animation:balance 1.1s cubic-bezier(.3,.6,.4,1)}
+@keyframes balance{0%{transform:rotate(0)}15%{transform:rotate(26deg)}38%{transform:rotate(-16deg)}60%{transform:rotate(9deg)}80%{transform:rotate(-4deg)}100%{transform:rotate(0)}}
+.puce.tic,.ajout.tic{animation:tic .35s ease}
+@keyframes tic{40%{transform:translateY(3px)}}
+
+/* Aperçu WhatsApp (côté restaurant) */
+dialog{width:min(94vw,410px);max-height:96vh;padding:4px 2px;border:0;background:transparent;color:var(--creme);overflow:auto;scrollbar-width:none}
+dialog::backdrop{background:rgba(10,4,5,.78);backdrop-filter:blur(4px)}
+.dlg-k{margin:0 0 10px;text-align:center;color:var(--laiton-clair);font-size:11px}
+.tel{overflow:hidden;border-radius:26px;background:#0b141a;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 30px 60px -20px #000}
+.tel-tete{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#202c33;color:#e9edef}
+.avatar{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:#6a7175;color:#fff;font:700 15px/1 var(--texte)}
+.tel-tete b{display:block;font:600 16px/1.2 var(--texte)}
+.tel-tete small{display:block;font-size:13px;color:#aebac1}
+.tel-tete .wa{margin-left:auto;color:#25d366}
+.fil{position:relative;padding:14px 14px 16px;min-height:200px;
+  background:#0b141a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='40'%3E%3Cpath d='M9 8h8l3 10H6z' fill='none' stroke='%23ffffff' stroke-opacity='.05'/%3E%3Cpath d='M30 26h6l2 8H28z' fill='none' stroke='%23ffffff' stroke-opacity='.05'/%3E%3C/svg%3E")}
+.pill{display:table;margin:0 auto 14px;padding:5px 12px;border-radius:8px;background:#182229;color:#8696a0;font:500 12px/1 var(--texte);text-transform:uppercase;letter-spacing:.04em}
+.bulle{position:relative;max-width:88%;padding:8px 10px 22px 11px;border-radius:0 10px 10px 10px;background:#202c33;color:#e9edef;
+  font:400 14.5px/1.42 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:0 1px 1px rgba(0,0,0,.3)}
+.bulle::before{content:"";position:absolute;left:-8px;top:0;border:8px solid transparent;border-top-color:#202c33;border-right-color:#202c33;border-width:0 8px 10px 0}
+.bulle .h{position:absolute;right:9px;bottom:5px;font-size:11px;color:#8696a0}
+.tel-pied{display:flex;align-items:center;gap:10px;padding:10px 12px 14px;background:#0b141a}
+.tel-pied span{flex:1;padding:10px 16px;border-radius:22px;background:#202c33;color:#8696a0;font:400 14px/1 var(--texte)}
+.demo{margin:14px 2px 0;padding:12px 16px;border-left:3px solid var(--laiton);background:var(--nuit2);font-size:14px;color:var(--doux)}
+.demo strong{display:block;margin-bottom:4px;color:var(--creme);font-size:16px}
+dialog .cta{margin-top:12px;min-height:54px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ——— Tablette / bureau ——— */
+@media (min-width:600px){
+  main,footer{max-width:600px;margin:0 auto}
+  .commande{margin:0;padding-left:40px;padding-right:40px}
+}
+@media (min-width:960px){
+  .page{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .tete{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:0 40px 28px;border-right:1px solid var(--trait)}
+  .tete::before{background:radial-gradient(60% 46% at 50% 52%,rgba(184,50,58,.34),transparent 72%),radial-gradient(36% 12% at 50% 88%,rgba(0,0,0,.6),transparent 80%)}
+  .bandeau{padding-top:24px}
+  .bandeau .adr{font-size:12px}
+  .chapeau{width:auto;height:min(68vh,560px);max-width:none;margin:auto}
+  .pied-tete{position:relative;display:flex;justify-content:space-between;color:var(--doux);font-size:11px}
+  .col{grid-column:2;min-width:0}
+  main{max-width:660px;margin:0;padding:0 clamp(40px,5.5vw,84px)}
+  footer{max-width:660px;margin:0;padding:28px clamp(40px,5.5vw,84px) 120px}
+  .intro{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 0}
+  .accroche{font-size:68px;margin:18px 0 18px}
+  .intro .sous{font-size:19px}
+  .intro .cta{max-width:420px}
+  h2{font-size:46px}
+  .commande{margin:0 calc(-1 * clamp(20px,2.5vw,40px));padding:96px clamp(30px,3.5vw,48px) 48px}
+  .commande::before{clip-path:polygon(9% 0,91% 0,100% 90px,100% 100%,0 100%,0 90px)}
+  .plat-nom{font-size:58px}
+  .plat-2 .plat-nom{font-size:48px}
+  .adresse{font-size:68px}
+  .barre{left:50%}
+}
+@media (max-width:959px){.pied-tete{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="tete" id="tete">
+    <div class="bandeau">
+      <span class="pastille"><i aria-hidden="true"></i>Maquette</span>
+      <span class="mono adr">22 rue de la Krutenau<br>Strasbourg</span>
+    </div>
+
+    <div class="chapeau" id="chapeau">
+      <div class="feutre" aria-hidden="true"></div>
+      <div class="tige" aria-hidden="true"></div>
+      <svg class="cordon" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M50 14 C 62 3, 78 4, 87 16" fill="none" stroke="#e2b264" stroke-width="2.2" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+      </svg>
+      <h1 class="nom">
+        <span class="sr">Le Tarbouche</span>
+        <span class="le" aria-hidden="true">Le</span>
+        <span class="ligne" aria-hidden="true">Tar</span>
+        <span class="ligne" aria-hidden="true">bou</span>
+        <span class="ligne" aria-hidden="true">che</span>
+      </h1>
+      <div class="gland" id="gland" aria-hidden="true">
+        <svg viewBox="0 0 34 170">
+          <defs>
+            <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#9c6f2f"/><stop offset=".42" stop-color="#f3d293"/><stop offset="1" stop-color="#9c6f2f"/></linearGradient>
+          </defs>
+          <path d="M17 0V31" stroke="#e2b264" stroke-width="2.4" stroke-linecap="round"/>
+          <g fill="none" stroke-width="1.3" stroke-linecap="round"><path d="M11.5 62 Q5.8 112 2.5 163.0" stroke="#E3B466"/><path d="M11.9 62 Q7.1 114 4.5 167.0" stroke="#9C6F2F"/><path d="M12.4 62 Q7.0 109 3.7 157.5" stroke="#B98A3E"/><path d="M12.8 62 Q8.8 108 6.6 155.7" stroke="#D9A653"/><path d="M13.3 62 Q9.5 112 7.4 162.0" stroke="#F3D293"/><path d="M13.7 62 Q9.8 109 7.3 156.8" stroke="#E3B466"/><path d="M14.1 62 Q11.7 107 10.5 153.9" stroke="#9C6F2F"/><path d="M14.6 62 Q11.8 112 10.2 163.9" stroke="#B98A3E"/><path d="M15.0 62 Q12.7 113 11.3 164.8" stroke="#D9A653"/><path d="M15.5 62 Q14.4 110 14.0 158.1" stroke="#F3D293"/><path d="M15.9 62 Q14.3 112 13.2 163.0" stroke="#E3B466"/><path d="M16.3 62 Q15.7 113 15.4 164.9" stroke="#9C6F2F"/><path d="M16.8 62 Q16.9 108 17.1 154.8" stroke="#B98A3E"/><path d="M17.2 62 Q16.9 108 16.5 155.1" stroke="#D9A653"/><path d="M17.7 62 Q18.7 112 19.5 162.2" stroke="#F3D293"/><path d="M18.1 62 Q19.3 109 20.0 157.5" stroke="#E3B466"/><path d="M18.5 62 Q19.7 109 20.2 156.4" stroke="#9C6F2F"/><path d="M19.0 62 Q21.6 114 23.3 166.2" stroke="#B98A3E"/><path d="M19.4 62 Q21.7 113 22.8 164.7" stroke="#D9A653"/><path d="M19.9 62 Q22.7 109 24.2 157.2" stroke="#F3D293"/><path d="M20.3 62 Q24.2 111 26.7 161.9" stroke="#E3B466"/><path d="M20.7 62 Q24.1 112 25.8 162.4" stroke="#9C6F2F"/><path d="M21.2 62 Q25.7 107 28.4 153.0" stroke="#B98A3E"/><path d="M21.6 62 Q26.7 108 29.7 155.8" stroke="#D9A653"/><path d="M22.1 62 Q26.8 112 29.3 163.6" stroke="#F3D293"/><path d="M22.5 62 Q28.7 110 32.4 158.8" stroke="#E3B466"/></g>
+          <circle cx="17" cy="32" r="3.6" fill="#c99545"/>
+          <path d="M10.2 60 C 9.6 47, 12.4 36.5, 17 35.5 C 21.6 36.5, 24.4 47, 23.8 60 Z" fill="url(#lg)"/>
+          <path d="M11 44.5 H23 M10.4 51 H23.6" stroke="#8a5f25" stroke-width="1.2"/>
+          <rect x="9.6" y="58.5" width="14.8" height="5" rx="2" fill="#b4833a"/>
+        </svg>
+      </div>
+    </div>
+    <div class="pied-tete mono" aria-hidden="true"><span>Restaurant libanais</span><span>Depuis 2010</span></div>
+  </header>
+
+  <div class="col">
+  <main>
+    <section class="intro" aria-labelledby="t-intro">
+      <p class="mono kicker">Restaurant libanais · Krutenau · depuis 2010</p>
+      <h2 class="accroche" id="t-intro">Les fêtes approchent. <em>Commandez à l’avance.</em></h2>
+      <p class="sous">Composez votre commande ici, choisissez l’heure de retrait&nbsp;: nous la préparons au 22 rue de la Krutenau.</p>
+      <a class="cta" id="cta-haut" href="#commande">Composer ma commande
+        <svg class="fleche" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
+      </a>
+      <p class="mono note-avis"><b>4,3/5</b> sur Sluurpy · <b>1&#8239;197</b> recommandations</p>
+    </section>
+
+    <section class="bloc plats" id="plats" aria-labelledby="t-plats">
+      <p class="repere mono">Citées par nos clients</p>
+      <h2 id="t-plats">Deux noms reviennent dans vos avis.</h2>
+      <ul class="pile">
+        <li class="plat plat-1">
+          <span class="plat-src mono">Avis Wanderlog · Sluurpy</span>
+          <span class="plat-nom">Houmous</span>
+          <button class="ajout" type="button" data-plat="Houmous" aria-label="Ajouter un houmous à ma commande"><b aria-hidden="true">+</b> Ajouter <span class="compte" aria-hidden="true"></span></button>
+        </li>
+        <li class="plat plat-2">
+          <span class="plat-src mono">L’assiette qui porte notre nom</span>
+          <span class="plat-nom">Assiette «&nbsp;Le&nbsp;Tarbouche&nbsp;»</span>
+          <button class="ajout" type="button" data-plat="Assiette «&nbsp;Le Tarbouche&nbsp;»" aria-label="Ajouter une assiette Le Tarbouche à ma commande"><b aria-hidden="true">+</b> Ajouter <span class="compte" aria-hidden="true"></span></button>
+        </li>
+      </ul>
+      <p class="manque mono">Carte complète et prix&nbsp;: [à fournir]</p>
+    </section>
+
+    <section class="bloc commande" id="commande" aria-labelledby="t-commande">
+      <p class="repere mono">Commande à emporter</p>
+      <h2 id="t-commande">Composez. Choisissez l’heure. Passez prendre.</h2>
+      <p class="chapo">Pour les fêtes comme pour un soir de semaine. Nous vous rappelons pour confirmer.</p>
+      <form id="form" novalidate>
+        <div class="champ">
+          <label class="lbl" for="f-commande">Votre commande</label>
+          <div class="puces" role="group" aria-label="Ajouter une spécialité">
+            <button class="puce" type="button" data-plat="Houmous">+ Houmous <span class="n" aria-hidden="true"></span></button>
+            <button class="puce" type="button" data-plat="Assiette «&nbsp;Le Tarbouche&nbsp;»">+ Assiette «&nbsp;Le&nbsp;Tarbouche&nbsp;» <span class="n" aria-hidden="true"></span></button>
+          </div>
+          <textarea id="f-commande" name="commande" aria-describedby="e-commande" placeholder="Touchez une spécialité ou écrivez librement : quantités, remarques…"></textarea>
+          <p class="err" id="e-commande">Écrivez votre commande ou ajoutez une spécialité.</p>
+        </div>
+        <div class="duo">
+          <div class="champ">
+            <label class="lbl" for="f-date">Jour de retrait</label>
+            <select id="f-date" name="date" aria-describedby="e-date info-jour"><option value="">Choisir un jour</option></select>
+            <p class="err" id="e-date">Choisissez le jour.</p>
+          </div>
+          <div class="champ">
+            <label class="lbl" for="f-heure">Vers</label>
+            <select id="f-heure" name="heure"><option value="11:45">11h45</option><option value="12:00">12h00</option><option value="12:15">12h15</option><option value="12:30" selected>12h30</option><option value="12:45">12h45</option><option value="13:00">13h00</option><option value="13:15">13h15</option><option value="13:30">13h30</option><option value="13:45">13h45</option><option value="14:00">14h00</option><option value="18:00">18h00</option><option value="18:30">18h30</option><option value="19:00">19h00</option><option value="19:30">19h30</option><option value="20:00">20h00</option><option value="20:30">20h30</option><option value="21:00">21h00</option><option value="21:30">21h30</option><option value="22:00">22h00</option><option value="22:30">22h30</option></select>
+          </div>
+        </div>
+        <p class="info-jour" id="info-jour" aria-live="polite">Horaires relevés en ligne, à confirmer.</p>
+        <div class="champ">
+          <label class="lbl" for="f-nom">Votre nom</label>
+          <input id="f-nom" name="nom" autocomplete="name" aria-describedby="e-nom">
+          <p class="err" id="e-nom">Indiquez votre nom.</p>
+        </div>
+        <div class="champ">
+          <label class="lbl" for="f-tel">Votre téléphone <small>Pour vous confirmer la commande.</small></label>
+          <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="e-tel">
+          <p class="err" id="e-tel">Indiquez un numéro à 10 chiffres.</p>
+        </div>
+        <div class="envoi">
+          <button class="cta" type="submit">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Commander sur WhatsApp
+          </button>
+          <p class="mono rassure">Vous voyez le message avant tout envoi</p>
+        </div>
+      </form>
+      <p class="sr" id="annonce" aria-live="polite"></p>
+    </section>
+
+    <section class="bloc" id="histoire" aria-labelledby="t-histoire">
+      <p class="repere mono">Notre histoire</p>
+      <h2 id="t-histoire">Une cuisine libanaise, depuis <span class="annee">2010</span></h2>
+      <p class="chapo">Le Tarbouche a été fondé en 2010 par des passionnés de cuisine libanaise. La salle a depuis été rénovée, puis a rouvert.</p>
+      <h3 class="h3">Plus de 1&#8239;000 avis en ligne</h3>
+      <div class="chiffres">
+        <div><strong>4,3/5</strong><span class="mono"><em>Sluurpy</em><br>1&#8239;197 recomm.</span></div>
+        <div><strong>7,3</strong><span class="mono"><em>Restoranking</em><br>1&#8239;089 avis</span></div>
+        <div><strong>4,0</strong><span class="mono"><em>Spinach</em><br>1&#8239;311</span></div>
+      </div>
+    </section>
+
+    <section class="bloc" id="trouver" aria-labelledby="t-trouver">
+      <p class="repere mono">Nous trouver</p>
+      <h2 class="adresse" id="t-trouver">22 rue de la <span>Krutenau</span></h2>
+      <p class="chapo">67000 Strasbourg, quartier Krutenau.</p>
+      <div class="actions">
+        <a class="b2" href="tel:+33388350048">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg>
+          Appeler</a>
+        <a class="b2" href="https://www.google.com/maps/search/?api=1&amp;query=22%20rue%20de%20la%20Krutenau%2C%2067000%20Strasbourg" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          Itinéraire</a>
+      </div>
+      <p class="mono source" style="text-transform:none;letter-spacing:.02em">03&nbsp;88&nbsp;35&nbsp;00&nbsp;48</p>
+
+      <h3 class="h3">Horaires</h3>
+      <table class="horaires">
+        <caption class="sr">Horaires relevés en ligne, à confirmer</caption>
+        <tbody>
+          <tr data-j="0"><th scope="row">Lundi</th><td>11h45–14h00<br><span class="ac">soir à confirmer</span></td></tr>
+          <tr data-j="1"><th scope="row">Mardi</th><td>11h45–14h00<br><span class="ac">soir à confirmer</span></td></tr>
+          <tr data-j="2"><th scope="row">Mercredi</th><td><span class="ac">à confirmer</span></td></tr>
+          <tr data-j="3"><th scope="row">Jeudi</th><td><span class="ac">à confirmer</span></td></tr>
+          <tr data-j="4"><th scope="row">Vendredi</th><td>11h45–14h00<br>18h00–23h00</td></tr>
+          <tr data-j="5"><th scope="row">Samedi</th><td>11h45–15h00<br>18h00–23h00</td></tr>
+          <tr data-j="6"><th scope="row">Dimanche</th><td><span class="ac">à confirmer</span></td></tr>
+        </tbody>
+      </table>
+      <p class="source">Relevés sur Sluurpy et Spinach, qui ne concordent pas&nbsp;: horaires à confirmer.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="frange" aria-hidden="true"></div>
+    <p>Notes et horaires&nbsp;: Sluurpy, Restoranking, Spinach. Spécialités&nbsp;: avis Wanderlog et Sluurpy. Histoire&nbsp;: Mapstr.</p>
+    <p>Page de démonstration non officielle : aucune commande n’est transmise.</p>
+    <p class="signe">Maquette préparée par BRUNFRAME</p>
+  </footer>
+  </div>
+</div>
+
+<div class="barre cachee" id="barre">
+  <a class="cta" href="#commande">
+    <svg width="14" height="26" viewBox="0 0 14 26" aria-hidden="true"><g class="mini"><path d="M7 1v6" stroke="currentColor" stroke-width="1.6"/><path d="M4 12c0-3 1.2-5 3-5s3 2 3 5z" fill="currentColor"/><path d="M4.5 12.5 2.5 24M6 12.5 5 25M7 12.5V25M8 12.5 9 25M9.5 12.5l2 11.5" stroke="currentColor" stroke-width="1.1"/></g></svg>
+    <span id="barre-txt">Composer ma commande</span>
+  </a>
+</div>
+
+<dialog id="apercu" aria-labelledby="dlg-k" aria-describedby="dlg-note">
+  <p class="mono dlg-k" id="dlg-k">Aperçu · le message que reçoit le restaurant</p>
+  <div class="tel">
+    <div class="tel-tete">
+      <span class="avatar" id="dlg-ini" aria-hidden="true">?</span>
+      <span><b id="dlg-nom">Client</b><small id="dlg-num"></small></span>
+      <svg class="wa" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+    </div>
+    <div class="fil">
+      <span class="pill">Aujourd’hui</span>
+      <div class="bulle"><span id="bulle"></span><span class="h" id="dlg-h"></span></div>
+    </div>
+    <div class="tel-pied" aria-hidden="true"><span>Répondre…</span></div>
+  </div>
+  <p class="demo" id="dlg-note"><strong>Démonstration : rien n’est envoyé.</strong>En ligne, ce message arriverait sur le WhatsApp du restaurant. Numéro WhatsApp&nbsp;: [à fournir], le 03&nbsp;88&nbsp;35&nbsp;00&nbsp;48 étant une ligne fixe.</p>
+  <a class="cta" id="dlg-envoyer" href="#" target="_blank" rel="noopener" hidden>Ouvrir dans WhatsApp</a>
+  <button class="cta" type="button" id="dlg-fermer">Modifier ma commande</button>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  // Numéro vérifié : +33 3 88 35 00 48 (ligne fixe) : aucun lien wa.me.
+  var WA = null;
+  var NOM = "Le Tarbouche";
+  var HORAIRES = [
+    "11h45–14h00, soir à confirmer", "11h45–14h00, soir à confirmer", null, null,
+    "11h45–14h00 et 18h00–23h00", "11h45–15h00 et 18h00–23h00", null
+  ];
+  var JOURS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+  var reduit = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function $(s) { return document.querySelector(s); }
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+  /* Date du jour à Strasbourg */
+  var auj = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  function jourSemaine(iso) { var p = iso.split("-"); return (new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay() + 6) % 7; }
+  var ligneAuj = document.querySelector('.horaires tr[data-j="' + jourSemaine(auj) + '"]');
+  if (ligneAuj) ligneAuj.className = "auj";
+
+  /* 1. Le nom dessine le tarbouche : chaque ligne prend la largeur du feutre à sa hauteur (axe de largeur variable) */
+  var chapeau = $("#chapeau"), gland = $("#gland");
+  var lignes = [].slice.call(document.querySelectorAll(".nom .ligne")), le = $(".nom .le");
+  function ajuster() {
+    var W = chapeau.clientWidth, H = chapeau.clientHeight;
+    if (!W || !H) return;
+    var ins = 0.13, pad = W * 0.05;
+    var glandG = gland.offsetLeft + 2, glandBas = gland.offsetTop + gland.offsetHeight * 0.62;
+    var taille = H * 0.285;
+    lignes.forEach(function (l) {
+      l.style.fontSize = taille + "px";
+      l.style.letterSpacing = "0px"; l.style.marginRight = "0px"; l.style.fontStretch = "100%";
+      var y = l.offsetTop + l.offsetHeight * 0.1;
+      var bord = W * ins * (1 - y / H);
+      var gauche = bord + pad, droite = W - bord - pad;
+      if (y < glandBas) droite = Math.min(droite, glandG - pad * 0.4);
+      var cible = droite - gauche;
+      var w100 = l.getBoundingClientRect().width;
+      l.style.fontStretch = "75%";
+      var w75 = l.getBoundingClientRect().width, s, k = 1;
+      if (w100 - w75 < 1) { s = 100; k = clamp(cible / w100, 0.82, 1.16); }
+      else if (cible >= w100) { s = 100; k = Math.min(1.13, cible / w100); }
+      else if (cible <= w75) { s = 75; k = Math.max(0.82, cible / w75); }
+      else s = 75 + 25 * (cible - w75) / (w100 - w75);
+      l.style.fontStretch = s + "%";
+      l.style.fontSize = taille * k + "px";
+      var w = l.getBoundingClientRect().width, n = l.textContent.length;
+      var ls = clamp((cible - w) / n, -taille * 0.04, taille * 0.12);
+      l.style.letterSpacing = ls + "px";
+      l.style.marginRight = -ls + "px";
+      l.style.marginLeft = gauche + "px";
+    });
+    if (le && lignes[0]) le.style.marginLeft = lignes[0].style.marginLeft;
+  }
+  function ajuster2() { ajuster(); ajuster(); }
+  ajuster2();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajuster2);
+  if ("ResizeObserver" in window) new ResizeObserver(ajuster2).observe(chapeau);
+
+  /* 2. Le gland se balance au défilement (physique de pendule, coupée si mouvement réduit) */
+  var ang = 0, vit = 0, raf = 0, tPrec = 0, yPrec = window.scrollY;
+  function pas(t) {
+    var dt = clamp((t - tPrec) / 1000, 0.001, 0.034); tPrec = t;
+    vit += (-30 * ang - 2.4 * vit) * dt; ang = clamp(ang + vit * dt, -0.7, 0.7);
+    gland.style.transform = "rotate(" + ang.toFixed(4) + "rad)";
+    if (Math.abs(ang) < 0.002 && Math.abs(vit) < 0.004) { ang = vit = 0; gland.style.transform = ""; raf = 0; return; }
+    raf = requestAnimationFrame(pas);
+  }
+  function pousser(f) {
+    if (reduit.matches) return;
+    vit = clamp(vit + f, -3, 3);
+    if (!raf) { tPrec = performance.now(); raf = requestAnimationFrame(pas); }
+  }
+  window.addEventListener("scroll", function () {
+    var d = window.scrollY - yPrec; yPrec = window.scrollY;
+    pousser(clamp(-d * 0.02, -0.8, 0.8));
+  }, { passive: true });
+  var xPrec = null;
+  chapeau.addEventListener("pointermove", function (e) {
+    if (xPrec !== null) {
+      var r = gland.getBoundingClientRect();
+      if (Math.abs(e.clientX - (r.left + r.width / 2)) < 120 && e.clientY > r.top - 30 && e.clientY < r.bottom + 30) pousser(clamp((e.clientX - xPrec) * 0.05, -0.9, 0.9));
+    }
+    xPrec = e.clientX;
+  });
+  chapeau.addEventListener("pointerleave", function () { xPrec = null; });
+  gland.addEventListener("click", function () { pousser(1.6); });
+  setTimeout(function () { pousser(1.1); }, 700);
+
+  /* 3. Composer la commande : puces et boutons « Ajouter » */
+  var form = $("#form"), zone = form.commande, annonce = $("#annonce"), barreTxt = $("#barre-txt"), mini = document.querySelector(".mini");
+  function echappe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function motif(plat) { return new RegExp("^\\s*(\\d+)\\s*[×x]\\s*" + echappe(plat) + "\\s*$", "i"); }
+  function compter(plat) {
+    var m = zone.value.split("\n").map(function (l) { return l.match(motif(plat)); }).filter(Boolean);
+    return m.reduce(function (s, x) { return s + (+x[1]); }, 0);
+  }
+  function rafraichir() {
+    var total = 0;
+    document.querySelectorAll("[data-plat]").forEach(function (b) {
+      var n = compter(b.dataset.plat);
+      var cible = b.querySelector(".n") || b.querySelector(".compte");
+      if (b.classList.contains("puce")) { b.classList.toggle("a", n > 0); cible.textContent = n ? "×" + n : ""; }
+      else cible.textContent = n ? "· " + n : "";
+    });
+    document.querySelectorAll(".puce").forEach(function (b) { total += compter(b.dataset.plat); });
+    barreTxt.textContent = zone.value.trim() ? "Finaliser ma commande" + (total ? " (" + total + ")" : "") : "Composer ma commande";
+  }
+  function ajouter(plat, btn) {
+    var lignesTxt = zone.value.split("\n"), trouve = false, re = motif(plat);
+    lignesTxt = lignesTxt.map(function (l) {
+      var m = l.match(re);
+      if (m && !trouve) { trouve = true; return (+m[1] + 1) + " × " + plat; }
+      return l;
+    });
+    if (!trouve) {
+      while (lignesTxt.length && !lignesTxt[lignesTxt.length - 1].trim()) lignesTxt.pop();
+      lignesTxt.push("1 × " + plat);
+    }
+    zone.value = lignesTxt.join("\n");
+    rafraichir();
+    annonce.textContent = plat.replace(/ /g, " ") + " ajouté : " + compter(plat) + " dans votre commande.";
+    if (!reduit.matches) {
+      [btn, mini].forEach(function (el) { if (!el) return; var c = el === mini ? "balance" : "tic"; el.classList.remove(c); void el.getBoundingClientRect(); el.classList.add(c); });
+      pousser(0.9);
+    }
+    effacerErreur(zone);
+  }
+  document.querySelectorAll("[data-plat]").forEach(function (b) {
+    b.addEventListener("click", function () { ajouter(b.dataset.plat, b); });
+  });
+  zone.addEventListener("input", rafraichir);
+
+  /* 4. Jour et heure de retrait */
+  (function () {
+    var p = auj.split("-"), base = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+    var f = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+    for (var i = 0; i < 60; i++) {
+      var d = new Date(base + i * 864e5), o = document.createElement("option");
+      o.value = d.toISOString().slice(0, 10);
+      o.textContent = (i === 0 ? "Aujourd’hui, " : i === 1 ? "Demain, " : "") + f.format(d);
+      form.date.appendChild(o);
+    }
+  })();
+  var infoJour = $("#info-jour");
+  function infoDate() {
+    if (!form.date.value) { infoJour.textContent = "Horaires relevés en ligne, à confirmer."; return; }
+    var j = jourSemaine(form.date.value), h = HORAIRES[j];
+    infoJour.innerHTML = "";
+    var b = document.createElement("b"); b.textContent = JOURS[j] + " : ";
+    infoJour.appendChild(b);
+    infoJour.appendChild(document.createTextNode(h ? h + " (relevé en ligne, à confirmer)." : "horaires à confirmer, nous vous rappelons."));
+  }
+  form.date.addEventListener("change", infoDate);
+
+  /* 5. Validation et aperçu WhatsApp */
+  function erreur(champ, oui) {
+    var e = document.getElementById("e-" + champ.name);
+    champ.setAttribute("aria-invalid", oui ? "true" : "false");
+    if (e) e.classList.toggle("v", oui);
+    return oui;
+  }
+  function effacerErreur(champ) { if (champ.getAttribute("aria-invalid") === "true") erreur(champ, false); }
+  ["commande", "date", "nom", "tel"].forEach(function (n) { form[n].addEventListener("input", function () { effacerErreur(form[n]); }); });
+
+  var dlg = $("#apercu");
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var chiffres = form.tel.value.replace(/\D/g, "");
+    var fautes = [
+      erreur(form.commande, !form.commande.value.trim()) && form.commande,
+      erreur(form.date, !form.date.value || form.date.value < auj) && form.date,
+      erreur(form.nom, !form.nom.value.trim()) && form.nom,
+      erreur(form.tel, chiffres.length < 10) && form.tel
+    ].filter(Boolean);
+    if (fautes.length) { fautes[0].focus(); return; }
+    var p = form.date.value.split("-");
+    var date = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+    var heure = form.heure.value ? " vers " + form.heure.value.replace(":", "h") : "";
+    var nom = form.nom.value.trim();
+    var msg = "Bonjour " + NOM + ",\nje souhaite commander pour un retrait le " + date + heure + " :\n\n" +
+      form.commande.value.trim().replace(/\n{3,}/g, "\n\n") + "\n\nNom : " + nom + "\nTél. : " + form.tel.value.trim() + "\n\nMerci !";
+    $("#bulle").textContent = msg;
+    $("#dlg-nom").textContent = "~ " + nom;
+    $("#dlg-num").textContent = form.tel.value.trim();
+    $("#dlg-ini").textContent = nom.split(/\s+/).map(function (m) { return m.charAt(0); }).join("").slice(0, 2).toUpperCase() || "?";
+    var maintenant = new Intl.DateTimeFormat("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" }).format(new Date());
+    $("#dlg-h").textContent = maintenant;
+    var lien = $("#dlg-envoyer");
+    if (WA) { lien.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); lien.hidden = false; }
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    $("#dlg-fermer").focus();
+  });
+  $("#dlg-fermer").addEventListener("click", function () {
+    if (dlg.close) dlg.close(); else dlg.removeAttribute("open");
+    form.commande.focus();
+  });
+
+  /* 6. Barre fixe : masquée quand le bouton du haut ou le formulaire est visible */
+  var barre = $("#barre");
+  if ("IntersectionObserver" in window) {
+    var vus = new Set();
+    var suivre = function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) vus.add(en.target); else vus.delete(en.target); });
+      barre.classList.toggle("cachee", vus.size > 0);
+    };
+    new IntersectionObserver(suivre).observe($("#cta-haut"));
+    new IntersectionObserver(suivre, { rootMargin: "0px 0px -35% 0px" }).observe($("#form"));
+  } else { barre.classList.remove("cachee"); }
+  rafraichir();
+})();
+</script>
+</body>
+</html>
