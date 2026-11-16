@@ -6,3 +6,6 @@ node_modules/
 dist/
 .netlify/
 dist-single/
+
+# Prospection : exemple de configuration versionné
+!prospection/.env.example

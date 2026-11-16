@@ -1,0 +1,1530 @@
+{
+ "_avertissement": "Données FICTIVES pour --hors-ligne. Jamais déployées, jamais présentées comme réelles.",
+ "recherche": {
+  "boucherie": [
+   {
+    "id": "DEMO_1",
+    "displayName": {
+     "text": "Boucherie Démo du Marché",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "1 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "1 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.58,
+     "longitude": 7.748
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "butcher_shop",
+    "rating": 4.8,
+    "userRatingCount": 214,
+    "websiteUri": "",
+    "nationalPhoneNumber": "01 99 00 01 01",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "aucun"
+   },
+   {
+    "id": "DEMO_2",
+    "displayName": {
+     "text": "Boucherie Exemple Casher (démo)",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "2 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "2 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.581,
+     "longitude": 7.75
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "butcher_shop",
+    "rating": 4.7,
+    "userRatingCount": 90,
+    "websiteUri": "",
+    "nationalPhoneNumber": "01 99 00 01 02",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "aucun"
+   },
+   {
+    "id": "DEMO_3",
+    "displayName": {
+     "text": "Paul",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "3 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "3 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.582,
+     "longitude": 7.745
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "bakery",
+    "rating": 4.5,
+    "userRatingCount": 400,
+    "websiteUri": "",
+    "nationalPhoneNumber": "01 99 00 01 03",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "aucun"
+   }
+  ],
+  "patisserie": [
+   {
+    "id": "DEMO_4",
+    "displayName": {
+     "text": "Pâtisserie Fictive Krutenau",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "4 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "4 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.578,
+     "longitude": 7.76
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "bakery",
+    "rating": 4.9,
+    "userRatingCount": 167,
+    "websiteUri": "https://patisserie-fictive.wixsite.com/accueil",
+    "nationalPhoneNumber": "06 39 98 00 11",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 1,
+        "hour": 9,
+        "minute": 0
+       },
+       "close": {
+        "day": 1,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 9,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 9,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 9,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 9,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 9,
+        "minute": 0
+       },
+       "close": {
+        "day": 6,
+        "hour": 19,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "wix_gratuit"
+   },
+   {
+    "id": "DEMO_5",
+    "displayName": {
+     "text": "Pâtisserie Peu Notée (démo)",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "5 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "5 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.579,
+     "longitude": 7.759
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "bakery",
+    "rating": 4.1,
+    "userRatingCount": 80,
+    "websiteUri": "",
+    "nationalPhoneNumber": "01 99 00 01 05",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "aucun"
+   }
+  ],
+  "fromagerie": [
+   {
+    "id": "DEMO_6",
+    "displayName": {
+     "text": "Fromagerie Démo de la Gare",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "6 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "6 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.585,
+     "longitude": 7.73
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "food_store",
+    "rating": 4.6,
+    "userRatingCount": 58,
+    "websiteUri": "https://fromagerie-demo.example",
+    "nationalPhoneNumber": "01 99 00 01 06",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "sans_commande"
+   },
+   {
+    "id": "DEMO_7",
+    "displayName": {
+     "text": "Fromagerie Déjà Équipée (démo)",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "7 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "7 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.5845,
+     "longitude": 7.731
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "food_store",
+    "rating": 4.7,
+    "userRatingCount": 120,
+    "websiteUri": "https://commande.example",
+    "nationalPhoneNumber": "01 99 00 01 07",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "commande_en_ligne"
+   }
+  ],
+  "traiteur": [
+   {
+    "id": "DEMO_8",
+    "displayName": {
+     "text": "Traiteur Exemple Neustadt",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "8 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "8 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.588,
+     "longitude": 7.755
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "caterer",
+    "rating": 4.5,
+    "userRatingCount": 41,
+    "websiteUri": "https://www.facebook.com/traiteur.exemple",
+    "nationalPhoneNumber": "01 99 00 01 08",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "reseau_social"
+   }
+  ],
+  "caviste": [
+   {
+    "id": "DEMO_9",
+    "displayName": {
+     "text": "Cave Fictive Esplanade",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "9 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "9 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.576,
+     "longitude": 7.77
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "liquor_store",
+    "rating": 4.6,
+    "userRatingCount": 73,
+    "websiteUri": "https://cave-fictive.example",
+    "nationalPhoneNumber": "01 99 00 01 09",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "casse"
+   }
+  ],
+  "boulangerie": [
+   {
+    "id": "DEMO_10",
+    "displayName": {
+     "text": "Boulangerie Déjà Contactée (démo)",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "10 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "10 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.583,
+     "longitude": 7.742
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "bakery",
+    "rating": 4.7,
+    "userRatingCount": 300,
+    "websiteUri": "",
+    "nationalPhoneNumber": "01 99 00 01 10",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "aucun"
+   },
+   {
+    "id": "DEMO_11",
+    "displayName": {
+     "text": "Boulangerie Appel de 14h (démo)",
+     "languageCode": "fr"
+    },
+    "formattedAddress": "11 rue de l'Exemple, 67000 Strasbourg, France",
+    "shortFormattedAddress": "11 rue de l'Exemple, Strasbourg",
+    "location": {
+     "latitude": 48.5835,
+     "longitude": 7.743
+    },
+    "businessStatus": "OPERATIONAL",
+    "primaryType": "bakery",
+    "rating": 4.6,
+    "userRatingCount": 66,
+    "websiteUri": "",
+    "nationalPhoneNumber": "01 99 00 01 11",
+    "regularOpeningHours": {
+     "periods": [
+      {
+       "open": {
+        "day": 2,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 2,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 2,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 2,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 3,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 3,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 3,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 4,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 4,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 4,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 8,
+        "minute": 0
+       },
+       "close": {
+        "day": 5,
+        "hour": 12,
+        "minute": 30
+       }
+      },
+      {
+       "open": {
+        "day": 5,
+        "hour": 14,
+        "minute": 30
+       },
+       "close": {
+        "day": 5,
+        "hour": 19,
+        "minute": 0
+       }
+      },
+      {
+       "open": {
+        "day": 6,
+        "hour": 7,
+        "minute": 30
+       },
+       "close": {
+        "day": 6,
+        "hour": 13,
+        "minute": 0
+       }
+      }
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=0",
+    "_etat_demo": "aucun"
+   }
+  ]
+ },
+ "details": {
+  "DEMO_1": {
+   "reviews": [
+    {
+     "text": {
+      "text": "Le presskopf maison est excellent et la côte de bœuf parfaite."
+     }
+    },
+    {
+     "text": {
+      "text": "Super accueil, presskopf et knacks au top. On commande pour Noël chaque année."
+     }
+    },
+    {
+     "text": {
+      "text": "Côte de bœuf maturée, conseils précieux."
+     }
+    }
+   ]
+  },
+  "DEMO_2": {
+   "reviews": [
+    {
+     "text": {
+      "text": "Viande casher de qualité."
+     }
+    }
+   ]
+  },
+  "DEMO_4": {
+   "reviews": [
+    {
+     "text": {
+      "text": "La forêt-noire est incroyable, les macarons aussi."
+     }
+    },
+    {
+     "text": {
+      "text": "Meilleure forêt noire de Strasbourg !"
+     }
+    },
+    {
+     "text": {
+      "text": "Macarons fins, éclairs généreux."
+     }
+    }
+   ]
+  },
+  "DEMO_6": {
+   "reviews": [
+    {
+     "text": {
+      "text": "Munster affiné à point, très bon mont d'or."
+     }
+    },
+    {
+     "text": {
+      "text": "Le munster est top, accueil adorable."
+     }
+    }
+   ]
+  },
+  "DEMO_8": {
+   "reviews": [
+    {
+     "text": {
+      "text": "Bouchées à la reine comme chez ma grand-mère."
+     }
+    },
+    {
+     "text": {
+      "text": "Baeckeoffe délicieux pour 10 personnes."
+     }
+    }
+   ]
+  },
+  "DEMO_9": {
+   "reviews": [
+    {
+     "text": {
+      "text": "Très bon choix de crémants et de rieslings."
+     }
+    }
+   ]
+  }
+ }
+}

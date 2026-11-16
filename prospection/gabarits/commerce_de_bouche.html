@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>{{ nom }} — {{ categorie }} à Strasbourg</title>
+<meta name="description" content="Maquette préparée pour {{ nom }} : spécialités, horaires et commande sur WhatsApp.">
+<meta name="theme-color" content="{{ fond }}">
+<style>
+:root{
+  --fond:{{ fond }};--accent:{{ accent }};--sur-accent:{{ sur_accent }};--clair:{{ clair }};
+  --encre:#1c1918;--doux:#5b5452;--carte:#fffffff0;--trait:#00000014;--wa:#128c4a;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--clair);color:var(--encre);font:16px/1.55 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.page{max-width:560px;margin:0 auto;padding-bottom:96px}
+/* En-tête */
+.hero{position:relative;color:#fff;padding:18px 20px 30px;background:
+  radial-gradient(120% 80% at 100% 0%,color-mix(in srgb,var(--accent) 55%,transparent) 0%,transparent 60%),
+  linear-gradient(180deg,color-mix(in srgb,var(--fond) 82%,#000) 0%,var(--fond) 100%);
+  border-radius:0 0 28px 28px;overflow:hidden}
+.hero.photo{background:linear-gradient(180deg,#0000 0%,color-mix(in srgb,var(--fond) 70%,#000) 55%,var(--fond) 100%),var(--photo) center/cover}
+.hero.photo .contenu{padding-top:180px}
+.haut{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.marque{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.02em}
+.mono{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;
+  background:color-mix(in srgb,#fff 14%,transparent);border:1px solid #ffffff40;font:600 18px/1 var(--serif)}
+.logo{height:44px;width:auto;max-width:150px;object-fit:contain}
+.pastille{font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:99px;
+  border:1px solid #ffffff55;color:#ffffffd9}
+.contenu{padding-top:36px}
+.surtitre{margin:0 0 6px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#ffffffc7}
+h1{margin:0;font:600 clamp(2.1rem,9vw,3rem)/1.05 var(--serif);letter-spacing:-.01em;text-wrap:balance}
+.infos{display:flex;flex-wrap:wrap;gap:8px 14px;margin:16px 0 22px;font-size:15px;color:#ffffffe6}
+.note b{font-weight:700}
+.etoile{color:#ffd166}
+.ouvert::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;
+  background:#4ade80;vertical-align:1px}
+.ferme::before{background:#f87171}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:14px 20px;
+  border:0;border-radius:16px;background:var(--accent);color:var(--sur-accent);font:700 17px/1.2 var(--sans);
+  text-decoration:none;cursor:pointer;box-shadow:0 10px 24px -12px #000c}
+.cta.wa{background:var(--wa);color:#fff}
+/* Blocs */
+main{padding:6px 16px 0}
+.bloc{background:var(--carte);border:1px solid var(--trait);border-radius:22px;padding:20px;margin:16px 0;
+  box-shadow:0 1px 0 #0000000a}
+h2{margin:0 0 12px;font:600 1.45rem/1.2 var(--serif);color:var(--fond)}
+.accroche{background:var(--fond);color:#fff;border:0}
+.accroche h2{color:#fff}
+.accroche p{margin:0;color:#ffffffde}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.spec{border-radius:16px;padding:16px 14px;background:color-mix(in srgb,var(--clair) 70%,#fff);border:1px solid var(--trait)}
+.spec strong{display:block;font:600 1.15rem/1.2 var(--serif);color:var(--fond)}
+.spec span{display:block;margin-top:6px;font-size:13px;color:var(--doux)}
+.mention{margin:12px 0 0;font-size:13px;color:var(--doux)}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input,textarea{width:100%;font:16px/1.4 var(--sans);color:var(--encre);background:#fff;border:1px solid #0000002e;
+  border-radius:12px;padding:12px 13px}
+textarea{min-height:104px;resize:vertical}
+.aide{font-weight:400;font-size:13px;color:var(--doux)}
+.horaires{width:100%;border-collapse:collapse;font-size:15px}
+.horaires td{padding:8px 0;border-bottom:1px solid var(--trait)}
+.horaires td:last-child{text-align:right;color:var(--doux)}
+.horaires tr.aujourdhui td{font-weight:700;color:var(--encre)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.bouton2{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:14px;
+  border:1px solid color-mix(in srgb,var(--fond) 35%,transparent);color:var(--fond);font-weight:600;text-decoration:none}
+footer{padding:8px 22px 24px;font-size:13px;color:var(--doux)}
+footer p{margin:6px 0}
+/* Barre fixe : un seul appel à l'action visible */
+.barre{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:color-mix(in srgb,var(--clair) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-top:1px solid var(--trait);transition:transform .25s ease}
+.barre .cta{max-width:528px;margin:0 auto}
+.barre.cachee{transform:translateY(110%)}
+@media (prefers-reduced-motion:reduce){.barre{transition:none}}
+/* Aperçu WhatsApp */
+dialog{border:0;padding:0;border-radius:22px;width:min(92vw,420px);background:#efe7de;color:var(--encre)}
+dialog::backdrop{background:#000a}
+.dlg-tete{background:#075e54;color:#fff;padding:14px 18px;font-weight:600}
+.dlg-tete small{display:block;font-weight:400;opacity:.85}
+.fil{padding:18px}
+.bulle{background:#d9fdd3;border-radius:12px 12px 4px 12px;padding:10px 12px;white-space:pre-wrap;font-size:15px;
+  box-shadow:0 1px 1px #0002;margin-left:12%}
+.dlg-pied{padding:0 18px 18px;display:grid;gap:10px}
+.dlg-pied p{margin:0;font-size:13px;color:var(--doux)}
+.fermer{background:none;border:0;font:600 15px var(--sans);color:var(--doux);padding:10px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero{{ classe_photo }}" {{ style_photo }}>
+    <div class="haut">
+      <div class="marque">{{ logo }}</div>
+      <span class="pastille">Maquette</span>
+    </div>
+    <div class="contenu">
+      <p class="surtitre">{{ categorie }} · {{ quartier }}</p>
+      <h1>{{ nom }}</h1>
+      <div class="infos">
+        <span class="note"><span class="etoile" aria-hidden="true">★</span> <b>{{ note }}</b> · {{ nb_avis }} avis Google</span>
+        <span id="etat" hidden></span>
+      </div>
+      <a class="cta" href="#commander">{{ accroche_bouton }}</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="bloc accroche" aria-labelledby="t-accroche">
+      <h2 id="t-accroche">{{ accroche_titre }}</h2>
+      <p>Choisissez votre jour de retrait et écrivez votre commande : elle arrive directement sur notre WhatsApp, sans attendre au téléphone.</p>
+    </section>
+
+    {{ bloc_specialites }}
+
+    <section class="bloc" id="commander" aria-labelledby="t-commande">
+      <h2 id="t-commande">Commander {{ accroche_pour }}</h2>
+      <form id="form" novalidate>
+        <label>Votre commande
+          <textarea name="commande" required placeholder="{{ exemple_commande }}"></textarea>
+        </label>
+        <div class="duo">
+          <label>Pour le <input type="date" name="date" required></label>
+          <label>Vers <input type="time" name="heure" value="10:00" step="900"></label>
+        </div>
+        <label>Votre nom <input name="nom" autocomplete="name" required></label>
+        <label>Votre téléphone <span class="aide">pour vous confirmer la commande</span>
+          <input name="tel" type="tel" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <button class="cta wa" type="submit">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Commander sur WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <section class="bloc" aria-labelledby="t-horaires">
+      <h2 id="t-horaires">Horaires</h2>
+      <table class="horaires"><tbody>{{ lignes_horaires }}</tbody></table>
+    </section>
+
+    <section class="bloc" aria-labelledby="t-adresse">
+      <h2 id="t-adresse">Nous trouver</h2>
+      <p style="margin:0">{{ adresse }}</p>
+      <div class="actions">
+        <a class="bouton2" href="{{ lien_maps }}" target="_blank" rel="noopener">Itinéraire</a>
+        {{ bouton_tel }}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Note et nombre d'avis : <a href="{{ lien_maps }}" target="_blank" rel="noopener">Google Maps</a>.{{ credit_photo }}</p>
+    <p>Page de démonstration non officielle : aucune commande n'est transmise depuis cette maquette.</p>
+    <p>Maquette préparée par BRUNFRAME</p>
+  </footer>
+</div>
+
+<div class="barre" id="barre"><a class="cta wa" href="#commander">Commander sur WhatsApp</a></div>
+
+<dialog id="apercu" aria-labelledby="dlg-titre">
+  <div class="dlg-tete" id="dlg-titre">{{ nom }}<small>Ce que vous recevez sur WhatsApp</small></div>
+  <div class="fil"><div class="bulle" id="bulle"></div></div>
+  <div class="dlg-pied">
+    <p id="dlg-note">Démonstration : rien n'est envoyé. Une fois en ligne, ce message arrive sur votre WhatsApp.</p>
+    <a class="cta wa" id="dlg-envoyer" href="#" target="_blank" rel="noopener" hidden>Ouvrir dans WhatsApp</a>
+    <button class="fermer" type="button" id="dlg-fermer">Fermer</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var H = {{ horaires_json }}, NOM = {{ nom_json }}, WA = {{ wa_json }};
+  var JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+  function heure(m) { var h = Math.floor(m / 60) % 24, r = m % 60; return h + "h" + (r ? (r < 10 ? "0" : "") + r : ""); }
+  var maintenant = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+  var jour = (maintenant.getDay() + 6) % 7, min = maintenant.getHours() * 60 + maintenant.getMinutes();
+  var ligne = document.querySelector('tr[data-jour="' + jour + '"]');
+  if (ligne) ligne.className = "aujourdhui";
+  var connus = Object.keys(H).some(function (k) { return H[k].length; });
+  var etat = document.getElementById("etat");
+  if (connus) {
+    var texte = null;
+    H[jour].forEach(function (p) { if (min >= p[0] && min < p[1]) texte = "Ouvert · ferme à " + heure(p[1]); });
+    if (texte) { etat.className = "ouvert"; }
+    else {
+      for (var d = 0; d < 8 && !texte; d++) {
+        var j = (jour + d) % 7;
+        for (var i = 0; i < H[j].length; i++) {
+          if (d > 0 || H[j][i][0] > min) {
+            texte = "Fermé · ouvre " + (d === 0 ? "à " : d === 1 ? "demain à " : JOURS[j] + " à ") + heure(H[j][i][0]);
+            break;
+          }
+        }
+      }
+      etat.className = "ouvert ferme";
+    }
+    if (texte) { etat.textContent = texte; etat.hidden = false; }
+  }
+  var form = document.getElementById("form"), dlg = document.getElementById("apercu");
+  var demain = new Date(maintenant.getTime() + 864e5);
+  form.date.min = demain.toISOString().slice(0, 10);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    var date = new Date(form.date.value + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+    var msg = "Bonjour " + NOM + ",\nje voudrais commander pour le " + date + (form.heure.value ? " vers " + form.heure.value.replace(":", "h") : "") +
+      " :\n" + form.commande.value.trim() + "\n\nNom : " + form.nom.value.trim() + "\nTél : " + form.tel.value.trim();
+    document.getElementById("bulle").textContent = msg;
+    var lien = document.getElementById("dlg-envoyer");
+    if (WA) { lien.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); lien.hidden = false; }
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+  });
+  document.getElementById("dlg-fermer").addEventListener("click", function () { dlg.close ? dlg.close() : dlg.removeAttribute("open"); });
+  var barre = document.getElementById("barre"), cible = document.getElementById("commander"), hero = document.querySelector(".hero .cta");
+  if ("IntersectionObserver" in window) {
+    var visibles = new Set();
+    var io = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { en.isIntersecting ? visibles.add(en.target) : visibles.delete(en.target); });
+      barre.classList.toggle("cachee", visibles.size > 0);
+    });
+    io.observe(cible); io.observe(hero);
+  }
+})();
+</script>
+</body>
+</html>

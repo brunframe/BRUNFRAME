@@ -1,0 +1,54 @@
+# Chaînes et franchises exclues (une par ligne, sans accents ni majuscules requis).
+# Le nom du commerce est exclu s'il est égal à l'enseigne, commence ou finit par elle
+# (« Nicolas Kléber », « Boulangerie Paul »), mais pas « Boucherie Paul Muller ».
+Paul
+Marie Blachère
+Boulangerie Ange
+Feuillette
+Brioche Dorée
+La Mie Câline
+Banette
+Le Fournil de Pierre
+Maison Kayser
+Eric Kayser
+Columbus Café
+Starbucks
+Nicolas
+V and B
+Cavavin
+Le Repaire de Bacchus
+Jeff de Bruges
+Leonidas
+De Neuville
+Monbana
+Lenôtre
+Ladurée
+Pierre Hermé
+Picard
+Monoprix
+Franprix
+Carrefour
+Intermarché
+Auchan
+Lidl
+Aldi
+Coccinelle
+Naturalia
+Biocoop
+La Vie Claire
+Grand Frais
+Fromagerie Androuët
+Comptoir Irlandais
+Cafés Richard
+Mariage Frères
+Dammann Frères
+Kusmi Tea
+Palais des Thés
+Bonbon Folie
+Le Paradis du Fruit
+O'Tacos
+Sushi Shop
+Planet Sushi
+Class'Croute
+Pomme de Pain
+Subway

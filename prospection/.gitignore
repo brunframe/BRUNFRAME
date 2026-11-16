@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+state/
+logs/
+site/
+captures/
+sorties/
+personnalisation/*
+!personnalisation/README.md

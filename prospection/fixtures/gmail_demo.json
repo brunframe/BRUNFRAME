@@ -1,0 +1,157 @@
+{
+ "_avertissement": "Fils Gmail FICTIFS pour --hors-ligne.",
+ "fils": [
+  {
+   "id": "f1",
+   "messages": [
+    {
+     "id": "m1",
+     "internalDate": "1794725044000",
+     "labelIds": [
+      "SENT"
+     ],
+     "snippet": "Bonjour, Je suis tombé sur votre site : https://www.google.com/url?q=http://boulangerie-deja.wixsite.com/site&amp;sa=E",
+     "payload": {
+      "headers": [
+       {
+        "name": "From",
+        "value": "Andy Brun <demo@brunframe.test>"
+       },
+       {
+        "name": "To",
+        "value": "contact@boulangerie-deja-contactee.example"
+       },
+       {
+        "name": "Subject",
+        "value": "Boulangerie Déjà Contactée : votre site"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "f2",
+   "messages": [
+    {
+     "id": "m2",
+     "internalDate": "1790000000000",
+     "labelIds": [
+      "SENT"
+     ],
+     "snippet": "Bonjour",
+     "payload": {
+      "headers": [
+       {
+        "name": "From",
+        "value": "Andy Brun <demo@brunframe.test>"
+       },
+       {
+        "name": "To",
+        "value": "atelier.exemple@gmail.com"
+       },
+       {
+        "name": "Subject",
+        "value": "Atelier Exemple : votre site"
+       }
+      ]
+     }
+    },
+    {
+     "id": "m3",
+     "internalDate": "1790100000000",
+     "labelIds": [
+      "INBOX"
+     ],
+     "snippet": "Non merci, pas intéressé.",
+     "payload": {
+      "headers": [
+       {
+        "name": "From",
+        "value": "Atelier <atelier.exemple@gmail.com>"
+       },
+       {
+        "name": "To",
+        "value": "demo@brunframe.test"
+       },
+       {
+        "name": "Subject",
+        "value": "Re: Atelier Exemple : votre site"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "f3",
+   "messages": [
+    {
+     "id": "m4",
+     "internalDate": "1780000000000",
+     "labelIds": [
+      "SENT"
+     ],
+     "snippet": "Bonjour",
+     "payload": {
+      "headers": [
+       {
+        "name": "From",
+        "value": "Andy Brun <demo@brunframe.test>"
+       },
+       {
+        "name": "To",
+        "value": "vieux.contact@gmail.com"
+       },
+       {
+        "name": "Subject",
+        "value": "Vieux Contact : votre site"
+       }
+      ]
+     }
+    },
+    {
+     "id": "m5",
+     "internalDate": "1780000100000",
+     "labelIds": [
+      "INBOX"
+     ],
+     "snippet": "Address not found",
+     "payload": {
+      "headers": [
+       {
+        "name": "From",
+        "value": "Mail Delivery Subsystem <mailer-daemon@googlemail.com>"
+       },
+       {
+        "name": "To",
+        "value": "demo@brunframe.test"
+       },
+       {
+        "name": "Subject",
+        "value": "Delivery Status"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "mes_appels": [
+  [
+   "Appel",
+   "1. Boulangerie Appel de 14h (démo)",
+   "2. Commerce Fictif"
+  ],
+  [
+   "Numéro",
+   "01 99 00 01 11 (11 rue de l'Exemple)",
+   "01 99 00 09 99 ou 01 99 00 09 98"
+  ],
+  [
+   "Quand appeler",
+   "Demain",
+   "Lundi"
+  ]
+ ]
+}
