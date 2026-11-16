@@ -1,0 +1,1127 @@
+{
+ "ecartes": [
+  {
+   "nom": "Ôjourd'hui",
+   "motif": "Non qualifié : 1) téléphone non sourcé de façon fiable (seul bookingagency.io, non recoupé, recherche inverse vide) ; 2) ouverture actuelle NON confirmée : la source la plus récente trouvée date de 2023 (Gilles Pudlowski) et Sluurpy affiche « Confirmez-vous que Ôjourd'hui a fermé définitivement ? » (invite générique, pas une preuve de fermeture) ; ouvert_actuellement=false signifie « non confirmé », pas « fermé ». Aucun email public. À vérifier sur place ou par passage en boutique avant tout démarchage."
+  },
+  {
+   "nom": "Caouette",
+   "motif": "Aucun téléphone sourcé (ni email) après 7 recherches : le critère « téléphone sourcé » n'est pas rempli. Pour le reste, le profil colle : indépendante, centre, pas casher, pas de site ni de commande en ligne, jamais contactée. Ouverture jugée active d'après la bio Instagram qui liste deux adresses en service (non datée, aucun signe de fermeture). Contact possible par message Instagram ou Facebook."
+  },
+  {
+   "nom": "Grande Torino",
+   "motif": "Commerce fermé. Societe.com classe l'établissement GRANDE TORINO du 41 quai des Bateliers comme « Ancien établissement du 15 janvier 2021 au 1 juillet 2023 », et une annonce légale fait état de la cession du fonds, avec entrée en jouissance le 30/06/2023. Un avis Mapstr dit « Malheureusement ce restaurant a fermé ses portes », et Guidebiz indique « Fermée ». Abbiocco - Les Quais (focaccia) occupe aujourd'hui l'adresse : son site affiche le 41 quai des Bateliers, et Strafari (septembre 2025) précise qu'il a déménagé au 42."
+  },
+  {
+   "nom": "Baymar Boucherie Halal",
+   "motif": "Ce n'est pas une exclusion ferme. Le commerce est halal (donc pas casher), indépendant, sans commande en ligne, et n'a jamais été contacté. Trois points bloquent pourtant : 1) aucune source datée et récente ne prouve qu'il est ouvert aujourd'hui (fiches d'annuaire anciennes, avis Wanderlog sans date) ; 2) le téléphone vient d'un seul annuaire agrégateur (au-magasin.fr) et une recherche sur ce numéro ne renvoie aucune autre page ; 3) aucun email public, alors que le premier contact doit se faire par mail. Avant de le passer en qualifié, il faut vérifier par téléphone ou sur place qu'il est ouvert et que le numéro est le bon. L'angle « fêtes » est à adapter : l'Aïd plutôt que Noël."
+  }
+ ],
+ "dossiers": [
+  {
+   "nom": "Ôjourd'hui",
+   "categorie": "pâtisserie / salon de thé / brunch",
+   "adresse": {
+    "valeur": "11 rue de la Brigade Alsace-Lorraine, 67000 Strasbourg",
+    "source": "https://www.gillespudlowski.com/?p=340411",
+    "citation": "11 Rue de la Brigade Alsace-Lorraine 67000 Strasbourg"
+   },
+   "telephone": {
+    "valeur": "",
+    "source": "",
+    "citation": "Non retenu : seul bookingagency.io (https://bookingagency.io/cities/france/strasbourg/cafes/jourdhui-strasbourg) donne +33 3 88 98 89 34 ; une recherche inverse sur \"03 88 98 89 34\" ne renvoie aucune autre source. Agrégateur peu fiable, donc laissé vide."
+   },
+   "email": {
+    "valeur": "",
+    "source": "",
+    "citation": "Aucun email public trouvé dans 7 recherches (annuaires, presse, réseaux)."
+   },
+   "qualifie": false,
+   "interet": 40,
+   "sources": [
+    "https://www.gillespudlowski.com/?p=340411",
+    "https://en.lebonbon.fr/strasbourg/gems/today-tea-room-pastry-shop",
+    "https://mapstr.com/place/thlfAMedHc/ojourdhui-strasbourg-brunch-cafe-patisserie-boulangerie-restaurant",
+    "https://www.myboulange.fr/67/strasbourg/patisserie-ojourd-hui-303338",
+    "https://wanderlog.com/place/details/2195598/pâtisserie-ôjourdhui",
+    "https://www.sluurpy.fr/strasbourg/restaurant/8546705/ôjourd-hui",
+    "https://bookingagency.io/cities/france/strasbourg/cafes/jourdhui-strasbourg"
+   ],
+   "independant": true,
+   "casher": false,
+   "ouvert_actuellement": false,
+   "deja_contacte": false,
+   "deja_contacte_detail": "Absent de liste_noire_gmail.json (aucune occurrence de jourd/ojour/brigade/Gaëtan) ; Gmail in:sent (\"Ôjourd'hui\" OR \"Ojourdhui\" OR \"Ojourd'hui\") : aucun fil.",
+   "motif_exclusion": "Non qualifié : 1) téléphone non sourcé de façon fiable (seul bookingagency.io, non recoupé, recherche inverse vide) ; 2) ouverture actuelle NON confirmée : la source la plus récente trouvée date de 2023 (Gilles Pudlowski) et Sluurpy affiche « Confirmez-vous que Ôjourd'hui a fermé définitivement ? » (invite générique, pas une preuve de fermeture) ; ouvert_actuellement=false signifie « non confirmé », pas « fermé ». Aucun email public. À vérifier sur place ou par passage en boutique avant tout démarchage.",
+   "quartier": "Krutenau / Austerlitz (entre place de l'Étoile et place d'Austerlitz)",
+   "site_web": "",
+   "etat_site": "aucun_site_trouve",
+   "etat_site_preuve": "Sur 7 recherches, seuls des annuaires/guides apparaissent (gillespudlowski.com, lebonbon.fr, mapstr, wanderlog, sluurpy, myboulange, bookingagency.io), aucun domaine propre ; résumé de la recherche 7 : « No phone number, email, or website for Ôjourd'hui appeared in the results. » Donc pas de commande en ligne identifiée.",
+   "facebook": "",
+   "instagram": "",
+   "horaires": [
+    {
+     "valeur": "8h-18h ; fermé le lundi et le dimanche après-midi (source 2023)",
+     "source": "https://www.gillespudlowski.com/?p=340411",
+     "citation": "Horaires : 8h-18h. Fermeture hebdo : Lundi, dimanche apres midi"
+    },
+    {
+     "valeur": "Mardi-samedi 8h-18h, dimanche 8h-12h30",
+     "source": "https://en.lebonbon.fr/strasbourg/gems/today-tea-room-pastry-shop",
+     "citation": "from Tuesday to Saturday from 8am to 6pm and Sunday from 8am to 12:30pm"
+    }
+   ],
+   "specialites": [
+    {
+     "valeur": "Pâtisserie fine : viennoiseries, tartes, gâteaux",
+     "source": "https://en.lebonbon.fr/strasbourg/gems/today-tea-room-pastry-shop",
+     "citation": "specialised in fine pastry, with a wide range of viennoiseries, tarts, cakes and other sweet treats"
+    },
+    {
+     "valeur": "Brunch / café",
+     "source": "https://mapstr.com/place/thlfAMedHc/ojourdhui-strasbourg-brunch-cafe-patisserie-boulangerie-restaurant",
+     "citation": "ojourdhui strasbourg brunch cafe patisserie boulangerie restaurant"
+    }
+   ],
+   "histoire": [
+    {
+     "valeur": "Pâtisserie-salon de thé fondée par un couple, Katerine et Gaëtan, installée près de la place de Lattre-de-Tassigny (article 2023)",
+     "source": "https://www.gillespudlowski.com/?p=340411",
+     "citation": "salon de thé, dégustation et douceurs tenu par Katerine et Gaëtan Denilauler (résumé du moteur de recherche, pas le texte exact de la page)"
+    },
+    {
+     "valeur": "Décrite comme une institution du quartier",
+     "source": "https://en.lebonbon.fr/strasbourg/gems/today-tea-room-pastry-shop",
+     "citation": "an institution between the place de l'Étoile and the place d'Austerlitz"
+    }
+   ],
+   "responsable": {
+    "valeur": "Gaëtan et Katerine Denilauler (couple fondateur)",
+    "source": "https://www.gillespudlowski.com/?p=340411",
+    "citation": "Katerine and Gaëtan Denilauler (résumé du moteur de recherche ; une autre source écrit « Gaëtan and Katherine »)"
+   },
+   "commandes_actuelles": {
+    "valeur": "Non documenté : aucun site, aucune commande en ligne ni canal de commande public trouvé",
+    "source": "",
+    "citation": ""
+   },
+   "note_vue": {
+    "valeur": "Pas de note chiffrée relevée ; avis qualitatifs positifs",
+    "source": "https://wanderlog.com/place/details/2195598/pâtisserie-ôjourdhui",
+    "citation": "one of my favourite pastry shops in Strasbourg"
+   },
+   "identite_visuelle": "",
+   "observation": "Pâtisserie-salon de thé du couple Gaëtan et Katerine Denilauler au 11 rue de la Brigade Alsace-Lorraine, que Le Bonbon décrit comme une institution entre la place de l'Étoile et la place d'Austerlitz.",
+   "recherches_faites": 7
+  },
+  {
+   "nom": "Caouette",
+   "categorie": "pâtisserie / boulangerie / salon de thé",
+   "adresse": {
+    "valeur": "18 rue de la Fonderie, 67000 Strasbourg (salon de thé) ; boulangerie au 10 rue Saint-Maurice, 67000 Strasbourg (aussi adresse du siège INSEE)",
+    "source": "https://mapstr.com/place/MOrz7xw2k3/caouette-strasbourg-patisserie-cafe-gouter-brunch-salon_de_the",
+    "citation": "la pâtisserie Caouette est située au 18 Rue de la Fonderie ; Instagram : « Salon de thé - 18 rue de la fonderie » / « Boulangerie - 10 Rue St Maurice »"
+   },
+   "telephone": {
+    "valeur": "",
+    "source": "",
+    "citation": "Aucun numéro rattaché à Caouette trouvé en 4 recherches dédiées (les numéros Pages Jaunes remontés ne nomment pas Caouette)."
+   },
+   "email": {
+    "valeur": "",
+    "source": "",
+    "citation": "Aucun email public trouvé (Facebook, Instagram, annuaires, presse)."
+   },
+   "site_web": "",
+   "etat_site": "aucun",
+   "etat_site_preuve": "Aucun site propre n'apparaît dans 7 recherches ; présence en ligne limitée à Instagram (@caouette_patisserie) et à une page Facebook, plus des fiches tierces (Mapstr, Wanderlog, Le Bonbon). Aucun outil de commande en ligne repéré.",
+   "facebook": "https://www.facebook.com/p/Caouette-100087374907258/",
+   "instagram": "https://www.instagram.com/caouette_patisserie/",
+   "horaires": [
+    {
+     "valeur": "Du mardi au vendredi 8h-19h, samedi jusqu'à 18h30 (une seule source, à confirmer ; ne couvre peut-être que le salon de thé)",
+     "source": "https://en.lebonbon.fr/strasbourg/tops-food-and-drink/best-pastries-in",
+     "citation": "Open from Tuesday to Friday from 8 AM to 7 PM, 6:30 PM on Saturday"
+    }
+   ],
+   "specialites": [
+    {
+     "valeur": "Pain au levain (boulangerie rue Saint-Maurice)",
+     "source": "https://www.instagram.com/caouette_patisserie/",
+     "citation": "Repère de gourmandises & pain au levain"
+    },
+    {
+     "valeur": "Paris-Brest à la pistache (cité par des avis Mapstr)",
+     "source": "https://mapstr.com/place/MOrz7xw2k3/caouette-strasbourg-patisserie-cafe-gouter-brunch-salon_de_the",
+     "citation": "Paris-Brest with pistachio (avis)"
+    },
+    {
+     "valeur": "Viennoiseries et gâteaux maison, sucré et salé",
+     "source": "https://www.lebonbon.fr/strasbourg/les-tops-food-et-drink/meilleures-patisseries-strasbourg/",
+     "citation": "un endroit où vous sentir comme dans le salon de votre grand-mère"
+    },
+    {
+     "valeur": "Tout fait maison avec des produits locaux",
+     "source": "https://www.facebook.com/p/Caouette-100087374907258/",
+     "citation": "tout est fait maison, avec du local !"
+    }
+   ],
+   "histoire": [
+    {
+     "valeur": "Fondée en 2024 par une pâtissière ayant travaillé à Paris",
+     "source": "https://mapstr.com/place/MOrz7xw2k3/caouette-strasbourg-patisserie-cafe-gouter-brunch-salon_de_the",
+     "citation": "Fondée en 2024 par une pâtissière expérimentée ayant travaillé à Paris"
+    },
+    {
+     "valeur": "S'est agrandie : deux adresses, salon de thé rue de la Fonderie et boulangerie rue Saint-Maurice",
+     "source": "https://www.instagram.com/caouette_patisserie/",
+     "citation": "Salon de thé - 18 rue de la fonderie / Boulangerie - 10 Rue St Maurice"
+    },
+    {
+     "valeur": "Société (SARL) immatriculée, activité boulangerie-pâtisserie, 10 rue Saint-Maurice (SIRET 91510966400028)",
+     "source": "https://api-avis-situation-sirene.insee.fr/identification/pdf/91510966400028",
+     "citation": "10 RUE SAINT-MAURICE 67000 STRASBOURG"
+    }
+   ],
+   "responsable": {
+    "valeur": "",
+    "source": "",
+    "citation": "Sources contradictoires, non retenu : Le Bonbon cite Laura Schneider (qui dirige par ailleurs Jaune Citron, confusion probable), Wanderlog cite « Axelle »."
+   },
+   "commandes_actuelles": {
+    "valeur": "Aucun canal de commande public trouvé : ni site, ni téléphone publié, seulement Instagram et Facebook",
+    "source": "https://www.instagram.com/caouette_patisserie/",
+    "citation": "Repère de gourmandises & pain au levain (bio Instagram, sans lien de commande relevé)"
+   },
+   "quartier": "Broglie / Neustadt, rue de la Fonderie près de la place Broglie (centre)",
+   "independant": true,
+   "casher": false,
+   "ouvert_actuellement": true,
+   "deja_contacte": false,
+   "deja_contacte_detail": "Absent de liste_noire_gmail.json (seul nom proche : « Schneider D », schneider.d.sarl@free.fr, une autre société sans lien) ; Gmail in:sent \"Caouette\" : aucun résultat.",
+   "qualifie": false,
+   "motif_exclusion": "Aucun téléphone sourcé (ni email) après 7 recherches : le critère « téléphone sourcé » n'est pas rempli. Pour le reste, le profil colle : indépendante, centre, pas casher, pas de site ni de commande en ligne, jamais contactée. Ouverture jugée active d'après la bio Instagram qui liste deux adresses en service (non datée, aucun signe de fermeture). Contact possible par message Instagram ou Facebook.",
+   "interet": 70,
+   "observation": "Vous avez ouvert le salon de thé rue de la Fonderie en 2024, puis une boulangerie au pain au levain rue Saint-Maurice, mais on ne trouve en ligne ni site ni numéro pour vous commander un gâteau.",
+   "sources": [
+    "https://mapstr.com/place/MOrz7xw2k3/caouette-strasbourg-patisserie-cafe-gouter-brunch-salon_de_the",
+    "https://www.instagram.com/caouette_patisserie/",
+    "https://www.facebook.com/p/Caouette-100087374907258/",
+    "https://www.lebonbon.fr/strasbourg/les-tops-food-et-drink/meilleures-patisseries-strasbourg/",
+    "https://en.lebonbon.fr/strasbourg/tops-food-and-drink/best-pastries-in",
+    "https://wanderlog.com/place/details/6167690",
+    "https://api-avis-situation-sirene.insee.fr/identification/pdf/91510966400028",
+    "https://dubocalalassiette.fr/blog/meilleure-patisserie-de-strasbourg/"
+   ],
+   "recherches_faites": 7
+  },
+  {
+   "nom": "Grande Torino",
+   "categorie": "traiteur italien / épicerie fine piémontaise (FERMÉ)",
+   "adresse": {
+    "valeur": "41 quai des Bateliers, 67000 Strasbourg (adresse historique, commerce fermé)",
+    "source": "https://www.zut-magazine.com/categorie/a-table/adresses/piemont-et-merveilles/",
+    "citation": "Grande Torino, 41 quai des Bateliers à Strasbourg Tél : 03 90 20 06 01"
+   },
+   "telephone": {
+    "valeur": "03 90 20 06 01 (numéro de 2021, commerce fermé depuis 2023)",
+    "source": "https://www.zut-magazine.com/categorie/a-table/adresses/piemont-et-merveilles/",
+    "citation": "Grande Torino, 41 quai des Bateliers à Strasbourg Tél : 03 90 20 06 01"
+   },
+   "email": {
+    "valeur": "",
+    "source": "",
+    "citation": ""
+   },
+   "qualifie": false,
+   "interet": 0,
+   "motif_exclusion": "Commerce fermé. Societe.com classe l'établissement GRANDE TORINO du 41 quai des Bateliers comme « Ancien établissement du 15 janvier 2021 au 1 juillet 2023 », et une annonce légale fait état de la cession du fonds, avec entrée en jouissance le 30/06/2023. Un avis Mapstr dit « Malheureusement ce restaurant a fermé ses portes », et Guidebiz indique « Fermée ». Abbiocco - Les Quais (focaccia) occupe aujourd'hui l'adresse : son site affiche le 41 quai des Bateliers, et Strafari (septembre 2025) précise qu'il a déménagé au 42.",
+   "sources": [
+    "https://www.lebonbon.fr/strasbourg/italien/grande-torino-strasbourg-epicerie-italienne-piemont/",
+    "https://wanderlog.com/place/details/12117905/grande-torino",
+    "https://www.zut-magazine.com/categorie/a-table/adresses/piemont-et-merveilles/",
+    "https://www.petitfute.co.uk/v458-strasbourg-67000/c650-produits-gourmands-vins/c1108-produits-du-monde/c1113-europe/1960272-grande-torino.html",
+    "https://www.keskeces.fr/restaurant/grande-torino-67000-strasbourg.html",
+    "https://www.societe.com/etablissement/grande-torino-82379407800035.html",
+    "https://mapstr.com/place/GsaijDWX1z/grande-torino-strasbourg-restaurant-italien-strasbourg-food_strasbourg-tapas",
+    "https://guidebiz.com/business/24921781/grande-torino-strasbourg",
+    "https://www.privateaser.com/lieu/65769-abbiocco-les-quais",
+    "https://www.abbiocco.fr/",
+    "https://strafari.fr/2025/09/27/dejeuner-strasbourg-abbiocco/",
+    "https://www.horairesdouverture24.fr/filiale/Strasbourg-Grande%2520Torino-5450566K.html"
+   ],
+   "independant": true,
+   "casher": false,
+   "ouvert_actuellement": false,
+   "deja_contacte": false,
+   "deja_contacte_detail": "Le nom est absent de liste_noire_gmail.json : la seule entrée proche est « Artisan du Grand Est », un autre commerce. Gmail search_threads « in:sent \"Torino\" » ne renvoie aucun fil.",
+   "quartier": "Krutenau (quai des Bateliers)",
+   "site_web": "",
+   "etat_site": "ferme",
+   "etat_site_preuve": "Aucun site propre trouvé : Le Bonbon ne renvoie qu'à une page Facebook, dont l'URL n'apparaît pas dans les résultats. De toute façon, le commerce est fermé depuis 2023 (societe.com : « Ancien établissement du 15 janvier 2021 au 1 juillet 2023 »).",
+   "facebook": "",
+   "instagram": "",
+   "specialites": [
+    {
+     "valeur": "Vitello tonnato, polpette et focaccia à emporter",
+     "source": "https://www.lebonbon.fr/strasbourg/italien/grande-torino-strasbourg-epicerie-italienne-piemont/",
+     "citation": "des plats cuisinés à emporter et à réchauffer chez soi comme le célèbre vitello Tonnato, des polpettes mais aussi de la foccacia"
+    },
+    {
+     "valeur": "Cuisine et épicerie fine du Piémont (épicerie, traiteur, tavola)",
+     "source": "https://www.lebonbon.fr/strasbourg/italien/grande-torino-strasbourg-epicerie-italienne-piemont/",
+     "citation": "épicerie fine, traiteur et tavola dédié à la cuisine italienne du Piémont"
+    }
+   ],
+   "histoire": [
+    {
+     "valeur": "Ouverture le 1er février 2021 au 41 quai des Bateliers",
+     "source": "https://www.lebonbon.fr/strasbourg/italien/grande-torino-strasbourg-epicerie-italienne-piemont/",
+     "citation": "Depuis le 1er février, Grande Torino a ouvert ses portes au 41 quai des Bateliers"
+    },
+    {
+     "valeur": "Établissement fermé : actif du 15 janvier 2021 au 1er juillet 2023, fonds cédé (entrée en jouissance le 30/06/2023)",
+     "source": "https://www.societe.com/etablissement/grande-torino-82379407800035.html",
+     "citation": "Établissements: GRANDE TORINO - 67000 Ancien établissement du 15 janvier 2021 au 1 juillet 2023"
+    },
+    {
+     "valeur": "Fermeture confirmée par un avis client",
+     "source": "https://mapstr.com/place/GsaijDWX1z/grande-torino-strasbourg-restaurant-italien-strasbourg-food_strasbourg-tapas",
+     "citation": "Malheureusement ce restaurant a fermé ses portes .."
+    }
+   ],
+   "horaires": [
+    {
+     "valeur": "Horaires historiques (obsolètes, commerce fermé) : lundi 12:00-22:30, samedi plus court, dimanche fermé",
+     "source": "https://www.horairesdouverture24.fr/filiale/Strasbourg-Grande%2520Torino-5450566K.html",
+     "citation": "Lundi · 12:00-22:30"
+    }
+   ],
+   "responsable": {
+    "valeur": "",
+    "source": "",
+    "citation": ""
+   },
+   "commandes_actuelles": {
+    "valeur": "Aucune : le commerce est fermé depuis mi-2023",
+    "source": "https://www.societe.com/etablissement/grande-torino-82379407800035.html",
+    "citation": "Ancien établissement du 15 janvier 2021 au 1 juillet 2023"
+   },
+   "note_vue": {
+    "valeur": "",
+    "source": "",
+    "citation": ""
+   },
+   "identite_visuelle": "",
+   "observation": "Ne pas appeler. Grande Torino (41 quai des Bateliers) a fermé : son établissement est radié depuis le 1er juillet 2023 et Abbiocco - Les Quais a repris l'adresse avant de déménager au 42.",
+   "recherches_faites": 7
+  },
+  {
+   "nom": "Pane Vino",
+   "categorie": "épicerie fine italienne / traiteur italien (+ côté cave à vins)",
+   "adresse": {
+    "valeur": "8 rue du Sanglier (angle rue du Chaudron), 67000 Strasbourg — 2e point de vente aux Halles du Marché Gare (41 rue du Marché Gare)",
+    "source": "https://www.panevinoepicerie.com/contacts",
+    "citation": "Page « Nous contacter » : adresse centre-ville 8 rue du Sanglier + boutique au marché des Halles. Gault&Millau : « À l'angle de la rue du Sanglier et de la rue du Chaudron, Pane Vino est une bonne adresse italienne »"
+   },
+   "telephone": {
+    "valeur": "09 71 20 32 21 (boutique centre-ville) ; 06 25 18 77 91 (boutique des Halles)",
+    "source": "https://www.panevinoepicerie.com/contacts",
+    "citation": "Page contact du site officiel : « Le numéro du centre-ville est le 09 71 20 32 21, et celui des Halles est le 06 25 18 77 91 » (résumé du résultat de recherche restreint au domaine panevinoepicerie.com)"
+   },
+   "email": {
+    "valeur": "",
+    "source": "",
+    "citation": "Aucun email trouvé : la recherche sur panevinoepicerie.com indique que le site publie surtout des numéros de téléphone ; registres (societe.com) : téléphone/email réservés aux abonnés"
+   },
+   "site_web": "https://www.panevinoepicerie.com/",
+   "etat_site": "site vitrine existant, sans commande en ligne détectée (selection.json disait « aucun » : à corriger)",
+   "etat_site_preuve": "Recherche restreinte à panevinoepicerie.com (« commande contact email traiteur ») : seules pages remontées = accueil, /contacts, /a-propos, /lequipe, /nous-rejoindre, /cote-cave-a-vins-strasbourg-centre, /cote-epicerie-italienne-strasbourg-centre ; aucune page boutique/panier/commande. Le résumé indique que les plats traiteur sont proposés au comptoir « sans mention de commande en ligne ». Déduction, à vérifier visuellement.",
+   "horaires": [
+    {
+     "valeur": "Centre-ville : lundi 10h-19h ; dimanche fermé (site officiel, détail des autres jours non remonté)",
+     "source": "https://www.panevinoepicerie.com/",
+     "citation": "« Lundi : 10h-19h » ; « Dimanche : Fermé »"
+    },
+    {
+     "valeur": "Version plus ancienne : lundi 14h-19h, mardi 10h-19h30, dimanche fermé",
+     "source": "https://www.lecarredor-strasbourg.fr/portfolio/pane-vino-strasbourg/",
+     "citation": "« lundi 14:00–19:00 » ; « mardi · 10:00–19:30 »"
+    },
+    {
+     "valeur": "Pause déjeuner 13h-14h du lundi au mercredi selon annuaires (non vérifié)",
+     "source": "https://www.bottin.fr/fiche-locale/jjbgbajijhehagddhdf--pane-vino-strasbourg-epicerie-italienne--strasbourg.htm",
+     "citation": "« Ces horaires ne prennent pas en compte les périodes spéciales (vacances, jours fériés, etc). »"
+    }
+   ],
+   "specialites": [
+    {
+     "valeur": "Plats traiteur du jour préparés par le chef du restaurant La Cantina : lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes",
+     "source": "https://www.panevinoepicerie.com/",
+     "citation": "« chaque jour, une sélection de plats traiteur préparés par le chef du restaurant La Cantina » (lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes). Page précise du site non identifiée."
+    },
+    {
+     "valeur": "Charcuteries italiennes à la coupe",
+     "source": "https://lefooding.com/commerces/pane-vino",
+     "citation": "« bresaola, pancetta roulée, lard de Colonnata, coppa parme »"
+    },
+    {
+     "valeur": "Traiteur italien, charcuteries et fromages (avis client)",
+     "source": "https://citoofrance.com/epicerie/strasbourg/pane-vino-strasbourg-epicerie-italienne/",
+     "citation": "« Excellent traiteur italien »"
+    },
+    {
+     "valeur": "Produits italiens importés + quelques plats traiteur",
+     "source": "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+     "citation": "Gault&Millau : produits importés et « quelques plats traiteur »"
+    }
+   ],
+   "histoire": [
+    {
+     "valeur": "SAS PANE E VINO, SIREN 828 501 742, créée en janvier 2017, siège 8 rue du Sanglier, active, NAF 4711B",
+     "source": "https://annuaire-entreprises.data.gouv.fr/entreprise/pane-e-vino-828501742",
+     "citation": "« Son siège social est domicilié au 8 RUE DU SANGLIER 67000 STRASBOURG » ; « Commerce d'alimentation générale - 4711B »"
+    },
+    {
+     "valeur": "Tenue par Cyril Woberschar et Andrea Passonne, également derrière In Vino Veritas et La Cantina ; clientèle d'italianophiles fidèles depuis plus de cinq ans",
+     "source": "https://lefooding.com/commerces/pane-vino",
+     "citation": "Le Fooding : boutique au « espace très réduit » tenue par Cyril Woberschar et Andrea Passonne (In Vino Veritas, La Cantina)"
+    },
+    {
+     "valeur": "Référencée par Gault&Millau (catégorie artisans/épicier), Le Fooding et Raisin",
+     "source": "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+     "citation": "« Pane Vino est une bonne adresse italienne »"
+    },
+    {
+     "valeur": "Deuxième point de vente aux Halles du Marché Gare (41 rue du Marché Gare)",
+     "source": "https://www.panevinoepicerie.com/contacts",
+     "citation": "Page contact : boutique centre-ville + boutique au marché des Halles"
+    }
+   ],
+   "responsable": {
+    "valeur": "Cyril Woberschar (dirigeant ; co-gérant avec Andrea Passonne selon Le Fooding)",
+    "source": "https://www.pappers.fr/entreprise/pane-e-vino-828501742",
+    "citation": "« Cyril WOBERSCHAR + 1 autre dirigeant » (résultat registre Pappers/societe.com)"
+   },
+   "commandes_actuelles": {
+    "valeur": "Traiteur vendu au comptoir ; seuls canaux publiés = téléphone des deux boutiques (09 71 20 32 21 / 06 25 18 77 91) ; aucune commande en ligne ni email de commande trouvé",
+    "source": "https://www.panevinoepicerie.com/contacts",
+    "citation": "« Pour une commande traiteur ou une demande d'événement, le plus sûr est d'appeler l'une des deux boutiques » (déduction du résumé de recherche) ; /lequipe : « partenaire de vos événements » sans procédure de commande"
+   },
+   "note_vue": {
+    "valeur": "4,0/5 sur plus de 40 votes (agrégateur Bottin) ; 51 avis recensés sur Citoo",
+    "source": "https://www.bottin.fr/fiche-locale/jjbgbajijhehagddhdf--pane-vino-strasbourg-epicerie-italienne--strasbourg.htm",
+    "citation": "note 4.0/5 sur plus de 40 votes (agrégation non vérifiée) ; un avis signale prix élevés et service lent aux heures de pointe"
+   },
+   "facebook": "",
+   "instagram": "",
+   "identite_visuelle": "",
+   "quartier": "Grande Île (Carré d'Or)",
+   "independant": true,
+   "casher": false,
+   "ouvert_actuellement": true,
+   "deja_contacte": false,
+   "deja_contacte_detail": "Absent de liste_noire_gmail.json (aucune occurrence de pane/vino/sanglier sur 341 entrées) ; Gmail in:sent \"Pane Vino\" : 0 fil.",
+   "qualifie": true,
+   "interet": 55,
+   "motif_exclusion": "",
+   "observation": "Pane Vino a deux boutiques (8 rue du Sanglier et les Halles du Marché Gare) avec deux numéros différents, et son site panevinoepicerie.com présente les plats traiteur de La Cantina (lasagnes, pâtes farcies, pizzas à la part) sans aucun moyen de commander en ligne.",
+   "sources": [
+    "https://www.panevinoepicerie.com/",
+    "https://www.panevinoepicerie.com/contacts",
+    "https://www.panevinoepicerie.com/lequipe",
+    "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+    "https://lefooding.com/commerces/pane-vino",
+    "https://www.raisin.digital/fr/decouvrir/france/grand-est/etablissements/pane-vino-3121/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/pane-e-vino-828501742",
+    "https://www.pappers.fr/entreprise/pane-e-vino-828501742",
+    "https://www.societe.com/societe/pane-e-vino-828501742.html",
+    "https://www.lecarredor-strasbourg.fr/portfolio/pane-vino-strasbourg/",
+    "https://www.bottin.fr/fiche-locale/jjbgbajijhehagddhdf--pane-vino-strasbourg-epicerie-italienne--strasbourg.htm",
+    "https://citoofrance.com/epicerie/strasbourg/pane-vino-strasbourg-epicerie-italienne/"
+   ],
+   "recherches_faites": 7
+  },
+  {
+   "nom": "Salon de Thé Grand'Rue",
+   "categorie": "salon de thé pâtissier (gâteaux maison)",
+   "adresse": {
+    "valeur": "80 Grand'Rue, 67000 Strasbourg",
+    "source": "https://www.au-magasin.fr/67000-strasbourg/salon-de-the-grandrue-257799.html",
+    "citation": "Salon de Thé Grand'Rue Strasbourg (80 Grand'rue)"
+   },
+   "quartier": "Grande Île (Grand'Rue, vers la Petite France)",
+   "telephone": {
+    "valeur": "03 88 32 12 70",
+    "source": "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+    "citation": "Salon de Thé Grand'Rue De 8h30 à 18h Fermeture : Fermé les lundis et dimanches Téléphone : 03 88 32 12 70"
+   },
+   "email": {
+    "valeur": "",
+    "source": "",
+    "citation": ""
+   },
+   "site_web": "",
+   "etat_site": "aucun",
+   "etat_site_preuve": "Aucune fiche (au-magasin, citizenkid, Mapstr, Petit Futé, Wanderlog) ne cite de site officiel. Un résumé de recherche a évoqué « salondethegrandrue.fr » sans source ; une recherche directe de ce domaine n'a rien renvoyé, donc il n'est pas retenu. Aucun outil de commande en ligne trouvé.",
+   "horaires": [
+    {
+     "valeur": "8h30-18h, fermé lundi et dimanche (fiche citizenkid)",
+     "source": "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+     "citation": "De 8h30 à 18h Fermeture : Fermé les lundis et dimanches"
+    },
+    {
+     "valeur": "Lundi fermé ; mardi et mercredi 8h30-18h30 (site participatif, peut être erroné, contredit citizenkid)",
+     "source": "https://www.au-magasin.fr/67000-strasbourg/salon-de-the-grandrue-257799.html",
+     "citation": "Lundi : FERMÉ ; Mardi : 08h30 à 18h30 ; Mercredi : 08h30 à 18h30"
+    }
+   ],
+   "specialites": [
+    {
+     "valeur": "Gâteaux maison en parts généreuses",
+     "source": "https://wanderlog.com/place/details/1327861/salon-de-thé-grandrue",
+     "citation": "homemade cakes ... very generous portions (extrait d'avis repris par la recherche)"
+    },
+    {
+     "valeur": "Tarte au fromage blanc",
+     "source": "https://mapstr.com/place/rEJX4q1gfIg",
+     "citation": "tartes au fromage blanc (extrait repris par la recherche)"
+    },
+    {
+     "valeur": "Streusel",
+     "source": "https://mapstr.com/place/rEJX4q1gfIg",
+     "citation": "streusel (extrait repris par la recherche)"
+    }
+   ],
+   "histoire": [
+    {
+     "valeur": "Ouvert en 2024 par Jeanne et Apolline (selon Mapstr ; d'anciennes fiches, comme koifaire et Foursquare, laissent penser à une reprise d'un salon plus ancien du même nom, ce qui n'est pas confirmé)",
+     "source": "https://mapstr.com/place/rEJX4q1gfIg",
+     "citation": "Ouvert en 2024 par Jeanne et Apolline"
+    },
+    {
+     "valeur": "Présent dans la sélection Petit Futé des coffee shops et salons de thé de Strasbourg (4,3/5)",
+     "source": "https://www.petitfute.com/v458-strasbourg-67000/c1169-s-amuser-sortir/c182-bar-cafe/c219-coffee-shop-et-salon-de-the",
+     "citation": "SALON DE THÉ GRAND'RUE, 80, Grand-Rue, 67100 Strasbourg, Coffee shop et salon de thé, 4.3/5, (3 avis)"
+    }
+   ],
+   "responsable": {
+    "valeur": "Jeanne et Apolline (prénoms seulement)",
+    "source": "https://mapstr.com/place/rEJX4q1gfIg",
+    "citation": "Ouvert en 2024 par Jeanne et Apolline"
+   },
+   "commandes_actuelles": {
+    "valeur": "Pas de canal de commande en ligne documenté. Seul un téléphone fixe est publié. On ne sait pas s'ils prennent des commandes de gâteaux entiers.",
+    "source": "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+    "citation": "Téléphone : 03 88 32 12 70"
+   },
+   "note_vue": {
+    "valeur": "4,3/5 sur Petit Futé (3 avis)",
+    "source": "https://www.petitfute.com/v458-strasbourg-67000/c1169-s-amuser-sortir/c182-bar-cafe/c219-coffee-shop-et-salon-de-the",
+    "citation": "Coffee shop et salon de thé, 4.3/5, (3 avis)"
+   },
+   "facebook": "",
+   "instagram": "",
+   "identite_visuelle": "Décor inspiré d'Alice au pays des merveilles, selon Mapstr et Wanderlog. Aucun logo ni charte en ligne trouvés.",
+   "independant": true,
+   "casher": false,
+   "ouvert_actuellement": true,
+   "deja_contacte": false,
+   "deja_contacte_detail": "Aucune entrée proche dans liste_noire_gmail.json : le seul « Salon » est « Salon Thierry Eyermann », sans rapport. Gmail in:sent (\"Grand'Rue\" OR \"salon de thé\" OR \"Grand Rue\") ne renvoie qu'un mail à Maroquinerie Ury, un autre commerce. Aucun email connu à comparer.",
+   "qualifie": true,
+   "interet": 35,
+   "motif_exclusion": "Pas exclu, avec des réserves. (1) L'ouverture en 2026 n'est pas confirmée : le commerce figure dans la liste Petit Futé 2025 et aucune annonce de fermeture n'a été trouvée, mais l'étiquette « Fermé » de cette liste est ambiguë (elle apparaît aussi sur d'autres salons, donc c'est sans doute un statut horaire). (2) Le 03 88 32 12 70 est bien rattaché au nom par citizenkid et au-magasin, mais il pourrait dater d'avant la reprise de 2024. (3) Pas d'email public, donc le premier contact par mail est impossible. (4) C'est un salon de thé : on ne voit aucune preuve de commandes de fêtes.",
+   "observation": "Vos gâteaux maison au 80 Grand'Rue, servis en parts généreuses comme la tarte au fromage blanc ou le streusel, sont bien notés, mais je n'ai trouvé ni site ni moyen de vous commander un gâteau entier autrement qu'en appelant le salon.",
+   "recherches_faites": 7,
+   "sources": [
+    "https://www.au-magasin.fr/67000-strasbourg/salon-de-the-grandrue-257799.html",
+    "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+    "https://mapstr.com/place/rEJX4q1gfIg",
+    "https://www.petitfute.com/v458-strasbourg-67000/c1169-s-amuser-sortir/c182-bar-cafe/c219-coffee-shop-et-salon-de-the",
+    "https://wanderlog.com/place/details/1327861/salon-de-thé-grandrue",
+    "https://www.koifaire.com/alsace/salon,de,tha,grand,rue-23228.html"
+   ]
+  },
+  {
+   "nom": "Baymar Boucherie Halal",
+   "categorie": "boucherie halal (avec épicerie / supérette)",
+   "adresse": {
+    "valeur": "8 rue du Travail, 67000 Strasbourg",
+    "source": "https://www.au-magasin.fr/67000-strasbourg/baymar-boucherie-halal-263285.html",
+    "citation": "Baymar Boucherie Halal Strasbourg, 8 Rue Du Travail - 67000 Strasbourg"
+   },
+   "telephone": {
+    "valeur": "03 88 10 24 98",
+    "source": "https://www.au-magasin.fr/67000-strasbourg/baymar-boucherie-halal-263285.html",
+    "citation": "Pour contacter ce magasin vous pouvez appeler 0388102498"
+   },
+   "email": {
+    "valeur": "",
+    "source": "",
+    "citation": ""
+   },
+   "site_web": "",
+   "etat_site": "aucun",
+   "etat_site_preuve": "Sur 7 recherches (nom exact, adresse, nom + facebook/instagram/avis), aucun site propre n'est apparu. On ne trouve que des annuaires (au-magasin.fr, pagesjaunes.fr) et Wanderlog. La recherche dit explicitement : « Nothing from Baymar's own Facebook or Instagram pages came back ».",
+   "commandes_actuelles": {
+    "valeur": "Aucun outil de commande en ligne trouvé. Le seul canal visible est le téléphone de l'annuaire (0388102498). Vente au comptoir. Rien ne montre la façon dont les commandes de fêtes sont prises.",
+    "source": "https://www.au-magasin.fr/67000-strasbourg/baymar-boucherie-halal-263285.html",
+    "citation": "Pour contacter ce magasin vous pouvez appeler 0388102498"
+   },
+   "horaires": [
+    {
+     "valeur": "Du lundi au samedi de 8h30 à 20h00, le dimanche de 9h00 à 18h00, hors jours fériés. La fiche se contredit sur le dimanche : une partie dit « habituellement fermé », une autre « actuellement ouvert ».",
+     "source": "https://www.au-magasin.fr/67000-strasbourg/baymar-boucherie-halal-263285.html",
+     "citation": "ouverture de 8h30 à 20h00 du lundi au samedi, et de 9h00 à 18h00 le dimanche (résumé du moteur de recherche, pas la page elle-même)"
+    },
+    {
+     "valeur": "Une fiche Pages Jaunes « Baymar à Strasbourg », classée Supérette, indique une ouverture le dimanche. Son rattachement à l'adresse du 8 rue du Travail n'a pas été vérifié.",
+     "source": "https://www.pagesjaunes.fr/pros/53262718",
+     "citation": "Baymar à Strasbourg - Supérette (adresse, horaires, ouvert le dimanche)"
+    }
+   ],
+   "specialites": [
+    {
+     "valeur": "Viande halal dont la qualité est saluée par les clients",
+     "source": "https://wanderlog.com/place/details/10133960",
+     "citation": "qualité exceptionnelle de la viande ; « some of the best they've had in Europe » (avis Wanderlog, rapportés par le résumé de recherche)"
+    },
+    {
+     "valeur": "Boucherie (bœuf, agneau, volaille, charcuterie) doublée d'une épicerie : fruits et légumes, pain, produits laitiers. Ce texte d'annuaire est peut-être générique : on retrouve la même description sur des fiches à Marlenheim.",
+     "source": "https://www.au-magasin.fr/67000-strasbourg/baymar-boucherie-halal-263285.html",
+     "citation": "wide selection of halal meats, including beef, lamb, poultry and charcuterie (résumé de la fiche)"
+    }
+   ],
+   "histoire": [],
+   "responsable": {
+    "valeur": "",
+    "source": "",
+    "citation": ""
+   },
+   "note_vue": {
+    "valeur": "Avis Wanderlog positifs : qualité de la viande, accueil, propreté. Aucune note chiffrée vue, et les avis ne sont pas datés.",
+    "source": "https://wanderlog.com/place/details/10133960",
+    "citation": "Reviewers praise the exceptional quality of the meat... friendly staff and a clean market (résumé de recherche)"
+   },
+   "facebook": "",
+   "instagram": "",
+   "quartier": "Quartier Gare / Halles (rue du Travail, 67000), centre élargi de Strasbourg",
+   "identite_visuelle": "Aucune trouvée : pas de site, pas de réseaux sociaux repérés.",
+   "independant": true,
+   "casher": false,
+   "ouvert_actuellement": false,
+   "deja_contacte": false,
+   "deja_contacte_detail": "Aucune entrée Baymar, boucherie ou rue du Travail dans liste_noire_gmail.json. La recherche Gmail « in:sent Baymar » ne renvoie rien.",
+   "qualifie": false,
+   "motif_exclusion": "Ce n'est pas une exclusion ferme. Le commerce est halal (donc pas casher), indépendant, sans commande en ligne, et n'a jamais été contacté. Trois points bloquent pourtant : 1) aucune source datée et récente ne prouve qu'il est ouvert aujourd'hui (fiches d'annuaire anciennes, avis Wanderlog sans date) ; 2) le téléphone vient d'un seul annuaire agrégateur (au-magasin.fr) et une recherche sur ce numéro ne renvoie aucune autre page ; 3) aucun email public, alors que le premier contact doit se faire par mail. Avant de le passer en qualifié, il faut vérifier par téléphone ou sur place qu'il est ouvert et que le numéro est le bon. L'angle « fêtes » est à adapter : l'Aïd plutôt que Noël.",
+   "interet": 35,
+   "observation": "Sur Wanderlog, vos clients disent que votre viande halal fait partie des meilleures qu'ils aient goûtées en Europe. L'un raconte même que vous avez dépanné un groupe un matin de Noël.",
+   "sources": [
+    "https://www.au-magasin.fr/67000-strasbourg/baymar-boucherie-halal-263285.html",
+    "https://www.au-magasin.fr/67-bas-rhin/boucherie-charcuterie-traiteur/",
+    "https://wanderlog.com/place/details/10133960",
+    "https://www.pagesjaunes.fr/pros/53262718"
+   ],
+   "recherches_faites": 7
+  }
+ ],
+ "resultats": [
+  {
+   "slug": "pane-vino",
+   "non_verifie": false,
+   "dossier": {
+    "nom": "Pane Vino",
+    "categorie": "épicerie fine italienne / traiteur italien (+ côté cave à vins)",
+    "adresse": {
+     "valeur": "8 rue du Sanglier (angle rue du Chaudron), 67000 Strasbourg — 2e point de vente aux Halles du Marché Gare (41 rue du Marché Gare, 67200 Strasbourg)",
+     "source": "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+     "citation": "Gault&Millau : « 8 rue du Sanglier, 67000 Strasbourg », à l'angle de la rue du Sanglier et de la rue du Chaudron ; page contacts du site officiel : boutique Halles marché, 41 rue du Marché Gare"
+    },
+    "telephone": {
+     "valeur": "09 71 20 32 21 (boutique centre-ville) ; 06 25 18 77 91 (boutique des Halles)",
+     "source": "https://www.panevinoepicerie.com/contacts",
+     "citation": "Site officiel : centre-ville 09 71 20 32 21 (aussi sur la page cave à vins) ; Halles marché 06 25 18 77 91"
+    },
+    "email": {
+     "valeur": "",
+     "source": "",
+     "citation": ""
+    },
+    "site_web": "https://www.panevinoepicerie.com/",
+    "etat_site": "site vitrine probablement ancien (métadonnées : environ 6 ans), aucune commande en ligne trouvée sur le site ; bouton « JE COMMANDE » sur la fiche Le Fooding, fonction non vérifiée",
+    "etat_site_preuve": "Deux recherches limitées à panevinoepicerie.com ne remontent que l'accueil, /contacts, /a-propos, /lequipe, /nous-rejoindre et les pages cave et épicerie, sans boutique, panier ni procédure de commande. Le Fooding affiche un bouton « JE COMMANDE » non expliqué.",
+    "horaires": [
+     {
+      "valeur": "Centre-ville : lundi-samedi 10h-19h, dimanche fermé (site officiel, pages possiblement anciennes)",
+      "source": "https://www.panevinoepicerie.com/contacts",
+      "citation": "Page contact / page cave à vins : du lundi au samedi 10h-19h, dimanche fermé"
+     }
+    ],
+    "specialites": [
+     {
+      "valeur": "Plats traiteur du jour préparés par le chef du restaurant La Cantina : lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes",
+      "source": "https://www.panevinoepicerie.com/",
+      "citation": "« chaque jour, une sélection de plats traiteur préparée par le chef de notre restaurant la Cantina : lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes »"
+     },
+     {
+      "valeur": "Produits italiens importés + quelques plats traiteur",
+      "source": "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+      "citation": "Gault&Millau : bonne adresse italienne pour produits importés et quelques plats traiteur"
+     },
+     {
+      "valeur": "Cave et épicerie fine : charcuterie, fromages et pâtes italiens",
+      "source": "https://www.raisin.digital/fr/decouvrir/france/grand-est/etablissements/pane-vino-3121/",
+      "citation": "« Cave et Epicerie fine, le top des produits d'Italie et la sélection est draconienne »"
+     }
+    ],
+    "histoire": [
+     {
+      "valeur": "Propriétaires qui tiennent aussi In Vino Veritas et le restaurant La Cantina",
+      "source": "https://lefooding.com/commerces/pane-vino",
+      "citation": "Le Fooding : les propriétaires de la boutique sont aussi derrière In Vino Veritas et La Cantina"
+     },
+     {
+      "valeur": "Référencée par Gault&Millau (artisans/épicier), Le Fooding et Raisin",
+      "source": "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+      "citation": "« Pane Vino est une bonne adresse italienne »"
+     },
+     {
+      "valeur": "Deuxième point de vente aux Halles du Marché Gare (41 rue du Marché Gare)",
+      "source": "https://www.panevinoepicerie.com/contacts",
+      "citation": "Page contact : boutique centre-ville + boutique Halles marché"
+     }
+    ],
+    "responsable": {
+     "valeur": "",
+     "source": "",
+     "citation": ""
+    },
+    "commandes_actuelles": {
+     "valeur": "Traiteur vendu en boutique ; seuls canaux publiés trouvés : téléphone des deux boutiques (09 71 20 32 21 / 06 25 18 77 91) ; aucune commande en ligne trouvée sur le site officiel (bouton « JE COMMANDE » Le Fooding non vérifié)",
+     "source": "https://www.panevinoepicerie.com/contacts",
+     "citation": "Recherche sur le site officiel : aucune information sur la commande en ligne ou par téléphone pour les plats traiteur"
+    },
+    "note_vue": {
+     "valeur": "",
+     "source": "",
+     "citation": ""
+    },
+    "facebook": "",
+    "instagram": "",
+    "identite_visuelle": "",
+    "quartier": "Grande Île (centre)",
+    "independant": true,
+    "casher": false,
+    "ouvert_actuellement": null,
+    "deja_contacte": false,
+    "deja_contacte_detail": "Gmail in:sent \"Pane Vino\" : 0 fil (contre-vérification). Absent de liste_noire_gmail.json selon le dossier initial.",
+    "qualifie": true,
+    "interet": 50,
+    "motif_exclusion": "",
+    "observation": "Pane Vino a deux boutiques (8 rue du Sanglier et les Halles du Marché Gare) avec deux numéros différents. Son site présente les plats traiteur du chef de La Cantina (lasagnes, pâtes farcies, pizzas à la part) sans moyen de commander en ligne. Le site paraît ancien : confirmer que la boutique est toujours ouverte avant de la démarcher.",
+    "sources": [
+     "https://www.panevinoepicerie.com/",
+     "https://www.panevinoepicerie.com/contacts",
+     "https://panevinoepicerie.com/cote-cave-a-vins-strasbourg-centre/",
+     "https://fr.gaultmillau.com/fr/artisans/pane-vino",
+     "https://lefooding.com/commerces/pane-vino",
+     "https://www.raisin.digital/fr/decouvrir/france/grand-est/etablissements/pane-vino-3121/"
+    ],
+    "recherches_faites": 5
+   },
+   "verdicts": [
+    {
+     "fait": "Adresse 8 rue du Sanglier (angle rue du Chaudron), 67000 Strasbourg",
+     "statut": "confirme",
+     "preuve": "https://fr.gaultmillau.com/fr/artisans/pane-vino : « 8 rue du Sanglier, 67000 Strasbourg », angle rue du Sanglier / rue du Chaudron ; aussi https://www.panevinoepicerie.com/contacts"
+    },
+    {
+     "fait": "2e point de vente aux Halles du Marché Gare, 41 rue du Marché Gare",
+     "statut": "confirme",
+     "preuve": "https://www.panevinoepicerie.com/contacts (Halles marché, 41 rue du Marché Gare, 67200) ; Petit Futé cite aussi un « Pane E Vino » à la Halle du Marché Gare"
+    },
+    {
+     "fait": "Commerce ouvert actuellement à cette adresse",
+     "statut": "incertain",
+     "preuve": "Encore listé par Gault&Millau et Raisin, sans date. Le site officiel semble ancien (métadonnées : environ 2194 jours). Aucune source datée de 2025-2026 trouvée, mais aucune trace de fermeture non plus."
+    },
+    {
+     "fait": "Téléphone centre-ville 09 71 20 32 21",
+     "statut": "confirme",
+     "preuve": "https://www.panevinoepicerie.com/contacts et https://panevinoepicerie.com/cote-cave-a-vins-strasbourg-centre/"
+    },
+    {
+     "fait": "Téléphone Halles 06 25 18 77 91",
+     "statut": "confirme",
+     "preuve": "https://www.panevinoepicerie.com/contacts"
+    },
+    {
+     "fait": "Email",
+     "statut": "incertain",
+     "preuve": "Aucun email trouvé. Le champ reste vide."
+    },
+    {
+     "fait": "Pas de commande en ligne sur le site",
+     "statut": "incertain",
+     "preuve": "Recherches limitées à panevinoepicerie.com : aucune page boutique, panier ou commande, et « aucune information sur la commande en ligne ». Le Fooding (https://lefooding.com/commerces/pane-vino) affiche un bouton « JE COMMANDE » dont je n'ai pas pu voir la fonction."
+    },
+    {
+     "fait": "Indépendant (non franchise)",
+     "statut": "confirme",
+     "preuve": "https://lefooding.com/commerces/pane-vino : les propriétaires tiennent aussi In Vino Veritas et La Cantina, donc un petit groupe local et pas une chaîne"
+    },
+    {
+     "fait": "Non casher",
+     "statut": "confirme",
+     "preuve": "Raisin : charcuterie italienne ; le dossier cite pancetta et lard de Colonnata (Le Fooding)"
+    },
+    {
+     "fait": "Plats traiteur du chef de La Cantina (lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes)",
+     "statut": "confirme",
+     "preuve": "https://www.panevinoepicerie.com/ : « chaque jour, une sélection de plats traiteur préparée par le chef de notre restaurant la Cantina : lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes »"
+    },
+    {
+     "fait": "Produits importés + quelques plats traiteur (Gault&Millau)",
+     "statut": "confirme",
+     "preuve": "https://fr.gaultmillau.com/fr/artisans/pane-vino"
+    },
+    {
+     "fait": "Charcuteries à la coupe (bresaola, pancetta, lard de Colonnata, coppa)",
+     "statut": "incertain",
+     "preuve": "Liste précise non revue moi-même. Raisin confirme seulement « charcuterie, fromages et pâtes italiens »."
+    },
+    {
+     "fait": "Avis Citoo « Excellent traiteur italien »",
+     "statut": "incertain",
+     "preuve": "Non retrouvé"
+    },
+    {
+     "fait": "Horaires centre-ville lundi-samedi 10h-19h, dimanche fermé",
+     "statut": "confirme",
+     "preuve": "https://www.panevinoepicerie.com/contacts et la page cave à vins (pages possiblement anciennes)"
+    },
+    {
+     "fait": "Horaires lecarredor (lundi 14h-19h, mardi 10h-19h30) et pause déjeuner Bottin",
+     "statut": "incertain",
+     "preuve": "Non retrouvés"
+    },
+    {
+     "fait": "SAS PANE E VINO, SIREN 828 501 742, créée en 2017, NAF 4711B",
+     "statut": "incertain",
+     "preuve": "Une recherche sur « PANE E VINO 828501742 » ne renvoie aucun résultat registre"
+    },
+    {
+     "fait": "Responsable Cyril Woberschar (co-gérant Andrea Passonne)",
+     "statut": "incertain",
+     "preuve": "Le résultat Le Fooding confirme que les propriétaires tiennent In Vino Veritas et La Cantina, mais les noms n'apparaissent pas textuellement dans mes résultats"
+    },
+    {
+     "fait": "Référencé par Gault&Millau, Le Fooding, Raisin",
+     "statut": "confirme",
+     "preuve": "Fiches présentes : fr.gaultmillau.com/fr/artisans/pane-vino, lefooding.com/commerces/pane-vino, raisin.digital/.../pane-vino-3121/"
+    },
+    {
+     "fait": "Note 4,0/5 Bottin, 51 avis Citoo",
+     "statut": "incertain",
+     "preuve": "Non retrouvé"
+    },
+    {
+     "fait": "Pas déjà contacté",
+     "statut": "confirme",
+     "preuve": "Gmail search_threads in:sent \"Pane Vino\" : {} (0 fil)"
+    }
+   ],
+   "design": {
+    "chemin": "/home/user/BRUNFRAME/prospection/lots/2026-11-17/web/demo/pane-vino/index.html (fonts/ : gloock-latin-400, figtree-latin-400, figtree-latin-600 en .woff2 + LICENSE OFL ; image du mail : /home/user/BRUNFRAME/prospection/lots/2026-11-17/web/demo/pane-vino/apercu.png ; captures : /home/user/BRUNFRAME/prospection/lots/2026-11-17/captures/pane-vino-full.png, /home/user/BRUNFRAME/prospection/lots/2026-11-17/captures/pane-vino-desktop.png, /home/user/BRUNFRAME/prospection/lots/2026-11-17/captures/pane-vino-whatsapp.png)",
+    "concept": "« Découpé à la roulette » : le bord cranté de la roulette à pâtes, qui découpe les pâtes farcies du chef de La Cantina, devient la signature de la page. On le retrouve sur la vitrine du soir (où le nom est en lettres dorées et où pendent des étoiles faites de deux carrés crantés), sur les boutons, sur les puces et sur le bon de commande en papier, et une molette dorée trace en roulant une ligne ondulée entre les sections. J'ai gardé la vitrine de Noël la nuit, mais j'ai remplacé les Bredele, qui sont alsaciens, par cette forme de raviolo. Elle est plus fidèle à l'identité italienne du commerce et reste liée au produit qu'on commande. Le titre ancre la page dans sa rue : « Cette année, la table des fêtes passe par la rue du Sanglier. »",
+    "polices": "Gloock 400 pour les titres, le nom et les grands numéros de rue. C'est une didone très contrastée, dans la lignée de Bodoni, typographe de Parme. Figtree 400 et 600 pour le texte et l'interface. Les polices sont auto-hébergées depuis les paquets @fontsource 5.3.0 (fichiers .woff2 latin, licence OFL), avec font-display: swap. En repli : Bodoni 72 / Didot / Georgia, puis system-ui.",
+    "palette": "Nuit lie-de-vin #130a0e (fond, avec un grain léger) et #1b0d13 / #25121a (surfaces). Vin #5c1727 / #7e2338 (lueur de la vitrine, bouton du bon de commande, puces choisies). Or croûte #e3b260 avec #f5d898 et #a9732f (dégradé doré du nom, CTA, filets). Mie #f6eddd / #d3c4ad / #ad9d84 (textes). Papier #f2e5cd et encre #2b1219 réservés au bon de commande. Pas de vert, sauf dans l'aperçu WhatsApp, qui reprend les couleurs de l'application en mode sombre. Tous les contrastes de texte mesurés dépassent 4,5:1 : 10:1 pour le CTA, 7,4:1 pour le texte secondaire.",
+    "faits_utilises": [
+     "Nom Pane Vino ; épicerie fine italienne, traiteur, côté cave à vins ; quartier Grande Île",
+     "8 rue du Sanglier, à l'angle de la rue du Chaudron, 67000 Strasbourg ; tel:+33971203221 (09 71 20 32 21)",
+     "2e boutique aux Halles du Marché Gare, 41 rue du Marché Gare, 67200 Strasbourg ; tel:+33625187791 (06 25 18 77 91) ; c'est le seul numéro en 06, donc le seul à recevoir un lien wa.me, et seulement si l'on choisit le retrait aux Halles",
+     "Horaires du centre-ville : lundi–samedi 10h–19h, dimanche fermé, marqués « indiqués sur notre site, à confirmer » ; Halles : « Horaires à confirmer »",
+     "Plats traiteur préparés chaque jour par le chef du restaurant La Cantina : lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes",
+     "Produits importés d'Italie : charcuterie, fromages, pâtes ; cave à vins au centre-ville",
+     "Les propriétaires tiennent aussi In Vino Veritas et La Cantina (Le Fooding)",
+     "Citations mot pour mot : Raisin « Cave et Epicerie fine, le top des produits d'Italie et la sélection est draconienne » ; Gault&Millau « Pane Vino est une bonne adresse italienne » ; mention que Le Fooding référence aussi la boutique",
+     "Liens Itinéraire vers google.com/maps/search/?api=1&query= avec l'adresse encodée de chaque boutique"
+    ],
+    "points_faibles": "Points à vérifier avant l'envoi :\n- Le site officiel semble ancien. Il faut confirmer que les deux boutiques sont ouvertes, les horaires du centre et ceux des Halles (inconnus).\n- Je ne sais pas si le 06 des Halles a un compte WhatsApp. Le lien « Ouvrir dans WhatsApp » n'apparaît que pour un retrait aux Halles.\n- Aucun numéro mobile n'est connu pour le centre-ville : l'aperçu y reste une démonstration, sans lien.\n- Les créneaux de retrait vont de 10h à 18h30 sur 14 jours, d'après des horaires non confirmés. Les dimanches sont désactivés pour le centre seulement.\n- L'accroche « commandes de fêtes » et les puces « Une bouteille de la cave », « Charcuterie / Fromages / Pâtes italiennes » sont des propositions de la maquette, pas des offres confirmées par le commerce.\n- La citation Raisin contient un superlatif (« le top ») ; il est sourcé et entre guillemets.\n\nLimites de rendu :\n- Les étoiles pendantes, petites, ressemblent plus à des ornements en filigrane qu'à des étoiles nettes.\n- Le bord cranté utilise mask-image : il apparaît en bord droit sur un navigateur très ancien.\n- Les puces crantées gardent un contour à faible contraste, mais leur libellé et l'état choisi (fond vin) sont bien lisibles.\n\nTests : capture.py ne signale aucune erreur JS ni requête externe sur les trois vues. Le parcours Playwright passe :\n- les erreurs s'affichent quand on envoie un formulaire vide, et le dimanche n'est pas cliquable au centre ;\n- le récapitulatif se met à jour, l'aperçu s'ouvre et le lien wa.me apparaît seulement pour les Halles ;\n- l'aperçu se ferme avec Échap, la barre fixe apparaît et disparaît comme prévu, et la page ne déborde pas en largeur (390 px).\n\nPoids : environ 105 Ko, polices comprises.\n\nPas fait : theme:check et npm test, qui concernent le thème Shopify et pas cette maquette."
+   },
+   "revue": {
+    "score_avant": 87,
+    "score_apres": 91,
+    "conformite_ok": true,
+    "corrections": [
+     "Fait inventé retiré : le titre « Des produits importés d'Italie, et la cave juste à côté » devient « … et une cave à vins. » (rien ne dit que la cave est « juste à côté »).",
+     "Fait déduit retiré : la phrase « La cave est au centre-ville, 8 rue du Sanglier » de la carte « Côté cave à vins » devient « Ajoutez une bouteille de la cave à votre bon de commande, pour accompagner vos plats. »",
+     "Boutique des Halles : le paragraphe isolé « Horaires à confirmer » devient une ligne de tableau « Horaires | À confirmer » suivie de la note « Non publiés sur le site : à confirmer avec la boutique ». Les deux cartes boutique s'alignent maintenant sur desktop.",
+     "Remplissage des étoiles de la guirlande allégé (doré à 7 % au lieu de 16 %) pour que le bord cranté ressorte mieux. Le gain est faible : les étoiles paraissent encore un peu grises.",
+     "Règle CSS .a-confirmer supprimée (plus utilisée).",
+     "Les 4 images ont été refaites aux mêmes chemins (apercu.png, pane-vino-full.png, pane-vino-desktop.png, pane-vino-whatsapp.png). La capture WhatsApp vient d'un script Playwright temporaire (/tmp/claude-0/-home-user-BRUNFRAME/6e33e125-04c2-5611-a3ba-58657668bd8a/scratchpad/pv/wa.py) qui remplit le bon (3 spécialités, un jour, 11h30, nom et téléphone de démo) puis ouvre l'aperçu.",
+     "Points de conformité vérifiés, tous OK : balise noindex ; pastille « Maquette » ; BRUNFRAME seulement dans « Maquette préparée par BRUNFRAME » en pied de page ; mention « aucune commande n'est transmise » ; aucun prix ; « aucune requête externe » à chaque capture ; lien wa.me seulement pour le 06 25 18 77 91 des Halles (rien pour le 09 du centre-ville) ; reduced-motion coupe animations et transitions ; pas d'intro ; barre CTA cachée quand le CTA du haut ou le bon est à l'écran ; aucun mot interdit.",
+     "Contrastes calculés, tous AA, le plus faible à 4,68:1 (gris WhatsApp) : mie-3/nuit 7,4 ; encre-2/papier 7,6 ; texte indicatif 4,75 ; papier/vin 10,5 ; gris WhatsApp 4,68."
+    ],
+    "restes": "Je n'ai pas vérifié que la boutique est toujours ouverte (site ancien) : c'est à faire avant le démarchage. Le lien « Ouvrir dans WhatsApp (boutique des Halles) » envoie vers le vrai 06 de la boutique. C'est permis par la règle, mais un message pourrait réellement partir si quelqu'un clique. Deux phrases décrivent le fonctionnement proposé et non un fait vérifié : « Nous vous confirmons par message » et les heures de retrait proposées aux Halles, alors que leurs horaires ne sont pas connus. Côté finition : les étoiles de la guirlande restent un peu grises sur desktop, et la colonne gauche du bon de commande paraît vide en capture pleine page desktop. Ce vide n'apparaît qu'en capture : au défilement réel, l'intro reste fixée à côté du bon (sticky)."
+   },
+   "redaction": {
+    "objet": "Pane Vino — vos commandes de fêtes",
+    "corps": "Bonjour,\n\nJ'ai préparé une page pour Pane Vino : {{LIEN}}\n\n{{CAPTURE}}\n\nVos clients y voient les lasagnes et les pâtes farcies du chef de La Cantina, vos horaires, et ils commandent pour les fêtes : la commande arrive sur votre WhatsApp, pas au téléphone quand la boutique est pleine.\n\nJ'ai fait le site de Shemtov, rue du Maréchal-Foch. Je vous appelle jeudi pour avoir votre avis ?\n\nSi ce n'est pas pour vous, répondez « non » et je n'insiste pas.\n\nAndy Brun — BRUNFRAME\n06 30 83 59 78",
+    "email_destinataire": "",
+    "dm_instagram": "",
+    "appel": {
+     "numero": "09 71 20 32 21 (8 rue du Sanglier, angle rue du Chaudron, Strasbourg centre). 2e numéro : 06 25 18 77 91 (boutique des Halles du Marché Gare, 41 rue du Marché Gare)",
+     "quand_appeler": "Jeudi 19 novembre 2026 vers 14h30. D'après le site, la boutique est ouverte du lundi au samedi de 10h à 19h (page peut-être ancienne). Éviter 12h-14h : c'est l'heure des plats traiteur et des pizzas à la part. Plan B : entre 16h15 et 17h, avant l'affluence de fin de journée. Si le 09 ne répond pas ou n'est plus attribué, essayer les Halles au 06. Si aucun des deux ne répond, vérifier que la boutique est toujours ouverte avant de rappeler (le site a environ 6 ans).",
+     "demande_a_parler_a": "Le ou la responsable de Pane Vino (nom non vérifié ; les propriétaires tiennent aussi In Vino Veritas et La Cantina). « Je pourrais parler au responsable de la boutique ? » Si un employé répond : demander son prénom et quand rappeler le responsable (et s'il vaut mieux le joindre ici ou à La Cantina). Pas de pitch.",
+     "leur_probleme": "Leur site présente les plats traiteur préparés chaque jour par le chef de La Cantina (lasagnes, pâtes farcies, pizzas à la part, pâtisseries italiennes) mais ne dit pas comment les commander. Il n'y a pas de commande en ligne sur le site, seulement les numéros de deux boutiques différentes (centre-ville et Halles du Marché Gare). Le site semble ancien (environ 6 ans). À vérifier pendant l'appel : le bouton « JE COMMANDE » de leur fiche Le Fooding.",
+     "presentation": "« Bonjour, c'est Andy, de BRUNFRAME. Je vous ai envoyé mardi une page que j'ai faite pour Pane Vino. Vous avez pu la regarder ? » (Seulement si le mail est parti : aucun email vérifié à ce jour.)",
+     "presentation_sans_mail": "« Bonjour, c'est Andy, de BRUNFRAME. J'ai fait le site de Shemtov, rue du Maréchal-Foch, et j'ai préparé une page pour Pane Vino. Je vous prends 30 secondes ? »",
+     "compliment_probleme": "« Vous avez tous les jours les plats du chef de La Cantina, lasagnes, pâtes farcies, pizzas à la part. Sur votre site on les voit, mais rien ne dit comment les commander. »",
+     "question": "« Pour les fêtes, vos clients vous commandent comment les plats traiteur, aujourd'hui ? » (puis se taire)",
+     "proposition": "Oui : « Qu'est-ce qui vous a parlé ? » puis « Je passe vous la montrer vendredi, 5 minutes, à un moment calme ? » Non : « Je l'ai faite pour vous. Je vous la montre en 5 minutes vendredi ? Si ça ne vous plaît pas, on en reste là. »",
+     "prix": "« 550 € avec la commande sur WhatsApp, payés à la mise en ligne, et seulement si le site vous plaît. Ou rien au départ : 49 € par mois sur un an, ou 59 € par mois sans engagement. » Puis : « Je le propose à mes 3 premiers clients : vous ne payez rien avant la mise en ligne, et rien si le site final ne vous plaît pas. En échange, je vous demande un avis Google. »",
+     "objection1": "« C'est cher. » → « Une commande de fêtes, c'est combien en moyenne chez vous ? » (se taire, noter son chiffre X). Puis : « Si c'est X €, 550 €, c'est [550 ÷ X] commandes. Et à 49 € par mois, si la page vous apporte une commande de plus par mois, le mois est payé. Par exemple, si c'est 80 €, ça fait 7 commandes pour les 550 €, et moins d'une par mois pour les 49 €. Et si le site ne vous plaît pas, vous ne payez rien. Vous voyez ça comment ? »",
+     "objection2": "« On a déjà un site » ou « les gens appellent ou passent en boutique, ça marche ». → « Oui, j'ai vu votre site : il montre les plats du chef de La Cantina, mais on ne peut pas les commander. Avec la page, la commande arrive sur votre WhatsApp, avec le plat, la quantité et le jour, et vous ne la prenez plus au téléphone quand la boutique est pleine. En décembre, combien d'appels de commandes vous prenez en pleine affluence ? »",
+     "objection3": "« C'est pas moi qui décide, il faut voir avec les patrons » (les mêmes propriétaires que La Cantina et In Vino Veritas). → « Bien sûr. Je leur montre la page en 5 minutes, ici ou à La Cantina. Qui dois-je demander, et quel est le meilleur moment pour le joindre ? »"
+    }
+   }
+  },
+  {
+   "slug": "salon-de-the-grand-rue",
+   "non_verifie": false,
+   "dossier": {
+    "nom": "Salon de Thé Grand'Rue",
+    "categorie": "salon de thé pâtissier (gâteaux maison)",
+    "adresse": {
+     "valeur": "80 Grand'Rue, 67000 Strasbourg",
+     "source": "https://www.au-magasin.fr/67000-strasbourg/salon-de-the-grandrue-257799.html",
+     "citation": "Salon de Thé Grand'Rue Strasbourg (80 Grand'rue)"
+    },
+    "quartier": "Grande Île (Grand'Rue)",
+    "telephone": {
+     "valeur": "03 88 32 12 70",
+     "source": "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+     "citation": "Salon de Thé Grand'Rue 80, Grand'Rue 67000 Strasbourg 03 88 32 12 70"
+    },
+    "email": {
+     "valeur": "",
+     "source": "",
+     "citation": ""
+    },
+    "site_web": "",
+    "etat_site": "inconnu",
+    "etat_site_preuve": "Une fiche annuaire cite « www.salondethegrandrue.fr » (« Salon de Thé Grand'Rue 80, Grand'Rue 67000 Strasbourg 03 88 32 12 70 www.salondethegrandrue.fr »). Je n'ai pas pu vérifier que ce site existe encore, ni s'il permet de commander. Aucune page de commande en ligne n'est apparue dans les résultats.",
+    "horaires": [
+     {
+      "valeur": "Du mardi au samedi, 8h30-18h (fiche citizenkid, mise à jour en mars 2025)",
+      "source": "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+      "citation": "Du mardi au samedi ; De 8h30 à 18h"
+     },
+     {
+      "valeur": "Lundi fermé ; mardi et mercredi 8h30-18h30 (fiche participative)",
+      "source": "https://www.au-magasin.fr/67000-strasbourg/salon-de-the-grandrue-257799.html",
+      "citation": "Lundi : FERMÉ ; Mardi : 08h30 à 18h30 ; Mercredi : 08h30 à 18h30"
+     }
+    ],
+    "specialites": [
+     {
+      "valeur": "Gâteaux maison en parts généreuses",
+      "source": "https://mapstr.com/place/rEJX4q1gfIg",
+      "citation": "des délicieux gâteaux maison servis en parts très généreuses"
+     },
+     {
+      "valeur": "Tarte au fromage blanc",
+      "source": "https://mapstr.com/place/rEJX4q1gfIg",
+      "citation": "tartes au fromage blanc"
+     },
+     {
+      "valeur": "Streusel",
+      "source": "https://mapstr.com/place/rEJX4q1gfIg",
+      "citation": "streusel"
+     }
+    ],
+    "histoire": [
+     {
+      "valeur": "Ouvert en 2024 par Jeanne et Apolline (selon Mapstr)",
+      "source": "https://mapstr.com/place/rEJX4q1gfIg",
+      "citation": "Le Salon de Thé Grand'Rue, ouvert en 2024 par Jeanne et Apolline, est rapidement devenu une adresse prisée dans le quartier de la Grand'Rue"
+     },
+     {
+      "valeur": "Présent dans la sélection Petit Futé des coffee shops et salons de thé de Strasbourg (4,3/5, 3 avis)",
+      "source": "https://www.petitfute.com/v458-strasbourg-67000/c1169-s-amuser-sortir/c182-bar-cafe/c219-coffee-shop-et-salon-de-the",
+      "citation": "SALON DE THÉ GRAND'RUE, 80, Grand-Rue, 67100 Strasbourg, Coffee shop et salon de thé, 4.3/5, (3 avis)"
+     }
+    ],
+    "responsable": {
+     "valeur": "Jeanne et Apolline (prénoms seulement)",
+     "source": "https://mapstr.com/place/rEJX4q1gfIg",
+     "citation": "ouvert en 2024 par Jeanne et Apolline"
+    },
+    "commandes_actuelles": {
+     "valeur": "Aucun canal de commande en ligne trouvé. Le seul contact publié est un téléphone fixe. On ne sait pas s'ils prennent des commandes de gâteaux entiers.",
+     "source": "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+     "citation": "03 88 32 12 70"
+    },
+    "note_vue": {
+     "valeur": "4,3/5 sur Petit Futé (3 avis)",
+     "source": "https://www.petitfute.com/v458-strasbourg-67000/c1169-s-amuser-sortir/c182-bar-cafe/c219-coffee-shop-et-salon-de-the",
+     "citation": "Coffee shop et salon de thé, 4.3/5, (3 avis)"
+    },
+    "facebook": "",
+    "instagram": "",
+    "identite_visuelle": "Décor inspiré d'Alice au pays des merveilles (selon Mapstr et Wanderlog). Aucun logo ni charte trouvés.",
+    "independant": true,
+    "casher": false,
+    "ouvert_actuellement": null,
+    "deja_contacte": false,
+    "deja_contacte_detail": "Gmail in:sent (\"Grand'Rue\" OR \"salon de thé\" OR \"Grand Rue\" OR \"88321270\" OR \"03 88 32 12 70\") : un seul fil, Maroquinerie Ury (contact@maroquinerie-ury.com), sans rapport.",
+    "qualifie": true,
+    "interet": 30,
+    "motif_exclusion": "Pas exclu, sous réserves. Ouverture en novembre 2026 non prouvée : dernière trace datée en mars 2025, mention « Fermé 2025 » ambiguë sur Petit Futé, et article Le Bonbon sur la perte d'un salon de thé non identifié. Le domaine salondethegrandrue.fr est cité mais n'a pas été vérifié. Pas d'email. Aucune preuve de commandes de fêtes. Vérifier par téléphone ou sur place avant tout contact.",
+    "observation": "Vos gâteaux maison du 80 Grand'Rue, servis en parts généreuses comme la tarte au fromage blanc ou le streusel, sont appréciés, mais je n'ai pas trouvé de moyen de vous commander un gâteau entier en ligne : il faut appeler le salon.",
+    "recherches_faites": 5,
+    "sources": [
+     "https://www.au-magasin.fr/67000-strasbourg/salon-de-the-grandrue-257799.html",
+     "https://www.citizenkid.com/sortie/salon-de-the-grand-rue-strasbourg-a1057571",
+     "https://mapstr.com/place/rEJX4q1gfIg",
+     "https://www.petitfute.com/v458-strasbourg-67000/c1169-s-amuser-sortir/c182-bar-cafe/c219-coffee-shop-et-salon-de-the",
+     "https://wanderlog.com/place/details/1327861/salon-de-thé-grandrue",
+     "https://en.lebonbon.fr/strasbourg/news/salon-the-strasbourgeois-loss/"
+    ]
+   },
+   "verdicts": [
+    {
+     "fait": "Adresse 80 Grand'Rue, 67000 Strasbourg",
+     "statut": "confirme",
+     "preuve": "Titre de la fiche au-magasin.fr : « Salon de Thé Grand'Rue Strasbourg (80 Grand'rue) ». Petit Futé : « 80, Grand-Rue, 67100 Strasbourg » (le code postal diffère)."
+    },
+    {
+     "fait": "Commerce ouvert aujourd'hui (novembre 2026)",
+     "statut": "incertain",
+     "preuve": "Dernière preuve d'activité : citizenkid, mise à jour le 17/03/2025. Petit Futé affiche « Fermé 2025 », un statut ambigu. Un article Le Bonbon « salon-the-strasbourgeois-loss » n'est pas identifié. Aucune annonce de fermeture définitive trouvée pour ce commerce."
+    },
+    {
+     "fait": "Téléphone 03 88 32 12 70",
+     "statut": "confirme",
+     "preuve": "Extrait de fiche dans les résultats : « Salon de Thé Grand'Rue 80, Grand'Rue 67000 Strasbourg 03 88 32 12 70 www.salondethegrandrue.fr ». Un annuaire donne aussi 0388321270 (citizenkid, au-magasin). Rien ne prouve qu'il soit à jour : une recherche exacte du numéro ne renvoie rien d'autre."
+    },
+    {
+     "fait": "Email",
+     "statut": "incertain",
+     "preuve": "Aucun email trouvé. Le champ reste vide."
+    },
+    {
+     "fait": "Aucun site web (etat_site = aucun)",
+     "statut": "refute",
+     "preuve": "Une fiche annuaire, reprise deux fois dans les résultats, cite « www.salondethegrandrue.fr ». Je n'ai pas pu savoir si le site existe encore, ni s'il permet de commander."
+    },
+    {
+     "fait": "Pas d'outil de commande en ligne",
+     "statut": "incertain",
+     "preuve": "Aucune page de commande n'apparaît dans les résultats. Le domaine salondethegrandrue.fr n'a pas pu être vérifié."
+    },
+    {
+     "fait": "Indépendant",
+     "statut": "confirme",
+     "preuve": "Mapstr : « ouvert en 2024 par Jeanne et Apolline ». Aucune trace de chaîne ou de franchise."
+    },
+    {
+     "fait": "Non casher",
+     "statut": "incertain",
+     "preuve": "Aucune mention casher dans les sources. Rien ne contredit ce point, mais rien ne le confirme non plus."
+    },
+    {
+     "fait": "Horaires 8h30-18h, fermé lundi et dimanche (citizenkid)",
+     "statut": "confirme",
+     "preuve": "citizenkid : « Du mardi au samedi », « De 8h30 à 18h »."
+    },
+    {
+     "fait": "Horaires au-magasin (lundi fermé, mardi et mercredi 8h30-18h30)",
+     "statut": "confirme",
+     "preuve": "Résumé de recherche : au-magasin indique « Monday closed and Tuesday to Wednesday 08h30 to 18h30 ». C'est une fiche participative."
+    },
+    {
+     "fait": "Gâteaux maison en parts généreuses, tarte au fromage blanc, streusel",
+     "statut": "confirme",
+     "preuve": "Mapstr/Wanderlog : « des délicieux gâteaux maison servis en parts très généreuses », « tartes au fromage blanc, streusel, tartes aux fruits, gâteau au chocolat »."
+    },
+    {
+     "fait": "Ouvert en 2024 par Jeanne et Apolline",
+     "statut": "confirme",
+     "preuve": "Mapstr : « Le Salon de Thé Grand'Rue, ouvert en 2024 par Jeanne et Apolline, est rapidement devenu une adresse prisée »."
+    },
+    {
+     "fait": "Petit Futé 4,3/5 (3 avis)",
+     "statut": "confirme",
+     "preuve": "Liste Petit Futé : « SALON DE THÉ GRAND'RUE, 80, Grand-Rue, 67100 Strasbourg, Coffee shop et salon de thé, 4.3/5 (3 avis) »."
+    },
+    {
+     "fait": "Décor inspiré d'Alice au pays des merveilles",
+     "statut": "confirme",
+     "preuve": "Résumé de recherche : « whimsical, Alice in Wonderland-style decor » (Mapstr/Wanderlog)."
+    },
+    {
+     "fait": "Pas déjà contacté",
+     "statut": "confirme",
+     "preuve": "Gmail in:sent (\"Grand'Rue\" OR \"salon de thé\" OR \"Grand Rue\" OR numéro) : un seul fil, envoyé à contact@maroquinerie-ury.com, qui n'a pas de rapport."
+    }
+   ],
+   "design": {
+    "chemin": "/home/user/BRUNFRAME/prospection/lots/2026-11-17/web/demo/salon-de-the-grand-rue/index.html (polices dans /home/user/BRUNFRAME/prospection/lots/2026-11-17/web/demo/salon-de-the-grand-rue/fonts/, image du mail dans /home/user/BRUNFRAME/prospection/lots/2026-11-17/web/demo/salon-de-the-grand-rue/apercu.png, captures dans /home/user/BRUNFRAME/prospection/lots/2026-11-17/captures/salon-de-the-grand-rue-full.png, salon-de-the-grand-rue-desktop.png et salon-de-the-grand-rue-whatsapp.png)",
+    "concept": "« Le 80 de cœur ». Le décor du salon s'inspire d'Alice au pays des merveilles : la page devient donc un jeu de cartes de la Reine de Cœur, et le numéro de rue, 80, devient la valeur de la carte. Le premier écran est une figure de cœur en miroir, posée sur une nappe à carreaux qui rappelle le kelsch alsacien. Le motif revient partout. La carte du salon devient trois cartes à jouer : Roi = gâteaux maison, Dame = tarte au fromage blanc (dans Alice, la Reine de Cœur fait des tartes), Valet = streusel. Les étapes du formulaire sont des valeurs de cartes (As, 2, 3), les spécialités se choisissent comme des cartes qu'on tire, la semaine est un « 7 de pique » et l'adresse un « 80 de cœur ». J'ai écarté la carte du quartier proposée : elle demandait de dessiner une géographie que je ne pouvais pas vérifier, et elle conviendrait à n'importe quel commerce. Alice est le seul trait d'identité qui appartient vraiment à ce salon.",
+    "polices": "Fraunces (fichiers variables poids + taille optique, romain et italique, latin), utilisée pour les titres, le nom en grand corps à opsz 144 et les valeurs des cartes. Inter Tight (fichier variable poids, latin) pour le texte et l'interface. Les deux viennent de @fontsource-variable, licence OFL réunie dans fonts/LICENSE, avec font-display: swap et repli Georgia / system-ui. J'ai remplacé Unbounded, trop « startup », par Fraunces : sa forme douce et un peu bancale colle à l'univers Alice et à la pâtisserie. Poids total : environ 244 Ko (HTML 50 Ko + 3 fichiers woff2 194 Ko).",
+    "palette": "Fond nappe rouge griotte #9c2c26 avec carreaux en surimpression (kelsch). Cartes ivoire #fffaf2 / #fbf4ea avec texture papier. Rouge cœur #b3322a et #8f241e. Encre #1e1a1f, utilisée pour le bouton principal, la section « La carte » et le pied de page. Gris doux #5a4e53. Or pâle #f5d48c pour les surtitres et le focus. Vert WhatsApp #25a35a pour l'icône seulement. Contrastes vérifiés en AA : ivoire sur rouge environ 6:1, or sur rouge environ 5:1, gris doux sur ivoire environ 6,9:1.",
+    "faits_utilises": [
+     "Nom : Salon de Thé Grand'Rue ; métier : salon de thé pâtissier, gâteaux maison",
+     "Adresse : 80 Grand'Rue, 67000 Strasbourg ; quartier : Grande Île",
+     "Téléphone 03 88 32 12 70 (lien tel:+33388321270 ; c'est un fixe, donc aucun lien wa.me, et la fenêtre d'aperçu le précise)",
+     "Horaires : du mardi au samedi 8h30-18h (Citizenkid), lundi fermé (au-magasin.fr), dimanche « à confirmer », avec la note « une fiche indique 18h30 le mardi et le mercredi »",
+     "Spécialités : gâteaux maison en parts généreuses, tarte au fromage blanc, streusel (Mapstr), sans prix ni mention « citées par nos clients »",
+     "Ouvert en 2024 par Jeanne et Apolline (Mapstr)",
+     "Décor inspiré d'Alice au pays des merveilles (Mapstr, Wanderlog)",
+     "Itinéraire : https://www.google.com/maps/search/?api=1&query=80%20Grand%27Rue%2C%2067000%20Strasbourg"
+    ],
+    "points_faibles": "1) Le salon est peut-être fermé : aucune trace datée après mars 2025, et une mention « Fermé 2025 » ambiguë sur Petit Futé. À vérifier par téléphone avant tout envoi. 2) On ne sait pas s'ils vendent des gâteaux entiers : la page propose de « réserver votre part » et laisse le client préciser librement, mais l'accroche fêtes reste une proposition. 3) Les horaires se contredisent (18h ou 18h30) et le dimanche n'est pas connu : la page l'affiche, et le formulaire refuse le lundi et le dimanche. 4) Le numéro est un fixe : l'envoi WhatsApp réel demandera un mobile ou WhatsApp Business. 5) Le champ date affiche mm/dd/yyyy dans Chromium headless ; un téléphone français affiche jj/mm/aaaa. 6) Sur la capture pleine page, la barre fixe apparaît au milieu, sur le texte « Ouvert en 2024 ». C'est un défaut de la capture : en vrai, la barre se cache bien (vérifié par le test). 7) Le lien entre la Dame de cœur et les tartes est un clin d'œil littéraire (Alice), pas un fait sur le salon. Le patron peut le juger trop appuyé. Tests faits : 3 captures sans erreur JS ni requête externe. Le parcours Playwright passe en mouvement normal et en mouvement réduit : envoi vide refusé, lundi refusé, synchronisation carte/puces, compteur, aperçu avec bulle entrante, aucun lien wa.me, Échap ferme l'aperçu. Les animations (cartes distribuées, éventail, relief au survol) se coupent sous prefers-reduced-motion."
+   },
+   "revue": {
+    "score_avant": 86,
+    "score_apres": 91,
+    "conformite_ok": true,
+    "corrections": [
+     "Fait retiré : la carte Valet disait « à la part au salon », ce que les faits vérifiés ne disent pas. Elle porte maintenant un clin d'œil à Alice : « Dans Alice, le Valet de Cœur est jugé pour le vol des tartes. Le streusel, lui, se partage. » Rien n'est affirmé sur le salon.",
+     "Champ Jour du formulaire : le calendrier natif affichait « mm/dd/yyyy » sur les captures et laissait choisir un lundi ou un dimanche. C'est maintenant une liste des 36 prochains jours du mardi au samedi (« Mar. 22 déc. »), à partir de demain. Le 25 décembre, le 26 décembre (férié en Alsace-Moselle) et le 1er janvier sont exclus. La vérification lundi/dimanche est simplifiée en conséquence.",
+     "Texte d'aide raccourci : « Du mardi au samedi, horaires à confirmer. »",
+     "Nappe kelsch plus lisible : des fils ivoire discrets sont tissés dans les bandes du fond rouge. Le contraste du texte clair n'est pas touché.",
+     "Boutons « Ajouter à ma commande » des cartes en fond papier opaque : la grande lettre R/D/V en filigrane ne passe plus à travers leur texte (surtout sur desktop).",
+     "Retouche de texte sur la carte Roi : « Faits ici, servis en parts généreuses. »",
+     "Barre fixe vérifiée par défilement réel : masquée en haut de page et sur le formulaire, visible ailleurs. Il y a donc un seul CTA dominant par écran.",
+     "Les 4 images ont été recapturées aux mêmes chemins (apercu.png, -full, -desktop, -whatsapp). La capture WhatsApp vient d'un parcours scripté : Dame + Streusel, mardi 22 décembre, 10h30. Vérification : « aucune erreur, aucune requête externe ».",
+     "Conformité vérifiée, aucun manque : noindex, nofollow, noarchive ; pastille « Maquette » ; BRUNFRAME seulement dans « Maquette préparée par BRUNFRAME » en pied de page ; « aucune commande n'est transmise » dans le pied de page ; « Démonstration : rien n'est envoyé » sous le bouton et dans l'aperçu ; aucun lien wa.me (le numéro est un fixe 03, ce que l'aperçu explique) ; reduced-motion appliqué partout ; aucune intro bloquante ; aucun mot interdit ; aucun prix ni note affiché ; contrastes AA vérifiés (surtitres or sur rouge ≈ 5,5:1, textes secondaires ≥ 4,5:1)."
+    ],
+    "restes": "Tous les faits affichés correspondent aux faits vérifiés : adresse, Grande Île, téléphone, horaires (avec la nuance 18h30 le mardi et le mercredi, dimanche « à confirmer »), Jeanne et Apolline en 2024, décor Alice, les trois spécialités, et les sources citées en pied de page. Ce qui reste : 1) Les mentions « Commandes de fêtes », « Pour les fêtes, réservez votre part » et « à réserver pour vos tables de fêtes » décrivent le service proposé, pas une pratique prouvée du salon. Elles sont couvertes par la pastille Maquette et les mentions de démonstration, mais il faut vérifier par téléphone que le salon est ouvert et prend des commandes avant tout envoi (motif_exclusion). 2) Le bouton dit « Commander sur WhatsApp » alors que le salon n'a pas de numéro WhatsApp connu. L'aperçu le dit clairement. 3) Sur la capture -full, la barre fixe apparaît sur le début de « Le salon ». Le défilement réel montre qu'elle est masquée à cet endroit : c'est le mode pleine page de la capture qui la dessine là. 4) Le coin bas de la carte se lit « 08 » : c'est le « 80 » retourné, comme sur une vraie carte. 5) Copie de l'état avant modification : /tmp/claude-0/-home-user-BRUNFRAME/6e33e125-04c2-5611-a3ba-58657668bd8a/scratchpad/salon-index-avant.html. Script de la capture WhatsApp : /tmp/claude-0/-home-user-BRUNFRAME/6e33e125-04c2-5611-a3ba-58657668bd8a/scratchpad/salon_wa.py."
+   },
+   "redaction": {
+    "objet": "Salon de Thé Grand'Rue — vos commandes de fêtes",
+    "corps": "Bonjour,\n\nJ'ai préparé une page pour le Salon de Thé Grand'Rue : {{LIEN}}\n\n{{CAPTURE}}\n\nVos clients y voient vos gâteaux maison, dont la tarte au fromage blanc et le streusel, vos horaires, et ils commandent pour les fêtes : la commande arrive sur votre WhatsApp, pas au téléphone pendant le service.\n\nJ'ai fait le site de Shemtov, rue du Maréchal-Foch. Je vous appelle jeudi pour avoir votre avis ?\n\nSi ce n'est pas pour vous, répondez « non » et je n'insiste pas.\n\nAndy Brun — BRUNFRAME\n06 30 83 59 78",
+    "email_destinataire": "",
+    "dm_instagram": "",
+    "appel": {
+     "numero": "03 88 32 12 70 (80 Grand'Rue, Strasbourg, fixe du salon)",
+     "quand_appeler": "Jeudi 19 novembre 2026, vers 14h15. Le salon devrait être ouvert : mardi-samedi 8h30-18h selon citizenkid (fiche de mars 2025). L'autre fiche ne donne pas le jeudi. Éviter le milieu d'après-midi, sans doute l'heure du goûter. Pas de réponse ou salle pleine : rappeler vers 17h15, avant la fermeture de 18h. D'abord, vérifier que le salon est toujours ouvert : la dernière trace datée remonte à mars 2025 et Petit Futé affiche une mention « Fermé 2025 » ambiguë. Si le numéro est hors service ou annonce une fermeture, rayer la fiche et ne pas relancer.",
+     "demande_a_parler_a": "Jeanne ou Apolline, les fondatrices (prénoms seulement, d'après Mapstr ; salon ouvert en 2024). « Est-ce que Jeanne ou Apolline est là ? » Si un employé répond : lui demander son prénom et à quel moment l'une des deux est là au calme, puis rappeler à ce moment-là. Pas de pitch.",
+     "leur_probleme": "Je n'ai trouvé aucun moyen de commander en ligne. Pas d'email, pas de Facebook ni d'Instagram, et le site salondethegrandrue.fr cité par un annuaire n'a pas pu être vérifié. Le seul contact publié est le fixe du salon : pour un gâteau de fêtes, il faut appeler pendant le service. À confirmer pendant l'appel : on ne sait pas si elles prennent des commandes de gâteaux entiers.",
+     "presentation": "Bonjour, c'est Andy, de BRUNFRAME. Je vous ai envoyé mardi une page que j'ai faite pour le Salon de Thé Grand'Rue. Vous avez pu la regarder ? [Aucun email trouvé, donc le mail n'est pas parti : utiliser la présentation sans mail.]",
+     "presentation_sans_mail": "Bonjour, c'est Andy, de BRUNFRAME. J'ai fait le site de Shemtov, rue du Maréchal-Foch, et j'ai préparé une page pour le Salon de Thé Grand'Rue. Je vous prends 30 secondes ?",
+     "compliment_probleme": "Vous avez ouvert en 2024 et le salon est vite devenu une adresse de la Grand'Rue, avec vos gâteaux maison en parts généreuses, la tarte au fromage blanc, le streusel. Mais pour commander un gâteau entier, je n'ai trouvé aucun moyen en ligne : il faut appeler le salon.",
+     "question": "Pour les fêtes, comment ça se passe chez vous aujourd'hui pour les commandes de gâteaux ? (puis se taire)",
+     "proposition": "Oui -> « Qu'est-ce qui vous a parlé ? » puis « Je passe vous la montrer vendredi, 5 minutes, à un moment calme ? » Non -> « Je l'ai faite pour vous. Je vous la montre en 5 minutes vendredi ? Si ça ne vous plaît pas, on en reste là. »",
+     "prix": "« 550 € avec la commande sur WhatsApp, payés à la mise en ligne, et seulement si le site vous plaît. Ou rien au départ : 49 € par mois sur un an, ou 59 € par mois sans engagement. » Puis l'offre des 3 premiers clients : « Vous seriez parmi mes 3 premiers clients : vous ne payez rien avant la mise en ligne, et rien du tout si le site final ne vous plaît pas. En échange, je vous demande un avis Google. »",
+     "objection1": "« C'est cher. » « Une commande de fêtes, c'est combien en moyenne chez vous ? » (se taire, noter son chiffre). Puis : « Si c'est [son chiffre], 49 € par mois, c'est [49 ÷ son chiffre] commandes. Si la page vous en apporte une ou deux en décembre sans que vous décrochiez pendant le service, elle est payée. Et au départ, vous ne payez rien. Ça vous paraît jouable ? » (Aide au calcul, avec un chiffre d'exemple qui n'est pas leur prix : si elle dit 40 €, 49 € par mois font un peu plus d'une commande, et 550 € environ 14 commandes.)",
+     "objection2": "« On a déjà un site. » « D'accord. Est-ce que vos clients peuvent y commander un gâteau pour les fêtes ? Sinon, c'est exactement ce que la page ajoute. Je vous montre les deux côte à côte vendredi ? »",
+     "objection3": "« On ne fait pas de gâteaux entiers » ou « On n'a pas le temps pour des commandes en plus. » « C'est vous qui choisissez ce qu'on peut commander, et quand. Si vous n'en voulez pas, la page montre juste vos gâteaux, vos horaires et le salon. Aujourd'hui, qu'est-ce qu'on vous demande le plus au téléphone ? »"
+    }
+   }
+  }
+ ]
+}

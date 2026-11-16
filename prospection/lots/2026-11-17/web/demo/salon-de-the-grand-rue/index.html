@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Salon de Thé Grand'Rue — gâteaux maison à Strasbourg</title>
+<meta name="description" content="Maquette : commandes de fêtes, spécialités maison, horaires et adresse du Salon de Thé Grand'Rue, 80 Grand'Rue à Strasbourg.">
+<meta name="theme-color" content="#9c2c26">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b3322a' d='M12 21.4C9.6 18.6 2.2 13.6 2.2 8.1 2.2 5 4.5 2.7 7.4 2.7c2 0 3.6 1.1 4.6 2.8 1-1.7 2.6-2.8 4.6-2.8 2.9 0 5.2 2.3 5.2 5.4 0 5.5-7.4 10.5-9.8 13.3z'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("fonts/fraunces-latin-standard-normal.woff2") format("woff2")}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:100 900;font-display:swap;src:url("fonts/fraunces-latin-standard-italic.woff2") format("woff2")}
+@font-face{font-family:"Inter Tight";font-style:normal;font-weight:100 900;font-display:swap;src:url("fonts/inter-tight-latin-wght-normal.woff2") format("woff2")}
+
+:root{
+  --tapis:#9c2c26;--tapis-f:#7a201c;
+  --ivoire:#fbf4ea;--papier:#fffaf2;--creme:#f3e8d8;
+  --encre:#1e1a1f;--encre-2:#5a4e53;--rouge:#b3322a;--rouge-f:#8f241e;
+  --or:#f5d48c;--wa:#25a35a;
+  --serif:"Fraunces","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Inter Tight",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --focus:var(--or);
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45 0 0 0 0 .28 0 0 0 0 .16 0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  --ombre:0 1px 1px #3a0a0826,0 3px 6px -2px #3a0a0833,0 26px 48px -22px #22030399;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--tapis)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;color:var(--ivoire);font:400 16px/1.55 var(--sans);
+  background-color:var(--tapis);
+  background-image:
+    radial-gradient(110% 55% at 50% 0%,#c2473c55,transparent 70%),
+    repeating-linear-gradient(90deg,transparent 0 36px,#fbf4ea12 36px 38px,transparent 38px 72px),
+    repeating-linear-gradient(0deg,transparent 0 36px,#fbf4ea12 36px 38px,transparent 38px 72px),
+    repeating-linear-gradient(90deg,#0000000d 0 2px,transparent 2px 30px,#00000012 30px 44px,transparent 44px 72px),
+    repeating-linear-gradient(0deg,#0000000d 0 2px,transparent 2px 30px,#00000012 30px 44px,transparent 44px 72px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:8px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.s{width:1em;height:1em;fill:currentColor;flex:none}
+h1,h2,h3{margin:0;font-weight:600}
+p{margin:0}
+
+/* Surtitre commun */
+.surtitre{display:flex;align-items:center;gap:9px;margin:0 0 12px;font:650 12px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.surtitre svg{width:12px;height:12px}
+
+/* Bouton principal */
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 28px;border:0;border-radius:999px;
+  background:var(--encre);color:var(--ivoire);font:620 17px/1.1 var(--sans);letter-spacing:.005em;text-decoration:none;cursor:pointer;
+  box-shadow:inset 0 0 0 4px var(--encre),inset 0 0 0 5px #fbf4ea4d,0 14px 28px -16px #000;transition:transform .2s ease,box-shadow .2s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 4px var(--encre),inset 0 0 0 5px #fbf4ea80,0 18px 30px -16px #000}
+.cta .coeur{width:17px;height:17px;fill:#ef6a5c}
+.cta .fl{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Carte à jouer (base) ---------- */
+.carte{position:relative;background:var(--papier) var(--grain);color:var(--encre);border-radius:16px;box-shadow:var(--ombre);--focus:var(--rouge)}
+.coin{position:absolute;display:grid;justify-items:center;gap:3px;color:var(--rouge);font:700 21px/1 var(--serif);font-variation-settings:"opsz" 72;letter-spacing:-.04em;pointer-events:none}
+.coin svg{width:15px;height:15px;fill:currentColor}
+.coin-h{top:15px;left:10px}
+.coin-b{bottom:15px;right:10px;transform:rotate(180deg)}
+.coin.noir{color:var(--encre)}
+
+/* ---------- En-tête ---------- */
+.hero{position:relative;overflow:hidden;padding:14px 18px 40px}
+.haut{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1160px;margin:0 auto}
+.pastille{display:inline-flex;align-items:center;gap:7px;padding:7px 12px 6px;border-radius:99px;background:var(--ivoire);color:var(--rouge-f);
+  font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;box-shadow:0 6px 14px -8px #0008}
+.pastille::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rouge)}
+.lieu{font:500 13px/1.25 var(--sans);color:#fbf4eae8;text-align:right}
+.hero-grille{max-width:1160px;margin:0 auto;display:grid;gap:26px;padding-top:22px}
+.donne{position:relative;width:min(78vw,306px);aspect-ratio:5/7;margin:0 auto;left:-10px;perspective:900px}
+.donne-in{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1);
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.dos{position:absolute;inset:0;border-radius:16px;border:8px solid var(--ivoire);
+  background:radial-gradient(circle at 50% 50%,#fbf4ea2e 0 13%,transparent 13.5%),
+    repeating-linear-gradient(45deg,#fbf4ea2b 0 1px,transparent 1px 9px),repeating-linear-gradient(-45deg,#fbf4ea2b 0 1px,transparent 1px 9px),var(--rouge);
+  box-shadow:0 1px 2px #0003,0 16px 30px -16px #2a0505b0}
+.dos::after{content:"";position:absolute;inset:5px;border:1px solid #fbf4ea70;border-radius:7px}
+.dos-1{transform:translate(16px,8px) rotate(6deg)}
+.dos-2{transform:translate(30px,18px) rotate(12deg)}
+.carte-hero{position:absolute;inset:0;transform:rotate(-3deg);container-type:inline-size}
+@supports (width:1cqw){
+  .carte-hero .coin{font-size:6.9cqw}
+  .carte-hero .coin svg{width:4.9cqw;height:4.9cqw}
+  .carte-hero .cadre{inset:4.6cqw 13.7cqw}
+  .carte-hero .n-salon{font-size:6.55cqw}
+  .carte-hero .n-rue{font-size:16cqw}
+  .carte-hero .n-metier{font-size:3.1cqw}
+  .carte-hero .pli svg{width:5.2cqw;height:5.2cqw}
+}
+.carte-hero::after{content:"";position:absolute;inset:0;border-radius:16px;pointer-events:none;opacity:var(--brillance,0);
+  background:radial-gradient(60% 45% at var(--mx,50%) var(--my,30%),#ffffffa8,transparent 70%);mix-blend-mode:soft-light;transition:opacity .4s}
+.cadre{position:absolute;inset:14px 42px;border:1.5px solid var(--rouge);border-radius:7px;outline:1px solid #b3322a4d;outline-offset:3px;
+  display:grid;grid-template-rows:1fr auto 1fr;text-align:center;padding:10px 4px;overflow:hidden}
+.moitie{display:grid;align-content:end;justify-items:center}
+.miroir{transform:rotate(180deg);color:var(--rouge)}
+.n-salon{display:block;font:500 20px/1.1 var(--serif);font-variation-settings:"opsz" 30;letter-spacing:.01em}
+.n-rue{display:block;margin-top:3px;font:italic 600 49px/.95 var(--serif);font-variation-settings:"opsz" 144;letter-spacing:-.025em;white-space:nowrap}
+.n-metier{display:block;margin-top:9px;font:650 9.5px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--encre-2)}
+.miroir .n-metier{color:#b3322acc}
+.pli{display:flex;align-items:center;gap:8px;margin:10px 2px;color:var(--rouge)}
+.pli::before,.pli::after{content:"";flex:1;height:1px;background:currentColor;opacity:.45}
+.pli svg{width:16px;height:16px}
+.etiquette{position:absolute;right:-24px;top:6.5%;z-index:2;display:flex;align-items:center;gap:8px;padding:9px 16px 9px 24px;
+  background:var(--encre);color:var(--ivoire);font:italic 500 16px/1 var(--serif);font-variation-settings:"opsz" 24;
+  clip-path:polygon(12px 0,100% 0,100% 100%,12px 100%,0 50%);transform:rotate(7deg);box-shadow:0 10px 20px -10px #000}
+.etiquette::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--tapis);box-shadow:inset 0 0 0 1px #fbf4ea66}
+.hero-texte{width:100%;max-width:560px}
+.grand{font:600 clamp(2.15rem,9.6vw,5rem)/1.02 var(--serif);font-variation-settings:"opsz" 144;letter-spacing:-.025em;color:var(--ivoire);text-wrap:balance}
+.grand em{font-style:italic;font-weight:500;color:#ffd9c2}
+.chapo{margin-top:14px;font-size:16.5px;line-height:1.5;color:#fbf4eaeb;max-width:44ch}
+.hero .cta{width:100%;margin-top:22px}
+
+/* ---------- Le salon ---------- */
+.nous{padding:34px 22px 70px;max-width:1000px;margin:0 auto}
+.nous-texte{font:400 clamp(1.55rem,6.6vw,2.9rem)/1.22 var(--serif);font-variation-settings:"opsz" 72;letter-spacing:-.012em;color:var(--ivoire);text-wrap:pretty}
+.nous-texte strong{font-weight:600}
+.nous-texte em{font-style:italic;color:#ffd9c2}
+.couleurs{display:flex;gap:16px;margin-top:26px;color:#fbf4ea8c}
+.couleurs svg{width:18px;height:18px}
+
+/* ---------- La carte ---------- */
+.la-carte{background:var(--encre) radial-gradient(90% 60% at 50% 0%,#2f272e,transparent 70%);padding:72px 18px 84px;--focus:var(--or);position:relative}
+.la-carte::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(90deg,#ffffff05 0 1px,transparent 1px 6px)}
+.entete{max-width:1160px;margin:0 auto 38px;position:relative}
+.entete h2{font:600 clamp(2.4rem,11vw,5.2rem)/1 var(--serif);font-variation-settings:"opsz" 144;letter-spacing:-.03em;color:var(--ivoire)}
+.entete h2 em{font-style:italic;font-weight:500;color:#f08a7c}
+.entete p:not(.surtitre){margin-top:14px;color:#fbf4eacc;max-width:42ch;font-size:16.5px}
+.jeu{list-style:none;margin:0 auto;padding:0;max-width:1160px;display:grid;gap:0}
+.spec{padding:24px 22px 22px 66px;min-height:212px;margin-top:-10px;transform:rotate(var(--r,0deg));transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.spec:first-child{margin-top:0}
+.spec:nth-child(1){--r:-1.6deg;z-index:1}
+.spec:nth-child(2){--r:1.3deg;z-index:2}
+.spec:nth-child(3){--r:-.8deg;z-index:3}
+.spec .lettre{position:absolute;right:16px;top:50%;transform:translateY(-52%);font:italic 300 150px/1 var(--serif);font-variation-settings:"opsz" 144;color:#b3322a2b;pointer-events:none;user-select:none}
+.spec h3{position:relative;font:600 27px/1.08 var(--serif);font-variation-settings:"opsz" 60;letter-spacing:-.015em;max-width:12ch}
+.spec .rang{display:block;margin-bottom:6px;font:650 11px/1.2 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--rouge)}
+.spec p{position:relative;margin-top:8px;color:var(--encre-2);font-size:15.5px;max-width:30ch}
+.ajout{position:relative;display:inline-flex;align-items:center;gap:8px;margin-top:16px;min-height:44px;padding:0 16px;border-radius:99px;
+  border:1.5px solid #b3322a80;background:var(--papier);color:var(--rouge-f);font:620 14.5px/1 var(--sans);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.ajout svg{width:15px;height:15px}
+.ajout:hover{border-color:var(--rouge);background:#f7e9e0}
+.ajout[aria-pressed="true"]{background:var(--rouge);border-color:var(--rouge);color:var(--ivoire)}
+.ajout .i-on{display:none}
+.ajout[aria-pressed="true"] .i-on{display:block}
+.ajout[aria-pressed="true"] .i-off{display:none}
+
+/* ---------- Commande ---------- */
+.commande{padding:84px 16px 80px;max-width:1160px;margin:0 auto;display:grid;gap:30px}
+.commande-intro h2{font:600 clamp(2.3rem,10.4vw,4.6rem)/1.02 var(--serif);font-variation-settings:"opsz" 144;letter-spacing:-.03em;color:var(--ivoire);text-wrap:balance}
+.commande-intro h2 em{font-style:italic;font-weight:500;color:#ffd9c2}
+.commande-intro p:not(.surtitre){margin-top:14px;color:#fbf4eae6;max-width:40ch;font-size:16.5px}
+.etapes{list-style:none;padding:0;margin:26px 0 0;display:none;gap:12px}
+.etapes li{display:flex;align-items:center;gap:14px;color:#fbf4eae6}
+.formulaire{padding:26px 20px 24px;display:grid;gap:26px}
+.formulaire::before{content:"";position:absolute;inset:8px;border:1px solid #b3322a40;border-radius:10px;pointer-events:none}
+fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:14px}
+legend{display:flex;align-items:center;gap:12px;padding:0;margin-bottom:14px;font:600 22px/1.15 var(--serif);font-variation-settings:"opsz" 40;letter-spacing:-.01em}
+.rang-mini{display:inline-grid;place-items:center;align-content:center;gap:1px;width:30px;height:40px;border-radius:5px;background:var(--papier);
+  border:1px solid #1e1a1f2e;box-shadow:0 2px 4px -2px #0004;color:var(--rouge);font:700 14px/1 var(--serif);flex:none}
+.rang-mini svg{width:10px;height:10px}
+.puces{display:flex;flex-wrap:wrap;gap:9px}
+.puce{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 15px 0 12px;border-radius:9px;border:1.5px solid #1e1a1f33;
+  background:var(--papier);color:var(--encre);font:560 15px/1.15 var(--sans);cursor:pointer;box-shadow:0 2px 0 #1e1a1f14;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .2s,color .2s,border-color .2s}
+.puce svg{width:15px;height:15px;color:var(--rouge)}
+.puce:hover{border-color:var(--rouge)}
+.puce[aria-pressed="true"]{background:var(--rouge);border-color:var(--rouge);color:var(--ivoire);transform:translateY(-3px) rotate(-1.5deg);box-shadow:0 8px 14px -8px #8f241eaa}
+.puce[aria-pressed="true"] svg{color:var(--ivoire)}
+.champ{display:grid;gap:7px;min-width:0}
+label{font:620 15px/1.25 var(--sans);color:var(--encre)}
+.aide{font:400 13.5px/1.4 var(--sans);color:var(--encre-2)}
+label .aide{display:block;margin-top:2px}
+input,textarea,select{width:100%;min-height:50px;font:400 16px/1.35 var(--sans);color:var(--encre);background:#fff;border:1.5px solid #1e1a1f42;border-radius:10px;padding:12px 13px;
+  transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+textarea{min-height:92px;resize:vertical}
+select{background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%231e1a1f' stroke-width='1.8' stroke-linecap='round'/></svg>") no-repeat right 14px center;padding-right:36px}
+input::placeholder,textarea::placeholder{color:#7a6d72}
+input:focus,textarea:focus,select:focus{border-color:var(--rouge);box-shadow:0 0 0 4px #b3322a24;outline:none}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none}
+.duo{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
+.alerte{font:560 13.5px/1.4 var(--sans);color:var(--rouge-f);min-height:0}
+.alerte:empty{display:none}
+.envoi{display:grid;gap:12px}
+.envoi .cta{width:100%}
+.wa-rond{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--wa);color:#fff}
+.wa-rond svg{width:18px;height:18px;fill:currentColor}
+.mention{text-align:center;font:500 13.5px/1.4 var(--sans);color:var(--encre-2)}
+
+/* ---------- Infos ---------- */
+.infos{padding:20px 16px 90px;max-width:1160px;margin:0 auto}
+.infos-tete{margin-bottom:26px}
+.infos-tete h2{font:600 clamp(2.3rem,10.4vw,4.6rem)/1.02 var(--serif);font-variation-settings:"opsz" 144;letter-spacing:-.03em;color:var(--ivoire)}
+.infos-tete h2 em{font-style:italic;font-weight:500;color:#ffd9c2}
+.infos-grille{display:grid;gap:18px}
+.bloc{padding:26px 22px 58px 54px}
+.bloc h3{font:600 26px/1.1 var(--serif);font-variation-settings:"opsz" 48;letter-spacing:-.015em;margin-bottom:16px}
+.horaires{list-style:none;margin:0;padding:0;font-size:15.5px}
+.horaires li{display:grid;grid-template-columns:1fr auto;grid-template-areas:"j h" "f f";align-items:baseline;gap:7px 12px;padding:10px 0 12px}
+.horaires li+li{border-top:1px solid #1e1a1f14}
+.jn{grid-area:j;font-weight:560}
+.frise{grid-area:f;position:relative;height:5px;border-radius:9px;background:#1e1a1f12}
+.frise i{position:absolute;top:0;bottom:0;border-radius:9px;background:var(--rouge);left:calc((var(--d) - 7) / 13 * 100%);width:calc((var(--f) - var(--d)) / 13 * 100%)}
+.frise.doute{background:repeating-linear-gradient(90deg,#1e1a1f33 0 5px,transparent 5px 10px)}
+.h{grid-area:h;color:var(--encre-2);font-variant-numeric:tabular-nums;text-align:right}
+.horaires li.auj .jn,.horaires li.auj .h{color:var(--encre);font-weight:700}
+.horaires li.auj .frise i{background:var(--encre)}
+.auj-tag{display:inline-block;margin-left:8px;padding:3px 7px 2px;border-radius:5px;background:var(--encre);color:var(--ivoire);font:650 10px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;vertical-align:2px}
+.echelle{position:relative;height:16px;margin-bottom:2px;font:500 11px/1 var(--sans);color:var(--encre-2)}
+.echelle span{position:absolute;top:0;transform:translateX(-50%)}
+.echelle span:first-child{transform:none}
+.echelle span:last-child{transform:none;left:auto!important;right:0}
+.note{margin-top:14px;font-size:13.5px;color:var(--encre-2)}
+.bloc-adresse{overflow:hidden}
+.filigrane{position:absolute;right:-6px;bottom:-34px;font:italic 300 190px/1 var(--serif);font-variation-settings:"opsz" 144;letter-spacing:-.05em;color:#b3322a17;pointer-events:none;user-select:none}
+.bloc-adresse > :not(.filigrane):not(.coin){position:relative}
+.adresse{font:600 30px/1.08 var(--serif);font-variation-settings:"opsz" 60;letter-spacing:-.02em}
+.adresse em{font-style:italic;font-weight:500;color:var(--rouge)}
+.quartier{margin-top:10px;color:var(--encre-2);font-size:15px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.bouton{flex:1 1 auto;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:999px;border:1.5px solid var(--encre);
+  color:var(--encre);font:620 15.5px/1.1 var(--sans);text-decoration:none;transition:background .2s,color .2s}
+.bouton svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bouton:hover{background:var(--encre);color:var(--ivoire)}
+
+/* ---------- Pied ---------- */
+footer{background:var(--encre);color:#fbf4eabf;padding:44px 22px calc(116px + env(safe-area-inset-bottom));font-size:14px;--focus:var(--or)}
+footer .in{max-width:1160px;margin:0 auto;display:grid;gap:8px}
+footer .sig{margin-top:14px;padding-top:16px;border-top:1px solid #fbf4ea24;color:var(--ivoire);font:500 14px/1.4 var(--sans)}
+footer .couleurs{margin:0 0 18px;color:#fbf4ea66}
+
+/* ---------- Barre fixe ---------- */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:#fbf4eaeb;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid #1e1a1f1f;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.barre .cta{width:100%;max-width:520px;margin:0 auto;display:flex;min-height:54px}
+.barre.cachee{transform:translateY(115%)}
+.compte{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:99px;background:var(--rouge);color:var(--ivoire);font:700 13px/1 var(--sans)}
+.compte:empty{display:none}
+
+/* ---------- Aperçu WhatsApp ---------- */
+dialog{width:min(94vw,410px);max-height:92vh;padding:0;border:0;border-radius:24px;background:var(--papier);color:var(--encre);box-shadow:0 30px 80px -20px #000c;overflow:auto;--focus:var(--rouge)}
+dialog::backdrop{background:#1e1a1fcc;backdrop-filter:blur(3px)}
+.dlg-sur{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 12px 20px;font:650 11.5px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--encre-2)}
+.x{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:0;background:#1e1a1f0f;color:var(--encre);font:400 24px/1 var(--sans);cursor:pointer}
+.tel{margin:0 12px;border-radius:18px;overflow:hidden;border:1px solid #1e1a1f1f}
+.tel-tete{display:flex;align-items:center;gap:11px;padding:11px 14px;background:#0f5b4f;color:#fff}
+.avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#e8dccb;color:#0f5b4f;font:700 16px/1 var(--sans);flex:none}
+.tel-tete strong{display:block;font:620 15.5px/1.2 var(--sans)}
+.tel-tete small{display:block;font:400 12.5px/1.3 var(--sans);opacity:.85}
+.fil{min-height:250px;padding:14px 12px 18px;background-color:#efe6da;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'><g fill='%235a4e53' fill-opacity='.07'><path transform='translate(4 4) scale(.5)' d='M12 21.4C9.6 18.6 2.2 13.6 2.2 8.1 2.2 5 4.5 2.7 7.4 2.7c2 0 3.6 1.1 4.6 2.8 1-1.7 2.6-2.8 4.6-2.8 2.9 0 5.2 2.3 5.2 5.4 0 5.5-7.4 10.5-9.8 13.3z'/><path transform='translate(32 32) scale(.5)' d='M12 2.2c-2.4 3.9-9 7.3-9 12.1 0 2.7 2.1 4.6 4.6 4.6 1.6 0 2.9-.7 3.7-1.9-.3 2.1-1.2 3.4-2.9 4.6h7.2c-1.7-1.2-2.6-2.5-2.9-4.6.8 1.2 2.1 1.9 3.7 1.9 2.5 0 4.6-1.9 4.6-4.6 0-4.8-6.6-8.2-9-12.1z'/></g></svg>")}
+.jour{display:table;margin:0 auto 12px;padding:4px 10px;border-radius:8px;background:#fffffff0;font:560 12px/1.3 var(--sans);color:#4b4f54;box-shadow:0 1px 1px #0000001a}
+.bulle,.tape{position:relative;max-width:88%;padding:9px 11px 8px;border-radius:0 12px 12px 12px;background:#fff;box-shadow:0 1px 1px #00000024;font:400 15px/1.42 var(--sans);color:#111b21}
+.bulle::before,.tape::before{content:"";position:absolute;left:-7px;top:0;border:7px solid transparent;border-top-color:#fff;border-right-color:#fff;border-width:0 7px 9px 0;border-color:transparent #fff transparent transparent}
+.bulle-txt{white-space:pre-wrap;overflow-wrap:anywhere}
+.bulle-h{display:block;margin-top:2px;text-align:right;font-size:11.5px;color:#667781}
+.tape{display:inline-flex;gap:4px;padding:13px 14px}
+.tape i{width:7px;height:7px;border-radius:50%;background:#8a9aa3;animation:tape 1s infinite ease-in-out}
+.tape i:nth-child(2){animation-delay:.15s}.tape i:nth-child(3){animation-delay:.3s}
+@keyframes tape{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.dlg-pied{padding:16px 20px 20px;display:grid;gap:12px}
+.demo{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:#b3322a12;color:var(--rouge-f);font:450 14.5px/1.4 var(--sans)}
+.demo strong{font-weight:700}
+.demo svg{width:16px;height:16px;margin-top:2px;fill:currentColor}
+.dlg-info{font-size:13.5px;color:var(--encre-2);line-height:1.45}
+.dlg-pied .cta{width:100%;min-height:52px;font-size:16px}
+
+/* ---------- Animations (jamais bloquantes) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js .carte-hero{animation:donne .95s cubic-bezier(.2,.75,.2,1) both .1s}
+  .js .dos-1{animation:dos1 .8s cubic-bezier(.2,.75,.2,1) both}
+  .js .dos-2{animation:dos2 .8s cubic-bezier(.2,.75,.2,1) both}
+  .js .etiquette{animation:etiq .6s cubic-bezier(.3,1.4,.5,1) both .85s}
+  .js .jeu.replie .spec{transform:translateY(34px) rotate(0deg)}
+  .puce[aria-pressed="true"] svg,.ajout[aria-pressed="true"] svg{animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+  .bulle.entre{animation:entre .35s cubic-bezier(.2,.75,.2,1)}
+}
+@keyframes donne{from{transform:translate(70px,-40px) rotate(16deg);opacity:0}to{transform:rotate(-3deg);opacity:1}}
+@keyframes dos1{from{transform:translate(0,0) rotate(0)}to{transform:translate(16px,8px) rotate(6deg)}}
+@keyframes dos2{from{transform:translate(0,0) rotate(0)}to{transform:translate(30px,18px) rotate(12deg)}}
+@keyframes etiq{from{transform:rotate(-14deg) translateX(-30px);opacity:0}to{transform:rotate(7deg);opacity:1}}
+@keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.35)}100%{transform:scale(1)}}
+@keyframes entre{from{transform:translateY(10px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ---------- Grand écran ---------- */
+@media (min-width:720px){
+  .hero{padding:22px 40px 70px}
+  .lieu{font-size:14px}
+  .nous{padding:40px 40px 100px}
+  .la-carte{padding:110px 40px 130px}
+  .commande{padding:120px 40px 100px}
+  .infos{padding:30px 40px 120px}
+  .infos-grille{grid-template-columns:1.15fr 1fr}
+  .horaires li{grid-template-columns:150px 1fr 104px;grid-template-areas:"j f h";align-items:center;padding:12px 0}
+  .echelle{margin:0 116px 0 162px}
+  .infos-grille{align-items:stretch}
+  .bloc-adresse{display:flex;flex-direction:column}
+  .bloc-adresse .actions{margin-top:auto;padding-top:26px}
+  .filigrane{top:50%;bottom:auto;right:34px;transform:translateY(-56%);font-size:290px}
+  .nous,.commande,.infos{max-width:1240px}
+  .nous{max-width:1160px}
+  .nous-texte{max-width:26ch}
+}
+@media (min-width:960px){
+  footer{padding-bottom:48px}
+  .hero-grille{grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding-top:30px;min-height:min(78vh,700px)}
+  .donne{order:2;width:338px;left:-20px}
+  .hero-texte{order:1}
+  .chapo{font-size:18.5px;margin-top:22px}
+  .hero .cta{width:auto;margin-top:34px}
+  .surtitre{font-size:12.5px}
+  .entete{display:grid;grid-template-columns:1.5fr 1fr;align-items:end;gap:40px;margin-bottom:70px}
+  .entete p:not(.surtitre){margin:0 0 10px}
+  .jeu{display:flex;justify-content:center;align-items:flex-start;padding-top:20px}
+  .spec{width:292px;aspect-ratio:5/7;min-height:0;margin:0 -10px;padding:62px 30px 30px;display:flex;flex-direction:column}
+  .spec:nth-child(1){--r:-7deg;--y:26px;--tx:300px}
+  .spec:nth-child(2){--r:0deg;--y:0px;--tx:0px}
+  .spec:nth-child(3){--r:7deg;--y:26px;--tx:-300px}
+  .spec{transform:translateY(var(--y)) rotate(var(--r))}
+  .spec:hover,.spec:focus-within{transform:translateY(calc(var(--y) - 18px)) rotate(calc(var(--r) / 2));z-index:5;box-shadow:0 2px 3px #0003,0 40px 60px -26px #000}
+  .js .jeu.replie .spec{transform:translateX(var(--tx)) translateY(40px) rotate(0deg)}
+  .spec .lettre{top:auto;bottom:-18px;right:22px;transform:none;font-size:230px}
+  .spec h3{font-size:31px}
+  .spec .ajout{margin-top:auto}
+  .coin-h{top:16px;left:14px}
+  .commande{grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+  .commande-intro{position:sticky;top:60px;padding-top:30px}
+  .etapes{display:grid}
+  .formulaire{padding:44px 46px 36px}
+  .barre{display:none}
+  .bloc{padding:36px 40px 60px 70px}
+}
+@media (min-width:1200px){
+  .donne{width:390px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="coeur" viewBox="0 0 24 24"><path d="M12 21.4C9.6 18.6 2.2 13.6 2.2 8.1 2.2 5 4.5 2.7 7.4 2.7c2 0 3.6 1.1 4.6 2.8 1-1.7 2.6-2.8 4.6-2.8 2.9 0 5.2 2.3 5.2 5.4 0 5.5-7.4 10.5-9.8 13.3z"/></symbol>
+  <symbol id="pique" viewBox="0 0 24 24"><path d="M12 2.2c-2.4 3.9-9 7.3-9 12.1 0 2.7 2.1 4.6 4.6 4.6 1.6 0 2.9-.7 3.7-1.9-.3 2.1-1.2 3.4-2.9 4.6h7.2c-1.7-1.2-2.6-2.5-2.9-4.6.8 1.2 2.1 1.9 3.7 1.9 2.5 0 4.6-1.9 4.6-4.6 0-4.8-6.6-8.2-9-12.1z"/></symbol>
+  <symbol id="trefle" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4.4"/><circle cx="6.8" cy="13.6" r="4.4"/><circle cx="17.2" cy="13.6" r="4.4"/><path d="M11.1 11.5h1.8c0 4.4.9 7.1 3.1 9.9H8c2.2-2.8 3.1-5.5 3.1-9.9z"/></symbol>
+  <symbol id="carreau" viewBox="0 0 24 24"><path d="M12 1.6c2.2 3.8 4.9 7.2 8.2 10.4-3.3 3.2-6 6.6-8.2 10.4-2.2-3.8-4.9-7.2-8.2-10.4 3.3-3.2 6-6.6 8.2-10.4z"/></symbol>
+  <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="haut">
+    <span class="pastille">Maquette</span>
+    <span class="lieu">80 Grand’Rue · Grande Île<br>Strasbourg</span>
+  </div>
+
+  <div class="hero-grille">
+    <div class="donne" id="donne">
+      <div class="donne-in">
+        <div class="dos dos-2" aria-hidden="true"></div>
+        <div class="dos dos-1" aria-hidden="true"></div>
+        <div class="carte carte-hero">
+          <span class="coin coin-h" aria-hidden="true">80<svg><use href="#coeur"/></svg></span>
+          <span class="coin coin-b" aria-hidden="true">80<svg><use href="#coeur"/></svg></span>
+          <div class="cadre">
+            <div class="moitie">
+              <h1><span class="n-salon">Salon de Thé</span><span class="n-rue">Grand’Rue</span></h1>
+              <span class="n-metier">Gâteaux maison</span>
+            </div>
+            <div class="pli" aria-hidden="true"><svg class="s"><use href="#coeur"/></svg></div>
+            <div class="moitie miroir" aria-hidden="true">
+              <span class="n-salon">Salon de Thé</span><span class="n-rue">Grand’Rue</span>
+              <span class="n-metier">Gâteaux maison</span>
+            </div>
+          </div>
+        </div>
+        <span class="etiquette" aria-hidden="true">Commandes de fêtes</span>
+      </div>
+    </div>
+
+    <div class="hero-texte">
+      <p class="surtitre"><svg class="s"><use href="#coeur"/></svg>Salon de thé pâtissier</p>
+      <p class="grand">Pour les fêtes, réservez <em>votre part.</em></p>
+      <p class="chapo">Nos gâteaux maison, servis en parts généreuses. Composez votre commande ici, choisissez le jour du retrait au salon&nbsp;: nous vous confirmons par message.</p>
+      <a class="cta" id="cta-haut" href="#commander"><svg class="coeur"><use href="#coeur"/></svg>Commander pour les fêtes<svg class="fl" viewBox="0 0 24 24"><path d="M5 12h13m-5-6 6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="nous" aria-labelledby="t-nous">
+    <h2 class="surtitre" id="t-nous"><svg class="s"><use href="#pique"/></svg>Le salon</h2>
+    <p class="nous-texte">Ouvert en 2024 par <strong>Jeanne et Apolline</strong>, notre salon de thé vous reçoit au 80 Grand’Rue, dans un décor inspiré d’<em>Alice au pays des merveilles</em>.</p>
+    <p class="couleurs" aria-hidden="true"><svg class="s"><use href="#pique"/></svg><svg class="s"><use href="#coeur"/></svg><svg class="s"><use href="#carreau"/></svg><svg class="s"><use href="#trefle"/></svg></p>
+  </section>
+
+  <section class="la-carte" id="carte" aria-labelledby="t-carte">
+    <div class="entete">
+      <div>
+        <p class="surtitre"><svg class="s"><use href="#coeur"/></svg>La carte</p>
+        <h2 id="t-carte">Notre jeu, <em>côté cœur.</em></h2>
+      </div>
+      <p>Nos spécialités maison, à déguster au salon ou à réserver pour vos tables de fêtes.</p>
+    </div>
+    <ul class="jeu" id="jeu">
+      <li class="carte spec">
+        <span class="coin coin-h" aria-hidden="true">R<svg><use href="#coeur"/></svg></span>
+        <span class="coin coin-b" aria-hidden="true">R<svg><use href="#coeur"/></svg></span>
+        <span class="lettre" aria-hidden="true">R</span>
+        <h3><span class="rang">Roi de cœur</span>Gâteaux maison</h3>
+        <p>Faits ici, servis en parts généreuses.</p>
+        <button class="ajout" type="button" aria-pressed="false" data-spec="Gâteau maison"><svg class="s i-off"><use href="#plus"/></svg><svg class="s i-on"><use href="#ok"/></svg><span>Ajouter à ma commande</span></button>
+      </li>
+      <li class="carte spec">
+        <span class="coin coin-h" aria-hidden="true">D<svg><use href="#coeur"/></svg></span>
+        <span class="coin coin-b" aria-hidden="true">D<svg><use href="#coeur"/></svg></span>
+        <span class="lettre" aria-hidden="true">D</span>
+        <h3><span class="rang">Dame de cœur</span>Tarte au fromage blanc</h3>
+        <p>Dans <em>Alice</em>, la Reine de Cœur fait des tartes. Nous aussi.</p>
+        <button class="ajout" type="button" aria-pressed="false" data-spec="Tarte au fromage blanc"><svg class="s i-off"><use href="#plus"/></svg><svg class="s i-on"><use href="#ok"/></svg><span>Ajouter à ma commande</span></button>
+      </li>
+      <li class="carte spec">
+        <span class="coin coin-h" aria-hidden="true">V<svg><use href="#coeur"/></svg></span>
+        <span class="coin coin-b" aria-hidden="true">V<svg><use href="#coeur"/></svg></span>
+        <span class="lettre" aria-hidden="true">V</span>
+        <h3><span class="rang">Valet de cœur</span>Streusel</h3>
+        <p>Dans <em>Alice</em>, le Valet de Cœur est jugé pour le vol des tartes. Le streusel, lui, se partage.</p>
+        <button class="ajout" type="button" aria-pressed="false" data-spec="Streusel"><svg class="s i-off"><use href="#plus"/></svg><svg class="s i-on"><use href="#ok"/></svg><span>Ajouter à ma commande</span></button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="commande" id="commander" aria-labelledby="t-commande">
+    <div class="commande-intro">
+      <p class="surtitre"><svg class="s"><use href="#coeur"/></svg>Commandes de fêtes</p>
+      <h2 id="t-commande">Composez <em>votre commande.</em></h2>
+      <p>Choisissez vos gâteaux, le jour du retrait au salon, puis laissez votre numéro&nbsp;: nous vous confirmons la commande.</p>
+      <ol class="etapes" aria-hidden="true">
+        <li><span class="rang-mini">A<svg><use href="#coeur"/></svg></span>Votre commande</li>
+        <li><span class="rang-mini">2<svg><use href="#coeur"/></svg></span>Le jour et l’heure du retrait</li>
+        <li><span class="rang-mini">3<svg><use href="#coeur"/></svg></span>Vos coordonnées</li>
+      </ol>
+    </div>
+
+    <form class="carte formulaire" id="form" novalidate>
+      <fieldset>
+        <legend><span class="rang-mini" aria-hidden="true">A<svg><use href="#coeur"/></svg></span>Votre commande</legend>
+        <div class="puces" role="group" aria-label="Nos spécialités">
+          <button type="button" class="puce" aria-pressed="false" data-spec="Tarte au fromage blanc"><svg class="s"><use href="#coeur"/></svg>Tarte au fromage blanc</button>
+          <button type="button" class="puce" aria-pressed="false" data-spec="Streusel"><svg class="s"><use href="#coeur"/></svg>Streusel</button>
+          <button type="button" class="puce" aria-pressed="false" data-spec="Gâteau maison"><svg class="s"><use href="#coeur"/></svg>Gâteau maison</button>
+        </div>
+        <div class="champ">
+          <label for="f-commande">Précisions <span class="aide">Nombre de parts, nombre de personnes…</span></label>
+          <textarea id="f-commande" name="commande" rows="3" placeholder="Ex. : une tarte au fromage blanc pour 8 personnes"></textarea>
+        </div>
+        <p class="alerte" id="alerte-commande" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="rang-mini" aria-hidden="true">2<svg><use href="#coeur"/></svg></span>Retrait au salon</legend>
+        <div class="duo">
+          <div class="champ"><label for="f-date">Jour</label><select id="f-date" name="date" required aria-describedby="aide-date"><option value="">Choisir</option></select></div>
+          <div class="champ"><label for="f-heure">Heure</label>
+            <select id="f-heure" name="heure" required>
+              <option value="">Choisir</option>
+              <option>8h30</option><option>9h00</option><option>9h30</option><option>10h00</option><option>10h30</option><option>11h00</option><option>11h30</option><option>12h00</option><option>12h30</option><option>13h00</option><option>13h30</option><option>14h00</option><option>14h30</option><option>15h00</option><option>15h30</option><option>16h00</option><option>16h30</option><option>17h00</option><option>17h30</option>
+            </select>
+          </div>
+        </div>
+        <p class="aide" id="aide-date">Du mardi au samedi, horaires à confirmer.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="rang-mini" aria-hidden="true">3<svg><use href="#coeur"/></svg></span>Vos coordonnées</legend>
+        <div class="champ"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+        <div class="champ"><label for="f-tel">Téléphone <span class="aide">Pour vous confirmer la commande</span></label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      </fieldset>
+
+      <div class="envoi">
+        <button class="cta" type="submit" id="envoyer"><span class="wa-rond"><svg><use href="#wa"/></svg></span>Commander sur WhatsApp</button>
+        <p class="mention">Démonstration&nbsp;: rien n’est envoyé.</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="infos" id="infos" aria-labelledby="t-infos">
+    <div class="infos-tete">
+      <p class="surtitre"><svg class="s"><use href="#pique"/></svg>Venir au salon</p>
+      <h2 id="t-infos">Au 80 <em>Grand’Rue.</em></h2>
+    </div>
+    <div class="infos-grille">
+      <article class="carte bloc" aria-labelledby="t-horaires">
+        <span class="coin coin-h noir" aria-hidden="true">7<svg><use href="#pique"/></svg></span>
+        <span class="coin coin-b noir" aria-hidden="true">7<svg><use href="#pique"/></svg></span>
+        <h3 id="t-horaires">Horaires</h3>
+        <div class="echelle" aria-hidden="true"><span style="left:0">7h</span><span style="left:38.46%">12h</span><span style="left:69.23%">16h</span><span>20h</span></div>
+        <ul class="horaires" aria-label="Horaires d’ouverture, à confirmer">
+          <li data-jour="0"><span class="jn">Lundi</span><span class="h">Fermé</span><span class="frise" aria-hidden="true"></span></li>
+          <li data-jour="1"><span class="jn">Mardi</span><span class="h">8h30 – 18h</span><span class="frise" aria-hidden="true"><i style="--d:8.5;--f:18"></i></span></li>
+          <li data-jour="2"><span class="jn">Mercredi</span><span class="h">8h30 – 18h</span><span class="frise" aria-hidden="true"><i style="--d:8.5;--f:18"></i></span></li>
+          <li data-jour="3"><span class="jn">Jeudi</span><span class="h">8h30 – 18h</span><span class="frise" aria-hidden="true"><i style="--d:8.5;--f:18"></i></span></li>
+          <li data-jour="4"><span class="jn">Vendredi</span><span class="h">8h30 – 18h</span><span class="frise" aria-hidden="true"><i style="--d:8.5;--f:18"></i></span></li>
+          <li data-jour="5"><span class="jn">Samedi</span><span class="h">8h30 – 18h</span><span class="frise" aria-hidden="true"><i style="--d:8.5;--f:18"></i></span></li>
+          <li data-jour="6"><span class="jn">Dimanche</span><span class="h">À confirmer</span><span class="frise doute" aria-hidden="true"></span></li>
+        </ul>
+        <p class="note">Horaires relevés en ligne, à confirmer. Une fiche indique 18h30 le mardi et le mercredi.</p>
+      </article>
+
+      <article class="carte bloc bloc-adresse" aria-labelledby="t-adresse">
+        <span class="filigrane" aria-hidden="true">80</span>
+        <span class="coin coin-h" aria-hidden="true">80<svg><use href="#coeur"/></svg></span>
+        <span class="coin coin-b" aria-hidden="true">80<svg><use href="#coeur"/></svg></span>
+        <h3 id="t-adresse">Nous trouver</h3>
+        <p class="adresse">80 Grand’Rue<br><em>67000 Strasbourg</em></p>
+        <p class="quartier">Sur la Grande Île, dans la Grand’Rue.</p>
+        <div class="actions">
+          <a class="bouton" href="tel:+33388321270"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler · 03 88 32 12 70</a>
+          <a class="bouton" href="https://www.google.com/maps/search/?api=1&amp;query=80%20Grand%27Rue%2C%2067000%20Strasbourg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Itinéraire</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <p class="couleurs" aria-hidden="true"><svg class="s"><use href="#pique"/></svg><svg class="s"><use href="#coeur"/></svg><svg class="s"><use href="#carreau"/></svg><svg class="s"><use href="#trefle"/></svg></p>
+    <p>Informations relevées sur des fiches publiques (Citizenkid, Mapstr, au-magasin.fr)&nbsp;: à confirmer avec le salon.</p>
+    <p>Page de démonstration non officielle&nbsp;: aucune commande n’est transmise.</p>
+    <p class="sig">Maquette préparée par BRUNFRAME</p>
+  </div>
+</footer>
+
+<div class="barre cachee" id="barre">
+  <a class="cta" href="#commander"><svg class="coeur"><use href="#coeur"/></svg>Commander pour les fêtes<span class="compte" id="compte"></span></a>
+</div>
+
+<p class="sr" id="annonce" aria-live="polite"></p>
+
+<dialog id="apercu" aria-labelledby="dlg-titre" aria-describedby="dlg-demo">
+  <div class="dlg-sur"><span>Aperçu · côté salon</span><button class="x" type="button" id="dlg-x" aria-label="Fermer l’aperçu">×</button></div>
+  <div class="tel">
+    <div class="tel-tete">
+      <span class="avatar" id="dlg-avatar" aria-hidden="true">?</span>
+      <div><strong id="dlg-titre">Client</strong><small id="dlg-sous">Nouveau message</small></div>
+    </div>
+    <div class="fil" id="fil">
+      <span class="jour">Aujourd’hui</span>
+      <div class="tape" id="tape" hidden><i></i><i></i><i></i></div>
+      <div class="bulle" id="bulle" hidden><span class="bulle-txt" id="bulle-txt"></span><span class="bulle-h" id="bulle-h"></span></div>
+    </div>
+  </div>
+  <div class="dlg-pied">
+    <p class="demo" id="dlg-demo"><svg><use href="#coeur"/></svg><span><strong>Démonstration&nbsp;: rien n’est envoyé.</strong> Voici la commande telle que le salon la recevrait sur WhatsApp.</span></p>
+    <p class="dlg-info">Le numéro public du salon (03 88 32 12 70) est un fixe&nbsp;: l’envoi réel demanderait un numéro WhatsApp.</p>
+    <button class="cta" type="button" id="dlg-fermer">Modifier ma commande</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var d = document, root = d.documentElement;
+  root.classList.add("js");
+  var reduit = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  function $(s) { return d.querySelector(s); }
+  function $$(s) { return Array.prototype.slice.call(d.querySelectorAll(s)); }
+  function deux(n) { return (n < 10 ? "0" : "") + n; }
+
+  /* Heure de Strasbourg */
+  var ici;
+  try { ici = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" })); } catch (e) { ici = new Date(); }
+  if (isNaN(ici.getTime())) ici = new Date();
+
+  /* Horaires : ligne du jour */
+  var ligne = $('.horaires li[data-jour="' + ((ici.getDay() + 6) % 7) + '"]');
+  if (ligne) {
+    ligne.classList.add("auj");
+    var tag = d.createElement("span"); tag.className = "auj-tag"; tag.textContent = "Aujourd’hui";
+    ligne.querySelector(".jn").appendChild(tag);
+  }
+
+  /* Choix des spécialités : puces du formulaire + boutons de la carte, synchronisés */
+  var form = $("#form"), zone = form.elements.commande, annonce = $("#annonce"), compte = $("#compte");
+  var puces = $$(".puce"), ajouts = $$(".ajout");
+  function choisies() { return puces.filter(function (p) { return p.getAttribute("aria-pressed") === "true"; }).map(function (p) { return p.getAttribute("data-spec"); }); }
+  function regle(spec, on) {
+    puces.concat(ajouts).forEach(function (b) {
+      if (b.getAttribute("data-spec") !== spec) return;
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      if (b.classList.contains("ajout")) b.querySelector("span").textContent = on ? "Dans votre commande" : "Ajouter à ma commande";
+    });
+    var n = choisies().length;
+    compte.textContent = n ? String(n) : "";
+    annonce.textContent = spec + (on ? " ajouté à votre commande." : " retiré de votre commande.");
+    verifCommande(false);
+  }
+  puces.concat(ajouts).forEach(function (b) {
+    b.addEventListener("click", function () { regle(b.getAttribute("data-spec"), b.getAttribute("aria-pressed") !== "true"); });
+  });
+
+  /* Vérifications douces */
+  var alerte = $("#alerte-commande");
+  function verifCommande(montrer) {
+    var ok = choisies().length > 0 || zone.value.trim().length > 0;
+    zone.setCustomValidity(ok ? "" : "Choisissez une spécialité ou décrivez votre commande.");
+    if (ok) alerte.textContent = ""; else if (montrer) alerte.textContent = "Choisissez une spécialité ou décrivez votre commande.";
+    return ok;
+  }
+  zone.addEventListener("input", function () { verifCommande(false); });
+
+  /* Jour de retrait : les jours d'ouverture relevés (mardi au samedi), à partir de demain */
+  var champDate = form.elements.date;
+  for (var k = 1, n = 0; n < 36 && k < 70; k++) {
+    var dt = new Date(ici.getFullYear(), ici.getMonth(), ici.getDate() + k), jj = dt.getDay();
+    if (jj === 0 || jj === 1) continue;
+    var md = deux(dt.getMonth() + 1) + "-" + deux(dt.getDate());
+    if (md === "12-25" || md === "12-26" || md === "01-01") continue; /* jours fériés en Alsace */
+    var o = d.createElement("option");
+    o.value = dt.getFullYear() + "-" + deux(dt.getMonth() + 1) + "-" + deux(dt.getDate());
+    var txt = dt.toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short" });
+    o.textContent = txt.charAt(0).toUpperCase() + txt.slice(1);
+    champDate.appendChild(o); n++;
+  }
+  function verifDate() {
+    champDate.setCustomValidity(champDate.value ? "" : "Choisissez le jour du retrait.");
+    return !!champDate.value;
+  }
+  champDate.addEventListener("change", verifDate);
+
+  var champTel = form.elements.tel;
+  function verifTel() {
+    var chiffres = champTel.value.replace(/\D/g, "");
+    champTel.setCustomValidity(champTel.value && chiffres.length < 9 ? "Indiquez un numéro de téléphone complet." : "");
+  }
+  champTel.addEventListener("input", verifTel);
+
+  /* Aperçu WhatsApp */
+  var dlg = $("#apercu"), bulle = $("#bulle"), tape = $("#tape"), minuteur;
+  function ouvrir() { if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); }
+  function fermer() { clearTimeout(minuteur); if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
+  $("#dlg-x").addEventListener("click", fermer);
+  $("#dlg-fermer").addEventListener("click", fermer);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) fermer(); });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    verifCommande(true); verifDate(); verifTel();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var choix = choisies(), precis = zone.value.trim(), nom = form.elements.nom.value.trim(), tel = champTel.value.trim();
+    var jour = new Date(champDate.value + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+    var l = ["Bonjour, je souhaite commander pour les fêtes :"];
+    choix.forEach(function (c) { l.push("• " + c); });
+    if (precis) l.push((choix.length ? "Précisions : " : "") + precis);
+    l.push("", "Retrait au salon : " + jour + ", vers " + form.elements.heure.value, "Nom : " + nom, "Tél. : " + tel);
+    $("#bulle-txt").textContent = l.join("\n");
+    var maintenant = new Date();
+    $("#bulle-h").textContent = deux(maintenant.getHours()) + ":" + deux(maintenant.getMinutes());
+    $("#dlg-titre").textContent = nom;
+    $("#dlg-sous").textContent = tel + " · nouveau message";
+    $("#dlg-avatar").textContent = nom.charAt(0).toUpperCase() || "?";
+    clearTimeout(minuteur);
+    bulle.classList.remove("entre");
+    if (reduit) { tape.hidden = true; bulle.hidden = false; }
+    else {
+      bulle.hidden = true; tape.hidden = false;
+      minuteur = setTimeout(function () { tape.hidden = true; bulle.hidden = false; bulle.classList.add("entre"); }, 750);
+    }
+    ouvrir();
+  });
+
+  /* Barre fixe : visible seulement quand ni le bouton du haut ni le formulaire ne sont à l'écran */
+  var barre = $("#barre");
+  if ("IntersectionObserver" in window) {
+    var vus = new Set();
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) vus.add(en.target); else vus.delete(en.target); });
+      barre.classList.toggle("cachee", vus.size > 0);
+    });
+    io.observe($("#cta-haut")); io.observe($("#commander"));
+  } else { barre.classList.remove("cachee"); }
+
+  /* Les cartes de la carte se distribuent quand on arrive dessus */
+  var jeu = $("#jeu");
+  if (!reduit && "IntersectionObserver" in window) {
+    var r = jeu.getBoundingClientRect();
+    if (r.top > window.innerHeight) {
+      jeu.classList.add("replie");
+      var io2 = new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting) { jeu.classList.remove("replie"); io2.disconnect(); }
+      }, { threshold: 0.2 });
+      io2.observe(jeu);
+    }
+  }
+
+  /* Carte du haut : léger relief au survol (souris uniquement) */
+  var donne = $("#donne");
+  if (!reduit && window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    var inn = donne.querySelector(".donne-in"), hero = donne.querySelector(".carte-hero");
+    donne.addEventListener("pointermove", function (e) {
+      var b = donne.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - 0.5, y = (e.clientY - b.top) / b.height - 0.5;
+      inn.style.setProperty("--ry", (x * 10).toFixed(2) + "deg");
+      inn.style.setProperty("--rx", (-y * 8).toFixed(2) + "deg");
+      hero.style.setProperty("--mx", ((x + 0.5) * 100).toFixed(1) + "%");
+      hero.style.setProperty("--my", ((y + 0.5) * 100).toFixed(1) + "%");
+      hero.style.setProperty("--brillance", "1");
+    });
+    donne.addEventListener("pointerleave", function () {
+      inn.style.setProperty("--ry", "0deg"); inn.style.setProperty("--rx", "0deg"); hero.style.setProperty("--brillance", "0");
+    });
+  }
+})();
+</script>
+</body>
+</html>

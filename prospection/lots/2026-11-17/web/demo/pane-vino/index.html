@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Pane Vino — épicerie fine italienne, traiteur et cave à vins à Strasbourg</title>
+<meta name="description" content="Maquette pour Pane Vino, 8 rue du Sanglier à Strasbourg : le traiteur du chef de La Cantina, l'épicerie italienne, la cave à vins, et la commande de fêtes sur WhatsApp (démonstration).">
+<meta name="theme-color" content="#130a0e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-26 -26 52 52'%3E%3Crect x='-26' y='-26' width='52' height='52' fill='%23130a0e'/%3E%3Cg fill='%23e3b260'%3E%3Crect x='-15' y='-15' width='30' height='30'/%3E%3Crect x='-15' y='-15' width='30' height='30' transform='rotate(45)'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Gloock";src:url(fonts/gloock-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+
+:root{
+  --nuit:#130a0e;--nuit-2:#1b0d13;--nuit-3:#25121a;
+  --vin:#5c1727;--vin-2:#7e2338;
+  --or:#e3b260;--or-clair:#f5d898;--or-fonce:#a9732f;
+  --mie:#f6eddd;--mie-2:#d3c4ad;--mie-3:#ad9d84;
+  --papier:#f2e5cd;--papier-2:#e6d3b2;--encre:#2b1219;--encre-2:#5e3d43;--rouge:#8a1f2f;
+  --trait:rgba(227,178,96,.24);
+  --display:"Gloock","Bodoni 72","Didot","Bodoni MT","Book Antiqua",Georgia,serif;
+  --texte:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --g:16px;
+  --vague:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M0 4Q2.5 .6 5 4T10 4' fill='none' stroke='%23e3b260' stroke-width='1.1'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--nuit)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;color:var(--mie);font:400 16px/1.55 var(--texte);overflow-x:hidden;
+  background:var(--nuit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .86 0 0 0 0 .7 0 0 0 .045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+img,svg{display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--or-clair);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0}
+.saut{position:absolute;left:12px;top:-60px;z-index:50;background:var(--or);color:var(--nuit);padding:10px 14px;font-weight:600;text-decoration:none}
+.saut:focus{top:12px}
+
+/* Signature : le bord cranté de la roulette à pâtes */
+.cran{--r:5px;
+  -webkit-mask:linear-gradient(#000 0 0) 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat,radial-gradient(farthest-side,#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round;
+  mask:linear-gradient(#000 0 0) 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat,radial-gradient(farthest-side,#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round}
+.lisere{filter:drop-shadow(1px 0 0 var(--or-fonce)) drop-shadow(-1px 0 0 var(--or-fonce)) drop-shadow(0 1px 0 var(--or-fonce)) drop-shadow(0 -1px 0 var(--or-fonce))}
+
+.surtitre{display:flex;align-items:center;gap:10px;margin:0;font:600 12px/1.3 var(--texte);letter-spacing:.18em;text-transform:uppercase;color:var(--or)}
+.surtitre::before{content:"";flex:none;width:30px;height:8px;background:var(--vague) repeat-x 0 0/10px 8px}
+.dore{color:var(--or)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .dore{background:linear-gradient(100deg,#a56d2c 0%,#f2cf86 26%,#e0a955 44%,#fbe6b4 56%,#c78b3c 78%,#f0c879 100%);background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+}
+
+/* Boutons */
+.cta{--r:3.5px;position:relative;display:flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:16px 26px;border:0;
+  background:var(--or);color:var(--nuit);font:600 17px/1.2 var(--texte);letter-spacing:.01em;text-decoration:none;cursor:pointer;
+  transition:background-color .2s,transform .2s}
+.cta:hover{background:var(--or-clair)}
+.cta:active{transform:scale(.985)}
+.cta:focus-visible{outline:none;box-shadow:inset 0 0 0 6px var(--or),inset 0 0 0 8px var(--nuit)}
+.cta svg{flex:none}
+.cta .fleche{transition:transform .25s}
+.cta:hover .fleche{transform:translateY(2px)}
+
+/* En-tête */
+.haut{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1180px;margin:0 auto;padding:14px var(--g) 12px}
+.lieu{font:600 12px/1.2 var(--texte);letter-spacing:.14em;text-transform:uppercase;color:var(--mie-2)}
+.pastille{display:inline-flex;align-items:center;gap:7px;padding:6px 11px 6px 9px;border:1px solid rgba(245,216,152,.5);border-radius:99px;
+  font:600 11.5px/1 var(--texte);letter-spacing:.14em;text-transform:uppercase;color:var(--or-clair);background:rgba(19,10,14,.6)}
+.pastille::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--or);box-shadow:0 0 0 3px rgba(227,178,96,.2)}
+.nav{display:none}
+
+.hero{padding:0 var(--g)}
+.hero-grille{max-width:1180px;margin:0 auto}
+.vitrine{--r:5px;position:relative;min-height:440px;padding:148px 22px 20px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  background:
+    radial-gradient(3px 3px at 18% 70%,rgba(251,230,180,.55),transparent),
+    radial-gradient(2px 2px at 82% 58%,rgba(251,230,180,.5),transparent),
+    radial-gradient(2.5px 2.5px at 66% 82%,rgba(251,230,180,.45),transparent),
+    radial-gradient(70% 38% at 50% 64%,rgba(245,216,152,.20),transparent 72%),
+    radial-gradient(140% 80% at 50% 108%,rgba(227,178,96,.42),rgba(126,35,56,.42) 42%,rgba(92,23,39,0) 76%),
+    linear-gradient(180deg,#1c0d14 0%,#2b131d 100%)}
+.guirlande{position:absolute;left:0;right:0;top:0;height:150px;pointer-events:none}
+.fil{position:absolute;top:0;width:1px;background:linear-gradient(rgba(227,178,96,.05),rgba(227,178,96,.6));transform-origin:50% 0}
+.fil svg{position:absolute;left:50%;bottom:0;transform:translate(-50%,46%);overflow:visible;fill:rgba(227,178,96,.07);stroke:var(--or-clair);stroke-width:2.2;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(245,216,152,.45))}
+.fil svg.plein{fill:var(--or-clair);stroke:none}
+.fil svg .coeur{fill:var(--or-clair);stroke:none}
+.nom{position:relative;margin:0;font:400 clamp(6rem,30.5vw,12.6rem)/.86 var(--display);letter-spacing:-.025em}
+.nom span{display:block;padding:.06em 0 .02em}
+.nom span+span{text-align:right;margin-top:-.06em}
+.vit-pied{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;margin-top:16px;padding-top:13px;border-top:1px solid var(--trait)}
+.metier{margin:0;font:600 11.5px/1.45 var(--texte);letter-spacing:.15em;text-transform:uppercase;color:var(--or-clair)}
+.adr{margin:0;font-size:14px;color:var(--mie-2)}
+.accroche{padding:24px 2px 8px}
+.titre-hero{margin:12px 0 10px;font:400 clamp(1.85rem,7.7vw,3.3rem)/1.06 var(--display);letter-spacing:-.005em;text-wrap:balance}
+.titre-hero em{font-style:normal;color:var(--or-clair)}
+.chapo{margin:0 0 20px;color:var(--mie-2);font-size:16px;max-width:34em}
+
+/* Roulette : la ligne de découpe */
+.roulette{position:relative;height:30px;max-width:1180px;margin:56px auto 0;padding:0 var(--g)}
+.trace{position:absolute;left:var(--g);right:calc(var(--g) + 22px);top:11px;height:8px;background:var(--vague) repeat-x 0 0/10px 8px;opacity:.55}
+.molette{position:absolute;top:1px;right:var(--g);width:28px;height:28px;color:var(--or)}
+.molette .disque{fill:none;stroke:currentColor;stroke-width:1.3}
+.molette .axe{fill:currentColor}
+
+/* Sections */
+.section{max-width:1180px;margin:0 auto;padding:40px var(--g) 8px}
+.titre{margin:12px 0 14px;font:400 clamp(2rem,8.2vw,3.5rem)/1.05 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.texte{margin:0;color:var(--mie-2);max-width:36em}
+.texte strong{color:var(--mie);font-weight:600}
+
+/* La carte du chef */
+.carte-liste{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--trait)}
+.plat{width:100%;display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:10px;padding:17px 0;background:none;border:0;border-bottom:1px solid var(--trait);
+  text-align:left;cursor:pointer;transition:background-color .25s}
+.plat:hover{background:linear-gradient(90deg,rgba(227,178,96,.07),transparent 70%)}
+.plat-num{align-self:start;padding-top:.9em;font:600 11.5px/1 var(--texte);letter-spacing:.08em;color:var(--or)}
+.plat-nom{font:400 clamp(1.95rem,8.6vw,3.3rem)/1.02 var(--display);color:var(--mie)}
+.plat-etat{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--texte);color:var(--mie-3);white-space:nowrap}
+.raviolo{width:20px;height:20px;fill:none;stroke:var(--or);stroke-width:2.6;transition:fill .2s,transform .3s}
+.plat[aria-pressed="true"] .raviolo,.puce[aria-pressed="true"] .raviolo{fill:var(--or);transform:rotate(45deg)}
+.plat[aria-pressed="true"] .plat-etat{color:var(--or-clair)}
+.plat .oui{display:none}
+.plat[aria-pressed="true"] .oui{display:inline}
+.plat[aria-pressed="true"] .non{display:none}
+.astuce{display:flex;align-items:center;gap:10px;margin:16px 0 0;font-size:14px;color:var(--mie-3)}
+.maison{margin-top:18px;padding:0;font-size:15px;color:var(--mie-2)}
+.maison b{font-weight:600;color:var(--mie)}
+
+/* Épicerie & cave */
+.rayons{display:grid;gap:14px;margin-top:26px}
+.rayon{padding:22px 20px 22px;background:linear-gradient(160deg,var(--nuit-3),var(--nuit-2))}
+.rayon h3{display:flex;align-items:center;gap:12px;margin:0 0 8px;font:400 1.75rem/1.1 var(--display);color:var(--mie)}
+.rayon h3 svg{width:24px;height:24px;fill:rgba(227,178,96,.18);stroke:var(--or);stroke-width:3;flex:none;overflow:visible}
+.rayon p{margin:0;color:var(--mie-2)}
+.presse{margin:38px 0 0;padding:0;list-style:none;display:grid;gap:26px}
+.presse blockquote{margin:0;font:400 clamp(1.45rem,6vw,2.1rem)/1.2 var(--display);color:var(--mie);text-wrap:pretty}
+.presse blockquote::before{content:"« ";color:var(--or)}
+.presse blockquote::after{content:" »";color:var(--or)}
+.presse cite{display:block;margin-top:10px;font:600 12px/1.3 var(--texte);letter-spacing:.16em;text-transform:uppercase;font-style:normal;color:var(--or)}
+.presse-note{margin:22px 0 0;font-size:14px;color:var(--mie-3)}
+
+/* Bon de commande */
+.commande{position:relative;margin-top:16px;padding:52px 0 64px;background:
+  radial-gradient(90% 50% at 50% 0%,rgba(126,35,56,.32),transparent 70%),var(--nuit-2)}
+.commande .section{padding-top:0}
+.ticket{--r:6px;margin-top:26px;padding:30px 20px 28px;background:var(--papier);color:var(--encre);
+  box-shadow:0 30px 60px -30px #000}
+.ticket-tete{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:16px;margin-bottom:6px;
+  border-bottom:1.5px dashed rgba(43,18,25,.28)}
+.ticket-tete b{font:400 1.6rem/1 var(--display)}
+.ticket-tete span{font:600 11px/1.3 var(--texte);letter-spacing:.14em;text-transform:uppercase;color:var(--encre-2);text-align:right}
+fieldset{margin:0;padding:22px 0 20px;border:0;min-width:0}
+fieldset+fieldset{border-top:1px solid rgba(43,18,25,.14)}
+legend{float:left;width:100%;display:flex;align-items:center;gap:12px;padding:0;margin-bottom:14px;font:400 1.5rem/1.1 var(--display);color:var(--encre)}
+legend .n{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--vin);color:var(--papier);font:600 14px/1 var(--texte)}
+legend+*{clear:both}
+.puces{display:flex;flex-wrap:wrap;gap:7px 6px}
+.groupe{margin:2px 0 8px;font:600 11px/1.3 var(--texte);letter-spacing:.14em;text-transform:uppercase;color:var(--encre-2)}
+.groupe+.puces+.groupe,.puces+.groupe{margin-top:14px}
+.puce{--r:2.6px;display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:9px 12px 9px 10px;border:0;background:var(--papier-2);color:var(--encre);
+  font:600 14px/1.2 var(--texte);cursor:pointer;transition:background-color .2s,color .2s,transform .2s}
+.puce .raviolo{width:14px;height:14px;stroke:var(--vin);stroke-width:3}
+.puce:hover{background:#dcc59f}
+.puce[aria-pressed="true"]{background:var(--vin);color:var(--papier)}
+.puce[aria-pressed="true"] .raviolo{fill:var(--or-clair);stroke:var(--or-clair)}
+.puce:focus-visible{outline:none;box-shadow:inset 0 0 0 4px var(--papier-2),inset 0 0 0 6px var(--encre)}
+.puce[aria-pressed="true"]:focus-visible{box-shadow:inset 0 0 0 4px var(--vin),inset 0 0 0 6px var(--papier)}
+.tape{animation:tampon .32s ease-out}
+@keyframes tampon{40%{transform:scale(.93)}100%{transform:scale(1)}}
+.champ{display:grid;gap:7px;margin-top:16px}
+.champ>label,.etiquette{font:600 14.5px/1.3 var(--texte);color:var(--encre)}
+.aide{font-weight:400;color:var(--encre-2)}
+input[type=text],input[type=tel],textarea,select{width:100%;min-height:48px;padding:12px 13px;border:0;border-bottom:1.5px solid rgba(43,18,25,.5);border-radius:0;
+  background:rgba(255,255,255,.42);color:var(--encre);font:400 16px/1.4 var(--texte)}
+textarea{min-height:92px;resize:vertical}
+::placeholder{color:#7d6468;opacity:1}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--vin);outline-offset:2px;border-bottom-color:var(--vin)}
+select{appearance:none;-webkit-appearance:none;padding-right:40px;
+  background:rgba(255,255,255,.42) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%232b1219' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center}
+.boutiques-choix{display:grid;gap:8px}
+.choix{position:relative;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center;padding:13px 14px;border:1.5px solid rgba(43,18,25,.22);cursor:pointer;transition:border-color .2s,background-color .2s}
+.choix input{position:absolute;opacity:0;pointer-events:none}
+.choix .rond{grid-row:span 2;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--encre-2);display:grid;place-items:center}
+.choix .rond::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--vin);transform:scale(0);transition:transform .2s}
+.choix b{font-weight:600;font-size:15px}
+.choix small{font-size:13.5px;color:var(--encre-2)}
+.choix:has(input:checked){border-color:var(--vin);background:rgba(92,23,39,.06)}
+.choix:has(input:checked) .rond{border-color:var(--vin)}
+.choix:has(input:checked) .rond::after{transform:scale(1)}
+.choix:has(input:focus-visible){outline:2px solid var(--vin);outline-offset:2px}
+.jours{display:flex;gap:7px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;margin:0 -2px;scrollbar-width:thin}
+.jour{position:relative;flex:none;scroll-snap-align:start;display:grid;justify-items:center;gap:1px;width:62px;padding:9px 0 8px;border:1.5px solid rgba(43,18,25,.22);cursor:pointer;
+  transition:background-color .2s,border-color .2s,color .2s}
+.jour input{position:absolute;opacity:0;pointer-events:none}
+.jour .js-nom{font:600 11.5px/1.2 var(--texte);letter-spacing:.06em;text-transform:uppercase;color:var(--encre-2)}
+.jour .js-num{font:400 26px/1.05 var(--display)}
+.jour .js-mois{font-size:12px;color:var(--encre-2)}
+.jour:has(input:checked){background:var(--vin);border-color:var(--vin);color:var(--papier)}
+.jour:has(input:checked) span{color:var(--papier)}
+.jour:has(input:focus-visible){outline:2px solid var(--vin);outline-offset:2px}
+.jour:has(input:disabled){cursor:not-allowed;border-style:dashed;opacity:.55}
+.jour:has(input:disabled) .js-num{text-decoration:line-through;text-decoration-thickness:1px}
+.duo{display:grid;grid-template-columns:1fr;gap:0}
+.erreur{margin:2px 0 0;font-size:14px;font-weight:600;color:var(--rouge)}
+[aria-invalid="true"]{border-bottom-color:var(--rouge)!important}
+.envoi{margin-top:8px;padding-top:18px;border-top:1.5px dashed rgba(43,18,25,.28)}
+.cta.vin{width:100%;background:var(--vin);color:var(--papier)}
+.cta.vin:hover{background:var(--vin-2)}
+.cta.vin:focus-visible{box-shadow:inset 0 0 0 6px var(--vin),inset 0 0 0 8px var(--papier)}
+.demo-note{margin:12px 0 0;font-size:13.5px;color:var(--encre-2);text-align:center}
+.recap{margin:0 0 12px;font-size:14px;color:var(--encre-2);text-align:center}
+.recap:empty{display:none}
+
+/* Boutiques */
+.boutiques{display:grid;gap:34px;margin-top:28px}
+.boutique{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;align-content:start;gap:0 18px;padding-top:22px;border-top:1px solid var(--trait)}
+.numero{grid-row:span 2;font:400 104px/.82 var(--display);letter-spacing:-.04em;padding-top:.04em}
+.boutique h3{margin:0;font:400 1.7rem/1.1 var(--display)}
+.boutique .lieu-b{margin:6px 0 0;font-size:15px;color:var(--mie-2)}
+.horaires{grid-column:1/-1;width:100%;margin-top:18px;border-collapse:collapse;font-size:15px}
+.horaires th,.horaires td{padding:9px 0;border-bottom:1px solid rgba(227,178,96,.14);text-align:left;font-weight:400}
+.horaires td{text-align:right;color:var(--mie-2)}
+.horaires tr.auj th{font-weight:600;color:var(--mie)}
+.horaires tr.auj th::after{content:"aujourd'hui";margin-left:10px;padding:2px 7px;border-radius:99px;background:rgba(227,178,96,.16);font:600 10.5px/1.4 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:var(--or-clair);vertical-align:2px}
+.horaires tr.auj td{color:var(--mie)}
+.note-h{grid-column:1/-1;margin:10px 0 0;font-size:13.5px;color:var(--mie-3)}
+.actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.bouton2{display:flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:10px 12px;border:1px solid rgba(227,178,96,.55);color:var(--mie);
+  font:600 15px/1.2 var(--texte);text-decoration:none;transition:background-color .2s,border-color .2s}
+.bouton2:hover{background:rgba(227,178,96,.1);border-color:var(--or)}
+.bouton2 svg{width:18px;height:18px;fill:none;stroke:var(--or);stroke-width:1.7;flex:none}
+.bouton2 small{display:block;font-weight:400;font-size:12.5px;color:var(--mie-3)}
+
+footer{max-width:1180px;margin:64px auto 0;padding:28px var(--g) 128px;border-top:1px solid var(--trait);color:var(--mie-3);font-size:13.5px;text-align:center}
+footer .sig{margin:0 auto 18px;width:40px;height:40px;fill:rgba(227,178,96,.16);stroke:var(--or);stroke-width:2.2;overflow:visible}
+footer p{margin:6px 0}
+footer .marque-pied{font:400 1.4rem/1.2 var(--display);color:var(--mie)}
+
+/* Barre fixe : un seul appel à l'action */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px var(--g) calc(10px + env(safe-area-inset-bottom));
+  background:rgba(19,10,14,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--trait);transition:transform .3s ease,opacity .3s}
+.barre.cachee{transform:translateY(115%);opacity:0;pointer-events:none}
+.barre .cta{max-width:540px;margin:0 auto;min-height:54px}
+.compte{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 7px;border-radius:99px;background:var(--nuit);color:var(--or-clair);font:600 13px/1 var(--texte)}
+.compte[hidden]{display:none}
+.bond{animation:bond .4s ease-out}
+@keyframes bond{40%{transform:scale(1.25)}}
+
+/* Aperçu WhatsApp (vue du commerçant) */
+dialog{width:min(94vw,410px);max-height:calc(100dvh - 24px);padding:6px 4px;border:0;background:transparent;color:var(--mie);overflow:auto;overscroll-behavior:contain}
+dialog::backdrop{background:rgba(8,4,6,.78);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.dlg{display:grid;gap:12px}
+.dlg-legende{margin:0;text-align:center}
+.dlg-legende b{display:block;font:400 1.4rem/1.15 var(--display);color:var(--mie)}
+.dlg-legende span{font-size:14px;color:var(--mie-2)}
+.wa{overflow:hidden;border-radius:22px;background:#0b141a;box-shadow:0 30px 80px -20px #000,0 0 0 1px rgba(255,255,255,.06);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wa-tete{display:flex;align-items:center;gap:11px;padding:10px 14px;background:#202c33;color:#e9edef}
+.wa-tete svg{width:20px;height:20px;fill:none;stroke:#aebac1;stroke-width:2}
+.wa-avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#6a7175;color:#fff;font-weight:600;font-size:15px}
+.wa-qui b{display:block;font-size:16px;font-weight:600;line-height:1.2}
+.wa-qui small{font-size:13px;color:#8696a0}
+.wa-fil{position:relative;display:grid;gap:8px;padding:14px 14px 18px;
+  background:#0b141a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.035' stroke-width='1.2'%3E%3Crect x='10' y='10' width='12' height='12'/%3E%3Crect x='10' y='10' width='12' height='12' transform='rotate(45 16 16)'/%3E%3Ccircle cx='46' cy='46' r='6'/%3E%3C/g%3E%3C/svg%3E")}
+.wa-date{justify-self:center;padding:5px 12px;border-radius:8px;background:#182229;color:#8696a0;font-size:12.5px}
+.wa-bulle{position:relative;justify-self:start;max-width:88%;padding:8px 10px 8px 11px;border-radius:0 10px 10px 10px;background:#202c33;color:#e9edef;font-size:14.5px;line-height:1.4;
+  box-shadow:0 1px 1px rgba(0,0,0,.25)}
+.wa-bulle::before{content:"";position:absolute;left:-8px;top:0;border:8px solid transparent;border-top-color:#202c33;border-right-color:#202c33;border-width:0 8px 10px 0}
+.wa-bulle .ligne{min-height:1.4em;overflow-wrap:anywhere}
+.wa-bulle strong{font-weight:700}
+.wa-heure{display:block;margin-top:2px;text-align:right;font-size:11.5px;color:#8696a0}
+.wa-saisie{display:flex;align-items:center;gap:10px;padding:6px 12px 10px;background:#0b141a}
+.wa-saisie span{flex:1;padding:10px 14px;border-radius:99px;background:#202c33;color:#8696a0;font-size:14.5px}
+.wa-saisie i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#00a884}
+.wa-saisie i svg{width:20px;height:20px;fill:#0b141a}
+.dlg-note{margin:0;padding:12px 14px;border:1px dashed rgba(245,216,152,.55);color:var(--mie-2);font-size:14px;text-align:center;background:rgba(19,10,14,.7)}
+.dlg-note strong{color:var(--or-clair);font-weight:600}
+.dlg-actions{display:grid;gap:8px}
+.dlg-actions .cta{min-height:52px}
+.lien-wa{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;color:var(--mie-2);font-size:14.5px;text-decoration:underline;text-underline-offset:3px}
+.lien-wa[hidden]{display:none}
+
+/* Animations utiles, coupées sous reduced-motion */
+@media (prefers-reduced-motion:no-preference){
+  .fil{animation:balance 6.5s ease-in-out infinite alternate}
+  .fil:nth-child(2n){animation-duration:8s;animation-delay:-3s}
+  .fil:nth-child(3n){animation-duration:7.2s;animation-delay:-1.5s}
+  .fil svg{animation:scintille 3.4s ease-in-out infinite}
+  .fil:nth-child(2n) svg{animation-delay:-1.2s}
+  .fil:nth-child(3n) svg{animation-delay:-2.3s}
+  .dore{animation:reflet 3.2s .3s ease-out both}
+  html.anim .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  html.anim .rv.vu{opacity:1;transform:none}
+  html.anim .roulette .trace{clip-path:inset(0 100% 0 0);transition:clip-path 1.5s cubic-bezier(.45,.05,.25,1)}
+  html.anim .roulette .molette{right:auto;left:var(--g);transition:left 1.5s cubic-bezier(.45,.05,.25,1),transform 1.5s cubic-bezier(.45,.05,.25,1)}
+  html.anim .roulette.vu .trace{clip-path:inset(0 0 0 0)}
+  html.anim .roulette.vu .molette{left:calc(100% - var(--g) - 28px);transform:rotate(1080deg)}
+  .wa-bulle{animation:arrive .45s .15s cubic-bezier(.2,.8,.2,1) both}
+}
+@keyframes balance{from{transform:rotate(-2.4deg)}to{transform:rotate(2.4deg)}}
+@keyframes scintille{0%,100%{opacity:1}50%{opacity:.62}}
+@keyframes reflet{from{background-position:100% 0}to{background-position:0 0}}
+@keyframes arrive{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Grand écran */
+@media (min-width:700px){
+  :root{--g:32px}
+  .rayons{grid-template-columns:1fr 1fr}
+  .presse{grid-template-columns:1.2fr 1fr;gap:40px}
+  .duo{grid-template-columns:1fr 1fr;gap:16px}
+  .boutiques-choix{grid-template-columns:1fr 1fr}
+  .ticket{padding:40px 40px 36px}
+  .jours{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));overflow:visible;margin:0;padding:2px 0 4px}
+  .jour{width:auto}
+}
+@media (min-width:980px){
+  :root{--g:48px}
+  .haut{padding-top:22px;padding-bottom:20px}
+  .nav{display:flex;gap:28px;margin-left:auto;margin-right:28px}
+  .nav a{font:600 13px/1 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:var(--mie-2);text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
+  .nav a:hover{color:var(--mie);border-bottom-color:var(--or)}
+  .hero-grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.4fr);gap:64px;align-items:end}
+  .accroche{order:-1;padding:0 0 26px}
+  .vitrine{min-height:clamp(560px,calc(100vh - 110px),680px);padding:200px 40px 30px}
+  .guirlande{height:200px;zoom:1.45}
+  .nom{font-size:clamp(8rem,15.5vw,13.5rem)}
+  .titre-hero{font-size:clamp(2.6rem,4.3vw,3.7rem);margin-top:20px}
+  .chapo{font-size:17.5px;margin-bottom:30px}
+  .accroche .cta{display:inline-flex}
+  .titre{font-size:clamp(2.4rem,3.5vw,3.05rem)}
+  .roulette{margin-top:88px}
+  .section{padding-top:56px}
+  .carte{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.4fr);gap:64px;align-items:start}
+  .carte .intro{position:sticky;top:40px}
+  .carte-liste{margin-top:0}
+  .plat{padding:22px 0;grid-template-columns:44px 1fr auto}
+  .epicerie{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.4fr);gap:64px;align-items:start}
+  .epicerie .rayons{margin-top:0}
+  .presse{grid-column:1/-1;margin-top:20px;padding-top:36px;border-top:1px solid var(--trait)}
+  .presse-note{grid-column:1/-1;margin-top:-30px}
+  .commande{padding:80px 0 96px}
+  .bon{display:grid;grid-template-columns:minmax(0,4.6fr) minmax(0,7fr);gap:64px;align-items:start}
+  .bon .intro{position:sticky;top:40px}
+  .ticket{margin-top:0;padding:44px 48px 40px}
+  .boutiques{grid-template-columns:1fr 1fr;gap:56px}
+  .numero{font-size:150px}
+  .barre{left:auto;right:28px;bottom:24px;padding:0;background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .barre .cta{box-shadow:0 18px 40px -14px #000}
+}
+</style>
+</head>
+<body>
+<a class="saut" href="#commander">Aller au bon de commande</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="raviolo" d="M-20 -20a3.6 3.6 0 0 1 6.667 0a3.6 3.6 0 0 1 6.667 0a3.6 3.6 0 0 1 6.667 0a3.6 3.6 0 0 1 6.667 0a3.6 3.6 0 0 1 6.667 0a3.6 3.6 0 0 1 6.667 0a3.6 3.6 0 0 1 0 6.667a3.6 3.6 0 0 1 0 6.667a3.6 3.6 0 0 1 0 6.667a3.6 3.6 0 0 1 0 6.667a3.6 3.6 0 0 1 0 6.667a3.6 3.6 0 0 1 0 6.667a3.6 3.6 0 0 1 -6.667 0a3.6 3.6 0 0 1 -6.667 0a3.6 3.6 0 0 1 -6.667 0a3.6 3.6 0 0 1 -6.667 0a3.6 3.6 0 0 1 -6.667 0a3.6 3.6 0 0 1 -6.667 0a3.6 3.6 0 0 1 0 -6.667a3.6 3.6 0 0 1 0 -6.667a3.6 3.6 0 0 1 0 -6.667a3.6 3.6 0 0 1 0 -6.667a3.6 3.6 0 0 1 0 -6.667a3.6 3.6 0 0 1 0 -6.667z"/>
+    <path id="molette" d="M0 -11A2.36 2.36 0 0 1 4.21 -10.16A2.36 2.36 0 0 1 7.78 -7.78A2.36 2.36 0 0 1 10.16 -4.21A2.36 2.36 0 0 1 11 0A2.36 2.36 0 0 1 10.16 4.21A2.36 2.36 0 0 1 7.78 7.78A2.36 2.36 0 0 1 4.21 10.16A2.36 2.36 0 0 1 0 11A2.36 2.36 0 0 1 -4.21 10.16A2.36 2.36 0 0 1 -7.78 7.78A2.36 2.36 0 0 1 -10.16 4.21A2.36 2.36 0 0 1 -11 0A2.36 2.36 0 0 1 -10.16 -4.21A2.36 2.36 0 0 1 -7.78 -7.78A2.36 2.36 0 0 1 -4.21 -10.16A2.36 2.36 0 0 1 0 -11z"/>
+    <g id="etoile"><use href="#raviolo"/><use href="#raviolo" transform="rotate(45)"/></g>
+  </defs>
+</svg>
+
+<header>
+  <div class="haut">
+    <span class="lieu">Strasbourg · Grande Île</span>
+    <nav class="nav" aria-label="Sections">
+      <a href="#carte">Traiteur</a><a href="#epicerie">Épicerie &amp; cave</a><a href="#boutiques">Boutiques</a>
+    </nav>
+    <span class="pastille">Maquette</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-grille">
+      <div class="lisere">
+        <div class="vitrine cran">
+          <div class="guirlande" aria-hidden="true">
+            <span class="fil" style="left:8%;height:54px"><svg class="plein" width="18" height="18" viewBox="-30 -30 60 60"><use href="#raviolo" transform="rotate(45) scale(.8)"/></svg></span>
+            <span class="fil" style="left:21%;height:100px"><svg width="40" height="40" viewBox="-30 -30 60 60"><use href="#etoile"/><circle class="coeur" r="4"/></svg></span>
+            <span class="fil" style="left:37%;height:40px"><svg width="24" height="24" viewBox="-30 -30 60 60"><use href="#etoile"/><circle class="coeur" r="4"/></svg></span>
+            <span class="fil" style="left:55%;height:80px"><svg class="plein" width="22" height="22" viewBox="-30 -30 60 60"><use href="#raviolo" transform="rotate(45) scale(.8)"/></svg></span>
+            <span class="fil" style="left:71%;height:30px"><svg width="26" height="26" viewBox="-30 -30 60 60"><use href="#etoile"/><circle class="coeur" r="4"/></svg></span>
+            <span class="fil" style="left:87%;height:112px"><svg width="44" height="44" viewBox="-30 -30 60 60"><use href="#etoile"/><circle class="coeur" r="4"/></svg></span>
+          </div>
+          <h1 class="nom"><span class="dore">Pane</span><span class="dore">Vino</span></h1>
+          <div class="vit-pied">
+            <p class="metier">Épicerie fine italienne<br>Traiteur · Cave&nbsp;à&nbsp;vins</p>
+            <p class="adr">8 rue du Sanglier, à l'angle de la rue du Chaudron</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accroche">
+        <p class="surtitre">Commandes de fêtes</p>
+        <h2 class="titre-hero">Cette année, la table des fêtes passe par <em>la&nbsp;rue du&nbsp;Sanglier.</em></h2>
+        <p class="chapo">Composez votre commande, choisissez le jour, passez la prendre en boutique.</p>
+        <a class="cta cran" id="cta-haut" href="#commander">Composer ma commande
+          <svg class="fleche" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2v13M3.5 9.5 9 15l5.5-5.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="roulette rv" aria-hidden="true"><span class="trace"></span><svg class="molette" viewBox="-14 -14 28 28"><use class="disque" href="#molette"/><circle class="axe" r="2.4"/></svg></div>
+
+  <section class="section carte" id="carte" aria-labelledby="t-carte">
+    <div class="intro rv">
+      <p class="surtitre">Traiteur du jour</p>
+      <h2 class="titre" id="t-carte">Chaque jour, le chef de notre restaurant La Cantina cuisine pour l'épicerie.</h2>
+      <p class="texte">Une sélection de plats traiteur, préparée chaque jour. <strong>Touchez un plat</strong> pour l'ajouter à votre commande.</p>
+    </div>
+    <div class="rv">
+      <ul class="carte-liste">
+        <li><button class="plat" type="button" data-spe="Lasagnes" aria-pressed="false"><span class="plat-num" aria-hidden="true">01</span><span class="plat-nom">Lasagnes</span><span class="plat-etat" aria-hidden="true"><span class="non">Ajouter</span><span class="oui">Ajouté</span><svg class="raviolo" viewBox="-26 -26 52 52"><use href="#raviolo"/></svg></span></button></li>
+        <li><button class="plat" type="button" data-spe="Pâtes farcies" aria-pressed="false"><span class="plat-num" aria-hidden="true">02</span><span class="plat-nom">Pâtes farcies</span><span class="plat-etat" aria-hidden="true"><span class="non">Ajouter</span><span class="oui">Ajouté</span><svg class="raviolo" viewBox="-26 -26 52 52"><use href="#raviolo"/></svg></span></button></li>
+        <li><button class="plat" type="button" data-spe="Pizzas à la part" aria-pressed="false"><span class="plat-num" aria-hidden="true">03</span><span class="plat-nom">Pizzas à la part</span><span class="plat-etat" aria-hidden="true"><span class="non">Ajouter</span><span class="oui">Ajouté</span><svg class="raviolo" viewBox="-26 -26 52 52"><use href="#raviolo"/></svg></span></button></li>
+        <li><button class="plat" type="button" data-spe="Pâtisseries italiennes" aria-pressed="false"><span class="plat-num" aria-hidden="true">04</span><span class="plat-nom">Pâtisseries italiennes</span><span class="plat-etat" aria-hidden="true"><span class="non">Ajouter</span><span class="oui">Ajouté</span><svg class="raviolo" viewBox="-26 -26 52 52"><use href="#raviolo"/></svg></span></button></li>
+      </ul>
+      <p class="maison">Nous tenons aussi <b>In Vino Veritas</b> et le restaurant <b>La Cantina</b>.</p>
+    </div>
+  </section>
+
+  <div class="roulette rv" aria-hidden="true"><span class="trace"></span><svg class="molette" viewBox="-14 -14 28 28"><use class="disque" href="#molette"/><circle class="axe" r="2.4"/></svg></div>
+
+  <section class="section epicerie" id="epicerie" aria-labelledby="t-epicerie">
+    <div class="intro rv">
+      <p class="surtitre">L'épicerie &amp; la cave</p>
+      <h2 class="titre" id="t-epicerie">Des produits importés d'Italie, et une cave à vins.</h2>
+    </div>
+    <div class="rayons rv">
+      <div class="lisere"><div class="rayon cran">
+        <h3><svg viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>L'épicerie fine</h3>
+        <p>Charcuterie, fromages et pâtes d'Italie, à emporter avec votre commande.</p>
+      </div></div>
+      <div class="lisere"><div class="rayon cran">
+        <h3><svg viewBox="-26 -26 52 52" aria-hidden="true"><use href="#etoile"/></svg>Côté cave à vins</h3>
+        <p>Ajoutez une bouteille de la cave à votre bon de commande, pour accompagner vos plats.</p>
+      </div></div>
+    </div>
+    <ul class="presse rv" aria-label="Ce qu'en disent les guides">
+      <li><blockquote>Cave et Epicerie fine, le top des produits d'Italie et la sélection est draconienne</blockquote><cite>Raisin</cite></li>
+      <li><blockquote>Pane Vino est une bonne adresse italienne</blockquote><cite>Gault&amp;Millau</cite></li>
+    </ul>
+    <p class="presse-note rv">Pane Vino est aussi référencée par Le Fooding.</p>
+  </section>
+
+  <section class="commande" id="commander" aria-labelledby="t-bon">
+    <div class="section bon">
+      <div class="intro rv">
+        <p class="surtitre">Bon de commande</p>
+        <h2 class="titre" id="t-bon">Vous composez. Nous préparons. Vous passez prendre.</h2>
+        <p class="texte">Votre commande arrive sur notre WhatsApp, avec votre jour et votre heure de retrait. Nous vous confirmons par message.</p>
+      </div>
+
+      <form class="ticket cran" id="bon" novalidate>
+        <div class="ticket-tete"><b>Pane Vino</b><span>Commande à retirer<br>en boutique</span></div>
+
+        <fieldset>
+          <legend><span class="n">1</span>Votre commande</legend>
+          <p class="groupe" id="g-traiteur">Traiteur du jour</p>
+          <div class="puces" role="group" aria-labelledby="g-traiteur" id="puces">
+            <button class="puce cran" type="button" data-spe="Lasagnes" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Lasagnes</button>
+            <button class="puce cran" type="button" data-spe="Pâtes farcies" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Pâtes farcies</button>
+            <button class="puce cran" type="button" data-spe="Pizzas à la part" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Pizzas à la part</button>
+            <button class="puce cran" type="button" data-spe="Pâtisseries italiennes" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Pâtisseries italiennes</button>
+          </div>
+          <p class="groupe" id="g-epicerie">Épicerie &amp; cave</p>
+          <div class="puces" role="group" aria-labelledby="g-epicerie">
+            <button class="puce cran" type="button" data-spe="Charcuterie italienne" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Charcuterie italienne</button>
+            <button class="puce cran" type="button" data-spe="Fromages italiens" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Fromages italiens</button>
+            <button class="puce cran" type="button" data-spe="Pâtes italiennes" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Pâtes italiennes</button>
+            <button class="puce cran" type="button" data-spe="Une bouteille de la cave" aria-pressed="false"><svg class="raviolo" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#raviolo"/></svg>Une bouteille de la cave</button>
+          </div>
+          <div class="champ">
+            <label for="precisions">Précisions <span class="aide">quantités, nombre de personnes…</span></label>
+            <textarea id="precisions" name="precisions" aria-describedby="err-commande" placeholder="Ex. : lasagnes pour 6 personnes, 8 parts de pizza"></textarea>
+            <p class="erreur" id="err-commande" hidden></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">2</span>Le retrait</legend>
+          <div class="boutiques-choix" role="radiogroup" aria-label="Boutique de retrait">
+            <label class="choix"><input type="radio" name="boutique" value="centre" checked><span class="rond" aria-hidden="true"></span><b>Centre-ville</b><small>8 rue du Sanglier</small></label>
+            <label class="choix"><input type="radio" name="boutique" value="halles"><span class="rond" aria-hidden="true"></span><b>Halles du Marché Gare</b><small>41 rue du Marché Gare</small></label>
+          </div>
+          <div class="champ" role="radiogroup" aria-labelledby="l-jour" aria-describedby="err-jour">
+            <span class="etiquette" id="l-jour">Jour de retrait <span class="aide" id="aide-jour">· fermé le dimanche</span></span>
+            <div class="jours" id="jours"></div>
+            <p class="erreur" id="err-jour" hidden></p>
+          </div>
+          <div class="champ">
+            <label for="heure">Heure de retrait <span class="aide" id="aide-heure">· entre 10h et 19h</span></label>
+            <select id="heure" name="heure" aria-describedby="err-heure"><option value="">Choisir une heure</option></select>
+            <p class="erreur" id="err-heure" hidden></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">3</span>Vos coordonnées</legend>
+          <div class="duo">
+            <div class="champ">
+              <label for="nom">Votre nom</label>
+              <input type="text" id="nom" name="nom" autocomplete="name" aria-describedby="err-nom">
+              <p class="erreur" id="err-nom" hidden></p>
+            </div>
+            <div class="champ">
+              <label for="tel">Votre téléphone <span class="aide">pour confirmer</span></label>
+              <input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" aria-describedby="err-tel">
+              <p class="erreur" id="err-tel" hidden></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="envoi">
+          <p class="recap" id="recap" aria-live="polite"></p>
+          <button class="cta vin cran" type="submit">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+            Commander sur WhatsApp
+          </button>
+          <p class="demo-note">Démonstration : rien n'est envoyé depuis cette maquette.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="boutiques" aria-labelledby="t-boutiques">
+    <div class="rv">
+      <p class="surtitre">Nos deux boutiques</p>
+      <h2 class="titre" id="t-boutiques">Au cœur de la Grande Île, et aux Halles.</h2>
+    </div>
+    <div class="boutiques">
+      <article class="boutique rv" aria-labelledby="b-centre">
+        <span class="numero dore" aria-hidden="true">8</span>
+        <h3 id="b-centre">Rue du Sanglier</h3>
+        <p class="lieu-b">À l'angle de la rue du Chaudron<br>67000 Strasbourg · Grande Île</p>
+        <table class="horaires" id="horaires-centre">
+          <caption class="sr">Horaires de la boutique du centre-ville</caption>
+          <tbody>
+            <tr data-jours="0,1,2,3,4,5"><th scope="row">Lundi – samedi</th><td>10h – 19h</td></tr>
+            <tr data-jours="6"><th scope="row">Dimanche</th><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="note-h">Horaires indiqués sur notre site, à confirmer.</p>
+        <div class="actions">
+          <a class="bouton2" href="tel:+33971203221"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.6a12 12 0 0 0 6.8 6.8l1.6-2.3L21 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg><span>Appeler<small>09 71 20 32 21</small></span></a>
+          <a class="bouton2" href="https://www.google.com/maps/search/?api=1&amp;query=8%20rue%20du%20Sanglier%2C%2067000%20Strasbourg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Itinéraire</a>
+        </div>
+      </article>
+      <article class="boutique rv" aria-labelledby="b-halles">
+        <span class="numero dore" aria-hidden="true">41</span>
+        <h3 id="b-halles">Halles du Marché Gare</h3>
+        <p class="lieu-b">41 rue du Marché Gare<br>67200 Strasbourg</p>
+        <table class="horaires">
+          <caption class="sr">Horaires de la boutique des Halles</caption>
+          <tbody><tr><th scope="row">Horaires</th><td>À confirmer</td></tr></tbody>
+        </table>
+        <p class="note-h">Non publiés sur le site : à confirmer avec la boutique.</p>
+        <div class="actions">
+          <a class="bouton2" href="tel:+33625187791"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.6a12 12 0 0 0 6.8 6.8l1.6-2.3L21 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg><span>Appeler<small>06 25 18 77 91</small></span></a>
+          <a class="bouton2" href="https://www.google.com/maps/search/?api=1&amp;query=41%20rue%20du%20March%C3%A9%20Gare%2C%2067200%20Strasbourg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Itinéraire</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="sig" viewBox="-26 -26 52 52" aria-hidden="true"><use href="#etoile"/></svg>
+  <p class="marque-pied">Pane Vino</p>
+  <p>Épicerie fine italienne, traiteur et cave à vins · 8 rue du Sanglier, 67000 Strasbourg</p>
+  <p>Informations reprises de panevinoepicerie.com, Gault&amp;Millau, Le Fooding et Raisin.</p>
+  <p>Page de démonstration non officielle : aucune commande n'est transmise.</p>
+  <p>Maquette préparée par BRUNFRAME</p>
+</footer>
+
+<div class="barre cachee" id="barre">
+  <a class="cta cran" href="#commander">Composer ma commande <span class="compte" id="compte" hidden></span></a>
+</div>
+
+<dialog id="apercu" aria-labelledby="dlg-titre">
+  <div class="dlg">
+    <p class="dlg-legende" id="dlg-titre"><b>Votre message est prêt</b><span>Voici ce que Pane Vino reçoit sur WhatsApp</span></p>
+    <div class="wa" role="group" aria-label="Aperçu de la conversation WhatsApp côté boutique">
+      <div class="wa-tete">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        <span class="wa-avatar" id="wa-avatar" aria-hidden="true"></span>
+        <span class="wa-qui"><b id="wa-numero"></b><small id="wa-nom"></small></span>
+      </div>
+      <div class="wa-fil">
+        <span class="wa-date">Aujourd'hui</span>
+        <div class="wa-bulle"><div id="wa-texte"></div><span class="wa-heure" id="wa-heure"></span></div>
+      </div>
+      <div class="wa-saisie" aria-hidden="true"><span>Répondre</span><i><svg viewBox="0 0 24 24"><path d="M3 20.5 21 12 3 3.5 5.5 12 3 20.5Z"/></svg></i></div>
+    </div>
+    <p class="dlg-note"><strong>Démonstration : rien n'est envoyé.</strong> Une fois en ligne, ce message arriverait directement sur le WhatsApp de la boutique.</p>
+    <div class="dlg-actions">
+      <button class="cta cran" type="button" id="dlg-fermer">Modifier ma commande</button>
+      <a class="lien-wa" id="dlg-wa" href="#" target="_blank" rel="noopener" hidden>Ouvrir dans WhatsApp (boutique des Halles)</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var doc = document.documentElement;
+  var reduit = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduit && "IntersectionObserver" in window) doc.classList.add("anim");
+
+  var ORDRE = ["Lasagnes", "Pâtes farcies", "Pizzas à la part", "Pâtisseries italiennes", "Charcuterie italienne", "Fromages italiens", "Pâtes italiennes", "Une bouteille de la cave"];
+  var BOUTIQUES = {
+    centre: { nom: "boutique du centre-ville", adr: "8 rue du Sanglier", dimanche: false, wa: "" },
+    halles: { nom: "boutique des Halles du Marché Gare", adr: "41 rue du Marché Gare", dimanche: null, wa: "33625187791" }
+  };
+  var choix = new Set();
+  var form = document.getElementById("bon");
+  var compte = document.getElementById("compte");
+  var recap = document.getElementById("recap");
+
+  /* Heure de Paris */
+  var paris = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+  var jourSemaine = (paris.getDay() + 6) % 7;
+  document.querySelectorAll("#horaires-centre tr[data-jours]").forEach(function (tr) {
+    if (tr.getAttribute("data-jours").split(",").indexOf(String(jourSemaine)) > -1) tr.classList.add("auj");
+  });
+
+  /* Sélection partagée : carte du chef + puces du bon */
+  var bascules = document.querySelectorAll("[data-spe]");
+  function majSelection(source) {
+    bascules.forEach(function (b) { b.setAttribute("aria-pressed", choix.has(b.getAttribute("data-spe")) ? "true" : "false"); });
+    var n = choix.size;
+    compte.hidden = n === 0;
+    compte.textContent = n;
+    compte.setAttribute("aria-label", n + (n > 1 ? " plats choisis" : " plat choisi"));
+    if (source && n) { compte.classList.remove("bond"); void compte.offsetWidth; compte.classList.add("bond"); }
+    if (n) effacerErreur("commande");
+    majRecap();
+  }
+  bascules.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var s = b.getAttribute("data-spe");
+      if (choix.has(s)) choix.delete(s); else choix.add(s);
+      b.classList.remove("tape"); void b.offsetWidth; b.classList.add("tape");
+      majSelection(b);
+    });
+  });
+
+  /* Jours de retrait (14 prochains jours) */
+  var joursBox = document.getElementById("jours");
+  function iso(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  for (var i = 1; i <= 14; i++) {
+    var d = new Date(paris.getFullYear(), paris.getMonth(), paris.getDate() + i, 12);
+    var lab = document.createElement("label");
+    lab.className = "jour";
+    var inp = document.createElement("input");
+    inp.type = "radio"; inp.name = "jour"; inp.value = iso(d);
+    inp.setAttribute("data-dim", d.getDay() === 0 ? "1" : "0");
+    inp.setAttribute("aria-label", d.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }));
+    var a = document.createElement("span"); a.className = "js-nom"; a.textContent = d.toLocaleDateString("fr-FR", { weekday: "short" }).replace(".", "");
+    var b2 = document.createElement("span"); b2.className = "js-num"; b2.textContent = d.getDate();
+    var c = document.createElement("span"); c.className = "js-mois"; c.textContent = d.toLocaleDateString("fr-FR", { month: "short" });
+    lab.appendChild(inp); lab.appendChild(a); lab.appendChild(b2); lab.appendChild(c);
+    joursBox.appendChild(lab);
+  }
+  var heure = document.getElementById("heure");
+  for (var m = 600; m <= 1110; m += 30) {
+    var o = document.createElement("option");
+    var hh = Math.floor(m / 60), mm = m % 60;
+    o.value = String(hh).padStart(2, "0") + ":" + String(mm).padStart(2, "0");
+    o.textContent = hh + "h" + (mm ? mm : "00");
+    heure.appendChild(o);
+  }
+  function majBoutique() {
+    var b = form.boutique.value;
+    var aideJ = document.getElementById("aide-jour"), aideH = document.getElementById("aide-heure");
+    joursBox.querySelectorAll("input").forEach(function (inp) {
+      var ferme = b === "centre" && inp.getAttribute("data-dim") === "1";
+      inp.disabled = ferme;
+      if (ferme && inp.checked) inp.checked = false;
+    });
+    aideJ.textContent = b === "centre" ? "· fermé le dimanche" : "· horaires des Halles à confirmer";
+    aideH.textContent = b === "centre" ? "· entre 10h et 19h" : "· à confirmer avec la boutique";
+    majRecap();
+  }
+  form.querySelectorAll("input[name=boutique]").forEach(function (r) { r.addEventListener("change", majBoutique); });
+  joursBox.addEventListener("change", function () { effacerErreur("jour"); majRecap(); });
+  heure.addEventListener("change", function () { effacerErreur("heure"); majRecap(); });
+  form.precisions.addEventListener("input", function () { if (form.precisions.value.trim()) effacerErreur("commande"); });
+  form.nom.addEventListener("input", function () { effacerErreur("nom"); });
+  form.tel.addEventListener("input", function () { effacerErreur("tel"); });
+  majBoutique();
+
+  function jourChoisi() { return joursBox.querySelector("input:checked"); }
+  function texteJour(v) { return new Date(v + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }); }
+  function majRecap() {
+    var parts = [];
+    if (choix.size) parts.push(choix.size + (choix.size > 1 ? " spécialités" : " spécialité"));
+    var j = jourChoisi();
+    if (j) parts.push(texteJour(j.value));
+    if (heure.value) parts.push("vers " + heure.value.replace(":", "h"));
+    recap.textContent = parts.length ? parts.join(" · ") : "";
+  }
+
+  /* Erreurs */
+  var CHAMPS = { commande: form.precisions, jour: null, heure: heure, nom: form.nom, tel: form.tel };
+  function montrerErreur(cle, msg) {
+    var p = document.getElementById("err-" + cle);
+    p.textContent = msg; p.hidden = false;
+    if (CHAMPS[cle]) CHAMPS[cle].setAttribute("aria-invalid", "true");
+  }
+  function effacerErreur(cle) {
+    var p = document.getElementById("err-" + cle);
+    if (p) { p.hidden = true; p.textContent = ""; }
+    if (CHAMPS[cle]) CHAMPS[cle].removeAttribute("aria-invalid");
+  }
+
+  /* Aperçu WhatsApp */
+  var dlg = document.getElementById("apercu");
+  function formatTel(t) {
+    var c = t.replace(/[^\d+]/g, "");
+    if (/^0\d{9}$/.test(c)) return "+33 " + c.slice(1, 2) + " " + c.slice(2).replace(/(\d{2})(?=\d)/g, "$1 ");
+    return t.trim();
+  }
+  function rendreLigne(txt) {
+    var div = document.createElement("div"); div.className = "ligne";
+    txt.split(/(\*[^*]+\*)/).forEach(function (bout) {
+      if (/^\*[^*]+\*$/.test(bout)) { var s = document.createElement("strong"); s.textContent = bout.slice(1, -1); div.appendChild(s); }
+      else if (bout) div.appendChild(document.createTextNode(bout));
+    });
+    return div;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    ["commande", "jour", "heure", "nom", "tel"].forEach(effacerErreur);
+    var prec = form.precisions.value.trim(), j = jourChoisi(), nom = form.nom.value.trim(), tel = form.tel.value.trim();
+    var premier = null;
+    function err(cle, msg, el) { montrerErreur(cle, msg); if (!premier) premier = el; }
+    if (!choix.size && !prec) err("commande", "Choisissez au moins une spécialité ou écrivez votre commande.", document.querySelector("#puces .puce"));
+    if (!j) err("jour", "Choisissez votre jour de retrait.", joursBox.querySelector("input:not(:disabled)"));
+    if (!heure.value) err("heure", "Choisissez une heure de retrait.", heure);
+    if (!nom) err("nom", "Indiquez votre nom.", form.nom);
+    if (tel.replace(/\D/g, "").length < 10) err("tel", "Indiquez un numéro de téléphone complet.", form.tel);
+    if (premier) { premier.focus({ preventScroll: false }); return; }
+
+    var b = BOUTIQUES[form.boutique.value];
+    var lignes = ["Bonjour Pane Vino,", "voici ma commande, à retirer à la " + b.nom + " (" + b.adr + ").", "",
+      "*Retrait :* " + texteJour(j.value) + " vers " + heure.value.replace(":", "h"), "", "*Commande :*"];
+    ORDRE.forEach(function (s) { if (choix.has(s)) lignes.push("• " + s); });
+    if (prec) lignes.push("Précisions : " + prec);
+    lignes.push("", "*Nom :* " + nom, "*Tél :* " + tel);
+    var msg = lignes.join("\n");
+
+    var zone = document.getElementById("wa-texte");
+    zone.textContent = "";
+    lignes.forEach(function (l) { zone.appendChild(rendreLigne(l)); });
+    document.getElementById("wa-numero").textContent = formatTel(tel);
+    document.getElementById("wa-nom").textContent = "~ " + nom;
+    document.getElementById("wa-avatar").textContent = nom.split(/\s+/).map(function (x) { return x.charAt(0); }).join("").slice(0, 2).toUpperCase();
+    var now = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+    document.getElementById("wa-heure").textContent = String(now.getHours()).padStart(2, "0") + ":" + String(now.getMinutes()).padStart(2, "0");
+    var lien = document.getElementById("dlg-wa");
+    if (b.wa) { lien.href = "https://wa.me/" + b.wa + "?text=" + encodeURIComponent(msg); lien.hidden = false; }
+    else { lien.hidden = true; lien.removeAttribute("href"); }
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+  });
+  function fermer() { if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
+  document.getElementById("dlg-fermer").addEventListener("click", fermer);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) fermer(); });
+
+  /* Barre fixe : visible seulement quand ni le CTA du haut ni le bon ne sont à l'écran */
+  var barre = document.getElementById("barre");
+  if ("IntersectionObserver" in window) {
+    var visibles = new Set();
+    var io = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) visibles.add(en.target); else visibles.delete(en.target); });
+      barre.classList.toggle("cachee", visibles.size > 0);
+    });
+    io.observe(document.getElementById("cta-haut"));
+    io.observe(document.getElementById("commander"));
+    var ior = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("vu"); ior.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".rv").forEach(function (el) { ior.observe(el); });
+  } else {
+    barre.classList.remove("cachee");
+    document.querySelectorAll(".rv").forEach(function (el) { el.classList.add("vu"); });
+  }
+})();
+</script>
+</body>
+</html>
