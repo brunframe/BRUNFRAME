@@ -304,14 +304,14 @@ dialog .cta{margin-top:12px;min-height:54px}
         </svg>
       </div>
     </div>
-    <div class="pied-tete mono" aria-hidden="true"><span>Restaurant libanais</span><span>Depuis 2010</span></div>
+    <div class="pied-tete mono" aria-hidden="true"><span>Houmous · Assiette «&nbsp;Le Tarbouche&nbsp;»</span><span>03&nbsp;88&nbsp;35&nbsp;00&nbsp;48</span></div>
   </header>
 
   <div class="col">
   <main>
     <section class="intro" aria-labelledby="t-intro">
       <p class="mono kicker">Restaurant libanais · Krutenau · depuis 2010</p>
-      <h2 class="accroche" id="t-intro">Les fêtes approchent. <em>Commandez à l’avance.</em></h2>
+      <h2 class="accroche" id="t-intro">Commandez avant. <em>Passez prendre à l’heure.</em></h2>
       <p class="sous">Composez votre commande ici, choisissez l’heure de retrait&nbsp;: nous la préparons au 22 rue de la Krutenau.</p>
       <a class="cta" id="cta-haut" href="#commande">Composer ma commande
         <svg class="fleche" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
@@ -320,8 +320,8 @@ dialog .cta{margin-top:12px;min-height:54px}
     </section>
 
     <section class="bloc plats" id="plats" aria-labelledby="t-plats">
-      <p class="repere mono">Citées par nos clients</p>
-      <h2 id="t-plats">Deux noms reviennent dans vos avis.</h2>
+      <p class="repere mono">Cités par nos clients</p>
+      <h2 id="t-plats">Deux plats reviennent dans les avis.</h2>
       <ul class="pile">
         <li class="plat plat-1">
           <span class="plat-src mono">Avis Wanderlog · Sluurpy</span>
@@ -329,7 +329,7 @@ dialog .cta{margin-top:12px;min-height:54px}
           <button class="ajout" type="button" data-plat="Houmous" aria-label="Ajouter un houmous à ma commande"><b aria-hidden="true">+</b> Ajouter <span class="compte" aria-hidden="true"></span></button>
         </li>
         <li class="plat plat-2">
-          <span class="plat-src mono">L’assiette qui porte notre nom</span>
+          <span class="plat-src mono">Avis Wanderlog · Sluurpy</span>
           <span class="plat-nom">Assiette «&nbsp;Le&nbsp;Tarbouche&nbsp;»</span>
           <button class="ajout" type="button" data-plat="Assiette «&nbsp;Le Tarbouche&nbsp;»" aria-label="Ajouter une assiette Le Tarbouche à ma commande"><b aria-hidden="true">+</b> Ajouter <span class="compte" aria-hidden="true"></span></button>
         </li>
@@ -340,7 +340,7 @@ dialog .cta{margin-top:12px;min-height:54px}
     <section class="bloc commande" id="commande" aria-labelledby="t-commande">
       <p class="repere mono">Commande à emporter</p>
       <h2 id="t-commande">Composez. Choisissez l’heure. Passez prendre.</h2>
-      <p class="chapo">Pour les fêtes comme pour un soir de semaine. Nous vous rappelons pour confirmer.</p>
+      <p class="chapo">Le message part au restaurant, qui vous confirme la commande et l’heure de retrait.</p>
       <form id="form" novalidate>
         <div class="champ">
           <label class="lbl" for="f-commande">Votre commande</label>
@@ -392,7 +392,7 @@ dialog .cta{margin-top:12px;min-height:54px}
       <div class="chiffres">
         <div><strong>4,3/5</strong><span class="mono"><em>Sluurpy</em><br>1&#8239;197 recomm.</span></div>
         <div><strong>7,3</strong><span class="mono"><em>Restoranking</em><br>1&#8239;089 avis</span></div>
-        <div><strong>4,0</strong><span class="mono"><em>Spinach</em><br>1&#8239;311</span></div>
+        <div><strong>4,0</strong><span class="mono"><em>Spinach</em><br>1&#8239;311 évaluations</span></div>
       </div>
     </section>
 
@@ -614,7 +614,7 @@ dialog .cta{margin-top:12px;min-height:54px}
     infoJour.innerHTML = "";
     var b = document.createElement("b"); b.textContent = JOURS[j] + " : ";
     infoJour.appendChild(b);
-    infoJour.appendChild(document.createTextNode(h ? h + " (relevé en ligne, à confirmer)." : "horaires à confirmer, nous vous rappelons."));
+    infoJour.appendChild(document.createTextNode(h ? h + " (relevé en ligne, à confirmer)." : "horaires à confirmer avec le restaurant."));
   }
   form.date.addEventListener("change", infoDate);
 
