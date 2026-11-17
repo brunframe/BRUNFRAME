@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0c100f">
+<title>La Gare’Mandise · boulangerie, pâtisserie, salon de thé · maquette</title>
+<meta name="description" content="Maquette pour La Gare’Mandise, 8 place de la Gare à Strasbourg : spécialités, horaires et commande de fêtes préparée en message WhatsApp.">
+<link rel="icon" href="data:,">
+<style>
+@font-face{font-family:"Fraunces";src:url(fonts/fraunces-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(fonts/fraunces-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(fonts/space-grotesk-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(fonts/space-grotesk-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(fonts/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  --nuit:#0c100f; --nuit-2:#121816; --panneau:#070908; --volet:#171d1a; --volet-2:#1e2622; --filet:#2a3330;
+  --chrome-1:#4a5550; --chrome-2:#1a201d;
+  --craie:#f2ebdd; --brume:#aab4ae; --brume-2:#8b9690;
+  --caramel:#f3b65c; --caramel-2:#ffd08a;
+  --menthe:#7fd99e; --framboise:#ff8f9c;
+  --papier:#f2e9d8; --papier-2:#e6dac3; --encre:#1a1d1b; --encre-2:#4f5651; --tampon:#9e2236;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gout:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--nuit);color:var(--craie);font:400 16px/1.55 var(--sans);
+  background-image:radial-gradient(120% 60% at 85% -10%,rgba(243,182,92,.10),transparent 60%),radial-gradient(90% 50% at -10% 30%,rgba(127,217,158,.05),transparent 60%);
+  background-repeat:no-repeat;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.saut{position:absolute;left:var(--gout);top:-60px;background:var(--caramel);color:#14110c;padding:10px 14px;border-radius:8px;font-weight:700;z-index:20;text-decoration:none}
+.saut:focus{top:10px}
+:focus-visible{outline:3px solid var(--caramel-2);outline-offset:3px;border-radius:6px}
+.enveloppe{width:min(1180px,100%);margin:0 auto;padding:0 var(--gout)}
+
+/* ===== Barre du haut ===== */
+.haut{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0 6px}
+.pastille{display:inline-flex;align-items:center;gap:8px;font:700 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--caramel);border:1px solid rgba(243,182,92,.55);border-radius:999px;padding:7px 12px 7px 10px;background:rgba(243,182,92,.07)}
+.pastille::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--caramel);box-shadow:0 0 0 3px rgba(243,182,92,.18)}
+.haut-adr{font:500 13px/1.3 var(--sans);color:var(--brume);text-align:right;letter-spacing:.02em}
+
+/* ===== Héros ===== */
+.heros{position:relative;display:grid;gap:20px;padding:10px 0 40px;grid-template-columns:minmax(0,1fr);grid-template-areas:"titre" "tableau" "action"}
+.heros>:not(.verriere){min-width:0}
+.verriere{position:absolute;right:calc(-1 * var(--gout));top:-30px;width:520px;max-width:none;opacity:.11;pointer-events:none;z-index:0}
+.heros>:not(.verriere){position:relative;z-index:1}
+.h-titre{grid-area:titre}
+.h-tableau{grid-area:tableau}
+.h-action{grid-area:action}
+.metier{margin:0 0 10px;font:500 12.5px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brume)}
+.metier b{color:var(--caramel);font-weight:500}
+h1{margin:0;font:600 clamp(3.4rem,15.5vw,7.4rem)/.9 var(--serif);letter-spacing:-.02em}
+h1 .l1{display:block}
+h1 em{display:block;font-weight:400;font-style:italic;color:var(--caramel);letter-spacing:-.01em;margin-left:.42em}
+.adresse{margin:12px 0 0;font:500 15px/1.4 var(--sans);color:var(--craie)}
+.adresse span{color:var(--brume)}
+.accroche{margin:12px 0 0;font:400 1.45rem/1.18 var(--serif);max-width:24ch}
+.accroche i{color:var(--caramel)}
+.sous{display:none;margin:0 0 18px;color:var(--brume);max-width:44ch}
+.sous strong{color:var(--craie);font-weight:500}
+
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 26px;border:0;border-radius:14px;cursor:pointer;
+  background:linear-gradient(180deg,#ffc978,var(--caramel));color:#16110a;font:700 17px/1 var(--sans);letter-spacing:.01em;text-decoration:none;
+  box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 12px 30px -12px rgba(243,182,92,.55);transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 16px 34px -12px rgba(243,182,92,.7)}
+.cta svg{width:20px;height:20px}
+.h-action .cta{width:100%}
+.ou{margin:12px 0 0;font-size:14.5px;color:var(--brume);text-align:center}
+.ou a{color:var(--craie);font-weight:500;text-underline-offset:3px}
+
+/* ===== Tableau des départs ===== */
+.tableau{border-radius:18px;padding:5px;background:linear-gradient(160deg,var(--chrome-1),var(--chrome-2) 38%,#2e3632 70%,#101412);box-shadow:0 30px 60px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.04)}
+.tableau-in{background:var(--panneau);border-radius:14px;padding:12px 12px 10px;box-shadow:inset 0 2px 14px rgba(0,0,0,.8)}
+.t-tete{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 10px;border-bottom:1px solid var(--filet)}
+.t-titre{display:flex;flex-direction:column;gap:2px}
+.t-titre b{font:700 13px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--craie)}
+.t-titre span{font:400 italic 14px/1.1 var(--serif);color:var(--caramel)}
+.horloge{display:flex;align-items:center;gap:3px}
+.horloge .deux{font:700 18px/1 var(--sans);color:var(--caramel);padding:0 1px;animation:clign 2s steps(1) infinite}
+@keyframes clign{50%{opacity:.25}}
+.case{position:relative;display:inline-grid;place-items:center;width:25px;height:34px;border-radius:4px;background:linear-gradient(180deg,var(--volet-2) 0 49.4%,#070908 49.4% 50.6%,var(--volet) 50.6% 100%);
+  font:700 21px/1 var(--sans);color:var(--craie);font-variant-numeric:tabular-nums;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.6);perspective:200px}
+.case.bascule{animation:bascule .42s cubic-bezier(.3,.7,.3,1)}
+@keyframes bascule{0%{transform:rotateX(0)}45%{transform:rotateX(-88deg);filter:brightness(.6)}100%{transform:rotateX(0)}}
+
+.depart{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0 6px;margin-top:2px}
+.depart thead th:first-child{width:78px}
+.depart thead th{font:500 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--brume-2);text-align:left;padding:8px 6px 2px}
+.depart td{vertical-align:middle;padding:8px 8px;background:linear-gradient(180deg,#121715 0 49.6%,#050706 49.6% 50.4%,#0f1412 50.4% 100%)}
+.depart td:first-child{border-radius:8px 0 0 8px;padding-left:9px}
+.depart td:last-child{border-radius:0 8px 8px 0}
+.heure{display:flex;gap:2px}
+.heure .case{width:15px;height:24px;font-size:15px;border-radius:3px}
+.heure .case.p{width:7px;background:none;box-shadow:none;color:var(--caramel)}
+.votre{display:block;font:700 10.5px/1.15 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--caramel)}
+.dest{display:block;font:500 16px/1.2 var(--sans);color:var(--craie);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.via{display:block;margin-top:3px;font:400 13px/1.3 var(--sans);color:var(--brume);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.via i{font-style:normal;color:var(--brume-2)}
+.etat{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.etat::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+.etat.ouvert{color:var(--menthe)}
+.etat.ferme{color:var(--framboise)}
+.t-info{display:flex;gap:10px;align-items:baseline;margin:6px 0 0;padding:9px 6px 2px;border-top:1px solid var(--filet);font:400 13px/1.4 var(--sans);color:var(--brume)}
+.t-info b{flex:none;font:700 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#14110c;background:var(--caramel);padding:4px 6px;border-radius:3px}
+
+/* ===== Sections ===== */
+section{scroll-margin-top:14px}
+.bloc{padding:64px 0}
+.bloc+.bloc{border-top:1px solid rgba(255,255,255,.06)}
+.surtitre{margin:0 0 10px;font:700 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--caramel)}
+h2{margin:0;font:400 clamp(2.1rem,8.6vw,3.4rem)/1.02 var(--serif);letter-spacing:-.015em;max-width:18ch}
+h2 em{font-style:italic;color:var(--caramel)}
+.chapeau{margin:14px 0 0;color:var(--brume);max-width:52ch}
+
+/* Quais / spécialités */
+.quais{display:grid;gap:14px;margin-top:30px}
+.quai{position:relative;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:18px;border-radius:16px;background:linear-gradient(180deg,var(--nuit-2),#0e1311);border:1px solid var(--filet)}
+.panneau{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:56px;height:58px;padding:0 8px;border-radius:10px;background:var(--craie);color:#101412;font:700 22px/1 var(--sans);letter-spacing:-.01em;font-variant-numeric:tabular-nums;box-shadow:inset 0 -3px 0 rgba(0,0,0,.12)}
+.panneau small{display:block;font:700 8.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#3d4440}
+.quai h3{margin:2px 0 6px;font:600 1.32rem/1.15 var(--serif)}
+.quai p{margin:0;color:var(--brume);font-size:15.5px}
+.quai .grand{grid-column:1/-1;display:flex;align-items:baseline;gap:14px;margin:6px 0 0;padding-top:14px;border-top:1px dashed var(--filet)}
+.grand span{font:400 italic clamp(2.6rem,12vw,3.6rem)/1 var(--serif);color:var(--caramel);font-variant-numeric:lining-nums}
+.grand em{font-style:normal;color:var(--brume);font-size:14px;line-height:1.3}
+.quai.vedette{background:linear-gradient(160deg,#1c1a14,#111512 60%);border-color:rgba(243,182,92,.35)}
+.presse{margin:26px 0 0;padding:14px 16px;border-left:2px solid var(--caramel);color:var(--brume);font-size:14.5px;max-width:70ch}
+.presse b{color:var(--craie);font-weight:500}
+
+/* ===== Billet de commande ===== */
+.billet{position:relative;margin-top:30px;display:grid;gap:0;background:var(--papier);color:var(--encre);border-radius:20px;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
+.billet::before{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;background:repeating-linear-gradient(90deg,rgba(26,29,27,.025) 0 2px,transparent 2px 7px)}
+.billet-bande{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 20px;border-bottom:2px dashed rgba(26,29,27,.22);font:700 11.5px/1.2 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--encre-2)}
+.billet-bande span:last-child{font:400 italic 15px/1 var(--serif);letter-spacing:0;text-transform:none;color:var(--tampon)}
+.corps{padding:4px 20px 6px}
+fieldset{margin:0;padding:22px 0 18px;border:0;border-bottom:1px solid rgba(26,29,27,.12);min-width:0}
+legend{float:left;width:100%;display:flex;align-items:center;gap:10px;margin:0 0 14px;padding:0;font:600 1.2rem/1.2 var(--serif)}
+legend+*{clear:both}
+.arret{display:grid;place-items:center;width:28px;height:28px;flex:none;border-radius:50%;border:2px solid var(--encre);font:700 13px/1 var(--sans)}
+.etiq{display:block;margin:0 0 8px;font:700 12px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--encre-2)}
+.etiq .fac{font-weight:400;letter-spacing:.02em;text-transform:none}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.puce{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid rgba(26,29,27,.35);background:transparent;color:var(--encre);font:500 15px/1.1 var(--sans);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.puce:hover{border-color:var(--encre)}
+.puce[aria-pressed="true"]{background:var(--encre);border-color:var(--encre);color:var(--papier)}
+.puce[aria-pressed="true"]::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--caramel)}
+.puce.voie{border-radius:10px;min-width:64px;justify-content:center;font-weight:700;font-variant-numeric:tabular-nums}
+.puce.voie small{font-weight:400;font-size:13px}
+input,select,textarea{width:100%;min-height:48px;padding:11px 13px;border-radius:12px;border:1.5px solid rgba(26,29,27,.35);background:#fbf6ec;color:var(--encre);font:400 16px/1.35 var(--sans);appearance:none;-webkit-appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--encre) 50%),linear-gradient(135deg,var(--encre) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:36px}
+select:disabled{opacity:.6}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(201,138,46,.6);outline-offset:1px;border-color:var(--encre)}
+::placeholder{color:#62665f}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--tampon)}
+.duo{display:grid;grid-template-columns:1.25fr 1fr;gap:10px}
+.champ{margin:0 0 12px}
+.aide{margin:8px 0 0;font-size:14px;color:var(--encre-2)}
+.aide b{color:var(--encre);font-weight:700}
+
+.talon{position:relative;margin:14px 0 4px;padding:16px 16px 14px;border-radius:14px;background:var(--papier-2);overflow:hidden}
+.talon::before,.talon::after{content:"";position:absolute;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:var(--encoche,var(--nuit))}
+.talon::before{left:-9px}.talon::after{right:-9px}
+.talon h3{margin:0 0 10px;font:700 11.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--encre-2)}
+.talon dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:15px}
+.talon dt{color:var(--encre-2)}
+.talon dd{margin:0;font-weight:500;min-width:0;overflow-wrap:anywhere}
+.tampon{position:absolute;right:14px;bottom:12px;padding:6px 10px;border:2px solid var(--tampon);border-radius:6px;color:var(--tampon);font:700 12px/1.1 var(--sans);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-8deg);opacity:0;transition:opacity .2s}
+.billet.composte .tampon{opacity:.9}
+.valider{padding:6px 20px 22px}
+.valider .cta{width:100%;background:var(--encre);color:var(--papier);box-shadow:0 12px 26px -14px rgba(0,0,0,.6)}
+.valider .cta:hover{box-shadow:0 16px 30px -14px rgba(0,0,0,.7)}
+.valider .cta svg{color:var(--caramel)}
+.erreur{margin:0 0 12px;padding:10px 12px;border-radius:10px;background:#f6d9d6;color:#7a1626;font-size:14.5px;font-weight:500}
+.erreur:empty{display:none}
+.mention{margin:10px 0 0;font-size:13.5px;color:var(--encre-2);text-align:center}
+
+/* ===== Horaires ===== */
+.statut{display:inline-flex;margin-top:18px;padding:8px 14px;border-radius:999px;background:var(--nuit-2);border:1px solid var(--filet);font-size:15px}
+.horaires{width:100%;max-width:640px;margin-top:22px;border-collapse:separate;border-spacing:0 8px}
+.horaires th,.horaires td{padding:14px 12px;text-align:left;background:var(--nuit-2)}
+.horaires thead th{background:none;padding:0 12px;font:500 11px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brume-2)}
+.horaires tbody th{border-radius:10px 0 0 10px;font:500 16px/1.2 var(--sans)}
+.horaires tbody td:last-child{border-radius:0 10px 10px 0}
+.horaires .h{display:flex;gap:2px}
+.horaires .case{width:17px;height:26px;font-size:16px}
+.horaires .case.p{width:7px;background:none;box-shadow:none;color:var(--caramel)}
+.horaires tr.auj th,.horaires tr.auj td{background:#1c1a14;box-shadow:inset 0 1px 0 rgba(243,182,92,.35),inset 0 -1px 0 rgba(243,182,92,.35)}
+.horaires tr.auj th{box-shadow:inset 1px 1px 0 rgba(243,182,92,.35),inset 0 -1px 0 rgba(243,182,92,.35)}
+.auj-lbl{display:none;margin-top:4px;font:700 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--caramel)}
+tr.auj .auj-lbl{display:block}
+.note{margin:14px 0 0;font-size:14px;color:var(--brume-2);max-width:60ch}
+
+/* ===== Accès ===== */
+.acces{display:grid;gap:22px;margin-top:26px}
+.carte-quai{padding:22px;border-radius:18px;background:linear-gradient(170deg,#18201c,#0f1412);border:1px solid var(--filet)}
+.carte-quai .pl{margin:0;font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--brume-2)}
+.carte-quai address{margin:10px 0 0;font:400 1.55rem/1.2 var(--serif);font-style:normal}
+.carte-quai .tel{display:block;margin-top:10px;color:var(--brume);font-size:15.5px}
+.boutons{display:grid;gap:10px;margin-top:20px}
+.secondaire{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:14px;border:1.5px solid rgba(242,235,221,.4);color:var(--craie);font:500 16px/1 var(--sans);text-decoration:none}
+.secondaire:hover{border-color:var(--craie)}
+.boutons svg{width:19px;height:19px}
+
+/* ===== Pied ===== */
+footer{padding:36px 0 44px;border-top:1px solid rgba(255,255,255,.08);color:var(--brume);font-size:14px}
+footer p{margin:0 0 6px}
+footer .sig{color:var(--brume-2);font-size:13px;letter-spacing:.04em}
+
+/* ===== Aperçu WhatsApp ===== */
+dialog{width:min(94vw,420px);max-height:92vh;padding:0;border:0;border-radius:20px;background:#0b141a;color:#e9edef;overflow:auto;box-shadow:0 40px 90px rgba(0,0,0,.7)}
+dialog::backdrop{background:rgba(5,7,6,.8);backdrop-filter:blur(4px)}
+.demo{margin:0;padding:12px 16px;background:var(--caramel);color:#16110a;font:700 14.5px/1.3 var(--sans);text-align:center}
+.wa-barre{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#1f2c34}
+.wa-barre .rond{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#2e3d46;color:#cfd8dc}
+.wa-barre .rond svg{width:20px;height:20px}
+.wa-barre b{display:block;font:500 16px/1.2 var(--sans)}
+.wa-barre span{display:block;font-size:13px;color:#aebac1}
+.wa-fil{padding:18px 14px 20px;background:#0b141a;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:14px 14px}
+.bulle{position:relative;margin-left:auto;max-width:92%;padding:10px 12px 22px;border-radius:12px 4px 12px 12px;background:#005c4b;color:#e9edef;font:400 15px/1.45 var(--sans);white-space:pre-wrap;overflow-wrap:anywhere}
+.bulle .h{position:absolute;right:10px;bottom:5px;display:flex;align-items:center;gap:4px;font-size:11.5px;color:#b5d3cb}
+.bulle .h svg{width:16px;height:11px}
+.wa-note{margin:0;padding:14px 16px 4px;font-size:14px;color:#c3ccd1}
+.afournir{color:var(--caramel);font-weight:500}
+.wa-actions{display:grid;gap:8px;padding:12px 16px 18px}
+.wa-actions .cta{width:100%}
+.wa-actions a{text-align:center;color:#d6dde1;font-size:14.5px;padding:8px;text-underline-offset:3px}
+
+/* ===== Grands écrans ===== */
+@media (min-width:880px){
+  :root{--gout:32px}
+  .haut{padding:22px 0 8px}
+  .heros{grid-template-columns:1fr 1.08fr;grid-template-areas:"titre tableau" "action tableau";column-gap:56px;row-gap:26px;padding:34px 0 80px;align-items:start}
+  .h-action{align-self:start}
+  .h-action .cta{width:auto}
+  .sous{display:block}
+  .depart thead th:first-child{width:104px}
+  .ou{text-align:left}
+  .verriere{right:-32px;top:-70px;width:860px}
+  .accroche{font-size:1.85rem}
+  .tableau-in{padding:18px 18px 14px}
+  .t-titre b{font-size:15px}
+  .t-titre span{font-size:17px}
+  .case{width:30px;height:42px;font-size:26px}
+  .depart td{padding:13px 12px}
+  .depart td:first-child{padding-left:13px}
+  .heure .case{width:19px;height:30px;font-size:19px}
+  .votre{font-size:12px}
+  .dest{font-size:20px}
+  .via{font-size:14.5px}
+  .bloc{padding:96px 0}
+  .quais{grid-template-columns:repeat(2,1fr);gap:18px}
+  .quai.vedette{grid-row:span 2}
+  .billet{grid-template-columns:1.45fr 1fr}
+  .billet-bande{grid-column:1/-1}
+  .corps{padding:6px 32px 18px;border-right:2px dashed rgba(26,29,27,.22)}
+  .cote{display:flex;flex-direction:column;justify-content:space-between;padding:22px 28px 26px}
+  .talon{margin:0;--encoche:var(--papier)}
+  .valider{padding:22px 0 0}
+  .acces{grid-template-columns:1.2fr 1fr;align-items:stretch}
+  .boutons{grid-template-columns:auto auto;justify-content:start}
+}
+@media (min-width:1100px){
+  .quais{grid-template-columns:repeat(3,1fr)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="saut" href="#billet">Aller à la commande</a>
+
+<div class="enveloppe">
+  <header class="haut">
+    <span class="pastille">Maquette</span>
+    <span class="haut-adr">Face à la gare de Strasbourg</span>
+  </header>
+
+  <main>
+    <section class="heros" aria-labelledby="titre">
+      <svg class="verriere" viewBox="0 0 600 340" aria-hidden="true" fill="none" stroke="#c9d4cf" stroke-width="1.2">
+        <path d="M20 330 A280 280 0 0 1 580 330"/><path d="M60 330 A240 240 0 0 1 540 330"/><path d="M110 330 A190 190 0 0 1 490 330"/><path d="M170 330 A130 130 0 0 1 430 330"/>
+        <path d="M300 330 L300 50"/><path d="M300 330 L160 89"/><path d="M300 330 L440 89"/><path d="M300 330 L58 190"/><path d="M300 330 L542 190"/><path d="M300 330 L98 128"/><path d="M300 330 L502 128"/><path d="M300 330 L228 60"/><path d="M300 330 L372 60"/>
+      </svg>
+
+      <div class="h-titre">
+        <p class="metier">Boulangerie <b>·</b> Pâtisserie <b>·</b> Salon de thé</p>
+        <h1 id="titre"><span class="l1">La Gare’</span><em>Mandise</em></h1>
+        <p class="adresse">8 place de la Gare, 67000 Strasbourg</p>
+        <p class="accroche">Pour les fêtes, votre grand dessert <i>part à l’heure.</i></p>
+      </div>
+
+      <div class="h-tableau tableau" role="region" aria-label="Tableau des départs gourmands">
+        <div class="tableau-in">
+          <div class="t-tete">
+            <p class="t-titre" style="margin:0"><b>Départs</b><span>gourmands</span></p>
+            <div class="horloge" id="horloge" role="img" aria-label="Heure de Strasbourg">
+              <span class="case" data-h="0">0</span><span class="case" data-h="1">0</span><span class="deux" aria-hidden="true">:</span><span class="case" data-h="2">0</span><span class="case" data-h="3">0</span>
+            </div>
+          </div>
+          <table class="depart">
+            <thead><tr><th scope="col">Départ</th><th scope="col">Destination</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="heure" id="t-ouv" aria-label="Ouverture"><span class="case">0</span><span class="case">6</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td>
+                <td><span class="sr">Boulangerie et salon de thé</span><span class="dest" data-volet aria-hidden="true">Boulangerie &amp; salon de thé</span>
+                  <span class="via"><i>via</i> café · brunch · <span class="etat" id="t-etat">horaires ci-dessous</span></span></td>
+              </tr>
+              <tr>
+                <td><span class="votre">À votre<br>heure</span></td>
+                <td><span class="sr">Grand dessert</span><span class="dest" data-volet aria-hidden="true">Grand dessert</span>
+                  <span class="via"><i>via</i> 4 · 6 · 8 personnes · 48 h avant</span></td>
+              </tr>
+              <tr>
+                <td><span class="votre">À votre<br>heure</span></td>
+                <td><span class="sr">Gâteau d’anniversaire ou de mariage</span><span class="dest" data-volet aria-hidden="true">Anniversaire · mariage</span>
+                  <span class="via"><i>via</i> personnalisé · sur commande</span></td>
+              </tr>
+              <tr>
+                <td><span class="votre">À votre<br>heure</span></td>
+                <td><span class="sr">Traiteur apéritif</span><span class="dest" data-volet aria-hidden="true">Traiteur apéritif</span>
+                  <span class="via"><i>via</i> salé · sur commande</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="t-info"><b>Info</b><span>Grands desserts&nbsp;: au moins 48&nbsp;h avant.</span></p>
+        </div>
+      </div>
+
+      <div class="h-action">
+        <p class="sous"><strong>4, 6 ou 8 personnes</strong>, retrait en boutique, face à la gare. Votre message de commande se compose en trois arrêts.</p>
+        <a class="cta" href="#billet">Commander pour les fêtes
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="ou">ou par téléphone au <a href="tel:+33388512879">03 88 51 28 79</a></p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="enveloppe">
+  <section class="bloc" id="specialites" aria-labelledby="t-spe">
+    <p class="surtitre">Spécialités</p>
+    <h2 id="t-spe">Ce qui part de <em>nos quais</em></h2>
+    <p class="chapeau">Une boulangerie-pâtisserie artisanale et un salon de thé, juste en face de la gare de Strasbourg.</p>
+
+    <div class="quais">
+      <article class="quai vedette">
+        <span class="panneau" aria-hidden="true"><small>Quai</small>1</span>
+        <div>
+          <h3>Grands desserts</h3>
+          <p>Nos desserts existent en grande taille, sur demande. À commander au moins 48&nbsp;h à l’avance, en boutique ou par téléphone.</p>
+        </div>
+        <p class="grand"><span>4 · 6 · 8</span><em>personnes,<br>au choix</em></p>
+      </article>
+      <article class="quai">
+        <span class="panneau" aria-hidden="true"><small>Quai</small>2</span>
+        <div>
+          <h3>Gâteaux d’anniversaire et de mariage</h3>
+          <p>Personnalisés, sur commande.</p>
+        </div>
+      </article>
+      <article class="quai">
+        <span class="panneau" aria-hidden="true"><small>Quai</small>3</span>
+        <div>
+          <h3>Traiteur apéritif</h3>
+          <p>Le salé de vos apéritifs, sur commande.</p>
+        </div>
+      </article>
+      <article class="quai">
+        <span class="panneau" aria-hidden="true"><small>Quai</small>4</span>
+        <div>
+          <h3>Salon de thé</h3>
+          <p>Café et brunch face à la gare, avant ou après le train.</p>
+        </div>
+      </article>
+      <article class="quai">
+        <span class="panneau" aria-hidden="true"><small>Quai</small>5</span>
+        <div>
+          <h3>Boulangerie</h3>
+          <p>Le comptoir ouvre dès 6&nbsp;h en semaine.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="presse"><b>On parle d’elle&nbsp;:</b> fiche artisans Gault&amp;Millau, article de Gilles Pudlowski (2025), producteurs locaux Tables &amp; Auberges.</p>
+  </section>
+
+  <section class="bloc" id="billet" aria-labelledby="t-billet">
+    <p class="surtitre">Commande de fêtes</p>
+    <h2 id="t-billet">Votre billet, <em>en trois arrêts</em></h2>
+    <p class="chapeau">Choisissez, indiquez le jour du retrait, laissez votre nom&nbsp;: votre message de commande est prêt.</p>
+
+    <form class="billet" id="form" novalidate>
+      <div class="billet-bande"><span>Billet de commande</span><span>retrait en boutique</span></div>
+
+      <div class="corps">
+        <fieldset>
+          <legend><span class="arret" aria-hidden="true">1</span>Votre commande</legend>
+          <span class="etiq" id="l-dessert">Grand dessert</span>
+          <div class="puces" role="group" aria-labelledby="l-dessert">
+            <button type="button" class="puce voie" aria-pressed="false" data-libelle="Grand dessert pour 4 personnes">4&nbsp;<small>pers.</small></button>
+            <button type="button" class="puce voie" aria-pressed="false" data-libelle="Grand dessert pour 6 personnes">6&nbsp;<small>pers.</small></button>
+            <button type="button" class="puce voie" aria-pressed="false" data-libelle="Grand dessert pour 8 personnes">8&nbsp;<small>pers.</small></button>
+          </div>
+          <span class="etiq" id="l-autres">Sur commande</span>
+          <div class="puces" role="group" aria-labelledby="l-autres">
+            <button type="button" class="puce" aria-pressed="false" data-libelle="Gâteau d’anniversaire">Gâteau d’anniversaire</button>
+            <button type="button" class="puce" aria-pressed="false" data-libelle="Gâteau de mariage">Gâteau de mariage</button>
+            <button type="button" class="puce" aria-pressed="false" data-libelle="Traiteur apéritif">Traiteur apéritif</button>
+          </div>
+          <label class="etiq" for="precisions">Votre demande <span class="fac">(texte libre)</span></label>
+          <textarea id="precisions" name="precisions" rows="3" maxlength="600" placeholder="Parfum, inscription sur le gâteau, nombre de pièces…"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="arret" aria-hidden="true">2</span>Départ&nbsp;: le retrait</legend>
+          <div class="duo">
+            <div class="champ">
+              <label class="etiq" for="jour">Jour</label>
+              <input type="date" id="jour" name="jour" required aria-describedby="aide-jour">
+            </div>
+            <div class="champ">
+              <label class="etiq" for="heure">Heure</label>
+              <select id="heure" name="heure" required disabled><option value="">à choisir</option></select>
+            </div>
+          </div>
+          <p class="aide" id="aide-jour">Au moins 48&nbsp;h après la commande, aux heures d’ouverture.</p>
+        </fieldset>
+
+        <fieldset style="border-bottom:0">
+          <legend><span class="arret" aria-hidden="true">3</span>Voyageur</legend>
+          <div class="champ">
+            <label class="etiq" for="nom">Nom</label>
+            <input id="nom" name="nom" autocomplete="name" required maxlength="80">
+          </div>
+          <div class="champ">
+            <label class="etiq" for="tel">Téléphone</label>
+            <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="10 chiffres">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="cote">
+        <div class="talon" aria-labelledby="t-talon">
+          <h3 id="t-talon">Talon du billet</h3>
+          <dl>
+            <dt>Départ</dt><dd>8 place de la Gare</dd>
+            <dt>Le</dt><dd id="s-quand">à choisir</dd>
+            <dt>Bagages</dt><dd id="s-quoi">à choisir</dd>
+            <dt>Voyageur</dt><dd id="s-qui">à compléter</dd>
+          </dl>
+          <span class="tampon" aria-hidden="true">Composté · démo</span>
+        </div>
+        <div class="valider">
+          <p class="erreur" id="erreur" role="alert"></p>
+          <button class="cta" type="submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6z"/><path d="M14 5v2M14 11v2M14 17v2"/></svg>
+            Composter mon billet</button>
+          <p class="mention">Ouvre l’aperçu du message WhatsApp. Démonstration&nbsp;: rien n’est envoyé.</p>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="bloc" id="horaires" aria-labelledby="t-hor">
+    <p class="surtitre">Horaires</p>
+    <h2 id="t-hor">Premier et <em>dernier départ</em></h2>
+    <p class="statut"><span class="etat" id="statut">Horaires de la boutique</span></p>
+    <table class="horaires">
+      <thead><tr><th scope="col">Jours</th><th scope="col">Ouverture</th><th scope="col">Fermeture</th></tr></thead>
+      <tbody>
+        <tr data-jours="1,2,3,4,5"><th scope="row">Lundi au vendredi<span class="auj-lbl">aujourd’hui</span></th>
+          <td><span class="h" aria-label="6 h"><span class="case">0</span><span class="case">6</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td>
+          <td><span class="h" aria-label="19 h"><span class="case">1</span><span class="case">9</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td></tr>
+        <tr data-jours="6"><th scope="row">Samedi<span class="auj-lbl">aujourd’hui</span></th>
+          <td><span class="h" aria-label="7 h"><span class="case">0</span><span class="case">7</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td>
+          <td><span class="h" aria-label="18 h"><span class="case">1</span><span class="case">8</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td></tr>
+        <tr data-jours="0"><th scope="row">Dimanche<span class="auj-lbl">aujourd’hui</span></th>
+          <td><span class="h" aria-label="7 h"><span class="case">0</span><span class="case">7</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td>
+          <td><span class="h" aria-label="14 h"><span class="case">1</span><span class="case">4</span><span class="case p">:</span><span class="case">0</span><span class="case">0</span></span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Horaires relevés sur la page contact du site actuel&nbsp;; ceux du samedi restent à confirmer.</p>
+  </section>
+
+  <section class="bloc" id="acces" aria-labelledby="t-acces">
+    <p class="surtitre">Accès</p>
+    <h2 id="t-acces">Quai de retrait&nbsp;: <em>face à la gare</em></h2>
+    <div class="acces">
+      <div class="carte-quai">
+        <p class="pl">La Gare’Mandise</p>
+        <address>8 place de la Gare<br>67000 Strasbourg</address>
+        <span class="tel">Téléphone&nbsp;: 03 88 51 28 79</span>
+        <div class="boutons">
+          <a class="cta" href="tel:+33388512879">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Appeler</a>
+          <a class="secondaire" href="https://www.google.com/maps/search/?api=1&amp;query=8%20Place%20de%20la%20Gare%2C%2067000%20Strasbourg" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Itinéraire</a>
+        </div>
+      </div>
+      <div class="carte-quai">
+        <p class="pl">Pour commander aujourd’hui</p>
+        <p style="margin:12px 0 0;font:400 1.25rem/1.35 var(--serif)">En boutique ou par téléphone, au moins 48&nbsp;h à l’avance pour un grand dessert.</p>
+        <p style="margin:12px 0 0;color:var(--brume);font-size:15px">Le billet ci-dessus prépare le même message pour WhatsApp, à brancher sur le numéro mobile de la boutique <span class="afournir">[à fournir]</span>.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="enveloppe">
+    <p>Page de démonstration non officielle : aucune commande n'est transmise.</p>
+    <p class="sig">Maquette préparée par BRUNFRAME</p>
+  </div>
+</footer>
+
+<dialog id="apercu" aria-labelledby="ap-titre">
+  <p class="demo">Démonstration : rien n'est envoyé.</p>
+  <div class="wa-barre">
+    <span class="rond" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18l-1.5 10h-15z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+    <div><b id="ap-titre">La Gare’Mandise</b><span>Aperçu du message WhatsApp</span></div>
+  </div>
+  <div class="wa-fil">
+    <div class="bulle"><span id="ap-message"></span><span class="h"><span id="ap-heure">--:--</span><svg viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6l3 3 6-7"/><path d="M6 9l1 0 6-7"/></svg></span></div>
+  </div>
+  <p class="wa-note" id="wa-note">Sur le site en ligne, ce bouton ouvrira WhatsApp avec ce message, vers le numéro mobile de la boutique <span class="afournir">[à fournir]</span>. Le numéro publié (03…) est un fixe.</p>
+  <div class="wa-actions">
+    <button class="cta" type="button" id="ap-fermer">Modifier ma commande</button>
+    <a href="tel:+33388512879">Appeler la boutique : 03 88 51 28 79</a>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  "use strict";
+  // Horaires relevés (page contact) : minutes depuis minuit. 0 = dimanche.
+  var H = {0:[420,840],1:[360,1140],2:[360,1140],3:[360,1140],4:[360,1140],5:[360,1140],6:[420,1080]};
+  var JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+  var MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  // Lien wa.me uniquement avec un mobile 06/07 vérifié : aucun pour l'instant (03 = fixe).
+  var MOBILE_WA = "";
+  var calme = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function deux(n){ return (n<10?"0":"")+n; }
+  function hm(m){ return deux(Math.floor(m/60))+":"+deux(m%60); }
+  function hFr(m){ var h=Math.floor(m/60), mi=m%60; return h+" h"+(mi?" "+deux(mi):""); }
+
+  // Heure murale de Strasbourg, codée dans un Date UTC (évite les pièges de fuseau).
+  function maintenant(){
+    var o = {};
+    try {
+      new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Paris",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",second:"numeric",hourCycle:"h23"})
+        .formatToParts(new Date()).forEach(function(p){ o[p.type]=p.value; });
+      return new Date(Date.UTC(+o.year, +o.month-1, +o.day, (+o.hour)%24, +o.minute, +o.second));
+    } catch(e){
+      var d = new Date(); return new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds()));
+    }
+  }
+  function iso(d){ return d.toISOString().slice(0,10); }
+  function deIso(s){ return new Date(s+"T00:00:00Z"); }
+  function dateLongue(d){ return JOURS[d.getUTCDay()]+" "+d.getUTCDate()+(d.getUTCDate()===1?"er":"")+" "+MOIS[d.getUTCMonth()]; }
+  var MOIS_C = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+  function dateCourte(d){ return JOURS[d.getUTCDay()].slice(0,3)+". "+d.getUTCDate()+" "+MOIS_C[d.getUTCMonth()]; }
+
+  function statut(){
+    var n = maintenant(), j = n.getUTCDay(), m = n.getUTCHours()*60+n.getUTCMinutes(), h = H[j];
+    if (m >= h[0] && m < h[1]) return {ouvert:true, ouv:h[0], texte:"Ouvert, jusqu’à "+hFr(h[1])};
+    if (m < h[0]) return {ouvert:false, ouv:h[0], texte:"Fermé, ouvre à "+hFr(h[0])};
+    var dm = H[(j+1)%7];
+    return {ouvert:false, ouv:dm[0], texte:"Fermé, rouvre demain à "+hFr(dm[0])};
+  }
+
+  // Premier retrait possible : maintenant + 48 h, au créneau de 30 min suivant, pendant l'ouverture.
+  function plusTot(){
+    var t = new Date(maintenant().getTime() + 48*3600e3);
+    var mins = t.getUTCHours()*60 + t.getUTCMinutes() + (t.getUTCSeconds()>0?1:0);
+    mins = Math.ceil(mins/30)*30;
+    var jour = new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate()));
+    for (var i=0;i<10;i++){
+      var h = H[jour.getUTCDay()];
+      if (mins < h[0]) mins = h[0];
+      if (mins <= h[1]-30) return {jour:jour, min:mins};
+      jour = new Date(jour.getTime()+864e5); mins = 0;
+    }
+    return {jour:jour, min:H[jour.getUTCDay()][0]};
+  }
+  function creneaux(s){
+    var d = deIso(s), h = H[d.getUTCDay()], p = plusTot(), out = [];
+    for (var m=h[0]; m<=h[1]-30; m+=30){ if (s!==iso(p.jour) || m>=p.min) out.push(m); }
+    return out;
+  }
+
+  /* ---- Cases à volets ---- */
+  function poser(el, txt){
+    var cases = el.querySelectorAll(".case:not(.p)"), c = txt.replace(":","").split("");
+    for (var i=0;i<cases.length;i++){
+      if (cases[i].textContent !== c[i]){
+        cases[i].textContent = c[i];
+        if (!calme){ cases[i].classList.remove("bascule"); void cases[i].offsetWidth; cases[i].classList.add("bascule"); }
+      }
+    }
+  }
+  var horloge = document.getElementById("horloge"), dernier = "";
+  function tic(){
+    var n = maintenant(), t = deux(n.getUTCHours())+deux(n.getUTCMinutes());
+    if (t === dernier) return;
+    dernier = t;
+    var cs = horloge.querySelectorAll(".case");
+    for (var i=0;i<4;i++){
+      if (cs[i].textContent !== t[i]){ cs[i].textContent = t[i]; if (!calme){ cs[i].classList.remove("bascule"); void cs[i].offsetWidth; cs[i].classList.add("bascule"); } }
+    }
+    horloge.setAttribute("aria-label","Il est "+hFr(n.getUTCHours()*60+n.getUTCMinutes())+" à Strasbourg");
+    majStatut();
+  }
+  function majStatut(){
+    var s = statut();
+    var e = document.getElementById("t-etat");
+    e.textContent = s.ouvert ? "ouvert" : "fermé";
+    e.className = "etat "+(s.ouvert?"ouvert":"ferme");
+    poser(document.getElementById("t-ouv"), hm(s.ouv));
+    document.getElementById("t-ouv").setAttribute("aria-label", (s.ouvert?"Ouvert depuis ":"Ouvre à ")+hFr(s.ouv));
+    var st = document.getElementById("statut");
+    st.textContent = s.texte; st.className = "etat "+(s.ouvert?"ouvert":"ferme");
+    var j = String(maintenant().getUTCDay());
+    document.querySelectorAll(".horaires tbody tr").forEach(function(tr){
+      tr.classList.toggle("auj", tr.getAttribute("data-jours").split(",").indexOf(j) > -1);
+    });
+  }
+  tic(); setInterval(tic, 1000);
+
+  /* ---- Intro : volets qui défilent (passée si mouvement réduit) ---- */
+  if (!calme){
+    var ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    document.querySelectorAll("[data-volet]").forEach(function(el, k){
+      var fin = el.textContent, n = 0, total = 16;
+      setTimeout(function(){
+        var it = setInterval(function(){
+          n++;
+          var vis = Math.floor(fin.length * n/total), s = "";
+          for (var i=0;i<fin.length;i++){
+            var ch = fin[i];
+            s += (i < vis || ch === " " || ch === "·" || ch === "&") ? ch : ALPHA[(Math.random()*ALPHA.length)|0];
+          }
+          el.textContent = s;
+          if (n >= total){ clearInterval(it); el.textContent = fin; }
+        }, 40);
+      }, 200 + k*140);
+    });
+  }
+
+  /* ---- Billet de commande ---- */
+  var form = document.getElementById("form"), jour = document.getElementById("jour"), heure = document.getElementById("heure"),
+      nom = document.getElementById("nom"), tel = document.getElementById("tel"), prec = document.getElementById("precisions"),
+      erreur = document.getElementById("erreur"), aide = document.getElementById("aide-jour"),
+      puces = form.querySelectorAll(".puce");
+
+  var p0 = plusTot(), max = new Date(p0.jour.getTime() + 120*864e5);
+  jour.min = iso(p0.jour); jour.max = iso(max);
+  aide.innerHTML = "Au moins 48&nbsp;h à l’avance. Commandé maintenant, retrait possible dès <b>"+dateLongue(p0.jour)+" à "+hFr(p0.min)+"</b>.";
+
+  function remplirHeures(){
+    var v = jour.value;
+    heure.innerHTML = "";
+    if (!v || v < jour.min || v > jour.max){
+      heure.disabled = true;
+      heure.appendChild(new Option(v ? "indisponible" : "à choisir", ""));
+      return;
+    }
+    var liste = creneaux(v);
+    heure.disabled = false;
+    heure.appendChild(new Option("à choisir", ""));
+    liste.forEach(function(m){ heure.appendChild(new Option(hFr(m), String(m))); });
+  }
+  function choisis(){
+    var a = [];
+    puces.forEach(function(b){ if (b.getAttribute("aria-pressed")==="true") a.push(b.getAttribute("data-libelle")); });
+    return a;
+  }
+  function telNorm(v){
+    var d = v.replace(/\D/g,"");
+    if (d.indexOf("33")===0 && d.length===11) d = "0"+d.slice(2);
+    return /^0[1-9]\d{8}$/.test(d) ? d.replace(/(\d{2})(?=\d)/g,"$1 ") : "";
+  }
+  function talon(){
+    var a = choisis(), libre = prec.value.trim();
+    document.getElementById("s-quoi").textContent = a.length ? a.join(", ") : (libre ? "demande en texte libre" : "à choisir");
+    var q = "à choisir";
+    if (jour.value && jour.value >= jour.min && jour.value <= jour.max){
+      q = dateCourte(deIso(jour.value)) + (heure.value ? " · "+hFr(+heure.value) : "");
+    }
+    document.getElementById("s-quand").textContent = q;
+    document.getElementById("s-qui").textContent = nom.value.trim() || "à compléter";
+    form.classList.remove("composte");
+  }
+  puces.forEach(function(b){
+    b.addEventListener("click", function(){
+      b.setAttribute("aria-pressed", b.getAttribute("aria-pressed")==="true" ? "false" : "true");
+      talon();
+    });
+  });
+  jour.addEventListener("change", function(){ remplirHeures(); jour.removeAttribute("aria-invalid"); talon(); });
+  jour.addEventListener("input", function(){ remplirHeures(); talon(); });
+  [heure, nom, tel, prec].forEach(function(el){ el.addEventListener("input", function(){ el.removeAttribute("aria-invalid"); talon(); }); el.addEventListener("change", talon); });
+
+  var dlg = document.getElementById("apercu");
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var a = choisis(), libre = prec.value.trim(), fautes = [], premier = null;
+    [jour, heure, nom, tel].forEach(function(el){ el.removeAttribute("aria-invalid"); });
+    function faute(el, txt){ fautes.push(txt); if (el){ el.setAttribute("aria-invalid","true"); if (!premier) premier = el; } }
+    if (!a.length && !libre) faute(null, "choisissez une spécialité ou décrivez votre demande");
+    if (!jour.value) faute(jour, "indiquez le jour du retrait");
+    else if (jour.value < jour.min) faute(jour, "le retrait doit être au moins 48 h après la commande");
+    else if (jour.value > jour.max) faute(jour, "choisissez un jour plus proche");
+    else if (!heure.value) faute(heure, "choisissez l’heure du retrait");
+    if (nom.value.trim().length < 2) faute(nom, "indiquez votre nom");
+    var t = telNorm(tel.value);
+    if (!t) faute(tel, "indiquez un téléphone à 10 chiffres");
+    if (fautes.length){
+      erreur.textContent = "Il manque une étape : " + fautes.join(" ; ") + ".";
+      if (premier) premier.focus(); else puces[0].focus();
+      return;
+    }
+    erreur.textContent = "";
+    var d = deIso(jour.value), lignes = ["Bonjour La Gare'Mandise,", "", "Je souhaite passer une commande :"];
+    a.forEach(function(x){ lignes.push("• "+x); });
+    if (libre) lignes.push("", (a.length ? "Précisions : " : "Ma demande : ")+libre);
+    lignes.push("", "Retrait en boutique : "+dateLongue(d)+" à "+hFr(+heure.value), "Nom : "+nom.value.trim(), "Téléphone : "+t, "", "Merci !");
+    var msg = lignes.join("\n");
+    document.getElementById("ap-message").textContent = msg;
+    var n = maintenant(); document.getElementById("ap-heure").textContent = deux(n.getUTCHours())+":"+deux(n.getUTCMinutes());
+    var actions = dlg.querySelector(".wa-actions"), ancien = document.getElementById("ap-wa");
+    if (ancien) ancien.remove();
+    if (/^0[67]\d{8}$/.test(MOBILE_WA)){
+      var lien = document.createElement("a");
+      lien.id = "ap-wa"; lien.target = "_blank"; lien.rel = "noopener";
+      lien.href = "https://wa.me/33"+MOBILE_WA.slice(1)+"?text="+encodeURIComponent(msg);
+      lien.textContent = "Ouvrir dans WhatsApp";
+      actions.insertBefore(lien, actions.children[1]);
+      document.getElementById("wa-note").hidden = true;
+    }
+    form.classList.add("composte");
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open","");
+  });
+  document.getElementById("ap-fermer").addEventListener("click", function(){
+    if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open");
+  });
+  dlg.addEventListener("click", function(e){ if (e.target === dlg && dlg.close) dlg.close(); });
+  talon();
+})();
+</script>
+</body>
+</html>
