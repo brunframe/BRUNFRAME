@@ -198,6 +198,8 @@ input:focus,textarea:focus{border-color:var(--sang)}
   color:var(--encre);text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center;transition:background-color .2s}
 .btn:hover{background:rgba(122,28,36,.07)}
 .btn small{display:block;font-size:14px;letter-spacing:.02em;text-transform:none;color:var(--encre-douce)}
+.seconde{margin:22px 0 0;padding-top:14px;border-top:1px solid var(--filet);color:var(--encre-douce);font-size:15px;line-height:1.45;max-width:560px}
+.seconde .capitale{display:block;margin-bottom:4px;color:var(--acier)}
 
 /* Pied de page */
 .pied{margin-top:72px;padding:0 0 112px}
@@ -386,13 +388,13 @@ dialog::backdrop{background:rgba(34,20,15,.74)}
           <p class="texte">Viande de boucherie et charcuterie maison. Prix et disponibilités&nbsp;: au comptoir ou au téléphone.</p>
         </div>
         <ul class="etiquettes revele">
-          <li><span class="etiquette" style="--r:-2.2deg"><span class="cat capitale">Bœuf</span><span class="plat">maturé</span></span></li>
-          <li><span class="etiquette" style="--r:1.6deg"><span class="cat capitale">Porc du Cantal</span><span class="plat">travers</span></span></li>
-          <li><span class="etiquette" style="--r:1.2deg"><span class="cat capitale">Agneau</span><span class="plat">côtelettes</span></span></li>
-          <li><span class="etiquette" style="--r:-1.8deg"><span class="cat capitale">Charcuterie maison</span><span class="plat">boudin brioché</span></span></li>
-          <li class="large"><span class="etiquette" style="--r:-.8deg"><span class="cat capitale">Charcuterie maison</span><span class="plat">jambon en croûte</span></span></li>
+          <li><span class="etiquette" style="--r:-2.2deg"><span class="cat capitale">Cochon fermier du Cantal</span><span class="plat">côte première</span></span></li>
+          <li><span class="etiquette" style="--r:1.6deg"><span class="cat capitale">Agneau</span><span class="plat">côtelettes doubles</span></span></li>
+          <li><span class="etiquette" style="--r:1.2deg"><span class="cat capitale">Porc noir de Bigorre</span><span class="plat">joues à la bière brune</span></span></li>
+          <li><span class="etiquette" style="--r:-1.8deg"><span class="cat capitale">Affinage</span><span class="plat">viande maturée</span></span></li>
+          <li class="large"><span class="etiquette" style="--r:-.8deg"><span class="cat capitale">Préparations maison</span><span class="plat">poitrine de veau farcie, paupiettes</span></span></li>
         </ul>
-        <p class="source capitale">Spécialités citées par le guide Gault&amp;Millau</p>
+        <p class="source capitale">Produits présentés sur natacha-bieber.fr (page Produits et fil Instagram)</p>
       </div>
     </section>
 
@@ -421,17 +423,18 @@ dialog::backdrop{background:rgba(34,20,15,.74)}
             <fieldset class="plein">
               <legend class="capitale">Ajouter une spécialité</legend>
               <div class="puces-liste">
-                <button type="button" class="puce" aria-pressed="false" data-ligne="Bœuf maturé">Bœuf maturé</button>
-                <button type="button" class="puce" aria-pressed="false" data-ligne="Côtelettes d’agneau">Côtelettes d’agneau</button>
-                <button type="button" class="puce" aria-pressed="false" data-ligne="Travers de porc du Cantal">Travers de porc du Cantal</button>
-                <button type="button" class="puce" aria-pressed="false" data-ligne="Boudin brioché">Boudin brioché</button>
-                <button type="button" class="puce" aria-pressed="false" data-ligne="Jambon en croûte">Jambon en croûte</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Côte première de cochon du Cantal">Côte première de cochon du Cantal</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Côtelettes d’agneau doubles">Côtelettes d’agneau doubles</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Joues de porc noir de Bigorre">Joues de porc noir de Bigorre</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Viande maturée">Viande maturée</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Poitrine de veau farcie">Poitrine de veau farcie</button>
+                <button type="button" class="puce" aria-pressed="false" data-ligne="Paupiettes de bœuf">Paupiettes de bœuf</button>
               </div>
             </fieldset>
 
             <div class="champ plein">
               <label for="commande" class="capitale">Votre commande</label>
-              <textarea id="commande" name="commande" rows="5" aria-describedby="aide-commande" placeholder="Par exemple&nbsp;: jambon en croûte pour huit, quatre côtelettes d’agneau…"></textarea>
+              <textarea id="commande" name="commande" rows="5" aria-describedby="aide-commande" placeholder="Par exemple&nbsp;: une poitrine de veau farcie pour six, quatre côtelettes d’agneau doubles…"></textarea>
               <p class="aide" id="aide-commande">Indiquez les quantités ou le nombre de personnes.</p>
               <p class="erreur" id="err-commande" hidden>Écrivez au moins un produit.</p>
             </div>
@@ -447,7 +450,7 @@ dialog::backdrop{background:rgba(34,20,15,.74)}
                   <input type="time" id="heure" name="heure" step="900" aria-describedby="aide-jour">
                 </div>
               </div>
-              <p class="aide" id="aide-jour">Fermé le lundi, en général le dimanche. Horaires à confirmer.</p>
+              <p class="aide" id="aide-jour">Fermé le lundi et le dimanche. Le mercredi, le matin seulement.</p>
               <p class="erreur" id="err-jour" hidden>Choisissez un jour de retrait.</p>
             </div>
 
@@ -479,20 +482,20 @@ dialog::backdrop{background:rgba(34,20,15,.74)}
       <p class="rail capitale"><span class="num">04</span><span>Les heures</span></p>
       <div class="heures-grille revele">
         <div>
-          <h2 id="t-heures">Nos heures, <em>à confirmer.</em></h2>
-          <p class="texte">Horaires indicatifs. Appelez-nous avant de passer, surtout pendant les fêtes&nbsp;: les horaires de fin d’année sont à confirmer.</p>
+          <h2 id="t-heures">Ouvert <em>du mardi au samedi.</em></h2>
+          <p class="texte">Le mercredi, le matin seulement. Pendant les fêtes, appelez avant de passer&nbsp;: les horaires de fin d’année sont à confirmer.</p>
         </div>
         <div>
         <dl class="heures">
           <div class="ferme" data-j="1"><dt>Lundi</dt><dd>Fermé</dd></div>
-          <div data-j="2"><dt>Mardi</dt><dd>À confirmer</dd></div>
-          <div data-j="3"><dt>Mercredi</dt><dd>À confirmer</dd></div>
-          <div data-j="4"><dt>Jeudi</dt><dd>À confirmer</dd></div>
-          <div data-j="5"><dt>Vendredi</dt><dd>À confirmer</dd></div>
-          <div data-j="6"><dt>Samedi</dt><dd>À confirmer</dd></div>
-          <div class="ferme" data-j="0"><dt>Dimanche</dt><dd>En général fermé</dd></div>
+          <div data-j="2"><dt>Mardi</dt><dd>8h30–12h30 · 15h–18h30</dd></div>
+          <div data-j="3"><dt>Mercredi</dt><dd>8h30–12h30</dd></div>
+          <div data-j="4"><dt>Jeudi</dt><dd>8h30–12h30 · 15h–18h30</dd></div>
+          <div data-j="5"><dt>Vendredi</dt><dd>8h30–12h30 · 15h–18h30</dd></div>
+          <div data-j="6"><dt>Samedi</dt><dd>8h30–15h30</dd></div>
+          <div class="ferme" data-j="0"><dt>Dimanche</dt><dd>Fermé</dd></div>
         </dl>
-        <p class="source capitale">Lundi et dimanche&nbsp;: horaires saisis par des internautes, à vérifier</p>
+        <p class="source capitale">Horaires de la page Contact de natacha-bieber.fr</p>
         </div>
       </div>
     </section>
@@ -512,13 +515,14 @@ dialog::backdrop{background:rgba(34,20,15,.74)}
           <a class="btn" href="tel:+33390238738"><span>Appeler<small>03 90 23 87 38</small></span></a>
           <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=17%20rue%20de%20la%20Croix%2C%2067000%20Strasbourg" target="_blank" rel="noopener"><span>Itinéraire<small>Google Maps</small></span></a>
         </div>
+        <p class="seconde"><span class="capitale">Seconde boutique · Neudorf</span>113 route du Polygone, 67100 Strasbourg</p>
       </div>
     </section>
   </main>
 
   <footer class="pied">
     <div class="regle" aria-hidden="true"></div>
-    <p>Sources publiques&nbsp;: acceslibre (adresse, téléphone), guides Gault&amp;Millau et Le Fooding (histoire, spécialités), au-magasin.fr (jours de fermeture saisis par des internautes, à vérifier).</p>
+    <p>Sources publiques&nbsp;: site natacha-bieber.fr (horaires, produits, seconde boutique), acceslibre (adresse, téléphone), guides Gault&amp;Millau et Le Fooding (histoire).</p>
     <p>Page de démonstration non officielle&nbsp;: aucune commande n’est transmise.</p>
     <p class="signature">Maquette préparée par BRUNFRAME</p>
   </footer>
@@ -609,15 +613,35 @@ dialog::backdrop{background:rgba(34,20,15,.74)}
   });
   ta.addEventListener("input", function () { synchroniser(); effacer(ta); });
 
+  /* Horaires de la page Contact de natacha-bieber.fr (0 = dimanche) */
+  var HORAIRES = {
+    0: [], 1: [],
+    2: [["08:30", "12:30"], ["15:00", "18:30"]],
+    3: [["08:30", "12:30"]],
+    4: [["08:30", "12:30"], ["15:00", "18:30"]],
+    5: [["08:30", "12:30"], ["15:00", "18:30"]],
+    6: [["08:30", "15:30"]]
+  };
+  var JOURS = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+  function hh(t) { return t.replace(/^0/, "").replace(":00", "h").replace(":", "h"); }
+  function plages(j) { return HORAIRES[j].map(function (p) { return "de\u00a0" + hh(p[0]) + " à\u00a0" + hh(p[1]); }).join(" et "); }
+  function ouvert(j, t) { return HORAIRES[j].some(function (p) { return t >= p[0] && t <= p[1]; }); }
+
   var AIDE_JOUR = aideJour.textContent;
-  jour.addEventListener("change", function () {
-    effacer(jour);
+  function majAideJour() {
     if (!jour.value) { aideJour.textContent = AIDE_JOUR; aideJour.classList.remove("alerte"); return; }
     var j = new Date(jour.value + "T12:00:00Z").getUTCDay();
-    if (j === 1) { aideJour.textContent = "Le lundi, la boutique est fermée (à confirmer). Un autre jour\u00a0?"; aideJour.classList.add("alerte"); }
-    else if (j === 0) { aideJour.textContent = "Le dimanche, la boutique est en général fermée (à confirmer). Un autre jour\u00a0?"; aideJour.classList.add("alerte"); }
-    else { aideJour.textContent = AIDE_JOUR; aideJour.classList.remove("alerte"); }
-  });
+    var nomJour = JOURS[j].charAt(0).toUpperCase() + JOURS[j].slice(1);
+    if (!HORAIRES[j].length) {
+      aideJour.textContent = "Le " + JOURS[j] + ", la boutique est fermée. Un autre jour\u00a0?"; aideJour.classList.add("alerte");
+    } else if (heure.value && !ouvert(j, heure.value)) {
+      aideJour.textContent = "À cette heure, la boutique est fermée. " + nomJour + "\u00a0: retrait " + plages(j) + "."; aideJour.classList.add("alerte");
+    } else {
+      aideJour.textContent = nomJour + "\u00a0: retrait " + plages(j) + "."; aideJour.classList.remove("alerte");
+    }
+  }
+  jour.addEventListener("change", function () { effacer(jour); majAideJour(); });
+  heure.addEventListener("change", majAideJour);
   [nom, tel].forEach(function (c) { c.addEventListener("input", function () { effacer(c); }); });
 
   function erreurDe(c) { return document.getElementById("err-" + c.id); }

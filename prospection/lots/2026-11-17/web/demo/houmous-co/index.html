@@ -79,6 +79,8 @@ h1 em{font-weight:400;color:var(--huile-400);letter-spacing:0;margin-right:.12em
 .hero-meta{list-style:none;margin:22px 0 0;padding:16px 0 0;border-top:1px solid #f3ead72e;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:#f3ead7d9}
 .hero-meta li{display:flex;align-items:center;gap:8px}
 .hero-meta .ico{color:var(--huile-400);width:16px;height:16px}
+.hero-meta .point{width:9px;height:9px;margin:0 3px 0 4px;border-radius:50%;background:var(--olive-300);box-shadow:0 0 0 3px #bccb9533;flex:none}
+.hero-meta .ferme .point{background:transparent;border:1.5px solid #f3ead7b3;box-shadow:none}
 
 /* ---------- Bandeau des fêtes ---------- */
 .fetes{position:relative;overflow:hidden;background:var(--huile-400);color:var(--sumac-950);padding:46px 0 50px}
@@ -369,6 +371,8 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
     <a class="cta" href="#commande" id="cta-haut"><span>Commander pour les fêtes</span><span class="cta-rond" aria-hidden="true"><svg><use href="#mini"/></svg></span></a>
     <ul class="hero-meta">
       <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>11 rue de la Division-Leclerc</li>
+      <li id="statut"><span class="point" aria-hidden="true"></span><span id="statut-txt">Lun–jeu 11h30–21h30 · ven–sam 11h30–22h00</span></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#mini"/></svg>Depuis maintenant 10 ans</li>
     </ul>
   </div>
 </header>
@@ -496,7 +500,7 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
       <h2 id="t-infos" class="apparait">En plein centre, <em>sur la Grande Île.</em></h2>
       <div class="infos-grille">
         <div class="apparait">
-          <h3>Horaires <span class="tag">à confirmer</span></h3>
+          <h3>Horaires</h3>
           <table class="horaires">
             <tbody>
               <tr data-jour="0"><th scope="row">Lundi</th><td>11h30 – 21h30</td></tr>
@@ -508,7 +512,7 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
               <tr data-jour="6"><th scope="row">Dimanche</th><td>Fermé</td></tr>
             </tbody>
           </table>
-          <p class="note-h">Horaires relevés sur des annuaires en ligne, qui ne concordent pas tous pour le vendredi et le samedi.</p>
+          <p class="note-h">Horaires indiqués sur le site du restaurant.</p>
         </div>
         <div class="apparait">
           <h3>Adresse</h3>
@@ -531,7 +535,7 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
       <p class="pied-nom">Houmous <em>&amp;</em> Co</p>
       <p>Restaurant et traiteur libanais<br>11 rue de la Division-Leclerc, 67000 Strasbourg</p>
     </div>
-    <p class="sources">Spécialités et horaires relevés sur des annuaires publics (Rankeat, HappyCow, Wanderlog, Spinach).</p>
+    <p class="sources">Horaires relevés sur le site du restaurant. Spécialités relevées sur des annuaires publics (Rankeat, HappyCow, Wanderlog, Spinach).</p>
     <p class="avert">Page de démonstration non officielle&nbsp;: aucune commande n'est transmise.</p>
     <p class="credit">Maquette préparée par BRUNFRAME</p>
   </div>
@@ -581,6 +585,26 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
   }
   var maintenant = paris();
   var jourIdx = (maintenant.getDay() + 6) % 7;
+
+  /* Horaires du site du restaurant, en minutes (index 0 = lundi ; null = fermé) */
+  var HORAIRES = [[690, 1290], [690, 1290], [690, 1290], [690, 1290], [690, 1320], [690, 1320], null];
+  var JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+  function hm(m) { return Math.floor(m / 60) + "h" + pad(m % 60); }
+  function hhmm(m) { return pad(Math.floor(m / 60)) + ":" + pad(m % 60); }
+
+  /* Ouvert / fermé, à l'heure de Paris */
+  (function () {
+    var li = document.getElementById("statut"), txt = document.getElementById("statut-txt");
+    if (!li || !txt) return;
+    var m = maintenant.getHours() * 60 + maintenant.getMinutes(), h = HORAIRES[jourIdx];
+    if (h && m >= h[0] && m < h[1]) { txt.textContent = "Ouvert · jusqu'à " + hm(h[1]); return; }
+    li.classList.add("ferme");
+    if (h && m < h[0]) { txt.textContent = "Fermé · ouvre à " + hm(h[0]); return; }
+    for (var k = 1; k <= 7; k++) {
+      var j = (jourIdx + k) % 7;
+      if (HORAIRES[j]) { txt.textContent = "Fermé · ouvre " + (k === 1 ? "demain" : JOURS[j]) + " à " + hm(HORAIRES[j][0]); return; }
+    }
+  })();
 
   /* Ligne du jour dans les horaires */
   var ligne = document.querySelector('.horaires tr[data-jour="' + jourIdx + '"]');
@@ -653,6 +677,15 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
   var aujourdhui = maintenant.getFullYear() + "-" + pad(maintenant.getMonth() + 1) + "-" + pad(maintenant.getDate());
   form.elements.date.min = aujourdhui;
 
+  /* Créneaux de retrait = horaires du jour choisi */
+  function horairesDu(d) { return d ? HORAIRES[(new Date(d + "T12:00:00").getDay() + 6) % 7] : null; }
+  var champHeure = form.elements.heure;
+  champHeure.min = hhmm(690); champHeure.max = hhmm(1320);
+  form.elements.date.addEventListener("change", function () {
+    var h = horairesDu(form.elements.date.value);
+    if (h) { champHeure.min = hhmm(h[0]); champHeure.max = hhmm(h[1]); }
+  });
+
   /* Validation lisible */
   function champ(nom) { return form.elements[nom]; }
   function erreur(nom, texte) {
@@ -680,8 +713,12 @@ dialog::backdrop{background:#12030799;-webkit-backdrop-filter:blur(4px);backdrop
     if (!d) { erreur("date", "Choisissez le jour du retrait."); premiers.push("date"); }
     else if (d < aujourdhui) { erreur("date", "Choisissez une date à partir d'aujourd'hui."); premiers.push("date"); }
     else if (new Date(d + "T12:00:00").getDay() === 0) { erreur("date", "Nous sommes fermés le dimanche : choisissez un autre jour."); premiers.push("date"); }
-    var m = minutes(champ("heure").value);
-    if (champ("heure").value && (isNaN(m) || m < 690 || m > 1320)) { erreur("heure", "Retrait entre 11h30 et 21h30 (22h00 le vendredi et le samedi)."); premiers.push("heure"); }
+    var m = minutes(champ("heure").value), hj = horairesDu(d);
+    if (champ("heure").value) {
+      if (hj && (isNaN(m) || m < hj[0] || m > hj[1])) { erreur("heure", "Ce jour-là, retrait entre " + hm(hj[0]) + " et " + hm(hj[1]) + "."); premiers.push("heure"); }
+      else if (!hj && (isNaN(m) || m < 690 || m > 1320)) { erreur("heure", "Retrait entre 11h30 et 21h30 (22h00 le vendredi et le samedi)."); premiers.push("heure"); }
+      else if (d === aujourdhui && m <= maintenant.getHours() * 60 + maintenant.getMinutes()) { erreur("heure", "Cette heure est déjà passée : choisissez une heure plus tardive."); premiers.push("heure"); }
+    }
     if (!champ("nom").value.trim()) { erreur("nom", "Indiquez votre nom."); premiers.push("nom"); }
     var chiffres = champ("tel").value.replace(/\D/g, "");
     if (chiffres.length < 10) { erreur("tel", "Indiquez un numéro de téléphone complet."); premiers.push("tel"); }
