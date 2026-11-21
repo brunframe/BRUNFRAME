@@ -172,14 +172,15 @@
   /* Ce qui est suivi chaque jour, et à partir de quelle semaine (1 à 2 nouveautés par semaine). */
   var HABITS = [
     { k: "tel_loin", n: "Téléphone loin du lit", s: "la nuit dernière", from: 1 },
-    { k: "salle", n: "Séance de salle", s: "lundi, jeudi, samedi", from: 2 },
+    { k: "salle", n: "Séance de salle", s: "le matin, avant le travail", from: 2 },
     { k: "fastfood", n: "Fast-food", s: "à cocher si tu en as mangé", from: 2, neg: true },
     { k: "chambre", n: "Chambre en ordre", s: "10 min le soir", from: 6 },
-    { k: "tel_matin", n: "Pas de téléphone avant 08:30", s: "le matin", from: 7 }
+    { k: "tel_matin", n: "Pas de téléphone au réveil", s: "les 30 premières minutes", from: 7 }
   ];
   var COUNTERS = [
     { k: "ecran", n: "Écran", u: "h", step: 0.5, from: 1, s: "Réglages › Temps d'écran" },
     { k: "depenses", n: "Dépenses", u: "€", input: true, from: 1, s: "tout compris" },
+    { k: "pas", n: "Pas", u: "pas", input: true, from: 1, s: "app Santé, le soir" },
     { k: "business", n: "Business", u: "min", step: 15, from: 1, s: "temps réel" },
     { k: "contacts", n: "Prospects contactés", u: "", step: 1, from: 4, s: "message, appel ou visite" },
     { k: "etudes", n: "Études", u: "min", step: 15, from: 1, s: "révisions, EVPM" }
@@ -259,7 +260,7 @@
     html += '<section class="card"><div><p class="eyebrow">Soir · chiffres</p><h2 class="h2">Le relevé</h2></div><div class="counters">' +
       cs.map(function (c) {
         var v = x[c.k];
-        if (c.input) return '<div class="ctr"><div><div class="cn">' + tx(c.n) + '</div><div class="ct">' + tx(c.s) + '</div></div><div class="step"><input class="v" type="text" inputmode="decimal" data-d="' + c.k + '" value="' + esc(v == null ? "" : String(v).replace(".", ",")) + '" placeholder="0" aria-label="' + esc(c.n) + ' en euros"><span class="mono muted">€</span></div></div>';
+        if (c.input) return '<div class="ctr"><div><div class="cn">' + tx(c.n) + '</div><div class="ct">' + tx(c.s) + '</div></div><div class="step"><input class="v" type="text" inputmode="decimal" data-d="' + c.k + '" value="' + esc(v == null ? "" : String(v).replace(".", ",")) + '" placeholder="0" aria-label="' + esc(c.n) + '"><span class="mono muted">' + esc(c.u) + '</span></div></div>';
         return '<div class="ctr"><div><div class="cn">' + tx(c.n) + '</div><div class="ct">' + tx(c.s) + '</div></div><div class="step"><button type="button" data-c="' + c.k + '" data-dir="-1" aria-label="Moins">−</button><span class="v" id="cv-' + c.k + '">' + (v == null ? "0" : fr(v, 1)) + (c.u ? "<small>" + c.u + "</small>" : "") + '</span><button type="button" data-c="' + c.k + '" data-dir="1" aria-label="Plus">+</button></div></div>';
       }).join("") + "</div></section>";
     html += '<details class="card fold"' + (x.difficultes || x.amelioration ? " open" : "") + '><summary><div><p class="eyebrow">Soir · 1 min</p><h2 class="h2">Le bilan</h2></div></summary><div class="fb">' +
@@ -283,7 +284,7 @@
   /* ================= Agrégats ================= */
   function weekDays(m) { var o = []; for (var i = 0; i < 7; i++) o.push(addDays(m, i)); return o; }
   function agg(m) {
-    var r = { noted: 0, sleep: [], beds: [], onTime: 0, bedN: 0, salle: 0, fast: 0, chambre: 0, tel: 0, ecran: [], dep: 0, depN: 0, biz: 0, contacts: 0, etudes: 0, energie: [], pd: 0, pp: 0 };
+    var r = { noted: 0, sleep: [], beds: [], onTime: 0, bedN: 0, salle: 0, fast: 0, chambre: 0, tel: 0, ecran: [], pas: [], dep: 0, depN: 0, biz: 0, contacts: 0, etudes: 0, energie: [], pd: 0, pp: 0 };
     weekDays(m).forEach(function (d) {
       var x = day(d); if (!noted(x)) return;
       r.noted++;
@@ -294,12 +295,13 @@
       if (x.chambre === true) r.chambre++;
       if (x.tel_loin === true) r.tel++;
       var e = num(x.ecran); if (e != null) r.ecran.push(e);
+      var ps = num(x.pas); if (ps != null) r.pas.push(ps);
       var dp = num(x.depenses); if (dp != null) { r.dep += dp; r.depN++; }
       r.biz += num(x.business) || 0; r.contacts += num(x.contacts) || 0; r.etudes += num(x.etudes) || 0;
       if (x.energie) r.energie.push(x.energie);
       ["1", "2", "3"].forEach(function (i) { if (x["p" + i]) { r.pp++; if (x["p" + i + "_ok"] === true) r.pd++; } });
     });
-    r.sleepAvg = avg(r.sleep); r.bedAvg = avg(r.beds); r.ecranAvg = avg(r.ecran); r.enAvg = avg(r.energie);
+    r.pasAvg = avg(r.pas); r.sleepAvg = avg(r.sleep); r.bedAvg = avg(r.beds); r.ecranAvg = avg(r.ecran); r.enAvg = avg(r.energie);
     r.w = weekOf(m) || weekOf(addDays(m, 6));
     r.rev = review(m);
     return r;
@@ -319,6 +321,7 @@
       line("Écran moyen", a.ecranAvg != null ? fr(a.ecranAvg, 1) + " h/j" : "—", c && c.ecran ? "≤ " + fr(c.ecran, 1) + " h" : "mesure") +
       line("Dépenses", fr(a.dep, 0) + " €", c && c.depenses ? "≤ " + c.depenses + " €" : "mesure") +
       line("Fast-food", String(a.fast), "≤ 1") +
+      line("Pas par jour", a.pasAvg != null ? fr(a.pasAvg, 0) : "—", "départ : 5 844") +
       line("Business", dur(a.biz), "≈ 13 h") +
       line("Prospects contactés", String(a.contacts), c && c.contacts ? String(c.contacts) : "") +
       line("Études", dur(a.etudes), c && c.etudes ? dur(c.etudes) : "") +
@@ -412,6 +415,7 @@
       tr("Finances", "Mis de côté", a.rev.epargne ? a.rev.epargne + " €" : "—", b.rev.epargne ? b.rev.epargne + " €" : "—", "250 €/mois") +
       tr("Bien-être", "Sommeil moyen", a.sleepAvg != null ? dur(a.sleepAvg) : "—", b.sleepAvg != null ? dur(b.sleepAvg) : "—", "≥ 7 h") +
       tr("Bien-être", "Coucher moyen", a.bedAvg != null ? clock(a.bedAvg) : "—", b.bedAvg != null ? clock(b.bedAvg) : "—", c ? c.coucher : "—") +
+      tr("Bien-être", "Pas par jour", a.pasAvg != null ? fr(a.pasAvg, 0) : "—", b.pasAvg != null ? fr(b.pasAvg, 0) : "—", "départ : 5 844") +
       tr("Bien-être", "Fast-food", String(a.fast), String(b.fast), "≤ 1") +
       tr("Bien-être", "Énergie au réveil", a.enAvg != null ? fr(a.enAvg, 1) + "/5" : "—", b.enAvg != null ? fr(b.enAvg, 1) + "/5" : "—", "en hausse") +
       tr("Vision", "Bilan du dimanche", noted(a.rev) ? "fait" : "non", noted(b.rev) ? "fait" : "non", "chaque semaine") +
@@ -539,7 +543,7 @@
     var k = el.getAttribute && el.getAttribute("data-d");
     if (k) {
       var v = el.value;
-      if (k === "depenses") { var n = num(v); v = n == null ? null : n; }
+      if (k === "depenses" || k === "pas") { var n = num(v); v = n == null ? null : n; }
       setDay(UI.day, k, v);
       if (k === "coucher" || k === "reveil") { el.classList.toggle("empty", !el.value); var x = day(UI.day); $("#sleepbar").innerHTML = sleepBar(sleepMin(x.coucher, x.reveil)); }
       refreshScore();
