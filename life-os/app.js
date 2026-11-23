@@ -92,7 +92,7 @@
       f.pulledAt = Date.now();
       if (!res) return false;
       var merged = res.data || {};
-      Object.keys(f.dirty).forEach(function (k) { if (f.data[k] !== undefined) merged[k] = f.data[k]; });
+      Object.keys(f.dirty).forEach(function (k) { if (f.data[k] !== undefined) merged[k] = f.data[k]; else delete merged[k]; });
       var changed = JSON.stringify(merged) !== JSON.stringify(f.data);
       f.data = merged; f.sha = res.sha; persist();
       return changed;
@@ -128,6 +128,10 @@
     [t, addDays(t.slice(0, 8) + "01", -1), UI.day, UI.week, addDays(UI.week, 6), UI.reg, addDays(UI.reg, -7), addDays(UI.reg, 6)].forEach(function (d) {
       list.push("jours/" + d.slice(0, 7) + ".json"); list.push("semaines/" + mondayOf(d).slice(0, 4) + ".json");
     });
+    list.push("listes/taches.json");
+    var ym = t.slice(0, 7);
+    [0, 1, 2].forEach(function (i) { list.push("sport/" + moisPrec(ym, i) + ".json"); });
+    [ym, moisPrec(ym, 1), UI.mois || ym, moisPrec(UI.mois || ym, 1), UI.day.slice(0, 7)].forEach(function (m) { list.push("argent/" + m + ".json"); });
     return list.filter(function (p, i) { return list.indexOf(p) === i; });
   }
   function runSync(force) {
@@ -232,7 +236,8 @@
     if (n >= 2) coches.push(["salle", "Séance de salle faite"], ["fastfood", "J'ai mangé un fast-food"]);
     if (n >= 6) coches.push(["chambre", "Chambre remise en ordre"]);
     if (coches.length) s.push({ id: "coches", q: "Coche ce qui est vrai aujourd'hui", hint: "Laisse vide si ce n'est pas le cas.", kind: "coches", items: coches });
-    var ch = [["ecran", "Écran", "h"], ["depenses", "Dépenses", "€"], ["pas", "Pas", ""], ["business", "Business", "min"]];
+    s.push({ id: "depenses", q: "Tes dépenses du jour", hint: "Tape le montant, choisis la catégorie, ajoute. Rien dépensé : Suivant.", kind: "depenses" });
+    var ch = [["ecran", "Écran", "h"], ["pas", "Pas", ""], ["business", "Business", "min"]];
     if (n >= 4) ch.push(["contacts", "Prospects contactés", ""]);
     ch.push(["etudes", "Études", "min"]);
     s.push({ id: "chiffres", q: "Tes chiffres du jour", hint: "Écran : Réglages › Temps d'écran. Pas : app Santé.", kind: "chiffres", items: ch });
@@ -278,6 +283,8 @@
         ctl = '<div class="liste">' + st.items.map(function (it) { return '<button type="button" class="opt large" data-tog="' + it[0] + '" aria-pressed="' + (x[it[0]] === true) + '"><span class="case"></span>' + tx(it[1]) + "</button>"; }).join("") + "</div>"; break;
       case "chiffres":
         ctl = '<div class="grille-n">' + st.items.map(function (it) { var v = x[it[0]]; return '<label class="cellule"><span>' + tx(it[1]) + '</span><span class="saisie-n"><input type="text" inputmode="decimal" data-d="' + it[0] + '" value="' + esc(v == null ? "" : String(v).replace(".", ",")) + '" placeholder="0" autocomplete="off">' + (it[2] ? "<em>" + esc(it[2]) + "</em>" : "") + "</span></label>"; }).join("") + "</div>"; break;
+      case "depenses":
+        ctl = ctlDepenses(); break;
       case "time":
         ctl = '<input class="grand-heure" type="time" id="fi" data-d="' + st.k + '" value="' + esc(x[st.k] || "") + '">'; break;
       case "yesno":
@@ -354,6 +361,8 @@
       etape(2, "L'après-midi", "1 minute, après le travail : ce que tu as tenu et tes chiffres.", soirOk, "soir") +
       (isSun && d === t ? etape(3, "Le bilan de la semaine", "5 minutes, le dimanche soir.", semOk, "semaine") : "") +
       "</div></section>";
+    var tj = tachesDuJour();
+    if (d === t && tj.length) html += '<section class="bloc"><h2>À faire aujourd\'hui</h2><ul class="taches">' + tj.slice(0, 6).map(function (x) { return ligneTache(x, t); }).join("") + '</ul><a class="petit-btn" href="#taches">Toutes les tâches →</a></section>';
     if (x.p1 || x.p2 || x.p3) html += '<section class="bloc"><h2>Tes priorités</h2><ul class="prios">' + ["1", "2", "3"].filter(function (i) { return x["p" + i]; }).map(function (i) { return '<li class="' + (x["p" + i + "_ok"] === true ? "fait" : "") + '"><span class="case"></span>' + esc(x["p" + i]) + "</li>"; }).join("") + "</ul></section>";
     if (w) {
       html += '<section class="bloc"><h2>Cette semaine' + (j < 1 ? " (dès lundi)" : "") + "</h2><p class=\"titre-sem\">" + tx(w.titre) + '</p><ol class="regles">' + w.priorites.map(function (p) { return "<li>" + tx(p) + "</li>"; }).join("") + "</ol>" +
@@ -367,6 +376,7 @@
   function agg(m) {
     var r = { noted: 0, sleep: [], beds: [], onTime: 0, bedN: 0, salle: 0, fast: 0, chambre: 0, tel: 0, ecran: [], pas: [], dep: 0, depN: 0, biz: 0, contacts: 0, etudes: 0, energie: [], pd: 0, pp: 0 };
     weekDays(m).forEach(function (d) {
+      var dj = depensesDuJour(d); if (dj.length) { r.dep += dj.reduce(function (a, y) { return a + (num(y.montant) || 0); }, 0); r.depN++; }
       var x = day(d); if (!noted(x)) return;
       r.noted++;
       var s = sleepMin(x.coucher, x.reveil); if (s != null) r.sleep.push(s);
@@ -420,7 +430,8 @@
     var m = UI.reg, w = weekOf(m) || weekOf(addDays(m, 6));
     $("#v-progres").innerHTML = '<div class="entete"><p class="sur">' + esc(shortDate(m)) + " – " + esc(shortDate(addDays(m, 6))) + "</p><h1>" + (w ? "Semaine " + w.n : "Semaine") + '</h1><div class="jours"><button type="button" class="petit-btn" data-reg="-7">← Précédente</button><button type="button" class="petit-btn" data-reg="7">Suivante →</button></div></div>' +
       '<section class="bloc"><h2>Sommeil</h2><p class="aide">Noir : 7 h ou plus. Gris : moins.</p><div class="graph">' + barres(m) + "</div></section>" +
-      '<section class="bloc"><h2>Résultats de la semaine</h2>' + resumeSemaine(m) + "</section>";
+      '<section class="bloc"><h2>Résultats de la semaine</h2>' + resumeSemaine(m) + "</section>" +
+      '<a class="secondaire lien-btn" href="#plan">Voir mon plan sur 90 jours →</a>';
   }
 
   /* ================= Plan ================= */
@@ -473,16 +484,267 @@
     }, function () { msg.textContent = "Pas de connexion."; });
   }
 
+
+  /* ================= Données génériques (tâches, sport, argent) ================= */
+  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+  function getData(path) { var f = files[path]; return f ? f.data : {}; }
+  function setKey(path, k, v) { var f = file(path), cur = Object.assign({}, f.data); if (v == null) delete cur[k]; else cur[k] = v; f.data = cur; f.dirty[k] = ++rev; persist(); scheduleSync(); }
+  function moisPath(prefix, d) { return prefix + "/" + d.slice(0, 7) + ".json"; }
+  function moisPrec(ym, n) { var d = parseISO(ym + "-01"); d.setMonth(d.getMonth() - n); return iso(d).slice(0, 7); }
+  var fMois = new Intl.DateTimeFormat("fr-FR", { month: "long", year: "numeric" });
+  function nomMois(ym) { return cap(fMois.format(parseISO(ym + "-01"))); }
+  function euros(n) { return (Math.round(n * 100) / 100).toLocaleString("fr-FR", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + " €"; }
+  var ARMED = {};
+  function arme(key) { if (ARMED[key] && Date.now() - ARMED[key] < 4000) { delete ARMED[key]; return true; } ARMED[key] = Date.now(); return false; }
+
+  /* ================= Tâches ================= */
+  var TPATH = "listes/taches.json";
+  UI.tDate = "auj";
+  function taches() { var d = getData(TPATH); return Object.keys(d).map(function (id) { return Object.assign({ id: id }, d[id]); }); }
+  function ligneTache(x, t) {
+    var retard = !x.fait && x.date && x.date < t, lbl = x.date ? (x.date === t ? "Aujourd'hui" : (x.date === addDays(t, 1) ? "Demain" : cap(fJour.format(parseISO(x.date))))) : "";
+    return '<li class="tache' + (x.fait ? " fait" : "") + '"><button type="button" class="tcoche" data-t-ok="' + x.id + '" aria-pressed="' + !!x.fait + '" aria-label="Marquer comme faite"><span class="case"></span></button>' +
+      '<span class="tt">' + esc(x.t) + (lbl ? '<small' + (retard ? ' class="retard"' : "") + ">" + (retard ? "En retard · " : "") + esc(lbl) + "</small>" : "") + "</span>" +
+      '<button type="button" class="tsuppr" data-t-del="' + x.id + '" aria-label="Supprimer">' + (ARMED["t" + x.id] ? "Supprimer ?" : "×") + "</button></li>";
+  }
+  function renderTaches() {
+    var t = today(), all = taches(), open = all.filter(function (x) { return !x.fait; });
+    var groupes = [
+      ["En retard", open.filter(function (x) { return x.date && x.date < t; })],
+      ["Aujourd'hui", open.filter(function (x) { return x.date === t; })],
+      ["À venir", open.filter(function (x) { return x.date && x.date > t; }).sort(function (a, b) { return a.date < b.date ? -1 : 1; })],
+      ["Sans date", open.filter(function (x) { return !x.date; })]
+    ];
+    var faites = all.filter(function (x) { return x.fait; }).sort(function (a, b) { return (b.faitLe || "") < (a.faitLe || "") ? -1 : 1; }).slice(0, 20);
+    var html = '<div class="entete"><p class="sur">' + open.length + " à faire</p><h1>Tâches</h1></div>" +
+      '<form class="ajout-t" id="form-t"><input class="champ-l" id="t-in" type="text" placeholder="Nouvelle tâche" autocomplete="off" enterkeyhint="done">' +
+      '<div class="puces-choix">' + [["auj", "Aujourd'hui"], ["dem", "Demain"], ["sans", "Sans date"]].map(function (c) { return '<button type="button" class="puce" data-t-date="' + c[0] + '" aria-pressed="' + (UI.tDate === c[0]) + '">' + c[1] + "</button>"; }).join("") +
+      '</div><button type="submit" class="principal">Ajouter</button></form>';
+    groupes.forEach(function (g) { if (g[1].length) html += '<section class="bloc"><h2>' + g[0] + '</h2><ul class="taches">' + g[1].map(function (x) { return ligneTache(x, t); }).join("") + "</ul></section>"; });
+    if (!open.length) html += '<p class="note">Rien à faire pour l\'instant. Ajoute ta première tâche ci-dessus.</p>';
+    if (faites.length) html += '<details class="bloc pli-t"><summary><h2>Faites (' + faites.length + ")</h2></summary><ul class=\"taches\">" + faites.map(function (x) { return ligneTache(x, t); }).join("") + "</ul></details>";
+    $("#v-taches").innerHTML = html;
+  }
+  function tachesDuJour() { var t = today(); return taches().filter(function (x) { return !x.fait && x.date && x.date <= t; }); }
+
+  /* ================= Sport ================= */
+  var SUGG = {
+    Push: ["Développé couché", "Développé incliné haltères", "Développé militaire", "Dips", "Élévations latérales", "Extensions triceps poulie"],
+    Pull: ["Tractions", "Rowing barre", "Tirage vertical", "Rowing haltère", "Curl biceps", "Face pull"],
+    Legs: ["Squat", "Presse à cuisses", "Soulevé de terre roumain", "Leg curl", "Leg extension", "Mollets debout"],
+    Autre: ["Cardio", "Gainage", "Abdos"]
+  };
+  function seances(mois) {
+    var out = [];
+    for (var i = 0; i < (mois || 3); i++) {
+      var ym = moisPrec(today().slice(0, 7), i), p = "sport/" + ym + ".json", d = getData(p);
+      Object.keys(d).forEach(function (id) { out.push(Object.assign({ id: id, path: p }, d[id])); });
+    }
+    return out.sort(function (a, b) { return a.date === b.date ? ((b.cree || "") < (a.cree || "") ? -1 : 1) : (a.date < b.date ? 1 : -1); });
+  }
+  function volume(s) { var v = 0, n = 0; (s.exos || []).forEach(function (e) { (e.series || []).forEach(function (x) { var r = num(x.reps) || 0, k = num(x.kg) || 0; if (r) { n++; v += r * k; } }); }); return { v: v, n: n }; }
+  function derniereFois(nom, saufId) {
+    if (!nom) return null;
+    var key = nom.trim().toLowerCase(), list = seances(3);
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id === saufId) continue;
+      var e = (list[i].exos || []).filter(function (x) { return (x.nom || "").trim().toLowerCase() === key; })[0];
+      if (e && e.series && e.series.length) return { date: list[i].date, series: e.series };
+    }
+    return null;
+  }
+  function resumeSeries(series) {
+    var ok = series.filter(function (x) { return num(x.reps); });
+    if (!ok.length) return "";
+    var maxKg = Math.max.apply(null, ok.map(function (x) { return num(x.kg) || 0; }));
+    return ok.length + " série" + (ok.length > 1 ? "s" : "") + " · " + ok.map(function (x) { return num(x.reps); }).join("-") + " reps" + (maxKg ? " · " + fr(maxKg, 1) + " kg" : "");
+  }
+  function renderSport() {
+    var list = seances(3), t = today(), m = mondayOf(t), w = weekOrFirst(t);
+    var semaine = list.filter(function (s) { return s.date >= m && s.date <= addDays(m, 6); }).length;
+    var html = '<div class="entete"><p class="sur">' + semaine + " séance" + (semaine > 1 ? "s" : "") + " cette semaine" + (w && w.c.salle ? " · objectif " + w.c.salle : "") + "</p><h1>Sport</h1></div>" +
+      '<section class="bloc"><h2>Nouvelle séance</h2><div class="types">' + Object.keys(SUGG).map(function (ty) { return '<button type="button" class="opt" data-sp-new="' + ty + '">' + ty + "</button>"; }).join("") + "</div></section>";
+    if (list.length) {
+      html += '<section class="bloc"><h2>Tes séances</h2><div class="seances">' + list.slice(0, 30).map(function (s) {
+        var v = volume(s);
+        return '<button type="button" class="seance-l" data-sp-open="' + s.path + "|" + s.id + '"><span><b>' + esc(s.type || "Séance") + "</b><small>" + esc(cap(fJour.format(parseISO(s.date)))) + "</small></span><span class=\"sv\">" + (s.exos || []).length + " exos · " + v.n + " séries" + (v.v ? "<small>" + Math.round(v.v).toLocaleString("fr-FR") + " kg soulevés</small>" : "") + "</span></button>";
+      }).join("") + "</div></section>";
+      var best = {};
+      list.forEach(function (s) { (s.exos || []).forEach(function (e) { var nm = (e.nom || "").trim(); if (!nm) return; (e.series || []).forEach(function (x) { var k = num(x.kg) || 0, r = num(x.reps) || 0; if (r && (!best[nm] || k > best[nm].kg)) best[nm] = { kg: k, reps: r, date: s.date }; }); }); });
+      var noms = Object.keys(best).filter(function (n) { return best[n].kg > 0; });
+      if (noms.length) html += '<section class="bloc"><h2>Tes records (3 derniers mois)</h2><div class="lignes-p">' + noms.map(function (n) { return '<div class="ligne-p"><span class="n">' + esc(n) + '</span><span class="v">' + fr(best[n].kg, 1) + ' kg</span><span class="o">' + best[n].reps + " reps · " + esc(shortDate(best[n].date)) + "</span></div>"; }).join("") + "</div></section>";
+    } else html += '<p class="note">Aucune séance notée. Choisis Push, Pull ou Legs pour commencer.</p>';
+    $("#v-sport").innerHTML = html;
+  }
+  function seanceCourante() { var s = UI.seance; if (!s) return null; var d = getData(s.path)[s.id]; return d ? clone(d) : null; }
+  function sauveSeance(s) {
+    var path = moisPath("sport", s.date);
+    if (path !== UI.seance.path) { setKey(UI.seance.path, UI.seance.id, null); UI.seance.path = path; }
+    setKey(path, UI.seance.id, s);
+    if (volume(s).n > 0 && day(s.date).salle !== true) setDay(s.date, "salle", true);
+  }
+  function renderSeance() {
+    var s = seanceCourante();
+    if (!s) { location.hash = "#sport"; return; }
+    var sugg = (SUGG[s.type] || SUGG.Autre).filter(function (n) { return !(s.exos || []).some(function (e) { return (e.nom || "").toLowerCase() === n.toLowerCase(); }); });
+    var html = '<div class="flow-top"><a class="retour" href="#sport">← Sport</a><span class="compte">' + volume(s).n + " séries</span></div>" +
+      '<div class="entete"><h1>' + esc(s.type || "Séance") + '</h1><input class="champ-date" type="date" data-sp-date value="' + esc(s.date) + '" aria-label="Date de la séance"></div>';
+    (s.exos || []).forEach(function (e, i) {
+      var prev = derniereFois(e.nom, UI.seance.id);
+      html += '<section class="exo"><div class="exo-h"><input class="exo-nom" type="text" data-sp-nom="' + i + '" value="' + esc(e.nom || "") + '" placeholder="Nom de l\'exercice" list="exos-liste" autocomplete="off"><button type="button" class="tsuppr" data-sp-delexo="' + i + '" aria-label="Retirer l\'exercice">' + (ARMED["e" + i] ? "Retirer ?" : "×") + "</button></div>" +
+        (prev ? '<p class="aide">Dernière fois (' + esc(shortDate(prev.date)) + ") : " + esc(resumeSeries(prev.series)) + "</p>" : "") +
+        '<div class="series">' + (e.series || []).map(function (x, j) {
+          return '<div class="serie"><span class="sn">' + (j + 1) + '</span><label><input type="text" inputmode="numeric" data-sp-s="' + i + "|" + j + '|reps" value="' + esc(x.reps == null ? "" : x.reps) + '" placeholder="0"><em>reps</em></label><span class="x">×</span><label><input type="text" inputmode="decimal" data-sp-s="' + i + "|" + j + '|kg" value="' + esc(x.kg == null ? "" : String(x.kg).replace(".", ",")) + '" placeholder="0"><em>kg</em></label><button type="button" class="tsuppr" data-sp-dels="' + i + "|" + j + '" aria-label="Retirer la série">×</button></div>';
+        }).join("") + '</div><button type="button" class="secondaire petit" data-sp-addset="' + i + '">+ Série</button></section>';
+    });
+    html += '<section class="bloc"><h2>Ajouter un exercice</h2><div class="puces-choix">' + sugg.map(function (n) { return '<button type="button" class="puce" data-sp-addexo="' + esc(n) + '">' + esc(n) + "</button>"; }).join("") + '<button type="button" class="puce" data-sp-addexo="">Autre…</button></div></section>' +
+      '<datalist id="exos-liste">' + [].concat(SUGG.Push, SUGG.Pull, SUGG.Legs, SUGG.Autre).map(function (n) { return '<option value="' + esc(n) + '">'; }).join("") + "</datalist>" +
+      '<section class="bloc"><h2>Note</h2><textarea class="champ-l" data-sp-note rows="2" placeholder="Sensations, douleur, énergie…">' + esc(s.note || "") + "</textarea></section>" +
+      '<a class="principal lien-btn" href="#sport">Séance enregistrée ✓</a>' +
+      '<button type="button" class="secondaire" data-sp-delseance>' + (ARMED.seance ? "Confirmer la suppression" : "Supprimer la séance") + "</button>";
+    $("#v-seance").innerHTML = html;
+    $$("#v-seance textarea").forEach(grow);
+  }
+
+  /* ================= Argent ================= */
+  var CATS_OUT = ["Fast-food", "Courses", "Sorties", "Vêtements", "Abonnements", "Téléphone", "Transport", "Salle", "Tech", "Autre", "Épargne"];
+  var CATS_IN = ["Salaire", "Client", "Vente", "Autre"];
+  UI.mois = today().slice(0, 7);
+  function mouvements(ym) { var p = "argent/" + ym + ".json", d = getData(p); return Object.keys(d).map(function (id) { return Object.assign({ id: id, path: p }, d[id]); }); }
+  function bilanMois(ym) {
+    var l = mouvements(ym), r = { entrees: 0, sorties: 0, epargne: 0, cats: {}, n: l.length };
+    l.forEach(function (x) {
+      var m = num(x.montant) || 0;
+      if (x.sens === "in") r.entrees += m;
+      else if (x.cat === "Épargne") r.epargne += m;
+      else { r.sorties += m; r.cats[x.cat || "Autre"] = (r.cats[x.cat || "Autre"] || 0) + m; }
+    });
+    r.reste = r.entrees - r.sorties - r.epargne;
+    return r;
+  }
+  function depensesDuJour(d) { return mouvements(d.slice(0, 7)).filter(function (x) { return x.date === d && x.sens !== "in" && x.cat !== "Épargne" && x.auto !== "fixes"; }); }
+  function renderArgent() {
+    var ym = UI.mois, b = bilanMois(ym), bp = bilanMois(moisPrec(ym, 1)), cur = ym === today().slice(0, 7), p = plan();
+    var html = '<div class="entete"><p class="sur">Entrées et sorties</p><h1>' + esc(nomMois(ym)) + '</h1><div class="jours"><button type="button" class="petit-btn" data-ar-mois="-1">← Mois précédent</button>' + (cur ? "" : '<button type="button" class="petit-btn" data-ar-mois="1">Mois suivant →</button>') + "</div></div>" +
+      '<div class="chiffres-ar"><div><span>Entrées</span><b>' + euros(b.entrees) + '</b></div><div><span>Sorties</span><b>' + euros(b.sorties) + '</b></div><div><span>Mis de côté</span><b>' + euros(b.epargne) + '</b></div><div class="fort"><span>Reste</span><b>' + euros(b.reste) + "</b></div></div>" +
+      '<div class="deux-btn"><button type="button" class="principal" data-ar-add="out">+ Dépense</button><button type="button" class="secondaire" data-ar-add="in">+ Entrée</button></div>';
+    if (p && (p.fixes || p.salaire)) {
+      var deja = mouvements(ym).some(function (x) { return x.auto === "fixes"; }), dejaS = mouvements(ym).some(function (x) { return x.auto === "salaire"; });
+      if (!deja || !dejaS) html += '<div class="deux-btn">' + (!dejaS && p.salaire ? '<button type="button" class="secondaire petit" data-ar-auto="salaire">Ajouter mon salaire (' + euros(p.salaire) + ")</button>" : "") + (!deja && p.fixes ? '<button type="button" class="secondaire petit" data-ar-auto="fixes">Ajouter mes fixes (' + euros(p.fixes.reduce(function (a, f) { return a + f[1]; }, 0)) + ")</button>" : "") + "</div>";
+    }
+    if (b.n) {
+      var cats = Object.keys(b.cats).sort(function (a, c) { return b.cats[c] - b.cats[a]; }), mx = cats.length ? b.cats[cats[0]] : 1;
+      var jours = cur ? parseISO(today()).getDate() : new Date(+ym.slice(0, 4), +ym.slice(5, 7), 0).getDate(), nbj = new Date(+ym.slice(0, 4), +ym.slice(5, 7), 0).getDate();
+      var an = [];
+      var fixesMois = mouvements(ym).filter(function (x) { return x.sens !== "in" && x.auto === "fixes"; }).reduce(function (t, x) { return t + (num(x.montant) || 0); }, 0), vari = b.sorties - fixesMois;
+      an.push(["Dépenses variables par jour", euros(vari / Math.max(1, jours))]);
+      if (cur && jours < nbj) an.push(["Projection fin de mois (sorties)", euros(fixesMois + vari / jours * nbj)]);
+      if (b.entrees) an.push(["Part du salaire épargnée", Math.round(b.epargne / b.entrees * 100) + " %"]);
+      if (bp.n) an.push(["Sorties vs mois précédent", (b.sorties >= bp.sorties ? "+ " : "− ") + euros(Math.abs(b.sorties - bp.sorties))]);
+      if (b.cats["Fast-food"] != null) an.push(["Fast-food (objectif 100 € max)", euros(b.cats["Fast-food"]) + (b.cats["Fast-food"] > 100 ? " · dépassé" : " · tenu")]);
+      html += '<section class="bloc"><h2>Analyse</h2><div class="lignes-p">' + an.map(function (a) { return '<div class="ligne-p"><span class="n">' + tx(a[0]) + '</span><span class="v">' + esc(a[1]) + "</span></div>"; }).join("") + "</div></section>";
+      if (cats.length) html += '<section class="bloc"><h2>Où part l\'argent</h2><div class="cats">' + cats.map(function (c) { return '<div class="cat"><span class="cn">' + esc(c) + '</span><span class="cb"><i style="width:' + Math.max(3, b.cats[c] / mx * 100) + '%"></i></span><span class="cv">' + euros(b.cats[c]) + "</span></div>"; }).join("") + "</div></section>";
+      var parJour = {};
+      mouvements(ym).forEach(function (x) { (parJour[x.date] = parJour[x.date] || []).push(x); });
+      html += '<section class="bloc"><h2>Détail</h2>' + Object.keys(parJour).sort().reverse().map(function (d) {
+        return '<div class="jour-ar"><p class="jd">' + esc(cap(fJour.format(parseISO(d)))) + '</p><ul class="taches">' + parJour[d].sort(function (a, c) { return (c.cree || "") < (a.cree || "") ? -1 : 1; }).map(function (x) {
+          return '<li class="mvt"><span class="tt">' + esc(x.cat || "Autre") + (x.note ? "<small>" + esc(x.note) + "</small>" : "") + '</span><span class="mm' + (x.sens === "in" ? " in" : "") + '">' + (x.sens === "in" ? "+ " : "− ") + euros(num(x.montant) || 0) + '</span><button type="button" class="tsuppr" data-ar-del="' + x.path + "|" + x.id + '" aria-label="Supprimer">' + (ARMED["a" + x.id] ? "Suppr. ?" : "×") + "</button></li>";
+        }).join("") + "</ul></div>";
+      }).join("") + "</section>";
+    } else html += '<p class="note">Rien de noté ce mois-ci. Commence par ton salaire et tes dépenses fixes.</p>';
+    $("#v-argent").innerHTML = html;
+  }
+  UI.ajout = { sens: "out", cat: "Fast-food" };
+  function renderAjout() {
+    var a = UI.ajout, cats = a.sens === "in" ? CATS_IN : CATS_OUT;
+    if (cats.indexOf(a.cat) < 0) a.cat = cats[0];
+    $("#v-ajout").innerHTML = '<div class="flow-top"><a class="retour" href="#argent">← Argent</a><span class="compte"></span></div>' +
+      '<div class="question"><h1>' + (a.sens === "in" ? "Nouvelle entrée" : "Nouvelle dépense") + '</h1><div class="nombre"><input class="grand-nombre" type="text" inputmode="decimal" id="ar-m" placeholder="0" autocomplete="off"><span>€</span></div>' +
+      '<p class="lbl">Catégorie</p><div class="puces-choix">' + cats.map(function (c) { return '<button type="button" class="puce" data-ar-cat="' + esc(c) + '" aria-pressed="' + (a.cat === c) + '">' + esc(c) + "</button>"; }).join("") + "</div>" +
+      '<p class="lbl">Date</p><input class="champ-l" type="date" id="ar-d" value="' + esc(a.date || today()) + '">' +
+      '<p class="lbl">Note (facultatif)</p><input class="champ-l" type="text" id="ar-n" placeholder="ex. McDo le midi" autocomplete="off"></div>' +
+      '<div class="flow-bas"><button type="button" class="principal" data-ar-save>Enregistrer</button></div>';
+    setTimeout(function () { var m = $("#ar-m"); if (m) try { m.focus(); } catch (e) { /* rien */ } }, 60);
+  }
+  function ajouteMvt(sens, montant, cat, date, note, auto) {
+    var x = { date: date, sens: sens, montant: montant, cat: cat, cree: new Date().toISOString() };
+    if (note) x.note = note; if (auto) x.auto = auto;
+    setKey(moisPath("argent", date), uid(), x);
+  }
+
+  /* Écran du soir : les dépenses du jour, ajoutées en deux touches */
+  UI.qcat = "Fast-food";
+  function ctlDepenses() {
+    var l = depensesDuJour(UI.day), tot = l.reduce(function (a, x) { return a + (num(x.montant) || 0); }, 0);
+    return '<div class="nombre"><input class="grand-nombre" type="text" inputmode="decimal" id="qd-m" placeholder="0" autocomplete="off"><span>€</span></div>' +
+      '<div class="puces-choix">' + CATS_OUT.filter(function (c) { return c !== "Épargne"; }).map(function (c) { return '<button type="button" class="puce" data-qd-cat="' + esc(c) + '" aria-pressed="' + (UI.qcat === c) + '">' + esc(c) + "</button>"; }).join("") + "</div>" +
+      '<button type="button" class="secondaire" data-qd-add>Ajouter cette dépense</button>' +
+      '<div class="lignes-p">' + l.map(function (x) { return '<div class="ligne-p"><span class="n">' + esc(x.cat) + '</span><span class="v">' + euros(num(x.montant) || 0) + "</span></div>"; }).join("") +
+      '<div class="ligne-p"><span class="n"><b>Total du jour</b></span><span class="v">' + euros(tot) + "</span></div></div>";
+  }
+
+  /* ================= Événements des modules ================= */
+  document.addEventListener("submit", function (e) {
+    if (e.target.id !== "form-t") return;
+    e.preventDefault();
+    var v = ($("#t-in").value || "").trim(); if (!v) return;
+    var t = today(), date = UI.tDate === "auj" ? t : (UI.tDate === "dem" ? addDays(t, 1) : null);
+    var x = { t: v, fait: false, cree: new Date().toISOString() }; if (date) x.date = date;
+    setKey(TPATH, uid(), x); renderTaches(); var inp = $("#t-in"); if (inp) inp.focus();
+  });
+  document.addEventListener("input", function (e) {
+    var el = e.target, a;
+    if ((a = el.getAttribute("data-sp-s"))) { var s = seanceCourante(), p = a.split("|"); s.exos[+p[0]].series[+p[1]][p[2]] = p[2] === "reps" ? (num(el.value) == null ? null : Math.round(num(el.value))) : num(el.value); sauveSeance(s); $(".compte", $("#v-seance")).textContent = volume(s).n + " séries"; return; }
+    if ((a = el.getAttribute("data-sp-nom")) != null) { var s2 = seanceCourante(); s2.exos[+a].nom = el.value; sauveSeance(s2); return; }
+    if (el.hasAttribute("data-sp-note")) { grow(el); var s3 = seanceCourante(); s3.note = el.value; sauveSeance(s3); return; }
+  });
+  document.addEventListener("change", function (e) {
+    var el = e.target;
+    if (el.hasAttribute("data-sp-date") && el.value) { var s = seanceCourante(); s.date = el.value; sauveSeance(s); }
+    if (el.getAttribute("data-sp-nom") != null) renderSeance();
+  });
+  document.addEventListener("click", function (e) {
+    var t = e.target, b;
+    if ((b = t.closest("[data-t-date]"))) { UI.tDate = b.getAttribute("data-t-date"); $$("[data-t-date]").forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); }); return; }
+    if ((b = t.closest("[data-t-ok]"))) { var id = b.getAttribute("data-t-ok"), x = getData(TPATH)[id]; if (!x) return; x = clone(x); x.fait = !x.fait; if (x.fait) x.faitLe = new Date().toISOString(); else delete x.faitLe; setKey(TPATH, id, x); UI.view === "taches" ? renderTaches() : renderAujourdhui(); return; }
+    if ((b = t.closest("[data-t-del]"))) { var did = b.getAttribute("data-t-del"); if (arme("t" + did)) setKey(TPATH, did, null); UI.view === "taches" ? renderTaches() : renderAujourdhui(); return; }
+    if ((b = t.closest("[data-sp-new]"))) { var ty = b.getAttribute("data-sp-new"), d = today(), sid = uid(); UI.seance = { path: moisPath("sport", d), id: sid }; setKey(UI.seance.path, sid, { date: d, type: ty, exos: [], cree: new Date().toISOString() }); location.hash = "#seance"; return; }
+    if ((b = t.closest("[data-sp-open]"))) { var pp = b.getAttribute("data-sp-open").split("|"); UI.seance = { path: pp[0], id: pp[1] }; location.hash = "#seance"; return; }
+    if ((b = t.closest("[data-sp-addexo]")) ) { var s = seanceCourante(); s.exos = s.exos || []; s.exos.push({ nom: b.getAttribute("data-sp-addexo"), series: [{ reps: null, kg: null }] }); sauveSeance(s); renderSeance(); var ins = $$("[data-sp-s]"); if (!b.getAttribute("data-sp-addexo")) { var noms = $$("[data-sp-nom]"); if (noms.length) noms[noms.length - 1].focus(); } else if (ins.length) ins[ins.length - 2].focus(); return; }
+    if ((b = t.closest("[data-sp-addset]"))) { var s1 = seanceCourante(), i = +b.getAttribute("data-sp-addset"), sr = s1.exos[i].series, last = sr[sr.length - 1] || { reps: null, kg: null }; sr.push({ reps: last.reps, kg: last.kg }); sauveSeance(s1); renderSeance(); return; }
+    if ((b = t.closest("[data-sp-dels]"))) { var q = b.getAttribute("data-sp-dels").split("|"), s2 = seanceCourante(); s2.exos[+q[0]].series.splice(+q[1], 1); sauveSeance(s2); renderSeance(); return; }
+    if ((b = t.closest("[data-sp-delexo]"))) { var ei = +b.getAttribute("data-sp-delexo"); if (arme("e" + ei)) { var s3 = seanceCourante(); s3.exos.splice(ei, 1); sauveSeance(s3); } renderSeance(); return; }
+    if (t.closest("[data-sp-delseance]")) { if (arme("seance")) { setKey(UI.seance.path, UI.seance.id, null); UI.seance = null; location.hash = "#sport"; } else renderSeance(); return; }
+    if ((b = t.closest("[data-ar-mois]"))) { UI.mois = moisPrec(UI.mois, -(+b.getAttribute("data-ar-mois"))); renderArgent(); scheduleSync(0); return; }
+    if ((b = t.closest("[data-ar-add]"))) { UI.ajout = { sens: b.getAttribute("data-ar-add"), cat: b.getAttribute("data-ar-add") === "in" ? "Salaire" : "Fast-food", date: UI.mois === today().slice(0, 7) ? today() : UI.mois + "-01" }; location.hash = "#ajout"; return; }
+    if ((b = t.closest("[data-ar-cat]"))) { UI.ajout.cat = b.getAttribute("data-ar-cat"); $$("[data-ar-cat]").forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); }); return; }
+    if (t.closest("[data-ar-save]")) {
+      var m = num($("#ar-m").value); if (!m || m <= 0) { $("#ar-m").focus(); return; }
+      var dd = $("#ar-d").value || today(); ajouteMvt(UI.ajout.sens, m, UI.ajout.cat, dd, ($("#ar-n").value || "").trim());
+      UI.mois = dd.slice(0, 7); location.hash = "#argent"; return;
+    }
+    if ((b = t.closest("[data-ar-auto]"))) {
+      var p = plan(), kind = b.getAttribute("data-ar-auto"), d0 = UI.mois === today().slice(0, 7) ? today() : UI.mois + "-01";
+      if (kind === "salaire") ajouteMvt("in", p.salaire, "Salaire", d0, "", "salaire");
+      else p.fixes.forEach(function (f) { ajouteMvt("out", f[1], f[2] || "Abonnements", d0, f[0], "fixes"); });
+      renderArgent(); return;
+    }
+    if ((b = t.closest("[data-ar-del]"))) { var r = b.getAttribute("data-ar-del").split("|"); if (arme("a" + r[1])) setKey(r[0], r[1], null); renderArgent(); return; }
+    if ((b = t.closest("[data-qd-cat]"))) { UI.qcat = b.getAttribute("data-qd-cat"); $$("[data-qd-cat]").forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); }); return; }
+    if (t.closest("[data-qd-add]")) { var qm = num($("#qd-m").value); if (!qm || qm <= 0) { $("#qd-m").focus(); return; } ajouteMvt("out", qm, UI.qcat, UI.day, ""); renderFlow(); return; }
+  });
+
   /* ================= Navigation ================= */
-  var VIEWS = { aujourdhui: renderAujourdhui, progres: renderProgres, plan: renderPlan, acces: renderAcces };
+  var VIEWS = { aujourdhui: renderAujourdhui, taches: renderTaches, sport: renderSport, seance: renderSeance, argent: renderArgent, ajout: renderAjout, progres: renderProgres, plan: renderPlan, acces: renderAcces };
+  var ONGLET = { seance: "sport", ajout: "argent", plan: "progres" };
   function show(v) {
     UI.flow = null; $("#v-flow").hidden = true;
     if (B.kind && !ready()) v = "acces";
     if (!VIEWS[v]) v = "aujourdhui";
     UI.view = v;
     Object.keys(VIEWS).forEach(function (k) { $("#v-" + k).hidden = k !== v; });
-    $$("#nav a").forEach(function (a) { if (a.getAttribute("data-v") === v) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-    $("#nav").hidden = !ready();
+    $$("#nav a").forEach(function (a) { if (a.getAttribute("data-v") === (ONGLET[v] || v)) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    $("#nav").hidden = !ready() || v === "ajout";
     VIEWS[v](); paintSync();
   }
   function route() { var h = location.hash.replace("#", ""); show(h || "aujourdhui"); }
