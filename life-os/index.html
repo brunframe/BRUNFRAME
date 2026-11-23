@@ -143,6 +143,17 @@ textarea.champ-l { resize: none; overflow: hidden; min-height: 96px; display: bl
 .recap dd small { display: block; font-weight: 400; font-size: 13px; color: var(--gris); }
 .fin .principal { margin-top: 8px; }
 
+.grille-n { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 6px; }
+.cellule { display: grid; gap: 6px; border: 2px solid var(--filet); border-radius: 16px; padding: 12px 14px; }
+.cellule:focus-within { border-color: var(--noir); }
+.cellule > span:first-child { font-size: 14px; font-weight: 600; color: var(--gris); }
+.saisie-n { display: flex; align-items: baseline; gap: 6px; }
+.saisie-n input { width: 100%; min-width: 0; border: 0; padding: 0; background: transparent; font-size: 30px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.saisie-n input:focus { outline: none; }
+.saisie-n input::placeholder { color: var(--filet); }
+.saisie-n em { font-style: normal; font-size: 15px; font-weight: 600; color: var(--gris); }
+.vue > .principal { min-height: 64px; font-size: 19px; }
+
 /* Progrès */
 .lignes-p { display: grid; border-top: 1px solid var(--filet); margin-top: 6px; }
 .ligne-p { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 12px 0; border-bottom: 1px solid var(--filet); }

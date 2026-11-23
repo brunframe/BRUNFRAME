@@ -218,30 +218,24 @@
 
   /* ================= Les parcours : une question par écran ================= */
   function matinSteps(d) {
-    var w = weekOrFirst(d), n = weekNo(d);
-    var s = [
-      { id: "coucher", q: "À quelle heure as-tu éteint la lumière hier soir ?", hint: w ? "Objectif : " + clock(bedTarget(d)) + " au plus tard." : "", kind: "time", k: "coucher" },
-      { id: "reveil", q: "Ton heure de réveil ce matin ?", hint: w ? "Objectif : " + wakeTarget(d, w) + "." : "", kind: "time", k: "reveil" },
-      { id: "tel", q: "Ton téléphone a-t-il dormi loin du lit ?", hint: "Pas sur la table de nuit, pas sous l'oreiller.", kind: "yesno", k: "tel_loin" },
-      { id: "energie", q: "Ton énergie ce matin ?", hint: "1 = à plat, 5 = au top.", kind: "scale", k: "energie" },
-      { id: "prios", q: "Tes 3 priorités du jour", hint: "Trois choses concrètes. Pas plus.", kind: "prios" }
+    var n = weekNo(d), s = [
+      { id: "nuit", q: "Ta nuit", hint: "", kind: "nuit" },
+      { id: "tel", q: "Ton téléphone a dormi loin du lit ?", hint: "Pas sur la table de nuit.", kind: "yesno", k: "tel_loin" }
     ];
-    if (n >= 7) s.splice(3, 0, { id: "telmatin", q: "As-tu tenu 30 minutes sans téléphone au réveil ?", hint: "", kind: "yesno", k: "tel_matin" });
+    if (n >= 7) s.push({ id: "telmatin", q: "30 minutes sans téléphone au réveil ?", hint: "", kind: "yesno", k: "tel_matin" });
+    s.push({ id: "prios", q: "Tes 3 priorités du jour", hint: "Trois choses concrètes.", kind: "prios" });
     return s;
   }
   function soirSteps(d) {
-    var n = weekNo(d), x = day(d), s = [];
-    if (x.p1 || x.p2 || x.p3) s.push({ id: "prios_ok", q: "Lesquelles de tes priorités sont faites ?", hint: "Touche celles qui sont faites.", kind: "checks" });
-    if (n >= 2) s.push({ id: "salle", q: "As-tu fait ta séance de salle aujourd'hui ?", hint: "Lundi, jeudi et samedi, avant le travail.", kind: "yesno", k: "salle" });
-    if (n >= 2) s.push({ id: "ff", q: "As-tu mangé un fast-food aujourd'hui ?", hint: "Objectif : 1 par semaine au maximum.", kind: "yesno", k: "fastfood" });
-    if (n >= 6) s.push({ id: "chambre", q: "As-tu remis ta chambre en ordre ce soir ?", hint: "Dix minutes suffisent.", kind: "yesno", k: "chambre" });
-    s.push({ id: "ecran", q: "Ton temps d'écran aujourd'hui ?", hint: "Réglages › Temps d'écran › Aujourd'hui.", kind: "stepper", k: "ecran", step: 0.5, u: "h" });
-    s.push({ id: "dep", q: "Combien as-tu dépensé aujourd'hui ?", hint: "Tout compris : repas, sorties, achats.", kind: "number", k: "depenses", u: "€" });
-    s.push({ id: "pas", q: "Combien de pas aujourd'hui ?", hint: "App Santé › Pas.", kind: "number", k: "pas", u: "pas" });
-    s.push({ id: "biz", q: "Combien de temps sur ton business ?", hint: "Le temps réellement travaillé.", kind: "stepper", k: "business", step: 15, u: "min" });
-    if (n >= 4) s.push({ id: "contacts", q: "Combien de prospects as-tu contactés ?", hint: "Message, appel ou visite.", kind: "stepper", k: "contacts", step: 1, u: "" });
-    s.push({ id: "etudes", q: "Combien de temps d'études ?", hint: "Révisions, préparation EVPM.", kind: "stepper", k: "etudes", step: 15, u: "min" });
-    s.push({ id: "bilan", q: "Le mot de la fin", hint: "Facultatif.", kind: "text2" });
+    var n = weekNo(d), x = day(d), s = [], coches = [];
+    if (x.p1 || x.p2 || x.p3) s.push({ id: "prios_ok", q: "Tes priorités faites ?", hint: "Touche celles qui sont faites.", kind: "checks" });
+    if (n >= 2) coches.push(["salle", "Séance de salle faite"], ["fastfood", "J'ai mangé un fast-food"]);
+    if (n >= 6) coches.push(["chambre", "Chambre remise en ordre"]);
+    if (coches.length) s.push({ id: "coches", q: "Coche ce qui est vrai aujourd'hui", hint: "Laisse vide si ce n'est pas le cas.", kind: "coches", items: coches });
+    var ch = [["ecran", "Écran", "h"], ["depenses", "Dépenses", "€"], ["pas", "Pas", ""], ["business", "Business", "min"]];
+    if (n >= 4) ch.push(["contacts", "Prospects contactés", ""]);
+    ch.push(["etudes", "Études", "min"]);
+    s.push({ id: "chiffres", q: "Tes chiffres du jour", hint: "Écran : Réglages › Temps d'écran. Pas : app Santé.", kind: "chiffres", items: ch });
     return s;
   }
   function semaineSteps() {
@@ -277,6 +271,13 @@
     var st = f.steps[f.i], x = day(UI.day), r = review(UI.week), total = f.steps.length;
     var ctl = "";
     switch (st.kind) {
+      case "nuit":
+        ctl = '<div class="liste"><label class="lbl" for="fi">Lumière éteinte hier soir' + (weekOrFirst(UI.day) ? " · objectif " + clock(bedTarget(UI.day)) : "") + '</label><input class="grand-heure" type="time" id="fi" data-d="coucher" value="' + esc(x.coucher || "") + '">' +
+          '<label class="lbl" for="fi2">Réveil' + (weekOrFirst(UI.day) ? " · objectif " + wakeTarget(UI.day, weekOrFirst(UI.day)) : "") + '</label><input class="grand-heure" type="time" id="fi2" data-d="reveil" value="' + esc(x.reveil || "") + '"></div>'; break;
+      case "coches":
+        ctl = '<div class="liste">' + st.items.map(function (it) { return '<button type="button" class="opt large" data-tog="' + it[0] + '" aria-pressed="' + (x[it[0]] === true) + '"><span class="case"></span>' + tx(it[1]) + "</button>"; }).join("") + "</div>"; break;
+      case "chiffres":
+        ctl = '<div class="grille-n">' + st.items.map(function (it) { var v = x[it[0]]; return '<label class="cellule"><span>' + tx(it[1]) + '</span><span class="saisie-n"><input type="text" inputmode="decimal" data-d="' + it[0] + '" value="' + esc(v == null ? "" : String(v).replace(".", ",")) + '" placeholder="0" autocomplete="off">' + (it[2] ? "<em>" + esc(it[2]) + "</em>" : "") + "</span></label>"; }).join("") + "</div>"; break;
       case "time":
         ctl = '<input class="grand-heure" type="time" id="fi" data-d="' + st.k + '" value="' + esc(x[st.k] || "") + '">'; break;
       case "yesno":
@@ -318,7 +319,7 @@
       var sm = sleepMin(x.coucher, x.reveil);
       if (sm != null) lines.push(["Ta nuit", dur(sm), sm >= 420 ? "Objectif de 7 h atteint." : "En dessous de 7 h."]);
       if (x.coucher && w) lines.push(["Lumière éteinte", x.coucher, onTime(d, x) ? "À l'heure." : "Objectif : " + clock(bedTarget(d)) + "."]);
-      return fin("Matin terminé.", lines, "Ce soir, reviens faire ton bilan.");
+      return fin("Matin terminé.", lines, "Après le travail, reviens remplir l'après-midi.");
     }
     if (type === "soir") {
       var t = tenueDuJour(d);
@@ -346,9 +347,11 @@
       "<h1>" + (j < 1 ? "Départ lundi" : (j > 90 ? "Après le plan" : "Jour " + j + " <span>sur 90</span>")) + "</h1>" +
       '<div class="jours"><button type="button" class="petit-btn" data-day="-1">← Veille</button>' + (d === t ? "" : '<button type="button" class="petit-btn" data-day="0">Aujourd\'hui</button>') + '<button type="button" class="petit-btn" data-day="1">Lendemain →</button></div></div>';
     if (!plan()) html += '<p class="note">Ton plan n\'est pas encore chargé.</p>';
-    html += '<section class="bloc"><h2>Ton parcours du jour</h2><div class="etapes">' +
-      etape(1, "Le matin", "2 minutes : ta nuit et tes 3 priorités.", matinOk, "matin") +
-      etape(2, "Le soir", "3 minutes : ce que tu as tenu et tes chiffres.", soirOk, "soir") +
+    var next = !matinOk ? ["matin", "Remplir le matin"] : (!soirOk ? ["soir", "Remplir l'après-midi"] : (isSun && d === t && !semOk ? ["semaine", "Faire le bilan de la semaine"] : null));
+    html += next ? '<button type="button" class="principal" data-flow="' + next[0] + '">' + esc(next[1]) + " →</button>" : '<p class="note">Journée complète. Rien d\'autre à remplir aujourd\'hui.</p>';
+    html += '<section class="bloc"><h2>Deux passages par jour</h2><div class="etapes">' +
+      etape(1, "Le matin", "1 minute : ta nuit et tes 3 priorités.", matinOk, "matin") +
+      etape(2, "L'après-midi", "1 minute, après le travail : ce que tu as tenu et tes chiffres.", soirOk, "soir") +
       (isSun && d === t ? etape(3, "Le bilan de la semaine", "5 minutes, le dimanche soir.", semOk, "semaine") : "") +
       "</div></section>";
     if (x.p1 || x.p2 || x.p3) html += '<section class="bloc"><h2>Tes priorités</h2><ul class="prios">' + ["1", "2", "3"].filter(function (i) { return x["p" + i]; }).map(function (i) { return '<li class="' + (x["p" + i + "_ok"] === true ? "fait" : "") + '"><span class="case"></span>' + esc(x["p" + i]) + "</li>"; }).join("") + "</ul></section>";
@@ -497,7 +500,7 @@
     var el = e.target;
     if (el.tagName === "TEXTAREA") grow(el);
     var k = el.getAttribute && el.getAttribute("data-d");
-    if (k) { var v = el.value; if (k === "depenses" || k === "pas") { var n = num(v); v = n == null ? null : n; } setDay(UI.day, k, v); return; }
+    if (k) { var v = el.value; if (/^(depenses|pas|ecran|business|contacts|etudes)$/.test(k)) { var n = num(v); v = n == null ? null : n; } setDay(UI.day, k, v); return; }
     var w = el.getAttribute && el.getAttribute("data-w");
     if (w) setReview(UI.week, w, el.value);
   });
