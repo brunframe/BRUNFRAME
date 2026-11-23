@@ -3,7 +3,7 @@
   "short_name": "LIFE OS",
   "description": "Journal, habitudes, stats et plan sur 90 jours.",
   "lang": "fr",
-  "start_url": "./#jour",
+  "start_url": "./#aujourdhui",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",

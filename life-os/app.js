@@ -44,7 +44,9 @@
     get: function (k) { try { var v = localStorage.getItem("los:" + k); return v ? JSON.parse(v) : null; } catch (e) { return null; } },
     set: function (k, v) { try { localStorage.setItem("los:" + k, JSON.stringify(v)); return true; } catch (e) { return false; } }
   };
-  var cfg = LS.get("cfg") || { token: "", repo: "brunframe/life-os-data" };
+  var cfg = LS.get("cfg") || { token: "", repo: "brunframe/BRUNFRAME-STUDION", dir: "life-os-data" };
+  if (cfg.dir == null) cfg.dir = cfg.repo === "brunframe/life-os-data" ? "" : "life-os-data";
+  function ghPath(p) { var d = (cfg.dir || "").replace(/^\/+|\/+$/g, ""); return d ? d + "/" + p : p; }
   var FKEY = "files";
   var files = LS.get(FKEY) || {};
   var saveTimer = null;
@@ -58,7 +60,7 @@
   function httpErr(status) { var e = new Error("http " + status); e.status = status; return e; }
   function dbId(path) { return path === "plan.json" ? "systeme/plan" : path.replace(/\.json$/, ""); }
   function gh(method, path, body) {
-    return fetch("https://api.github.com/repos/" + cfg.repo + "/contents/" + path, {
+    return fetch("https://api.github.com/repos/" + cfg.repo + "/contents/" + ghPath(path), {
       method: method, cache: "no-store",
       headers: Object.assign({ "Authorization": "Bearer " + cfg.token, "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" }, body ? { "Content-Type": "application/json" } : {}),
       body: body ? JSON.stringify(body) : undefined
@@ -466,7 +468,7 @@
     var standalone = window.navigator.standalone === true || (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
     $("#v-acces").innerHTML = '<div class="entete"><p class="sur">Bienvenue</p><h1>LIFE OS</h1></div>' +
       (standalone ? "" : '<p class="note">Étape 0 : dans Safari, touche Partager puis « Sur l\'écran d\'accueil ». Ouvre ensuite LIFE OS depuis l\'icône.</p>') +
-      '<section class="bloc"><h2>Connexion, une seule fois</h2><ol class="regles"><li>Ouvre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">ce lien GitHub</a>.</li><li>Nom : LIFE OS. Accès : <b>Only select repositories</b> › <b>life-os-data</b>.</li><li>Permissions : <b>Contents</b> › <b>Read and write</b>.</li><li>Génère la clé, copie-la, colle-la ici.</li></ol>' +
+      '<section class="bloc"><h2>Connexion, une seule fois</h2><ol class="regles"><li>Ouvre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">ce lien GitHub</a>.</li><li>Nom : LIFE OS. Expiration : 1 an. Accès : <b>Only select repositories</b> › <b>BRUNFRAME-STUDION</b>.</li><li>Permissions : <b>Contents</b> › <b>Read and write</b>. Rien d\'autre.</li><li>Génère la clé, copie-la, colle-la ici. Tes données iront dans le dossier life-os-data de ce dépôt privé.</li></ol>' +
       '<input class="champ-l" id="tok" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Colle ta clé ici">' +
       '<input class="champ-l" id="repo" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" value="' + esc(cfg.repo) + '" aria-label="Dépôt">' +
       '<p class="aide" id="msg" role="status"></p><button type="button" class="principal" id="connect">Se connecter</button></section>';
@@ -480,7 +482,7 @@
       if (r.status === 401) { msg.textContent = "Clé refusée."; return; }
       if (r.status === 404 || r.status === 403) { msg.textContent = "Cette clé n'a pas accès à " + repo + "."; return; }
       if (!r.ok) { msg.textContent = "GitHub ne répond pas."; return; }
-      cfg = { token: tok, repo: repo }; LS.set("cfg", cfg); location.hash = "#aujourdhui"; runSync(true).then(route);
+      cfg = { token: tok, repo: repo, dir: cfg.dir == null ? "life-os-data" : cfg.dir }; LS.set("cfg", cfg); location.hash = "#aujourdhui"; runSync(true).then(route);
     }, function () { msg.textContent = "Pas de connexion."; });
   }
 
@@ -790,7 +792,7 @@
     if (t.closest("#etat")) { if (B.kind) { location.hash = "#acces"; } return; }
     if (t.closest("#connect")) { connect(); return; }
     if (t.closest("#sync-now")) { runSync(true).then(function () { renderAcces(); }); return; }
-    if (t.closest("#logout")) { cfg = { token: "", repo: cfg.repo }; LS.set("cfg", cfg); route(); return; }
+    if (t.closest("#logout")) { cfg = { token: "", repo: cfg.repo, dir: cfg.dir }; LS.set("cfg", cfg); route(); return; }
   });
   document.addEventListener("visibilitychange", function () {
     if (document.visibilityState === "hidden") { LS.set(FKEY, files); runSync(); return; }
